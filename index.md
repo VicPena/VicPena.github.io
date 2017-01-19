@@ -1,5 +1,5 @@
 # Bio
-I'm a fourth-year PhD candidate at the [Department of Statistical Science](stat.duke.edu) at [Duke University](duke.edu), where I'm doing research on model selection, Bayesian robustness, and foundations of statistical inference under the supervision of [Jim Berger](stat.duke.edu/~berger). Prior to coming to Duke, I obtained a BSc in Statistics (2011) and a MSc in Statistics and Operations Research (2013) from [Universitat Politècnica de Catalunya](upc.edu). I completed my Master's thesis in the Biostatistics and Bioinformatics Unit at IRB Barcelona, where I worked on sequential experimental design for RNA-seq studies with [David Rossell](https://sites.google.com/site/rosselldavid/).
+I'm a fourth-year PhD candidate at the [Department of Statistical Science](stat.duke.edu) at [Duke University](duke.edu), where I'm doing research on model selection, Bayesian robustness, and foundations of statistical inference under the supervision of [Jim Berger](stat.duke.edu/~berger). Prior to coming to Duke, I obtained a BSc in Statistics (2011) and a MSc in Statistics and Operations Research (2013) from [Universitat Politècnica de Catalunya](upc.edu). I completed my Master's thesis in the Biostatistics and Bioinformatics Unit at IRB Barcelona, where I worked on sequential experimental design for RNA-seq studies with [David Rossell](https://sites.google.com/site/rosselldavid/). If you *really* want to see a picture of me, you can [click here](VicPena.github.io/mugshot.png).
 
 # Publications
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
@@ -20,7 +20,7 @@ I'm a fourth-year PhD candidate at the [Department of Statistical Science](stat.
   * STA 111: Probability & Statistical Inference (Summer Term II, 2015)
 
 # Active Projects
-* The dark side of high-dimensional regression (with Gonzalo García-Donato, M.A. Martínez-Beneito). A very incomplete draft with some of the ideas can be found [here](https://arxiv.org/abs/1607.02993).
+* The dark side of high-dimensional regression (with Gonzalo García-Donato, M.A. Martínez-Beneito). A very incomplete draft can be found [here](https://arxiv.org/abs/1607.02993).
 * Subgroup analysis: prior specification and computational challenges (with Jim Berger and Xiaojing Wang).
 * A tale of scale, tails, and empirical Bayes procedures (with Jim Berger).
 * Some thoughts about the likelihood principle (with Jim Berger).
