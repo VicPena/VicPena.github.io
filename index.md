@@ -26,4 +26,4 @@ My **email** username is *vp58* and the domain is *duke.edu*.
 * Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
 * A tale of scale, tails, and empirical Bayes procedures (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Some thoughts about the likelihood principle (with [Jim Berger](http://stat.duke.edu/~berger)).
-* Bayesian Boostrap and DPs for massive datsets (with [A. F. Barrientos](http://anfebar.com) and [P. Müller](https://www.ma.utexas.edu/users/pmueller/)).
+* Bayesian Bootstrap and DPs for massive datsets (with [A. F. Barrientos](http://anfebar.com) and [P. Müller](https://www.ma.utexas.edu/users/pmueller/)).
