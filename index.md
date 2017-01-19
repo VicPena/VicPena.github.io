@@ -6,18 +6,18 @@ I'm a fourth-year PhD candidate in [Statistical Science](stat.duke.edu) at [Duke
 * Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
 
 # Talks 
-* [Bayesian optimization with shape constraints](VicPena.github.io/BayesOptUPF.pdf) @ UPF Internal Statistics Seminar, Jan 2017
-* [In defense of the likelihood principle](VicPena.github.io/isba2016.pdf) @ ISBA 2016 
-* [Empirical Bayes model uncertainty: Introduction and a new prior](VicPena.github.io/isbis2016.pdf) @ ISBIS 2016
+* [Bayesian optimization with shape constraints](VicPena.github.io/BayesOptUPF.pdf) @ UPF Internal Statistics Seminar, Jan 2017.
+* [In defense of the likelihood principle](VicPena.github.io/isba2016.pdf) @ ISBA 2016.
+* [Empirical Bayes model uncertainty: Introduction and a new prior](VicPena.github.io/isbis2016.pdf) @ ISBIS 2016.
 
 # Teaching
 * TA
-  * STA521: [Modern Regression & Predictive Modelling](http://www2.stat.duke.edu/courses/Spring17/sta521/) (Spring 2017)
-  * STA340/623: Decision Analysis (Fall 2016, Fall 2015)
-  * STA210: Regression Analysis (Fall 2014)
+  * STA521: [Modern Regression & Predictive Modelling](http://www2.stat.duke.edu/courses/Spring17/sta521/) (Spring 2017).
+  * STA340/623: Decision Analysis (Fall 2016, Fall 2015).
+  * STA210: Regression Analysis (Fall 2014).
 
 * Instructor
-  * STA 111: Probability & Statistical Inference (Summer Term II, 2015)
+  * STA 111: Probability & Statistical Inference (Summer Term II, 2015).
 
 # Active Projects
 * The dark side of high-dimensional regression (with Gonzalo García-Donato, M.A. Martínez-Beneito). A very incomplete draft can be found [here](https://arxiv.org/abs/1607.02993).
