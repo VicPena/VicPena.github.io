@@ -1,7 +1,7 @@
 # Bio
 I'm a fourth-year PhD candidate in [Statistical Science](http://stat.duke.edu) at [Duke University](http://duke.edu), where I'm doing research on model selection, Bayesian robustness, and foundations of statistical inference under the supervision of [Jim Berger](http://stat.duke.edu/~berger). Prior to coming to Duke, I obtained a BSc in Statistics (2011) and a MSc in Statistics and Operations Research (2013) from [Universitat Politècnica de Catalunya](http://upc.edu). I completed my Master's thesis in the Biostatistics and Bioinformatics Unit at IRB Barcelona, where I worked on sequential experimental design for RNA-seq studies with [David Rossell](https://sites.google.com/site/rosselldavid/). If you *really* want to see a picture of me, you can [click here](http://VicPena.github.io/mugshot.png).
 
-My email username is vp58 and the domain is duke.edu. 
+My **email** username is *vp58* and the domain is *duke.edu*. 
 
 # Publications
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
@@ -24,6 +24,6 @@ My email username is vp58 and the domain is duke.edu.
 # Some active projects
 * The dark side of high-dimensional regression (with [Gonzalo García-Donato](http://www.uclm.es/profesorado/garcia-donato/), M.A. Martínez-Beneito, and [Jim Berger](http://stat.duke.edu/~berger)). A very incomplete draft can be found [here](https://arxiv.org/abs/1607.02993).
 * Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
-* A tale of scale, tails, and empirical Bayes procedures (with [Jim Berger](http://stat.duke.edu/~berger).
+* A tale of scale, tails, and empirical Bayes procedures (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Some thoughts about the likelihood principle (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Bayesian Boostrap and DPs for massive datsets (with [A. F. Barrientos](http://anfebar.com) and [P. Müller](https://www.ma.utexas.edu/users/pmueller/)).
