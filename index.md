@@ -8,7 +8,7 @@ I'm a fourth-year PhD candidate in [Statistical Science](stat.duke.edu) at [Duke
 # Talks 
 * [Bayesian optimization with shape constraints](VicPena.github.io/BayesOptUPF.pdf) @ UPF Internal Statistics Seminar, Jan 2017.
 * [In defense of the likelihood principle](VicPena.github.io/isba2016.pdf) @ ISBA 2016.
-* [Empirical Bayes model uncertainty: Introduction and a new prior](VicPena.github.io/isbis2016.pdf) @ ISBIS 2016.
+* [Empirical Bayes model uncertainty: introduction and a new prior](VicPena.github.io/isbis2016.pdf) @ ISBIS 2016.
 
 # Teaching
 * TA
