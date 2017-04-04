@@ -4,6 +4,7 @@ I'm a 4th year PhD candidate in [Statistical Science](http://stat.duke.edu) at [
 My **email** username is *vp58* and the domain is *duke.edu*. 
 
 # Publications
+* Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica (forthcoming).*
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
 * Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
 
@@ -19,7 +20,7 @@ My **email** username is *vp58* and the domain is *duke.edu*.
   * STA210: Regression Analysis (Fall 2014).
 
 * Instructor
-  * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015). I wrote my own set of [lecture notes](http://www2.stat.duke.edu/~vp58/sta111), which you're welcome to use (at your own risk!).
+  * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015). I wrote my own set of [lecture notes](http://www2.stat.duke.edu/~vp58/sta111), which you're welcome to use (at your own risk).
 
 # Some active projects
 * The dark side of high-dimensional regression (with [Gonzalo García-Donato](http://www.uclm.es/profesorado/garcia-donato/), M.A. Martínez-Beneito, and [Jim Berger](http://stat.duke.edu/~berger)). A very incomplete draft can be found [here](https://arxiv.org/abs/1607.02993).
