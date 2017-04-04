@@ -23,8 +23,9 @@ My **email** username is *vp58* and the domain is *duke.edu*.
   * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015). I wrote my own set of [lecture notes](http://www2.stat.duke.edu/~vp58/sta111), which you're welcome to use (at your own risk).
 
 # Some active projects
+* Model combination of rolling window models (with [Ken McAlinn](http://www.mcalinn.com))
 * The dark side of high-dimensional regression (with [Gonzalo García-Donato](http://www.uclm.es/profesorado/garcia-donato/), M.A. Martínez-Beneito, and [Jim Berger](http://stat.duke.edu/~berger)). A very incomplete draft can be found [here](https://arxiv.org/abs/1607.02993).
 * Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
-* A tale of scale, tails, and empirical Bayes procedures (with [Jim Berger](http://stat.duke.edu/~berger)).
+* On most favorable priors (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Some thoughts about the likelihood principle (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Bayesian Bootstrap and DPs for massive datsets (with [A. F. Barrientos](http://anfebar.com)).
