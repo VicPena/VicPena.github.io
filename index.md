@@ -29,5 +29,5 @@ My email address is ``vp58@duke.edu``.
 * Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
 * On most favorable priors (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Some thoughts about the likelihood principle (with [Jim Berger](http://stat.duke.edu/~berger)).
-* On the ubiquity of information inconsistency (With [Joris Mulder](www.jorismulder.com) and [Jim Berger](http://stat.duke.edu/~berger)
+* On the ubiquity of information inconsistency (With [Joris Mulder](www.jorismulder.com) and [Jim Berger](http://stat.duke.edu/~berger)).
 * Bayesian design and analysis of factorial designs.
