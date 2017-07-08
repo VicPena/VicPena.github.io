@@ -20,7 +20,8 @@ My email address is ``vp58@duke.edu``.
   * STA340/623: Decision Analysis (Fall 2016, Fall 2015).
   * STA210: Regression Analysis (Fall 2014).
 
-* Instructor
+* Instructor / Section Leader
+  * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017). 
   * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015). I wrote my own set of [lecture notes](http://www2.stat.duke.edu/~vp58/sta111), which you're welcome to use (at your own risk).
 
 # Some active projects
@@ -29,5 +30,5 @@ My email address is ``vp58@duke.edu``.
 * Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
 * On most favorable priors (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Some thoughts about the likelihood principle (with [Jim Berger](http://stat.duke.edu/~berger)).
-* On the ubiquity of information inconsistency (With [Joris Mulder](www.jorismulder.com) and [Jim Berger](http://stat.duke.edu/~berger)).
+* On the ubiquity of information inconsistency (With [Joris Mulder](http://www.jorismulder.com) and [Jim Berger](http://stat.duke.edu/~berger)).
 * Bayesian design and analysis of factorial designs.
