@@ -1,4 +1,4 @@
-# Bio
+# About me
 I'm a 5th year PhD candidate in [Statistical Science](http://stat.duke.edu) at [Duke](http://duke.edu). I'm doing research on model selection, Bayesian robustness, and foundations of statistical inference under the supervision of [Jim Berger](http://stat.duke.edu/~berger). Before that, I obtained a BSc in Statistics (2011) and an MSc in Statistics and Operations Research (2013), both from [Universitat Politècnica de Catalunya](http://upc.edu). I completed my Master's thesis at the Biostatistics and Bioinformatics Unit of IRB Barcelona, where I worked on sequential experimental design for RNA-seq studies with [David Rossell](https://sites.google.com/site/rosselldavid/). If you *really* want to see a picture of me, you can [click here](http://VicPena.github.io/mugshot.png).
 
 My email address is ``vp58@duke.edu``. 
