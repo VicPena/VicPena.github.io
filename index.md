@@ -5,7 +5,7 @@ My email address is ``vp58@duke.edu``.
 
 # Publications & preprints
 * Barrientos, A. F. & Peña, V. (2017) [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *Submitted*.
-* Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica (forthcoming).*
+* Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica, 27(4), 1554-1559.*
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
 * Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
 
