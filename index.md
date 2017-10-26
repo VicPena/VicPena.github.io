@@ -1,9 +1,10 @@
 # About me
-I'm a 5th year PhD candidate in [Statistical Science](http://stat.duke.edu) at [Duke](http://duke.edu). I'm doing research on model selection, Bayesian robustness, and foundations of statistical inference under the supervision of [Jim Berger](http://stat.duke.edu/~berger). Before that, I obtained a BSc in Statistics (2011) and an MSc in Statistics and Operations Research (2013), both from [Universitat Politècnica de Catalunya](http://upc.edu). I completed my Master's thesis at the Biostatistics and Bioinformatics Unit of IRB Barcelona, where I worked on sequential experimental design for RNA-seq studies with [David Rossell](https://sites.google.com/site/rosselldavid/). If you *really* want to see a picture of me, you can [click here](http://VicPena.github.io/mugshot.jpg).
+I'm a 5th year PhD candidate in [Statistical Science](http://stat.duke.edu) at [Duke](http://duke.edu). I'm doing research on model uncertainty, Bayesian robustness, and foundations of statistical inference under the supervision of [Jim Berger](http://stat.duke.edu/~berger). Before that, I obtained a BSc in Statistics (2011) and an MSc in Statistics and Operations Research (2013), both from [Universitat Politècnica de Catalunya](http://upc.edu). I completed my Master's thesis at the Biostatistics and Bioinformatics Unit of IRB Barcelona, where I worked on sequential experimental design for RNA-seq studies with [David Rossell](https://sites.google.com/site/rosselldavid/). If you *really* want to see a picture of me, you can [click here](http://VicPena.github.io/mugshot.jpg).
 
 My email address is ``vp58@duke.edu``. 
 
 # Publications & preprints
+* Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2017) [On the Ubiquity of Information Inconsistency with Conjugate Priors.] *Submitted*.
 * Barrientos, A. F. & Peña, V. (2017) [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *Submitted*.
 * Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica, 27(4), 1554-1559.*
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
@@ -30,5 +31,4 @@ My email address is ``vp58@duke.edu``.
 * Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
 * Empirical Bayes model selection and BIC (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Some thoughts about the likelihood principle (with [Jim Berger](http://stat.duke.edu/~berger)).
-* On the ubiquity of information inconsistency (with [Joris Mulder](http://www.jorismulder.com) and [Jim Berger](http://stat.duke.edu/~berger)).
 * Bayesian design and analysis of factorial designs.
