@@ -18,7 +18,7 @@ My email address is ``vp58@duke.edu``.
 # Teaching
 * TA
   * STA521: [Modern Regression & Predictive Modelling](http://www2.stat.duke.edu/courses/Spring17/sta521/) (Spring 2017).
-  * STA340/623: Decision Analysis (Fall 2016, 2015).
+  * STA340/623: Decision Analysis (Fall 2017, 2016, 2015).
   * STA210: Regression Analysis (Fall 2014).
 
 * Instructor / Section Leader
