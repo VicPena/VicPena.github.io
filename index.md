@@ -4,6 +4,8 @@ I'm a 5th year PhD candidate in [Statistical Science](http://stat.duke.edu) at [
 My email address is ``vp58@duke.edu``. 
 
 # Publications & preprints
+* Peña, V. & Berger, J.O. (2017). A note on recent criticisms to Birnbaum's theorem.
+* Peña, V. & Berger, J.O. (2017). Constrained empirical Bayes priors on regression coefficients. 
 * Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2017). [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://arxiv.org/abs/1710.09700) *Submitted*.
 * Barrientos, A. F. & Peña, V. (2017). [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *Submitted*.
 * Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica, 27(4), 1554-1559.*
@@ -29,7 +31,5 @@ My email address is ``vp58@duke.edu``.
 * Combining rolling windows (with [Ken McAlinn](http://www.mcalinn.com)).
 * The dark side of high-dimensional regression (with [Gonzalo García-Donato](http://www.uclm.es/profesorado/garcia-donato/), M.A. Martínez-Beneito, and [Jim Berger](http://stat.duke.edu/~berger)). A very incomplete draft can be found [here](https://arxiv.org/abs/1607.02993).
 * Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
-* Empirical Bayes model selection and BIC (with [Jim Berger](http://stat.duke.edu/~berger)).
-* Some thoughts about the likelihood principle (with [Jim Berger](http://stat.duke.edu/~berger)).
 * Bayesian design and analysis of factorial designs.
 * Towards more informative priors on model spaces.
