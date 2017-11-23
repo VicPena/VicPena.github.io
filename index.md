@@ -4,7 +4,7 @@ I'm a 5th year PhD candidate in [Statistical Science](http://stat.duke.edu) at [
 My email address is ``vp58@duke.edu``. 
 
 # Publications & preprints
-* Peña, V. & Berger, J. O. (2017). [A note on recent criticisms to Birnbaum's theorem.] (https://arxiv.org/abs/1711.08093)
+* Peña, V. & Berger, J. O. (2017). [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
 * Peña, V. & Berger, J. O. (2017). [Constrained empirical Bayes priors on regression coefficients.](https://arxiv.org/abs/1711.08072) 
 * Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2017). [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://arxiv.org/abs/1710.09700) *Submitted*.
 * Barrientos, A. F. & Peña, V. (2017). [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *Submitted*.
