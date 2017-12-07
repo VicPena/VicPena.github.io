@@ -14,7 +14,7 @@ My email address is ``vp58@duke.edu``.
 * Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
 
 # Talks & Posters
-* [Default and informative priors for 2-level designs.] (http://VicPena.github.io/VictorPenaOBayes.pdf) @ OBayes 2017, Austin. 
+* [Default and informative priors for 2-level designs.](http://VicPena.github.io/VictorPenaOBayes.pdf) @ OBayes 2017, Austin. 
 * [Bayesian optimization with shape constraints](http://VicPena.github.io/BayesOptUPF.pdf) @ UPF Internal Statistics Seminar, Jan 2017.
 * [In defense of the likelihood principle](http://VicPena.github.io/isba2016.pdf) @ ISBA 2016.
 * [Empirical Bayes model uncertainty: introduction and a new prior](http://VicPena.github.io/isbis2016.pdf) @ ISBIS 2016.
