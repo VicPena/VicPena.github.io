@@ -13,7 +13,7 @@ My email address is ``vp58@duke.edu``.
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
 * Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
 
-# Talks & Posters
+# Talks & posters
 * [Default and informative priors for 2-level designs.](http://VicPena.github.io/VictorPenaOBayes.pdf) @ OBayes 2017, Austin. 
 * [Bayesian optimization with shape constraints](http://VicPena.github.io/BayesOptUPF.pdf) @ UPF Internal Statistics Seminar, Jan 2017.
 * [In defense of the likelihood principle](http://VicPena.github.io/isba2016.pdf) @ ISBA 2016.
@@ -26,7 +26,7 @@ My email address is ``vp58@duke.edu``.
   * STA210: Regression Analysis (Fall 2014).
 
 * Instructor / Section Leader
-  * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017). 
+  * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017, 2018). 
   * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015). I wrote my own set of [lecture notes](http://www2.stat.duke.edu/~vp58/sta111), which you're welcome to use (at your own risk).
 
 # Some active projects
