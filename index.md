@@ -1,7 +1,5 @@
 # About me
-I'm a 5th year PhD candidate in [Statistical Science](http://stat.duke.edu) at [Duke](http://duke.edu). I'm doing research on model uncertainty, Bayesian robustness, and foundations of statistical inference under the supervision of [Jim Berger](http://stat.duke.edu/~berger). Before that, I got a BSc in Statistics (2011) and an MSc in Statistics and Operations Research (2013), both from [Universitat Politècnica de Catalunya](http://upc.edu). I did my Master's thesis at the Biostatistics and Bioinformatics Unit of IRB Barcelona, where I worked on experimental design for RNA-seq studies with [David Rossell](https://sites.google.com/site/rosselldavid/). If you *really* want to see a picture of me, you can [click here](http://VicPena.github.io/mugshot.png).
-
-My email address is ``vp58@duke.edu``. 
+I'm an assistant professor in statistics at [Zicklin](https://zicklin.baruch.cuny.edu/) ([Baruch College](http://www.baruch.cuny.edu/), [CUNY](http://www2.cuny.edu/)). I got a PhD. in  [Statistical Science](http://stat.duke.edu) at [Duke](http://duke.edu) under the supervision of [Jim Berger](http://stat.duke.edu/~berger). Most of the research I've done so far is related to Bayesian hypothesis testing and model selection, but I'm also interested in other topics, such as design of experiments. If you *really* want to see a picture of me, you can [click here](http://VicPena.github.io/mugshot.png).
 
 # Publications & preprints
 * Peña, V. & Berger, J. O. (2017). [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
