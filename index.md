@@ -20,8 +20,8 @@ I'm an assistant professor in statistics at [Zicklin](https://zicklin.baruch.cun
 # Teaching
 
 * At Baruch
- * STA2000: Business Statistics 
- * STA9750: Statistical programming
+  * STA2000: Business Statistics.
+  * STA9750: Statistical Programming.
 
 * At Duke
   * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017, 2018). 
