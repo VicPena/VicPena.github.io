@@ -18,12 +18,12 @@ I'm an assistant professor in statistics at [Zicklin](https://zicklin.baruch.cun
 * [Empirical Bayes model uncertainty: introduction and a new prior](http://VicPena.github.io/isbis2016.pdf) @ ISBIS 2016.
 
 # Teaching
-* TA
-  * STA521: [Modern Regression & Predictive Modelling](http://www2.stat.duke.edu/courses/Spring17/sta521/) (Spring 2017).
-  * STA340/623: Decision Analysis (Fall 2017, 2016, 2015).
-  * STA210: Regression Analysis (Fall 2014).
 
-* Instructor / Section Leader
+* At Baruch
+ * STA2000: Business Statistics 
+ * STA9750: Statistical programming
+
+* At Duke
   * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017, 2018). 
   * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015). I wrote my own set of [lecture notes](http://www2.stat.duke.edu/~vp58/sta111), which you're welcome to use (at your own risk).
 
