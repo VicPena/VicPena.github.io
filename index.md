@@ -1,6 +1,8 @@
 # About me
 I'm an assistant professor in statistics at [Baruch College](http://www.baruch.cuny.edu/) ([Zicklin](https://zicklin.baruch.cuny.edu/), [CUNY](http://www2.cuny.edu/)). I got a PhD in  [Statistical Science](http://stat.duke.edu) at [Duke](http://duke.edu) under the supervision of [Jim Berger](http://stat.duke.edu/~berger). Most of the research I've done is related to Bayesian hypothesis testing and model selection, but I'm also interested in other things, such as design of experiments or foundations. If you *really* want to see a picture of me, you can [click here](http://VicPena.github.io/mugshot.png).
 
+My email address is ``victor.pena@baruch.cuny.edu``
+
 # Publications & preprints
 * Peña, V. & Berger, J. O. (2017). [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
 * Peña, V. & Berger, J. O. (2017). [Constrained empirical Bayes priors on regression coefficients.](https://arxiv.org/abs/1711.08072) 
