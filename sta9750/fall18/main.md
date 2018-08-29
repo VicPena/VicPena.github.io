@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # STA/OPR 9750, Fall 2018
 
 ## Basic information
