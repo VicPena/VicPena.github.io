@@ -12,4 +12,4 @@
 * Lecture I: Reading in data and basic summaries, plots
   - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture1v2.pdf), [Pollution.prn](http://vicpena.github.io/sta9750/fall18/Pollution.prn), [Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
 * Lecture II: Confindence intervals, hypothesis tests, etc.
-  - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture2v2.pdf),  [Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
+  - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture2v2.pdf),  [Survey.xlsx](http://vicpena.github.io/sta9750/fall18/survey.xls), [Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
