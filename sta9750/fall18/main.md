@@ -13,5 +13,5 @@ layout: default
 ## Handouts & datasets
 
 * Lecture I: Reading in data and basic summaries, plots
-  - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture1v2.pdf), [Pollution.prn](http://vicpena.github.io/sta9750/fall18/Pollution.prn),[Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
+  - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture1v2.pdf), [Pollution.prn](http://vicpena.github.io/sta9750/fall18/Pollution.prn), [Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
 * Lecture II: More data-analysis, confindence intervals, hypothesis tests, etc.
