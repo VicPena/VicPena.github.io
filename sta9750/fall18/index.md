@@ -2,8 +2,9 @@
 
 ## Basic information
 * Classes: MoWe 550pm-705pm, 12-145 VC
-* Instructor: Víctor Peña
+* Instructor: [Víctor Peña](http://vicpena.github.io/)
 * Office hours: MoWe noon-2pm, 11-273 VC
+* email: ``victor.pena@baruch.cuny.edu``
 * [Syllabus](http://vicpena.github.io/9750fall18.pdf)
 
 ## Handouts & datasets
