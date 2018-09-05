@@ -13,3 +13,5 @@
   - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture1v2.pdf), [Pollution.prn](http://vicpena.github.io/sta9750/fall18/Pollution.prn), [Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
 * Lecture II: Confindence intervals, hypothesis tests, etc.
   - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture2v2.pdf),  [Survey.xlsx](http://vicpena.github.io/sta9750/fall18/survey.xlsx), [Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
+* Lecture III: Non-parametric tests, contingency tables
+  -[Handout], [depression.csv](http://vicpena.github.io/sta9750/fall18/depression.csv),[tat.csv](http://vicpena.github.io/sta9750/fall18/tat.csv),[xray.csv](http://vicpena.github.io/sta9750/fall18/xray.csv)
