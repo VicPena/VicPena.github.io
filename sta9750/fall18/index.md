@@ -19,4 +19,4 @@
 ## Assignments
 
 * [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/hw1.pdf)
-  -[pharma.csv](http://vicpena.github.io/sta9750/fall18/pharma.csv), [school.csv](http://vicpena.github.io/sta9750/fall18/school.csv), [drill.csv](http://vicpena.github.io/sta9750/fall18/drill.csv), [scores2.csv](http://vicpena.github.io/sta9750/fall18/scores2.csv].
+  - [pharma.csv](http://vicpena.github.io/sta9750/fall18/pharma.csv), [school.csv](http://vicpena.github.io/sta9750/fall18/school.csv), [drill.csv](http://vicpena.github.io/sta9750/fall18/drill.csv), [scores2.csv](http://vicpena.github.io/sta9750/fall18/scores2.csv].
