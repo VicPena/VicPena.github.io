@@ -15,3 +15,8 @@
   - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture2v2.pdf),  [Survey.xlsx](http://vicpena.github.io/sta9750/fall18/survey.xlsx), [Pollution.xls](http://vicpena.github.io/sta9750/fall18/Pollution.xls).
 * Lecture III: Non-parametric tests, contingency tables
   - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture3.pdf), [depression.csv](http://vicpena.github.io/sta9750/fall18/depression.csv), [tat.csv](http://vicpena.github.io/sta9750/fall18/tat.csv), [xray.csv](http://vicpena.github.io/sta9750/fall18/xray.csv), [zinc_conc.txt](http://vicpena.github.io/sta9750/fall18/zinc_conc.txt), [scores.csv](http://vicpena.github.io/sta9750/fall18/scores.csv).
+
+## Assignments
+
+* [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/hw1.pdf)
+  -[pharma.csv](http://vicpena.github.io/sta9750/fall18/pharma.csv), [school.csv](http://vicpena.github.io/sta9750/fall18/school.csv), [drill.csv](http://vicpena.github.io/sta9750/fall18/drill.csv), [scores2.csv](http://vicpena.github.io/sta9750/fall18/scores2.csv].
