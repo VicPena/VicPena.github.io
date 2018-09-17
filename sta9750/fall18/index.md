@@ -17,6 +17,8 @@
   - [Handout](http://vicpena.github.io/sta9750/fall18/STA9750Lecture3.pdf), [depression.csv](http://vicpena.github.io/sta9750/fall18/depression.csv), [tat.csv](http://vicpena.github.io/sta9750/fall18/tat.csv), [xray.csv](http://vicpena.github.io/sta9750/fall18/xray.csv), [zinc_conc.txt](http://vicpena.github.io/sta9750/fall18/zinc_conc.txt), [scores.csv](http://vicpena.github.io/sta9750/fall18/scores.csv).
 * Lecture IV: Confidence intervals & Hypothesis testing
   - [Slides](http://vicpena.github.io/sta9750/fall18/Lecture4.pdf).
+* Lecture V: Correlation & simple linear regression
+  - [Slides](http://vicpena.github.io/sta9750/fall18/Lecture5.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
 
 ## Assignments
 
