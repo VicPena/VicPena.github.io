@@ -19,9 +19,11 @@
   - [Slides](http://vicpena.github.io/sta9750/fall18/Lecture4.pdf).
 * Lecture V: Correlation & simple linear regression
   - [Slides](http://vicpena.github.io/sta9750/fall18/Lecture5.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
-* Lecture VI: More simple linear regression, intro to multiple linear regression
+* Lecture VI: More simple linear regression
   - [Handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
-
+* Lecture VII: Diagnostics, influential observations, intro to multiple linear regression
+  - [Handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [Animals.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
+  
 ## Assignments
 
 * [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/HW1.pdf)
