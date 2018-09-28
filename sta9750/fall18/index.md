@@ -22,7 +22,7 @@
 * Lecture VI: More simple linear regression
   - [Handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
 * Lecture VII: Diagnostics, influential observations, intro to multiple linear regression
-  - [Handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [Animals.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
+  - [Handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [Slides](http://vicpena.github.io/sta9750/fall18/Lecture6.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [Animals.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
   
 ## Assignments
 
