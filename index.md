@@ -27,7 +27,7 @@ My email address is ``victor.pena@baruch.cuny.edu``.
 
 * At Duke
   * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017, 2018). 
-  * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015). I wrote my own set of [lecture notes](http://www2.stat.duke.edu/~vp58/sta111), which you're welcome to use (at your own risk).
+  * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015).
 
 # Some active projects
 * Towards more informative priors on model spaces.
