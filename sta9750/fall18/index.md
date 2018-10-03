@@ -26,7 +26,7 @@
 * Lecture VIII: Transformations
   - [code](http://vicpena.github.io/sta9750/fall18/animalcode.sas), [how to interpret log transformations](https://www.cscu.cornell.edu/news/statnews/stnews83.pdf).
 * Lecture IX: Transformations, influential observations in multiple linear regression, categorical predictors
-  - [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt).
+  - [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt),[iqcode.sas](http://vicpena.github.io/sta9750/fall18/iqcode.sas).
   
 ## Assignments
 
