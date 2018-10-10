@@ -28,7 +28,8 @@
 * Lecture IX: Transformations, influential observations in multiple linear regression
   - [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [code](http://vicpena.github.io/sta9750/fall18/iqcode.sas).
 * Lecture X: Categorical predictors
-  - [evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv)
+  - [evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv),[evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas), [scores_code.sas](http://vicpena.github.io/sta9750/fall18/scores_code.sas).
+
 ## Assignments
 
 * [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/HW1.pdf)
