@@ -29,3 +29,8 @@ RUN;
 PROC SGPLOT data=evals;
 	hbar rank / group = gender;
 RUN;
+
+PROC GLM data=evals;
+	class gender;
+	model score= bty_avg*gender / solution;
+RUN;
