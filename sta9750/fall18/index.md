@@ -29,6 +29,8 @@
   - [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [code](http://vicpena.github.io/sta9750/fall18/iqcode.sas).
 * Lecture X: Categorical predictors
   - [evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv),[evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas), [scores_code.sas](http://vicpena.github.io/sta9750/fall18/scores_code.sas).
+* Lecture XI: Model building, categorical predictors
+  - [evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas),[brain_code.sas](http://vicpena.github.io/sta9750/fall18/brain_code.sas)
 
 ## Assignments
 
