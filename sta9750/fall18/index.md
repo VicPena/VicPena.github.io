@@ -40,8 +40,8 @@
  ## Resources
  
  * Basic statistics
-  - [Khan Academy - Probability and Stats](https://www.khanacademy.org/math/statistics-probability)
-  - [onlinestatbook](http://onlinestatbook.com/)
+   - [Khan Academy - Probability and Stats](https://www.khanacademy.org/math/statistics-probability)
+   - [onlinestatbook](http://onlinestatbook.com/)
 * Regression
   - [STA500 @ Penn State](https://onlinecourses.science.psu.edu/stat501/node/2/)
   - [Practical regression and ANOVA with R, by Faraway](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
