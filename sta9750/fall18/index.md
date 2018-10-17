@@ -31,6 +31,8 @@
   - [evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv),[evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas), [scores_code.sas](http://vicpena.github.io/sta9750/fall18/scores_code.sas).
 * Lecture XI: Model building, categorical predictors
   - [evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas),[brain_code.sas](http://vicpena.github.io/sta9750/fall18/brain_code.sas)
+* Lecture XII: Model building, multiple comparisons
+  - [building.pdf](http://vicpena.github.io/sta9750/fall18/building.pdf)
 
 ## Assignments
 
