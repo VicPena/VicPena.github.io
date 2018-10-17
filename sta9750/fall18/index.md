@@ -59,7 +59,7 @@
   - [STA482 @ Penn State](https://onlinecourses.science.psu.edu/stat482/)
 * R
   - [Applied stats with R, by David Dalpiaz](https://daviddalpiaz.github.io/appliedstats/)
-  - [R for Data Science, by Hadley Wikcham](http://r4ds.had.co.nz/)
+  - [R for Data Science, by Hadley Wickham](http://r4ds.had.co.nz/)
 * Other 
   - [An Introduction to Statistical Learning, by James, Witten, Hastie, and Tibshirani](http://www-bcf.usc.edu/~gareth/ISL/)
   - [Newsletter of the Cornell Statistical Consulting Unit](https://www.cscu.cornell.edu/news/archive.php)
