@@ -28,9 +28,9 @@
 * Lecture IX: Transformations, influential observations in multiple linear regression
   - [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [code](http://vicpena.github.io/sta9750/fall18/iqcode.sas).
 * Lecture X: Categorical predictors
-  - [evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv),[evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas), [scores_code.sas](http://vicpena.github.io/sta9750/fall18/scores_code.sas).
+  - [STA500 @ Penn State - Categorical Predictors](https://onlinecourses.science.psu.edu/stat501/node/301/),[evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv),[evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas), [scores_code.sas](http://vicpena.github.io/sta9750/fall18/scores_code.sas).
 * Lecture XI: Model building, categorical predictors
-  - [evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas),[brain_code.sas](http://vicpena.github.io/sta9750/fall18/brain_code.sas)
+  - [building.pdf](http://vicpena.github.io/sta9750/fall18/building.pdf), [evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas),[brain_code.sas](http://vicpena.github.io/sta9750/fall18/brain_code.sas)
 * Lecture XII: Model building, multiple comparisons
   - [building.pdf](http://vicpena.github.io/sta9750/fall18/building.pdf)
 
