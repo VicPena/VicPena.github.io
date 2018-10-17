@@ -47,6 +47,7 @@
   - [Khan Academy - Probability and Stats](https://www.khanacademy.org/math/statistics-probability)
   - [onlinestatbook](http://onlinestatbook.com/)
   - [Shafer and Zhang](https://stats.libretexts.org/Textbook_Maps/Introductory_Statistics/Book%3A_Introductory_Statistics_(Shafer_and_Zhang))
+  - [Seeing Theory @ Brown](https://seeing-theory.brown.edu/index.html#firstPage)
 * Regression
   - [STA501 @ Penn State](https://onlinecourses.science.psu.edu/stat501/node/2/)
   - [Practical regression and ANOVA with R, by Faraway](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
