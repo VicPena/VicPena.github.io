@@ -40,7 +40,6 @@
  ## Resources
  
  * Basic statistics
-  - [Shafer and Zhang](https://stats.libretexts.org/Textbook_Maps/Introductory_Statistics/Book%3A_Introductory_Statistics_(Shafer_and_Zhang))
   - [Khan Academy - Probability and Stats](https://www.khanacademy.org/math/statistics-probability)
   - [onlinestatbook](http://onlinestatbook.com/)
 * Regression
