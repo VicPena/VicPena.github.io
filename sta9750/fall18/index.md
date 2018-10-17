@@ -36,3 +36,24 @@
 
 * [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/HW1.pdf)
   - [pharma.csv](http://vicpena.github.io/sta9750/fall18/pharma.csv), [school.csv](http://vicpena.github.io/sta9750/fall18/school.csv), [drill.csv](http://vicpena.github.io/sta9750/fall18/drill.csv), [scores2.csv](http://vicpena.github.io/sta9750/fall18/scores2.csv).
+  
+ ## Resources
+ 
+ * Basic statistics
+  - [Shafer and Zhang](https://stats.libretexts.org/Textbook_Maps/Introductory_Statistics/Book%3A_Introductory_Statistics_(Shafer_and_Zhang))
+  - [Khan Academy - Probability and Stats](https://www.khanacademy.org/math/statistics-probability)
+  - [onlinestatbook](http://onlinestatbook.com/)
+* Regression
+  - [STA500 @ Penn State](https://onlinecourses.science.psu.edu/stat501/node/2/)
+  - [Practical regression and ANOVA with R, by Faraway](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
+* SAS
+  - [Getting started with SAS @ UT Austin](https://stat.utexas.edu/images/SSC/documents/SoftwareTutorials/SAS_GettingStarted.pdf)
+  - [Statistical inference with SAS @ UT Austin](https://stat.utexas.edu/images/SSC/documents/SoftwareTutorials/SAS_InferentialStats.pdf)
+  - [STA480 @ Penn State](https://onlinecourses.science.psu.edu/stat480/)
+  - [STA481 @ Penn State](https://onlinecourses.science.psu.edu/stat481/)
+  - [STA482 @ Penn State](https://onlinecourses.science.psu.edu/stat482/)
+* R
+  - [Applied stats with R, by David Dalpiaz](https://daviddalpiaz.github.io/appliedstats/)
+  - [R for Data Science, by Hadley Wikcham](http://r4ds.had.co.nz/)
+* Other 
+  - [An Introduction to Statistical Learning, by James, Witten, Hastie, and Tibshirani](http://www-bcf.usc.edu/~gareth/ISL/)
