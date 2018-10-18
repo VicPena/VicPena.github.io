@@ -20,19 +20,19 @@
 * Lecture V: Correlation & simple linear regression
   - [Slides](http://vicpena.github.io/sta9750/fall18/Lecture5.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
 * Lecture VI: More simple linear regression
-  - [Handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
+  - [Regression handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv).
 * Lecture VII: Diagnostics, influential observations, intro to multiple linear regression
-  - [Handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [Slides](http://vicpena.github.io/sta9750/fall18/Lecture6.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [Animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv).
+  - [Regression handout](http://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [Slides](http://vicpena.github.io/sta9750/fall18/Lecture6.pdf), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [Animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv).
 * Lecture VIII: Transformations
-  - [code](http://vicpena.github.io/sta9750/fall18/animalcode.sas), [how to interpret log transformations](https://www.cscu.cornell.edu/news/statnews/stnews83.pdf).
+  - [More regression handout](http://vicpena.github.io/sta9750/fall18/moreregSAS.pdf), [code](http://vicpena.github.io/sta9750/fall18/animalcode.sas), [how to interpret log transformations](https://www.cscu.cornell.edu/news/statnews/stnews83.pdf).
 * Lecture IX: Transformations, influential observations in multiple linear regression
-  - [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [code](http://vicpena.github.io/sta9750/fall18/iqcode.sas).
+  - [More regression handout](http://vicpena.github.io/sta9750/fall18/moreregSAS.pdf),[iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [code](http://vicpena.github.io/sta9750/fall18/iqcode.sas).
 * Lecture X: Categorical predictors
-  - [STA500 @ Penn State - Categorical Predictors](https://onlinecourses.science.psu.edu/stat501/node/301/),[evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv),[evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas), [scores_code.sas](http://vicpena.github.io/sta9750/fall18/scores_code.sas).
+  - [STA500 @ Penn State - Categorical Predictors](https://onlinecourses.science.psu.edu/stat501/node/301/),[evals_sas.csv](http://vicpena.github.io/sta9750/fall18/evals_sas.csv),[evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas), [scores_code.sas](http://vicpena.github.io/sta9750/fall18/scores_code.sas), [More regression handout](http://vicpena.github.io/sta9750/fall18/moreregSAS.pdf).
 * Lecture XI: Model building, categorical predictors
-  - [building.pdf](http://vicpena.github.io/sta9750/fall18/building.pdf), [evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas),[brain_code.sas](http://vicpena.github.io/sta9750/fall18/brain_code.sas)
+  - [Model building slides](http://vicpena.github.io/sta9750/fall18/building.pdf), [evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas),[brain_code.sas](http://vicpena.github.io/sta9750/fall18/brain_code.sas), [More regression handout](http://vicpena.github.io/sta9750/fall18/moreregSAS.pdf),
 * Lecture XII: Model building, multiple comparisons
-  - [building.pdf](http://vicpena.github.io/sta9750/fall18/building.pdf)
+  - [Model building slides](http://vicpena.github.io/sta9750/fall18/building.pdf), [More regression handout](http://vicpena.github.io/sta9750/fall18/moreregSAS.pdf).
 
 ## Assignments
 
