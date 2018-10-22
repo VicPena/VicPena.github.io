@@ -34,7 +34,7 @@
 * Lecture XII: Model building, multiple comparisons
   - [Model building slides](http://vicpena.github.io/sta9750/fall18/building.pdf), [More regression handout](http://vicpena.github.io/sta9750/fall18/moreregSAS.pdf).
 * Lecture XIII: Multiple comparisons, collinearity
-  -[bloodpressure.txt](http://vicpena.github.io/sta9750/fall18/bloodpressure.txt), [hsb2.xlsx](http://vicpena.github.io/sta9750/fall18/hsb2.xlsx)
+  - [bloodpressure.txt](http://vicpena.github.io/sta9750/fall18/bloodpressure.txt), [hsb2.xlsx](http://vicpena.github.io/sta9750/fall18/hsb2.xlsx)
 
 ## Assignments
 
