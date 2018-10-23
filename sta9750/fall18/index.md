@@ -33,8 +33,8 @@
   - [Model building slides](http://vicpena.github.io/sta9750/fall18/building.pdf), [evals_code.sas](http://vicpena.github.io/sta9750/fall18/evals_code.sas),[brain_code.sas](http://vicpena.github.io/sta9750/fall18/brain_code.sas), [More regression handout](http://VicPena.github.io/sta9750/fall18/moreregSAS.pdf).
 * Lecture XII: Model building, multiple comparisons
   - [Model building slides](http://vicpena.github.io/sta9750/fall18/building.pdf), [More regression handout](http://vicpena.github.io/sta9750/fall18/moreregSAS.pdf).
-* Lecture XIII: Multiple comparisons, collinearity
-  - [bloodpressure.txt](http://vicpena.github.io/sta9750/fall18/bloodpressure.txt), [hsb2.xlsx](http://vicpena.github.io/sta9750/fall18/hsb2.xlsx)
+* Lecture XIII: Multiple comparisons
+  - [bloodpressure.txt](http://vicpena.github.io/sta9750/fall18/bloodpressure.txt), [hsb2.xlsx](http://vicpena.github.io/sta9750/fall18/hsb2.xlsx), [slides](http://vicpena.github.io/sta9750/fall18/comparisons.pdf)
 
 ## Assignments
 
