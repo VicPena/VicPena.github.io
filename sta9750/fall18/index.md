@@ -43,7 +43,7 @@
 * [HW2: Due 10/25](http://vicpena.github.io/sta9750/fall18/HW2.pdf)
   - [hw2data.zip](http://VicPena.github.io/sta9750/fall18/hw2data.zip)
 * Midterm data
-  - [salary.csv](http://VicPena.github.io/sta9750/fall18/salary.csv), [treats.csv](http://VicPena.github.io/sta9750/fall18/treats.csv), [midterms.csv](http://VicPena.github.io/sta9750/fall18/midterms.csv), [Pollution.xls](http://VicPena.github.io/sta9750/fall18/Pollution.xlsx)
+  - [salary.csv](http://VicPena.github.io/sta9750/fall18/salary.csv), [treats.csv](http://VicPena.github.io/sta9750/fall18/treats.csv), [midterms.csv](http://VicPena.github.io/sta9750/fall18/midterms.csv), [Pollution.xls](http://VicPena.github.io/sta9750/fall18/Pollution.xls)
   
 ## Resources
 
