@@ -38,7 +38,9 @@
 * Lecture XIV: Multicollinearity
   - [Slides](http://vicpena.github.io/sta9750/fall18/multicollinearity.pdf), [LASSO with SAS video](https://video.sas.com/detail/video/3646879895001/lasso-selection-with-proc-glmselect),[code](http://vicpena.github.io/sta9750/fall18/bpcode.sas).
 * Lecture XV: Intro to R
-  - [R](https://www.r-project.org/), [Rstudio](https://www.rstudio.com/), [Code](http://vicpena.github.io/sta9750/fall18/introtoR.R)
+  - [R](https://www.r-project.org/), [Rstudio](https://www.rstudio.com/), [code](http://vicpena.github.io/sta9750/fall18/introtoR.R)
+* Lecture XVI: HW1 with R
+  - [code](http://vicpena.github.io/sta9750/fall18/hw1.R)
 
 ## Assignments
 
