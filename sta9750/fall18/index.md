@@ -72,6 +72,7 @@
 * R
   - [Applied stats with R, by David Dalpiaz](https://daviddalpiaz.github.io/appliedstats/)
   - [R for Data Science, by Hadley Wickham](http://r4ds.had.co.nz/)
+  - [Quick-R](https://www.statmethods.net/index.html)
 * Other 
   - [An Introduction to Statistical Learning, by James, Witten, Hastie, and Tibshirani](http://www-bcf.usc.edu/~gareth/ISL/)
   - [Newsletter of the Cornell Statistical Consulting Unit](https://www.cscu.cornell.edu/news/archive.php)
