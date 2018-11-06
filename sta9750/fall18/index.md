@@ -41,7 +41,7 @@
   - [R](https://www.r-project.org/), [Rstudio](https://www.rstudio.com/), [code](http://vicpena.github.io/sta9750/fall18/introtoR.R)
 * Lecture XVI: HW1 with R
   - [code](http://vicpena.github.io/sta9750/fall18/hw1.R)
-* Lecture XVI: Lists, linear regression with R
+* Lecture XVII: Lists, linear regression with R
   - [liststuff.R](http://vicpena.github.io/sta9750/fall18/liststuff.R), [midterms.R](http://vicpena.github.io/sta9750/fall18/midterms.R), [midterms.csv](http://vicpena.github.io/sta9750/fall18/midterms.csv)
 
 ## Assignments
