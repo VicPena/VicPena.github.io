@@ -43,6 +43,8 @@
   - [code](http://vicpena.github.io/sta9750/fall18/hw1.R)
 * Lecture XVII: Lists, linear regression with R
   - [liststuff.R](http://vicpena.github.io/sta9750/fall18/liststuff.R), [midterms.R](http://vicpena.github.io/sta9750/fall18/midterms.R), [midterms.csv](http://vicpena.github.io/sta9750/fall18/midterms.csv)
+* Lecture XVIII: Linear regression with R 
+  - [animals.pdf](http://vicpena.github.io/sta9750/fall18/animals.pdf), [Animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv).
 
 ## Assignments
 
