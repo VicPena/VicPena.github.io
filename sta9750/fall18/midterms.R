@@ -47,10 +47,25 @@ newseats = newpreds*(-435)
 
 # can plot the non-linear relationship (in the original-scale)
 # and how the intervals look like
-plot(x=midterms$approval, y=midterms$change, col=coldot, pch=16,ylim=c(-100,10))
+plot(x=midterms$approval, y=midterms$change, col=coldot, pch=16,ylim=c(-100,10),xlab="approval rating",ylab="change in # seats (house of rep.)")
 points(x=appr$approval,y=newseats[,1], type='l')
 points(x=appr$approval,y=newseats[,2], type='l')
 points(x=appr$approval,y=newseats[,3], type='l')
 abline(v=41.9) # current Trump's approval rating
 # the prediction is quite wide...
+
+
+# extracting residuals from models
+cooks = cooks.distance(modsqrt)
+levg = hatvalues(modsqrt)
+resstd = rstandard(modsqrt)
+res = residuals(modsqrt)
+
+# can plot cooks distance vs observation number
+plot(cooks)
+
+# we can identify the observations that exceed some threshold:
+midterms[cooks>0.10,]
+
+
 
