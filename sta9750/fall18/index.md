@@ -45,7 +45,9 @@
   - [liststuff.R](http://vicpena.github.io/sta9750/fall18/liststuff.R), [midterms.R](http://vicpena.github.io/sta9750/fall18/midterms.R), [midterms.csv](http://vicpena.github.io/sta9750/fall18/midterms.csv)
 * Lecture XVIII: Linear regression with R 
   - [midterms.R](http://vicpena.github.io/sta9750/fall18/midterms.R), [animals.pdf](http://vicpena.github.io/sta9750/fall18/animals.pdf), [Animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv).
-
+* Lecture XIX: More linear regression with R
+* Lecture XX: Categorical predictors, model selection, effect plots
+  - [Nov14.R](http://vicpena.github.io/sta9750/fall18/Nov14.R)
 ## Assignments
 
 * [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/HW1.pdf)
