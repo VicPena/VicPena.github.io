@@ -48,7 +48,8 @@
 * Lecture XIX: More linear regression with R
 * Lecture XX: Categorical predictors, model selection, effect plots
   - [Nov14.R](http://vicpena.github.io/sta9750/fall18/Nov14.R)
-  
+* Lecture XXI: Variable selection, search strategies, ANOVA, Tukey HSD, predictions
+  - [Nov19.R](http://vicpena.github.io/sta9750/fall18/Nov19.R)  
  
 ## Assignments
 
