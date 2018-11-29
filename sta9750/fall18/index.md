@@ -50,7 +50,11 @@
   - [Nov14.R](http://vicpena.github.io/sta9750/fall18/Nov14.R)
 * Lecture XXI: Variable selection, search strategies, ANOVA, Tukey HSD, predictions
   - [Nov19.R](http://vicpena.github.io/sta9750/fall18/Nov19.R)  
- 
+* Lecture XXII: Introduction to R markdown
+  - [Course on Datacamp](https://www.datacamp.com/courses/reporting-with-r-markdown)
+* Lecture XXIII: Introduction to `ggplot2`
+  - [R markdown](http://vicpena.github.io/sta9750/fall18/Nov28.Rmd), [html output](http://vicpena.github.io/sta9750/fall18/Nov28.html)
+  
 ## Assignments
 
 * [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/HW1.pdf)
