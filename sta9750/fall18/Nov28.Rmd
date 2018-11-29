@@ -1,5 +1,6 @@
 ---
 title: 'Introduction to plotting with `ggplot2` '
+author: 'Víctor Peña'
 output:
   html_document:
     toc: true
@@ -24,7 +25,7 @@ Today (and most likely next time) we'll learn a little bit about `ggplot2`. Ther
 
 * [r-statistics.co](http://r-statistics.co/ggplot2-cheatsheet.html)
 
-We will use the `diamonds` dataset in `library(ggplot2)`, so we load the library and load the dataset.
+We will use the `diamonds` dataset in `library(ggplot2)`, so we load the library and the dataset.
 
 ```{r}
 library(ggplot2)
@@ -45,7 +46,7 @@ You can get more information on what the variables are by running the `R` comman
 
 # Basic plots with `qplot`
 
-We have seen how to create some basic plots with `qplot` already. Now it's time to summarize what we learned and go a little deeper. The good thing about qplot is that it has good defaults for a decent amount of situations.
+We have seen how to create some basic plots with `qplot` already. Now it's time to summarize what we learned and go a little deeper. The good thing about `qplot` is that it has good defaults for a decent amount of situations.
 
 ## Univariate plots
 
@@ -66,34 +67,34 @@ Creating a bar plot with `qplot` is very easy:
 qplot(cut, data=diamonds)
 ```
 
-In `ggplot2`, plots can be saved as variables. This is a useful feature because, in `ggplot2`, we create visualizations *sequentially*, by adding layers to a plot. It also makes the code cleaner. Let's save the plot in a variable and add stuff to it.
+In `ggplot2`, plots can be saved as variables. This is a useful feature because, in `ggplot2`, we create visualizations *sequentially* by adding layers to a plot. It also makes the code cleaner. Let's save the plot in a variable and add stuff to it.
 
 ```{r}
 barcut = qplot(cut, data=diamonds)
 ```
 
-Sometimes I feel like the default fontsize of the plots is too small. You can update the plot as follows
+Sometimes I feel like the default fontsize of the plots is too small. You can change the font size as follows
 
 ```{r}
 barcut = barcut+theme(text=element_text(size=15))
 barcut
 ``` 
 
-Some other things that are easy to change are the color of the bars
+You can change the color of the bars:
 
 ```{r}
 barcut = barcut+geom_bar(fill='steelblue')
 barcut
 ```
 
-And you can flip the coordinates as follows
+And you can flip the coordinates
 
 ```{r}
 barcut = barcut+coord_flip()
 barcut
 ```
 
-We can add a title, too!
+You can add a title, too!
 
 ```{r}
 barcut = barcut+ggtitle("Quality of cut")
@@ -106,7 +107,7 @@ If you want to center the title:
 barcut + theme(plot.title = element_text(hjust = 0.5))
 ```
 
-As you saw, since we were saving the changes as we produced them, all the previous changes to the plot were saved. As you might imagine, an equivalent code to produce the plot is
+As you saw, since we were saving the changes as we produced them, all the previous changes to the plot were saved. As you might imagine, an equivalent chunk of code to produce the plot is
 
 ```{r, eval=FALSE}
 qplot(cut, data=diamonds)+theme(text=element_text(size=15))+geom_bar(fill='steelblue')+coord_flip()+ggtitle("Quality of cut")+ theme(plot.title = element_text(hjust = 0.5))
@@ -128,13 +129,13 @@ In `qplot`, the default plot for quantitative data looks like this
 qplot(price,data=diamonds)
 ```
 
-You can also make density plots
+You can also make density plots.
 
 ```{r}
 qplot(price, geom='density', data=diamonds) 
 ```
 
-We can change the color of the density plot as follows:
+You can change the color of the density plot as follows:
 
 ```{r}
 qplot(price, geom='density', data=diamonds) + geom_density(fill='steelblue')
@@ -221,7 +222,7 @@ qplot(price, facets = cut ~ ., data=diamonds)
 
 **Exercise** Does `price` depend on `cut`?
 
-**Solution** The distributions of `price` given `cut` don't look normal there is a long tail. We can do a `kruskal.test`:
+**Solution** The distributions of `price` given `cut` don't look normal (there is a long tail). We can do a `kruskal.test`:
 
 ```{r}
 kruskal.test(price~cut, data=diamonds)
@@ -238,21 +239,21 @@ Scatterplots are your best bet here.
 qplot(x=carat, y=price, data=diamonds)
 ```
 
-We can add some smoothed trend:
+You can add some smoothed trend:
 
 ```{r}
 qplot(x=carat, y=price, data=diamonds)+geom_smooth()
 ```
 
-We can fit some linear trend
+And you can fit some linear trend:
 
 ```{r}
 qplot(x=carat, y=price, data=diamonds)+geom_smooth(method='lm')
 ```
 
-**Exercise** Can we try to use transformations to make the linear fit better?
+**Exercise** Can we use transformations to make the linear fit better?
 
-**Solution** Yes, if we take logs of both variables, it'll look better. There are still some patches which are probably due to the existence of some *hidden* variable(s). The variance doesn't seem to be constant.
+**Solution** Yes, if you take logs of both variables, it'll look better. There are still some patches which are probably due to the existence of some *hidden* variable(s). The variance doesn't seem to be constant.
 
 ```{r}
 qplot(x=log(carat), y=log(price), data=diamonds)+geom_smooth(method='lm')
