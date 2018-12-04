@@ -54,6 +54,8 @@
   - [Course on Datacamp](https://www.datacamp.com/courses/reporting-with-r-markdown)
 * Lecture XXIII: Introduction to `ggplot2`
   - [R markdown](http://vicpena.github.io/sta9750/fall18/Nov28.Rmd), [html output](http://vicpena.github.io/sta9750/fall18/Nov28.html)
+* Lecture XXIV: More `ggplot2` and introduction to `dplyr`
+  - [R markdown](http://vicpena.github.io/sta9750/fall18/Dec3.Rmd), [html output](http://vicpena.github.io/sta9750/fall18/Dec3.html)
   
 ## Assignments
 
