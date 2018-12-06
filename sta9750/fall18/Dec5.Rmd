@@ -1,0 +1,187 @@
+---
+title: "More `dplyr`"
+author: 'Víctor Peña'
+output:
+  html_document:
+    toc: true
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(tidyr)
+```
+
+## Missing data with `dplyr` 
+
+In `R`, missing data are coded as `NA`. You can filter out missing data easily using `dplyr`. 
+
+We're going to use the dataset `speed_gender_height.csv`, which contained heights, genders, and maximum driving speeds for a sample of 1325 invididuals. The variable `speed` had some missing values and 0s, which corresponded to people who had never driven before. We can filter out people who never drove and people whose `value` of speed is missing as follows:
+
+```{r, eval = FALSE}
+speed = as_tibble(read.csv('./speed_gender_height.csv'))
+speed = speed %>% filter(!is.na(speed), speed > 0) %>% select(-X)
+```
+
+In general, we can omit rows that have missing values using `na.omit`:
+
+```{r, eval=FALSE}
+speed = speed %>% na.omit 
+```
+
+
+## Combining data sets
+
+In lecture, we learned about `left_join`, `right_join`, `inner_join`, and `full_join`. Our starting point is 2 datasets  `a` and `b`, which have a variable in common named `x`. We wish to *merge* the datasets by matching values of `x`. 
+
+* `left_join(a, b, by='x')`: Keep all the rows in `a`, find rows in dataset `b` that have the same values of `x` as rows in dataset `a`, and include the extra columns in `b` that don't appear in `a`. Don't include rows in `b` that have no matching value of `x` in `b`.
+
+* `right_join(a, b, by='x')`: Keep all the rows in `b`, find rows in dataset `a` that have the same values of `x` as rows in dataset `b`, and include the extra columns in `a` that don't appear in `b`. Don't include rows in `a` that have no matching value of `x` in `b`.
+
+* `inner_join(a, b, by='x')`: Merge by only keeping rows that have values of `x` that appear in **both** `a` and `b`.
+
+* `full_join(a, b, by='x')`: Keep all the rows in `a` and `b`, even if they don't have matching values in `x`.
+
+
+To make this concrete, let's work with a specific example. The `tibbles` below contain names of drinks:
+
+```{r}
+nonalcoholic = tibble(name=c("g&t","mimosa","rum and coke","calimocho","polar"), 
+                      mixer=c("tonic","orange juice", "coke", "coke","seltzer"))
+alcoholic = tibble(name=c("g&t","mimosa","rum and coke","calimocho","IPA","dark and stormy"), 
+                    spirit=c("gin","sparkling wine", "rum", "red wine","beer","rum"))
+```
+
+Let's try out what happens when we try the different `join`s on the `tibble`s:
+
+```{r}
+left_join(nonalcoholic, alcoholic, by='name') %>% select(name, spirit, mixer)
+```
+
+```{r}
+right_join(nonalcoholic, alcoholic, by='name') %>% select(name, spirit, mixer)
+```
+
+```{r}
+inner_join(nonalcoholic, alcoholic, by='name') %>% select(name, spirit, mixer)
+```
+
+```{r}
+full_join(nonalcoholic, alcoholic, by='name') %>% select(name, spirit, mixer)
+```
+
+We can also use `join`s for filtering. For example, `semi_join(a, b, by='x')` keeps all the rows in `a` that have a matching value of `x` in `b` (it doesn't create more columns with the information in `b`), and `anti_join(a, b, by='x')` keeps the rows in `a` that don't have a matching value of `x` in `b`:
+
+```{r}
+semi_join(nonalcoholic, alcoholic, by='name')
+```
+
+```{r}
+anti_join(nonalcoholic, alcoholic, by='name')
+```
+
+Suppose we get prices for the drinks:
+
+```{r}
+nonalcoholic = nonalcoholic %>% mutate(price=c(8, 6, 7, 5, 5))
+alcoholic = alcoholic  %>% mutate('$'=c(8, 6, 7, 5, 5, NA))
+```
+
+How can we join the new `tibbles` nicely?
+
+First, we can rename the price variable in `alcoholic`:
+
+```{r}
+alcoholic = alcoholic %>% rename(price='$')
+```
+
+And then, we can `full_join` the `tibbles` by their `name` and `price` (we want a double match):
+
+```{r}
+join = full_join(nonalcoholic, alcoholic, by=c('name','price'))
+join
+```
+
+If we want to reorder the columns so that the spirit comes first, followed by the mixer, we can use `select`:
+
+```{r}
+join = join %>% select(name, spirit, mixer, price)
+join
+```
+
+Now, suppose we got a new `tibble` with the extra components that were missing for `dark and stormy`
+
+```{r}
+ds = tibble(name='dark and stormy', spirit='ginger beer', price = 8)
+```
+
+How can we incorporate this new information?
+
+We can start by `full_join`ing
+
+```{r}
+full_join(join, ds, by='name')
+```
+
+This `join` has a few problems. We'd like to combine `price.x` and `price.y`. We can do that using the function `coalesce`, and then getting rid of `price.x` and `price.y`:
+
+```{r}
+full_join(join, ds, by='name') %>%  
+  mutate(price=coalesce(price.x,price.y)) %>% select(-price.x, -price.y)
+```
+
+This is mostly fine. If we want to combine `spirit.x` and `spirit.y`:
+
+```{r}
+full_join(join, ds, by='name') %>%  
+  mutate(price=coalesce(price.x,price.y)) %>% select(-price.x, -price.y) %>%
+    replace(is.na(.),"") %>%
+    unite(spirit, spirit.x, spirit.y, sep="")
+```
+
+First, we replaced the `NAs` by empty spaces, and then we joined the variables `spirit.x`, and `spirit.y` using `unite`. The formatting isn't great, unforunately. We can play around a little bit to make it look nicer: 
+
+```{r}
+ds = ds %>% mutate(spirit=paste(" ", spirit,sep=""))
+final = full_join(join, ds, by='name') %>%  
+  mutate(price=coalesce(price.x,price.y)) %>%
+  select(-price.x, -price.y)  %>%
+  replace(is.na(.),"") %>%
+  unite(spirit, spirit.x, spirit.y, sep="")
+final
+```
+
+Now suppose that we're at some bar where the total price for a mixed drink is equal to the sum of the prices of the components. The prices are
+
+```{r}
+nonalcoholic = tibble(name=c("g&t","mimosa","rum and coke","calimocho","polar"), 
+                      mixer=c("tonic","orange juice", "coke", "coke","seltzer"))  %>% 
+                      mutate(price=c(3, 2, 2, 2, 5))
+alcoholic = tibble(name=c("g&t","mimosa","rum and coke","calimocho","IPA"), 
+                    spirit=c("gin","sparkling wine", "rum", "red wine","beer")) %>% 
+                    mutate(price=c(5, 4, 5, 3, 5))
+
+```
+
+How can we merge the data and combine (add) prices? 
+
+We can start by `full_join`ing by name
+
+```{r}
+full_join(nonalcoholic, alcoholic, by='name')
+```
+
+Unfortunately, a simple `mutate` instruction isn't satisfactory because the sum of an `NA` + a number is equal to `NA`:
+
+```{r}
+full_join(nonalcoholic, alcoholic, by='name') %>% mutate(total=price.x+price.y)
+```
+
+We can solve this problem in different ways. One way is using `coalesce` to replace the `NA`s by 0s in `price.x` and `price.y`, and then adding:
+
+```{r}
+full_join(nonalcoholic, alcoholic, by='name') %>% 
+  mutate(price.x=coalesce(price.x,0), price.y=coalesce(price.y,0), total=price.x+price.y) %>% 
+  select(name, spirit, mixer, total)
+```
+
+In general, the way that `R` deals with `NA`s can be a little frustrating, as these examples show. 
