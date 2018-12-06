@@ -56,7 +56,9 @@
   - [R markdown](http://vicpena.github.io/sta9750/fall18/Nov28.Rmd), [html output](http://vicpena.github.io/sta9750/fall18/Nov28.html)
 * Lecture XXIV: More `ggplot2` and introduction to `dplyr`
   - [R markdown](http://vicpena.github.io/sta9750/fall18/Dec3.Rmd), [html output](http://vicpena.github.io/sta9750/fall18/Dec3.html)
-  
+* Lecture XXV: Joining datasets
+  - [R markdown](http://vicpena.github.io/sta9750/fall18/Dec5.Rmd), [html output](http://vicpena.github.io/sta9750/fall18/Dec5.html)
+
 ## Assignments
 
 * [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/HW1.pdf)
