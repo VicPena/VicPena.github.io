@@ -157,44 +157,44 @@ speed = speed %&gt;% filter(!is.na(speed), speed &gt; 0) %&gt;% select(-X)</code
 alcoholic = tibble(name=c(&quot;g&amp;t&quot;,&quot;mimosa&quot;,&quot;rum and coke&quot;,&quot;calimocho&quot;,&quot;IPA&quot;,&quot;dark and stormy&quot;), 
                     spirit=c(&quot;gin&quot;,&quot;sparkling wine&quot;, &quot;rum&quot;, &quot;red wine&quot;,&quot;beer&quot;,&quot;rum&quot;))</code></pre>
 <p>Let’s try out what happens when we try the different <code>join</code>s on the <code>tibble</code>s:</p>
-<pre class="r"><code>left_join(nonalcoholic, alcoholic, by='name') %&gt;% select(name, spirit, mixer)</code></pre>
+<pre class="r"><code>left_join(nonalcoholic, alcoholic, by='name') </code></pre>
 <pre><code>## # A tibble: 5 x 3
-##   name         spirit         mixer       
-##   &lt;chr&gt;        &lt;chr&gt;          &lt;chr&gt;       
-## 1 g&amp;t          gin            tonic       
-## 2 mimosa       sparkling wine orange juice
-## 3 rum and coke rum            coke        
-## 4 calimocho    red wine       coke        
-## 5 polar        &lt;NA&gt;           seltzer</code></pre>
-<pre class="r"><code>right_join(nonalcoholic, alcoholic, by='name') %&gt;% select(name, spirit, mixer)</code></pre>
+##   name         mixer        spirit        
+##   &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t          tonic        gin           
+## 2 mimosa       orange juice sparkling wine
+## 3 rum and coke coke         rum           
+## 4 calimocho    coke         red wine      
+## 5 polar        seltzer      &lt;NA&gt;</code></pre>
+<pre class="r"><code>right_join(nonalcoholic, alcoholic, by='name') </code></pre>
 <pre><code>## # A tibble: 6 x 3
-##   name            spirit         mixer       
-##   &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt;       
-## 1 g&amp;t             gin            tonic       
-## 2 mimosa          sparkling wine orange juice
-## 3 rum and coke    rum            coke        
-## 4 calimocho       red wine       coke        
-## 5 IPA             beer           &lt;NA&gt;        
-## 6 dark and stormy rum            &lt;NA&gt;</code></pre>
-<pre class="r"><code>inner_join(nonalcoholic, alcoholic, by='name') %&gt;% select(name, spirit, mixer)</code></pre>
+##   name            mixer        spirit        
+##   &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t             tonic        gin           
+## 2 mimosa          orange juice sparkling wine
+## 3 rum and coke    coke         rum           
+## 4 calimocho       coke         red wine      
+## 5 IPA             &lt;NA&gt;         beer          
+## 6 dark and stormy &lt;NA&gt;         rum</code></pre>
+<pre class="r"><code>inner_join(nonalcoholic, alcoholic, by='name') </code></pre>
 <pre><code>## # A tibble: 4 x 3
-##   name         spirit         mixer       
-##   &lt;chr&gt;        &lt;chr&gt;          &lt;chr&gt;       
-## 1 g&amp;t          gin            tonic       
-## 2 mimosa       sparkling wine orange juice
-## 3 rum and coke rum            coke        
-## 4 calimocho    red wine       coke</code></pre>
-<pre class="r"><code>full_join(nonalcoholic, alcoholic, by='name') %&gt;% select(name, spirit, mixer)</code></pre>
+##   name         mixer        spirit        
+##   &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t          tonic        gin           
+## 2 mimosa       orange juice sparkling wine
+## 3 rum and coke coke         rum           
+## 4 calimocho    coke         red wine</code></pre>
+<pre class="r"><code>full_join(nonalcoholic, alcoholic, by='name')</code></pre>
 <pre><code>## # A tibble: 7 x 3
-##   name            spirit         mixer       
-##   &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt;       
-## 1 g&amp;t             gin            tonic       
-## 2 mimosa          sparkling wine orange juice
-## 3 rum and coke    rum            coke        
-## 4 calimocho       red wine       coke        
-## 5 polar           &lt;NA&gt;           seltzer     
-## 6 IPA             beer           &lt;NA&gt;        
-## 7 dark and stormy rum            &lt;NA&gt;</code></pre>
+##   name            mixer        spirit        
+##   &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t             tonic        gin           
+## 2 mimosa          orange juice sparkling wine
+## 3 rum and coke    coke         rum           
+## 4 calimocho       coke         red wine      
+## 5 polar           seltzer      &lt;NA&gt;          
+## 6 IPA             &lt;NA&gt;         beer          
+## 7 dark and stormy &lt;NA&gt;         rum</code></pre>
 <p>We can also use <code>join</code>s for filtering. For example, <code>semi_join(a, b, by='x')</code> keeps all the rows in <code>a</code> that have a matching value of <code>x</code> in <code>b</code> (it doesn’t create more columns with the information in <code>b</code>), and <code>anti_join(a, b, by='x')</code> keeps the rows in <code>a</code> that don’t have a matching value of <code>x</code> in <code>b</code>:</p>
 <pre class="r"><code>semi_join(nonalcoholic, alcoholic, by='name')</code></pre>
 <pre><code>## # A tibble: 4 x 2
@@ -332,7 +332,7 @@ alcoholic = tibble(name=c(&quot;g&amp;t&quot;,&quot;mimosa&quot;,&quot;rum and c
 ## 4 calimocho    coke               2 red wine             3     5
 ## 5 polar        seltzer            5 &lt;NA&gt;                NA    NA
 ## 6 IPA          &lt;NA&gt;              NA beer                 5    NA</code></pre>
-<p>We can solve this problem in different ways. One way is using <code>coalesce</code> to replace the <code>NA</code>s by 0s in <code>price.x</code> and <code>price.y</code>, and then adding:</p>
+<p>We can solve this problem in different ways. One way is using <code>coalesce</code> to replace the <code>NA</code>s by zeros in <code>price.x</code> and <code>price.y</code>, and then adding:</p>
 <pre class="r"><code>full_join(nonalcoholic, alcoholic, by='name') %&gt;% 
   mutate(price.x=coalesce(price.x,0), price.y=coalesce(price.y,0), total=price.x+price.y) %&gt;% 
   select(name, spirit, mixer, total)</code></pre>
