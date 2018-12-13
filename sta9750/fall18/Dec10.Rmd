@@ -18,7 +18,7 @@ Throughout, we will use functions in `library(tidyr)` and `library(dplyr)`.
 
 ## `gather`: from wide to long format
 
-Suppose we want to compare outcomes with 3 treatments, and our data look like this
+Suppose you want to compare outcomes with 3 treatments, and your data look like this
 
 ```{r}
 data
@@ -26,13 +26,13 @@ data
 
 Some people would say that the data is in "wide format."
 
-Data in wide format aren't convenient for running our analyses: if we want to run an ANOVA or Tukey, we need to have all the outcomes in one column, and the categories (treatments) in another column. This alternative formatting is called "long format". We can go from wide to long format using `gather` in `library(tidyr)`. 
+Data in wide format aren't convenient for running our analyses: if you want to run an ANOVA or Tukey, you need to have all the outcomes in one column, and the categories (treatments) in another column. This alternative formatting is called "long format". You can go from wide to long format using `gather` in `library(tidyr)`. 
 
 ```{r}
 data %>% gather(key=treatment, value=outcome, Treat1, Treat2, Treat3)
 ```
 
-The first argument in `gather` is for naming the new column that contains the categories (the `key`), the second one is for naming the column where the new outcomes will be stored (the `value`), and then we write the names of the columns that contain the outcomes. An equivalent way of writing the same thing is:
+The first argument in `gather` is for naming the new column that contains the categories (the `key`), the second one is for naming the column where the new outcomes will be stored (the `value`), and then you write the names of the columns that contain the outcomes you want to `gather`. An equivalent way of writing the same thing is:
 
 ```{r}
 data %>% gather(key=treatment, value=outcome, Treat1:Treat3)
@@ -47,9 +47,7 @@ uneven[4:5,3] = NA
 uneven[5,1] = NA
 ```
 
-
 What if your data is in wide format, but you have an uneven number of observations? That is, your data looks something like this
-
 
 ```{r}
 uneven
@@ -89,26 +87,20 @@ You can convert it to wide format as follows
 data2 %>% spread(treatment, outcome)
 ```
 
-Note that `data2` isn't just our dataset that came out of `gather`ing. In fact, if we start with
+Note that `data2` isn't just our dataset that came out of `gather`ing. In fact, if you start with
 
 ```{r}
 gath = data %>% gather(key=treatment, value=outcome, Treat1:Treat3)
 ```
 
-and we try to `spread`, we'll get an error
-
-```{r, eval=FALSE}
-gath %>% spread(treatment, outcome) 
-```
-
-`tidyr` complains because the rows of `gath` aren't uniquely identifiable. A way to get around that is creating index variables within the treatments
+and you try to `spread`, you'll get an error. `R` complains because the rows of `gath` aren't uniquely identifiable. A way to get around that is creating index variables within the treatments
 
 ```{r}
 gath = gath %>% group_by(treatment) %>% mutate(id=row_number())
 gath
 ```
 
-and then, we can `spread` (and get rid of `id`):
+and then, you can `spread` (and get rid of `id`):
 
 ```{r}
 gath %>% spread(treatment, outcome) %>% select(-id)
@@ -129,13 +121,14 @@ drinks = full_join(nonalcoholic, alcoholic, by='name') %>%
 ```
 
 Suppose you have the following dataset
+
 ```{r}
 drinks
 ```
 
-You would like to create a new column that merged the information in `spirit` and `mixer`. You can use the command `unite` to do that.
+If you would like to create a new column that merges the information in `spirit` and `mixer`, you can use the command `unite`.
 
-For example, you can use
+For example, you can try
 
 ```{r}
 drinks %>% unite(name, spirit, mixer, sep=' & ')  
@@ -151,7 +144,7 @@ new = drinks %>%
 new
 ```
 
-The function `trimws` got rid of some empty spaces at the beginning and ends of strings. 
+The function `trimws` got rid of some empty spaces at the beginning and end of `name`. 
 
 If you are willing to work a little bit more, you can make the new variable look even nicer:
 
@@ -166,7 +159,7 @@ We used the function `gsub` to substitute `& nothing` and `nothing &` by (litera
 
 ## `separate` variables
 
-You can split up variables using `separate`. For example, if we start with
+You can split up variables using `separate`. For example, if you start with
 
 ```{r, echo = FALSE}
 new
@@ -178,10 +171,10 @@ We can split up `name` into `spirit` and `mixer` with
 new %>% separate(name, into=c("spirit", "mixer"), sep=" & ")
 ```
 
-If we used the dataset `final` instead, we would have to do more work to `separate` correctly.
+If you use the dataset `final` instead, you would have to do more work to `separate` correctly.
 
 
-## Summarizing what we know with `gapminder`
+## Summarizing what you know with `gapminder`
 
 ```{r echo=FALSE}
 library(gapminder)
@@ -204,7 +197,7 @@ out = gapminder %>%
 out
 ```
 
-And we can plot the trends as follows:
+And you can plot the trends as follows:
 
 ```{r}
 ggplot(out, aes(x=year, y=avglife, color=continent, linetype=continent))+geom_line(size=2)
@@ -218,7 +211,7 @@ out2 = gapminder %>%
 ggplot(out2, aes(x=year, y=lifeExp, color=country)) + geom_line(size=1.2)
 ```
 
-Let's do something a little more difficult. Let's try to find the population differential between 2007 and 1957 (range of the data) and sort the data in ascending order by the population differential. A way to do this is
+Let's do something a little more difficult. Let's try to find the population differential betyouen 2007 and 1957 (range of the data) and sort the data in ascending order by the population differential. A way to do this is
 
 ```{r}
 gapminder %>% select(country, year, pop) %>%
@@ -229,12 +222,12 @@ gapminder %>% select(country, year, pop) %>%
           arrange(diffPop)
 ```
 
-Notice the backticks in the variables when we define `diffPop`. 
+Notice the backticks in the variables when you define `diffPop`. 
 
 
 ## Resources
 
-* [`tidyr` website](https://tidyr.tidyverse.org/)
+* [`tidyr` youbsite](https://tidyr.tidyverse.org/)
 
 * [Tutorial by Bradley Boehmke](https://rpubs.com/bradleyboehmke/data_wrangling)
 
