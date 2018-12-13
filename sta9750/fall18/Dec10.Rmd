@@ -1,0 +1,241 @@
+---
+title: "Tidying datasets"
+author: 'Víctor Peña'
+output:
+  html_document:
+    toc: true
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(tidyr)
+set.seed(110289)
+n = 5
+data = round(tibble(Treat1=rnorm(n), Treat2=rnorm(n,1,1), Treat3=rnorm(n)),3)
+```
+
+Throughout, we will use functions in `library(tidyr)` and `library(dplyr)`. 
+
+## `gather`: from wide to long format
+
+Suppose we want to compare outcomes with 3 treatments, and our data look like this
+
+```{r}
+data
+```
+
+Some people would say that the data is in "wide format."
+
+Data in wide format aren't convenient for running our analyses: if we want to run an ANOVA or Tukey, we need to have all the outcomes in one column, and the categories (treatments) in another column. This alternative formatting is called "long format". We can go from wide to long format using `gather` in `library(tidyr)`. 
+
+```{r}
+data %>% gather(key=treatment, value=outcome, Treat1, Treat2, Treat3)
+```
+
+The first argument in `gather` is for naming the new column that contains the categories (the `key`), the second one is for naming the column where the new outcomes will be stored (the `value`), and then we write the names of the columns that contain the outcomes. An equivalent way of writing the same thing is:
+
+```{r}
+data %>% gather(key=treatment, value=outcome, Treat1:Treat3)
+```
+
+In `Treat1:Treat3` we gave `R` a range of columns which we want to `gather` (first to last). This is useful if you have many variables.
+
+
+```{r, echo = FALSE}
+uneven = data
+uneven[4:5,3] = NA 
+uneven[5,1] = NA
+```
+
+
+What if your data is in wide format, but you have an uneven number of observations? That is, your data looks something like this
+
+
+```{r}
+uneven
+```
+
+Let's try to `gather`:
+
+```{r}
+uneven %>% gather(key = treatment, value = outcome, Treat1:Treat3)
+```
+
+Unfortunately, we get some `NA`s. We can get rid of them with `na.omit`:
+
+```{r}
+uneven %>% gather(key = treatment, value = outcome, Treat1:Treat3) %>% 
+           na.omit
+```
+
+## `spread`: from long to wide format
+
+```{r, echo=FALSE}
+data2 = data %>% gather(key=treatment, value=outcome, Treat1:Treat3)
+data2 = data2 %>% group_by(treatment) %>% mutate(ind=row_number())
+```
+
+If you want to go from long to wide format, you can use `spread`. 
+
+For example, if your data are
+
+```{r}
+data2
+```
+
+You can convert it to wide format as follows
+
+```{r}
+data2 %>% spread(treatment, outcome)
+```
+
+Note that `data2` isn't just our dataset that came out of `gather`ing. In fact, if we start with
+
+```{r}
+gath = data %>% gather(key=treatment, value=outcome, Treat1:Treat3)
+```
+
+and we try to `spread`, we'll get an error
+
+```{r, eval=FALSE}
+gath %>% spread(treatment, outcome) 
+```
+
+`tidyr` complains because the rows of `gath` aren't uniquely identifiable. A way to get around that is creating index variables within the treatments
+
+```{r}
+gath = gath %>% group_by(treatment) %>% mutate(id=row_number())
+gath
+```
+
+and then, we can `spread` (and get rid of `id`):
+
+```{r}
+gath %>% spread(treatment, outcome) %>% select(-id)
+```
+
+## `unite` variables
+
+```{r, echo=FALSE}
+nonalcoholic = tibble(name=c("g&t","mimosa","rum and coke","calimocho","polar"), 
+                      mixer=c("tonic","orange juice", "coke", "coke","seltzer"))  %>% 
+                      mutate(price=c(3, 2, 2, 2, 5))
+alcoholic = tibble(name=c("g&t","mimosa","rum and coke","calimocho","IPA"), 
+                    spirit=c("gin","sparkling wine", "rum", "red wine","beer")) %>% 
+                    mutate(price=c(5, 4, 5, 3, 5))
+drinks = full_join(nonalcoholic, alcoholic, by='name') %>% 
+  mutate(price.x=coalesce(price.x,0), price.y=coalesce(price.y,0), total=price.x+price.y) %>% 
+  select(name, spirit, mixer, total) %>% select(-name)
+```
+
+Suppose you have the following dataset
+```{r}
+drinks
+```
+
+You would like to create a new column that merged the information in `spirit` and `mixer`. You can use the command `unite` to do that.
+
+For example, you can use
+
+```{r}
+drinks %>% unite(name, spirit, mixer, sep=' & ')  
+```
+
+Unfortunately, it doesn't look great because there are `NA`s. You can substitute the `NA`s by `nothing` using `coalesce` to make the output look a little nicer:
+
+```{r}
+new = drinks %>% 
+        mutate(spirit=coalesce(spirit, "nothing"), mixer=coalesce(mixer, "nothing")) %>%
+        unite(name, spirit, mixer, sep=' & ') %>% 
+        mutate(name=trimws(name))
+new
+```
+
+The function `trimws` got rid of some empty spaces at the beginning and ends of strings. 
+
+If you are willing to work a little bit more, you can make the new variable look even nicer:
+
+```{r}
+final = new %>% mutate(name1 = gsub("& nothing","",name),
+                       name = trimws(gsub("nothing &","",name1))) %>%
+                       select(-name1)
+final
+```
+
+We used the function `gsub` to substitute `& nothing` and `nothing &` by (literally) nothing.
+
+## `separate` variables
+
+You can split up variables using `separate`. For example, if we start with
+
+```{r, echo = FALSE}
+new
+```
+
+We can split up `name` into `spirit` and `mixer` with
+
+```{r}
+new %>% separate(name, into=c("spirit", "mixer"), sep=" & ")
+```
+
+If we used the dataset `final` instead, we would have to do more work to `separate` correctly.
+
+
+## Summarizing what we know with `gapminder`
+
+```{r echo=FALSE}
+library(gapminder)
+library(ggplot2)
+data(gapminder)
+```
+
+The dataset `gapminder` in `library(gapminder)` has information on life expectancy, GDP per capita, and population for some countries. The variables are
+
+```{r}
+str(gapminder)
+```
+
+We can find the average life expectancy by continent and year with
+
+```{r}
+out = gapminder %>% 
+  group_by(continent, year) %>% 
+  summarize(avglife=mean(lifeExp))
+out
+```
+
+And we can plot the trends as follows:
+
+```{r}
+ggplot(out, aes(x=year, y=avglife, color=continent, linetype=continent))+geom_line(size=2)
+```
+
+What's going on in Oceania? Let's find out:
+
+```{r}
+out2 = gapminder %>%
+  filter(continent == "Oceania")
+ggplot(out2, aes(x=year, y=lifeExp, color=country)) + geom_line(size=1.2)
+```
+
+Let's do something a little more difficult. Let's try to find the population differential between 2007 and 1957 (range of the data) and sort the data in ascending order by the population differential. A way to do this is
+
+```{r}
+gapminder %>% select(country, year, pop) %>%
+          filter(year==1952|year==2007)  %>% 
+          spread(key=year, value=pop) %>%
+          mutate(diffPop = `2007`-`1952`) %>%
+          select(country, diffPop) %>%
+          arrange(diffPop)
+```
+
+Notice the backticks in the variables when we define `diffPop`. 
+
+
+## Resources
+
+* [`tidyr` website](https://tidyr.tidyverse.org/)
+
+* [Tutorial by Bradley Boehmke](https://rpubs.com/bradleyboehmke/data_wrangling)
+
+* [Tutorial by Olivia L. Holmes](https://ademos.people.uic.edu/Chapter9.html)  
