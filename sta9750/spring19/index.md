@@ -5,4 +5,4 @@
 * Instructor: [Víctor Peña](http://vicpena.github.io/), office 11-273 VC
 * Office hours: By appointment
 * email: ``victor.pena@baruch.cuny.edu``
-* Syllabus
+* Syllabus: See [Blackboard](https://bbhosted.cuny.edu/)
