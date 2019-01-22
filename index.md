@@ -23,15 +23,10 @@ My email address is ``victor.pena@baruch.cuny.edu``.
 
 * At Baruch
   * [STA2000: Business statistics I](https://www.baruch.cuny.edu/bctc/blackboard/) (Fall 18).
-  * STA9750: Basic software tools for data analysis ([Fall 18]((http://vicpena.github.io/sta9750/fall18/)), [Spring 19](http://vicpena.github.io/sta9750/spring19/)).
+  * STA9750: Basic software tools for data analysis ([Fall 18](http://vicpena.github.io/sta9750/fall18/), [Spring 19](http://vicpena.github.io/sta9750/spring19/)).
 
 * At Duke
   * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017, 2018). 
   * [STA 111: Probability & Statistical Inference](http://www2.stat.duke.edu/~vp58/sta111) (Summer Term II, 2015).
 
-# Some active projects
-* Towards more informative priors on model spaces.
-* Subgroup analysis: prior specification and computational challenges (with [Jim Berger](http://stat.duke.edu/~berger) and [Xiaojing Wang](http://merlot.stat.uconn.edu/~xiaojing/)).
-* Bayesian design and analysis of factorial designs.
-* Combining rolling windows (with [Ken McAlinn](http://www.mcalinn.com)).
 
