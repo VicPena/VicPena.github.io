@@ -7,6 +7,14 @@
 * email: ``victor.pena@baruch.cuny.edu``
 * Syllabus: See [Blackboard](https://bbhosted.cuny.edu/)
 
+## Course materials
+
+### Week 1: Introduction to SAS
+
+* [Handout](http:/VicPena.github.io/sta9750/spring19/SASintro.pdf)
+* Data: [Pollution.prn](http:/VicPena.github.io/sta9750/spring19/Pollution.prn), [Pollution.xls](http:/VicPena.github.io/sta9750/spring19/Pollution.xls)
+* Code: To be posted soon.
+
 ## Resources
 
 * Basic statistics
