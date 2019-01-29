@@ -23,7 +23,7 @@ My email address is ``victor.pena@baruch.cuny.edu``.
 
 * At Baruch
   * [STA2000: Business statistics I](https://www.baruch.cuny.edu/bctc/blackboard/) (Fall 18).
-  * STA9750: Basic software tools for data analysis ([Fall 18](http://vicpena.github.io/sta9750/fall18/), [Spring 19](http://vicpena.github.io/sta9750/spring19/)).
+  * STA9750: Basic software tools for data analysis ([Spring 19](http://vicpena.github.io/sta9750/spring19/), [Fall 18](http://vicpena.github.io/sta9750/fall18/)).
 
 * At Duke
   * A&S101: Introduction to Quantitative and Qualitative Reasoning (Summer Term II, 2017, 2018). 
