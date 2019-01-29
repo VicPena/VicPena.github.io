@@ -4,10 +4,10 @@ I'm an assistant professor in statistics at [Baruch College](http://www.baruch.c
 My email address is ``victor.pena@baruch.cuny.edu``.
 
 # Publications & preprints
-* Peña, V. & Berger, J. O. (2017). [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
-* Peña, V. & Berger, J. O. (2017). [Constrained empirical Bayes priors on regression coefficients.](https://arxiv.org/abs/1711.08072) 
-* Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2017). [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://arxiv.org/abs/1710.09700) *Submitted*.
-* Barrientos, A. F. & Peña, V. (2017). [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *Submitted*.
+* Peña, V. & Berger, J. O. [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
+* Peña, V. & Berger, J. O. [Constrained empirical Bayes priors on regression coefficients.](https://arxiv.org/abs/1711.08072) 
+* Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://arxiv.org/abs/1710.09700) *Submitted*.
+* Barrientos, A. F. & Peña, V. [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *Submitted*.
 * Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica, 27(4), 1554-1559.*
 *  Berger, J.O., Garcia-Donato, G., Martinez-Beneito, M.A, & Peña, V. [Bayesian variable selection in high dimensional problems without assumptions on prior model probabilities.](https://arxiv.org/abs/1607.02993)
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
