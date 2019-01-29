@@ -13,7 +13,7 @@
 
 * [Handout](http:/VicPena.github.io/sta9750/spring19/SASintro.pdf)
 * Data: [Pollution.prn](http:/VicPena.github.io/sta9750/spring19/Pollution.prn), [Pollution.xls](http:/VicPena.github.io/sta9750/spring19/Pollution.xls)
-* Code: To be posted soon.
+* Code: [Intro to reading in data](http:/VicPena.github.io/sta9750/spring19/input.sas).
 
 ## Resources
 
