@@ -14,6 +14,7 @@
 * [Handout](http:/VicPena.github.io/sta9750/spring19/SASintro.pdf)
 * Data: [Pollution.prn](http:/VicPena.github.io/sta9750/spring19/Pollution.prn), [Pollution.xls](http:/VicPena.github.io/sta9750/spring19/Pollution.xls)
 * Code: [Intro to reading in data](http:/VicPena.github.io/sta9750/spring19/input.sas).
+* Getting SAS: [SAS university edition](https://www.sas.com/en_us/software/university-edition.html) (you can work offline), [CUNY Virtual Desktop](http://www2.cuny.edu/about/administration/offices/cis/virtual-desktop/).
 
 ## Resources
 
