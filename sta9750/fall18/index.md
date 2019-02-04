@@ -62,9 +62,9 @@
   
 ## Assignments
 
-* [HW1: Due 09/26](http://vicpena.github.io/sta9750/fall18/HW1.pdf)
+* HW1: Due 09/26
   - [pharma.csv](http://vicpena.github.io/sta9750/fall18/pharma.csv), [school.csv](http://vicpena.github.io/sta9750/fall18/school.csv), [drill.csv](http://vicpena.github.io/sta9750/fall18/drill.csv), [scores2.csv](http://vicpena.github.io/sta9750/fall18/scores2.csv).
-* [HW2: Due 10/25](http://vicpena.github.io/sta9750/fall18/HW2.pdf)
+* HW2: Due 10/25
   - [hw2data.zip](http://VicPena.github.io/sta9750/fall18/hw2data.zip)
 * Midterm data
   - [salary.csv](http://VicPena.github.io/sta9750/fall18/salary.csv), [treats.csv](http://VicPena.github.io/sta9750/fall18/treats.csv), [midterms.csv](http://VicPena.github.io/sta9750/fall18/midterms.csv), [Pollution.xls](http://VicPena.github.io/sta9750/fall18/Pollution.xls)
