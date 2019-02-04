@@ -34,7 +34,7 @@
   - [STA482 @ Penn State](https://onlinecourses.science.psu.edu/stat482/)
 * R
   - [Applied stats with R, by David Dalpiaz](https://daviddalpiaz.github.io/appliedstats/)
-  - [R for Data Science, by Hadley Wickham](http://r4ds.had.co.nz/)
+  - [R for Data Science, by Grolemund and Wickham](http://r4ds.had.co.nz/)
   - [Quick-R](https://www.statmethods.net/index.html)
   - [Cookbook for R](http://www.cookbook-r.com/)
 * Other 
