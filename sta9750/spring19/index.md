@@ -27,6 +27,7 @@
   - [STA501 @ Penn State](https://onlinecourses.science.psu.edu/stat501/node/2/)
   - [Practical regression and ANOVA with R, by Faraway](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
 * SAS
+  - [Data flair: A Complete Guide to Mastering SAS](https://data-flair.training/blogs/sas-tutorials-home/)
   - [Getting started with SAS @ UT Austin](https://stat.utexas.edu/images/SSC/documents/SoftwareTutorials/SAS_GettingStarted.pdf)
   - [Statistical inference with SAS @ UT Austin](https://stat.utexas.edu/images/SSC/documents/SoftwareTutorials/SAS_InferentialStats.pdf)
   - [STA480 @ Penn State](https://onlinecourses.science.psu.edu/stat480/)
