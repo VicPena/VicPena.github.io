@@ -13,7 +13,7 @@
 
 * [Handout](http:/VicPena.github.io/sta9750/spring19/SASintro.pdf)
 * Data: [Pollution.prn](http:/VicPena.github.io/sta9750/spring19/Pollution.prn), [Pollution.xls](http:/VicPena.github.io/sta9750/spring19/Pollution.xls), [hsb2.csv](http:/VicPena.github.io/sta9750/spring19/hsb2.csv), [speed_gender_height.csv](http:/VicPena.github.io/sta9750/spring19/speed_gender_height.csv).
-* Code: [Intro to reading in data](http:/VicPena.github.io/sta9750/spring19/input.sas)
+* Code: [Lecture 1](http:/VicPena.github.io/sta9750/spring19/input.sas), [Lecture 2](http:/VicPena.github.io/sta9750/spring19/Lecture2.sas)
 * Getting SAS: [SAS university edition](https://www.sas.com/en_us/software/university-edition.html) (you can work offline), [CUNY Virtual Desktop](http://www2.cuny.edu/about/administration/offices/cis/virtual-desktop/)
 
 ## Resources
