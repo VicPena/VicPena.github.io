@@ -16,7 +16,7 @@
 * Code: [Lecture 1](http:/VicPena.github.io/sta9750/spring19/input.sas), [Lecture 2](http:/VicPena.github.io/sta9750/spring19/Lecture2.sas)
 * Getting SAS: [SAS university edition](https://www.sas.com/en_us/software/university-edition.html) (you can work offline), [CUNY Virtual Desktop](http://www2.cuny.edu/about/administration/offices/cis/virtual-desktop/)
 
-### Week 2 Summarizing data with SAS
+### Week 2: Summarizing data with SAS
 
 * Topics: Dealing with missing data, PROC MEANS, PROC FREQ, PROC TABULATE, PROC SGPLOT
 * Handout: To be posted over the weekend
