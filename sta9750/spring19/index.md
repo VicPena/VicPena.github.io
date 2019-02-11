@@ -27,6 +27,11 @@
   - [Introduction to SGPLOT](https://susanslaughter.files.wordpress.com/2014/08/fp_47.pdf)
   - [LOESS video](http://www.youtube.com/watch?v=Vf7oJ6z2LCc)
 
+### Week 3: Basic data analysis with SAS
+
+* Data:[Pollution.xls](http:/VicPena.github.io/sta9750/spring19/Pollution.xls), [midterms.csv](http://VicPena.github.io/sta9750/fall18/midterms.csv), [before.csv](http:/VicPena.github.io/sta9750/spring19/before.csv), [after.csv](http:/VicPena.github.io/sta9750/spring19/after.csv)
+* [Exercises](http:/VicPena.github.io/sta9750/spring19/SASexercises1.pdf)
+
 ## Resources
 
 * Basic statistics
