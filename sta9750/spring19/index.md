@@ -30,6 +30,7 @@
 ### Week 3: Basic data analysis with SAS
 
 * Data: [Pollution.xls](http:/VicPena.github.io/sta9750/spring19/Pollution.xls), [midterms.csv](http://VicPena.github.io/sta9750/fall18/midterms.csv), [before.csv](http:/VicPena.github.io/sta9750/spring19/before.csv), [after.csv](http:/VicPena.github.io/sta9750/spring19/after.csv)
+* Code: [skLecture5.sas](http:/VicPena.github.io/sta9750/spring19/skLecture5.sas)
 * [Exercises](http:/VicPena.github.io/sta9750/spring19/SASexercises1.pdf)
 
 ## Resources
