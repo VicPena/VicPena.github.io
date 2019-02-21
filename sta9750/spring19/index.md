@@ -49,6 +49,7 @@
   - [STA501 @ Penn State](https://onlinecourses.science.psu.edu/stat501/node/2/)
   - [Practical regression and ANOVA with R, by Faraway](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
 * SAS
+  - [Color guide SAS](https://support.sas.com/content/dam/SAS/support/en/books/pro-template-made-easy-a-guide-for-sas-users/62007_Appendix.pdf)
   - [Data flair: A Complete Guide to Mastering SAS](https://data-flair.training/blogs/sas-tutorials-home/)
   - [Getting started with SAS @ UT Austin](https://stat.utexas.edu/images/SSC/documents/SoftwareTutorials/SAS_GettingStarted.pdf)
   - [Statistical inference with SAS @ UT Austin](https://stat.utexas.edu/images/SSC/documents/SoftwareTutorials/SAS_InferentialStats.pdf)
