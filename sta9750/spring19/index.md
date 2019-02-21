@@ -37,7 +37,7 @@
 
 * Data: [drug.csv](http:/VicPena.github.io/sta9750/spring19/drug.csv), [2drugs.csv](http:/VicPena.github.io/sta9750/spring19/2drugs.csv)
 * [Slides](http:/VicPena.github.io/sta9750/spring19/hyptest.html)
-* Code: [Lecture8.sas]((http:/VicPena.github.io/sta9750/spring19/Lecture8.sas)
+* Code: [Lecture8.sas](http:/VicPena.github.io/sta9750/spring19/Lecture8.sas)
 
 
 ## Resources
