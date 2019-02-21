@@ -33,6 +33,11 @@
 * Code: [Lecture5.sas](http:/VicPena.github.io/sta9750/spring19/Lecture5.sas), [Lecture6.sas](http:/VicPena.github.io/sta9750/spring19/Lecture6.sas)
 * [Exercises](http:/VicPena.github.io/sta9750/spring19/SASexercises1.pdf)
 
+### Week 4: Basic hypothesis testing with SAS
+
+* Data: [drug.csv](http:/VicPena.github.io/sta9750/spring19/drug.csv), [2drugs.csv](http:/VicPena.github.io/sta9750/spring19/2drugs.csv)
+
+
 ## Resources
 
 * Basic statistics
