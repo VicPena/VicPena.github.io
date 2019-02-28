@@ -42,7 +42,7 @@
 ### Week 5: Hypothesis testing and correlation
 
 * Data: [depression.csv](http://vicpena.github.io/sta9750/fall18/depression.csv)
-* Slides: [Lecture 8](http://vicpena.github.io/sta9750/spring19/moretests.pdf), [Lecture 8](http://vicpena.github.io/sta9750/spring19/Lecture9.pdf)
+* Slides: [Lecture 8](http://vicpena.github.io/sta9750/spring19/moretests.pdf), [Lecture 9](http://vicpena.github.io/sta9750/spring19/Lecture9.pdf)
 * Code: [Lecture8.sas](http:/VicPena.github.io/sta9750/spring19/Lecture8.sas), [Lecture9.sas](http:/VicPena.github.io/sta9750/spring19/Lecture9.sas)
 
 
