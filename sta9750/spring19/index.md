@@ -48,6 +48,7 @@
 ## Week 6: Simple linear regression with SAS
 
 * Data: [galton.csv](http://vicpena.github.io/sta9750/spring19/galton.csv), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv)
+* Slides: [SLR.pdf](http://vicpena.github.io/sta9750/spring19/SLR.pdf)
 
 ## Resources
 
