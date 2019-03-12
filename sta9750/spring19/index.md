@@ -49,6 +49,8 @@
 
 * Data: [galton.csv](http://vicpena.github.io/sta9750/spring19/galton.csv), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv)
 * Slides: [SLR.pdf](http://vicpena.github.io/sta9750/spring19/SLR.pdf)
+* Code: [Lecture10.sas](http:/VicPena.github.io/sta9750/spring19/Lecture10.sas)
+* [Video about Galton](https://www.youtube.com/watch?v=JeCKftkNKJ0)
 
 ## Resources
 
