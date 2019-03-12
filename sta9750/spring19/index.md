@@ -18,7 +18,6 @@
 
 ### Week 2: Summarizing data with SAS
 
-* Topics: Dealing with missing data, PROC MEANS, PROC FREQ, PROC TABULATE, PROC SGPLOT
 * [Handout](http:/VicPena.github.io/sta9750/spring19/SASsummaries.pdf)
 * Data: [hsb2.csv](http:/VicPena.github.io/sta9750/spring19/hsb2.csv), [speed_gender_height.csv](http:/VicPena.github.io/sta9750/spring19/speed_gender_height.csv), [midterms.csv](http://VicPena.github.io/sta9750/fall18/midterms.csv)
 * Code: [Lecture 3](http:/VicPena.github.io/sta9750/spring19/Lecture3.sas), [Lecture 4](http:/VicPena.github.io/sta9750/spring19/Lecture4.sas)
