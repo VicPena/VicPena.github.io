@@ -51,6 +51,12 @@
 * Code: [Lecture10.sas](http:/VicPena.github.io/sta9750/spring19/Lecture10.sas)
 * [Video about Galton](https://www.youtube.com/watch?v=JeCKftkNKJ0)
 
+### Week 7: Multiple linear regression with SAS
+
+* Data: [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv)
+* Slides: [MoreReg.pdf](http://vicpena.github.io/sta9750/spring19/MoreReg.pdf)
+* [How to interpret log transformations](https://www.cscu.cornell.edu/news/statnews/stnews83.pdf)
+
 ## Resources
 
 * Basic statistics
