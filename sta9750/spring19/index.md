@@ -56,7 +56,7 @@
 
 * Handouts: [Simple linear regression with SAS](https://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [Multiple linear regression with SAS](https://vicpena.github.io/sta9750/fall18/moreregSAS.pdf)
 * Data: [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv)
-* Slides: [Lecture11](http://vicpena.github.io/sta9750/spring19/MoreReg.pdf)
+* Slides: [Lecture 11](http://vicpena.github.io/sta9750/spring19/MoreReg.pdf), [Lecture 12](http://vicpena.github.io/sta9750/spring19/MultipleReg.pdf)
 * Code: [Lecture11.sas](http:/VicPena.github.io/sta9750/spring19/Lecture11.sas)
 * [How to interpret log transformations](https://www.cscu.cornell.edu/news/statnews/stnews83.pdf)
 
