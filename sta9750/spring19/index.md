@@ -46,6 +46,7 @@
 
 ### Week 6: Simple linear regression with SAS
 
+* Handout: [Simple linear regression with SAS](https://vicpena.github.io/sta9750/fall18/linregSAS.pdf).
 * Data: [galton.csv](http://vicpena.github.io/sta9750/spring19/galton.csv), [huswif.csv](http://vicpena.github.io/sta9750/fall18/huswif.csv), [animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv)
 * Slides: [SLR.pdf](http://vicpena.github.io/sta9750/spring19/SLR.pdf)
 * Code: [Lecture10.sas](http:/VicPena.github.io/sta9750/spring19/Lecture10.sas)
@@ -53,6 +54,7 @@
 
 ### Week 7: Multiple linear regression with SAS
 
+* Handouts: [Simple linear regression with SAS](https://vicpena.github.io/sta9750/fall18/linregSAS.pdf), [Multiple linear regression with SAS](https://vicpena.github.io/sta9750/fall18/moreregSAS.pdf).
 * Data: [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [animals.csv](http://vicpena.github.io/sta9750/fall18/Animals.csv)
 * Slides: [Lecture11](http://vicpena.github.io/sta9750/spring19/MoreReg.pdf)
 * Code: [Lecture11.sas](http:/VicPena.github.io/sta9750/spring19/Lecture11.sas)
