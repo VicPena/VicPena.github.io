@@ -60,6 +60,11 @@
 * Code: [Lecture11.sas](http:/VicPena.github.io/sta9750/spring19/Lecture11.sas), [Lecture12.sas](http:/VicPena.github.io/sta9750/spring19/Lecture12.sas)
 * [How to interpret log transformations](https://www.cscu.cornell.edu/news/statnews/stnews83.pdf)
 
+### Week 8: More regression with SAS
+
+* Data: [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [speed_gender_height.csv](http:/VicPena.github.io/sta9750/spring19/speed_gender_height.csv).
+* Code: [Lecture13.sas](http:/VicPena.github.io/sta9750/spring19/Lecture13.sas)
+
 ## Resources
 
 * Basic statistics
