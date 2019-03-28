@@ -64,7 +64,7 @@
 
 * Handouts: [Multiple linear regression with SAS](https://vicpena.github.io/sta9750/fall18/moreregSAS.pdf)
 * Data: [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [speed_gender_height.csv](http:/VicPena.github.io/sta9750/spring19/speed_gender_height.csv), [evals_sas.csv](http://VicPena.github.io/sta9750/fall18/evals_sas.csv), [hsb2.csv](http:/VicPena.github.io/sta9750/spring19/hsb2.csv).
-* Code: [Lecture13.sas](http:/VicPena.github.io/sta9750/spring19/Lecture13.sas)
+* Code: [Lecture13.sas](http:/VicPena.github.io/sta9750/spring19/Lecture13.sas), [Lecture14.sas](http:/VicPena.github.io/sta9750/spring19/Lecture14.sas)
 
 ## Resources
 
