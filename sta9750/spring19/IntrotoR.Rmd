@@ -1,11 +1,10 @@
 ---
 title: "Introduction to `R` "
 author: "Víctor Peña"
-date: "4/1/2019"
 output:
   html_document:
     toc: true
-    theme: united
+    theme: cosmo
 ---
 
 
@@ -267,7 +266,7 @@ Once the library is installed, we can load it using `library()`. If we want to l
 library(ggplot2)
 ```
 
-# Introduction to displaying and summarizing data
+# Introduction to `data.frame`s
 
 We'll use the dataset `mpg`, which is in the `ggplot2` library. First, we load it:
 
@@ -275,7 +274,7 @@ We'll use the dataset `mpg`, which is in the `ggplot2` library. First, we load i
 data(mpg) 
 ```
 
-The class of the dataset is `data.frame`, which allows having columns of different types.
+The class of the dataset is `data.frame` (and others), which are matrices that have columns that can have different types.
 
 The function `str` gives us some information about the variables in the dataset:
 
@@ -296,17 +295,117 @@ We can index the rows and columns of `mpg` using the same syntax we used for ind
 mpg[3:7,c(1,4:5)]
 ```
 
-
-We can get quick summaries of `numeric` variables using `summary`
-
-```{r}
-summary(mpg) 
-```
-
 With `data.frame`s we can extract variables using `$`. For example, if we want to look at `year`:
 
 ```{r}
 mpg$year
+```
+
+We can also index by logical conditions. For instance, if we want to work with the subset of Toyota cars:
+
+```{r}
+mpg[mpg$manufacturer == "toyota",]
+```
+
+# Factors
+
+`factor` is a variable type in `R` useful for encoding categorical variables. Defining them is easy:
+
+```{r}
+fac1 = factor(c("dog","cat","cat","dog"))
+```
+
+We can use `summary` to create a quick table (note that `summary` didn't work well with `character` variables):
+
+```{r}
+summary(fac1)
+```
+
+The default ordering of the categories in a factor is alphabetical, which isn't always the best or most intutive. We can see the different categories (in `R` lingo, levels) of a factor and its ordering using `levels`:
+
+```{r}
+levels(fac1)
+```
+
+
+```{r echo = FALSE}
+hsb2  = read.csv("~/spring19/STA9750/hsb2.csv") # sub this path by the one that's appropriate in your computer
+```
+
+Let's use the `hsb2` dataset (on the course website) to illustrate this point. The dataset contains a variable called `ses`, which is socioeconomic status of the student. It can take on the values `low`, `middle`, and `high`. Unfortunately, the default ordering of the factor is alphabetical, that is:
+
+```{r}
+levels(hsb2$ses)
+```
+
+The problem with this ordering is that if we create tables, plots, etc. `R` will use this ordering, which is counterintuitive. For instance, if we create a 2 x 2 table of `ses` and `race`, we get
+
+```{r}
+table(hsb2$ses, hsb2$race)
+```
+
+This is not great. 
+
+How can we reorder the levels of a factor? The answer is 
+
+```{r}
+hsb2$ses = factor(hsb2$ses, ordered = TRUE, levels = c("low", "middle", "high"))
+```
+
+The code above rewrites the `ses` variable in `hsb2` to an ordered factor whose levels are `low`, `middle`, and `high` (in that order). 
+
+If you don't believe me (and you shouldn't), here's the code to verify that `ses` is now ordered:
+
+```{r}
+levels(hsb2$ses)
+table(hsb2$ses, hsb2$race)
+```
+
+# Lists
+
+We won't say much about `list`s, but they're useful if we want to keep objects of different types in a single place. 
+
+For example, suppose that we have a `vector` and a `matrix`:
+
+```{r}
+v = 1:6
+m = matrix(c(1,0,0,1),byrow=T,nrow=2)
+```
+
+Then, the following code creates a `list` whose entries are the vector `v` and the matrix `m`:
+
+```{r}
+l = list(v,m)
+```
+
+We can access, say, the second element of the list with
+
+```{r}
+l[[2]]
+```
+
+And we can do things such as 
+
+```{r}
+l[[2]][2,1]
+l[[1]][4]
+```
+
+We can add a new element to the list indexing by a new element
+
+```{r}
+v2 = 3:4
+l[[3]] = v2
+```
+
+We probably won't see `list`s again in the course, but it's good to know that they exist.
+
+# Basic data summaries with `R`
+
+We can get quick summaries of `numeric` variables with `summary`
+
+```{r}
+summary(mpg) 
 ```
 
 We can tabulate with `table`
@@ -342,3 +441,8 @@ qplot(mpg$manufacturer)
 ```
 
 `qplot` is smart enough to produce different plots depending on the type of the object. We'll cover `ggplot2` in more detail later in the semester.
+
+# Sources
+
+* [Datacamp: introduction to `R`](https://www.datacamp.com/courses/free-introduction-to-r)
+
