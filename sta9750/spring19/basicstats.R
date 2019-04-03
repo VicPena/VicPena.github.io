@@ -1,0 +1,226 @@
+#' ---
+#' title: " Some hypothesis tests with `R` "
+#' author: "Víctor Peña"
+#' output:
+#'   html_document:
+#'     toc: true
+#'     theme: cosmo
+#' ---
+#' 
+#' 
+#' 
+#' ---
+#' 
+## ----setup, include=FALSE------------------------------------------------
+knitr::opts_chunk$set(echo = TRUE)
+
+#' 
+#' # One normal mean
+#' 
+#' A group of scientists recorded some measurements that are stored in the vector `x`:
+#' 
+## ------------------------------------------------------------------------
+x = c(1,4,2,3,6,9,1,3,9,3)
+
+#' 
+#' We can find the mean and standard deviation of `x` as follows:
+#' 
+## ------------------------------------------------------------------------
+mean(x)
+sd(x)
+
+#' 
+#' The function `summary` provides quantiles, minimum, maximum, etc.
+#' 
+## ------------------------------------------------------------------------
+summary(x)
+
+#' 
+#' We can visualize `x` with a histogram or a boxplot, for example. 
+#' 
+#' The plots below are created using the functions `hist` and `boxplot`, which are in `library(graphics)`:
+#' 
+## ------------------------------------------------------------------------
+hist(x, col = 'orange')
+boxplot(x, col = 'pink', main = "Boxplot of x")
+
+#' 
+#' We can do $t$-tests and find normal confidence intervals for the population mean $\mu$ with the function `t.test`. 
+#' 
+#' For example, if we want to find a 99\% confidence interval for the mean:
+#' 
+## ------------------------------------------------------------------------
+t.test(x, conf.level = 0.99)
+
+#' 
+#' We can change `conf.level` to any confidence level that we want. If we don't specify anything, the default is 95\% confidence. 
+#' 
+#' As you can see, `t.test` gives us a $p$-value. The output is self-explanatory: the $p$-value corresponds to the test $H_0: \mu = 0$ against $H_1: \mu \neq 0$. If we want to change the hypothesized value under the null to some value that is not 0, we can change the argument `mu` of `t.test`. If we want to change the alternative to "less than" or "greater than", instead of "not equal to", we can set `alternative` to `less` or `greater`, respectively.
+#' 
+#' For instance, if we want to test $H_0: \mu = 5$ against $H_1 : \mu < 5$, the following `R` code will do it for us:
+#' 
+## ------------------------------------------------------------------------
+t.test(x, mu = 5, alternative = 'less')
+
+#' 
+#' As always, you can get more information about the function if you type in `?t.test`. 
+#' 
+#' # Two independent normal means
+#' 
+#' A pharmaceutical is interested in knowing whether their new treatment is significantly different than the current gold standard. They collected a sample of 40 individuals: 20 of them were assigned the new treatment, and 20 of them were assigned the current treatment. The outcome is on an ordinal scale that goes from 0 to 100, where 0 is "bad" and 100 is "great". The data can be found in the file `pharma.csv`, which is on the course website.
+#' 
+## ---- echo = FALSE-------------------------------------------------------
+pharma = read.csv("~/Downloads/pharma.csv")
+
+#' 
+#' The data has 2 columns: `group` and `outcome`:
+#' 
+## ------------------------------------------------------------------------
+summary(pharma)
+
+#' 
+#' If we want to get summaries by group (means, standard deviations, etc.), there are different ways to do it. Here's one:
+#' 
+## ------------------------------------------------------------------------
+summary(pharma[pharma$group=='current',])
+summary(pharma[pharma$group=='new',])
+
+
+#' 
+#' We'll see other ways of creating summaries by different `levels` of a `factor` later in the semester. 
+#' 
+#' If we want to plot the outcomes by group, we can create a boxplot:
+#' 
+## ------------------------------------------------------------------------
+boxplot(outcome ~ group, 
+        data = pharma, 
+        main = "Boxplots of outcome by group", 
+        col = c('red', 'blue'))
+
+#' 
+#' We could've also used the command `boxplot(pharma$outcome ~ pharma$group)`, but I think the command above is cleaner. 
+#' 
+#' 
+#' If we want to create histograms of outcomes by groups, here's an option:
+#' 
+## ------------------------------------------------------------------------
+par(mfrow=c(2,1))
+hist(pharma$outcome[pharma$group=='current'],
+     main = "Outcomes for current treatment", 
+     xlab='outcome', 
+     col = 'red')
+
+hist(pharma$outcome[pharma$group=='new'],
+     main = "Outcomes for new treatment",
+     xlab = 'outcome', 
+     col = 'blue')
+
+#' 
+#' Some comments on the code:
+#' 
+#' * `par(mfrow=c(2,1))` tells `R` that we want a plot that has 2 rows and 1 column 
+#' 
+#' * `xlab` changes the label on the `x`-axis of the plot
+#' 
+#' The pharmaceutical is interested in knowing whether the population means of the health outcomes are different at the 0.01 significance level. That is, if $\mu_C$ and $\mu_N$ are the population means of `outcome` for the current and new treatments, respectively, the pharmaceutical wants to test $H_0: \mu_C = \mu_N$ against $H_1 : \mu_C \neq \mu_N$ at the 0.01 significance level. 
+#' 
+#' We can do a two-sample $t$-test with `t.test`:
+#' 
+## ------------------------------------------------------------------------
+t.test(outcome ~ group, conf.level = 0.99, data = pharma)
+
+#' 
+#' We can change the hypothesized difference in means under the null with the argument `mu` and we can change the alternative to "less than" or "greater than" with the argument `alternative`, just as we did with the one-sample $t$-test we covered in the previous section. 
+#' 
+#' As you can see, the treatments are significantly different at the 0.01 significance level (the $p$-value is less than 0.01 and the 99\% confidence interval doesn't cover 0). However, we wouldn't recommend marketing this new drug: the new treatment is significantly *worse* than the current treatment. 
+#' 
+#' 
+#' # $\chi^2$-tests of independence for categorical variables
+#' 
+#' The `hsb2` dataset in `library(openintro)` has standardized test scores and background information for a sample of 200 highschoolers. Let's read in the data:
+#' 
+## ------------------------------------------------------------------------
+library(openintro)
+data(hsb2)
+
+#' 
+#' If you want more information about the dataset, you can find it by typing `?hsb2`. 
+#' 
+#' If we want to get a quick look at the variables in the dataset, we can use `str`:
+#' 
+## ------------------------------------------------------------------------
+str(hsb2)
+
+#' 
+#' Suppose that a team of social scientists want to test whether the distribution of `ses` depends on `race`. First, we can create a table:
+#' 
+## ------------------------------------------------------------------------
+table(hsb2$ses, hsb2$race)
+
+#' 
+#' It's hard to see whether `race` depends on `ses` by looking at the raw counts. We can create columns with row and column percentages with `prop.table`. First, we save the original table with raw counts in a variable.
+#' 
+## ------------------------------------------------------------------------
+tab = table(hsb2$ses, hsb2$race)
+
+#' 
+#' If we want row percentages (i.e. the sum of each row of the table is equal to 1):
+#' 
+## ------------------------------------------------------------------------
+prop.table(tab, margin = 1)
+
+#' 
+#' If we want column percentages (i.e. the sum of each column of the table is equal to 1):
+#' 
+## ------------------------------------------------------------------------
+prop.table(tab, margin = 2)
+
+#' 
+#' Finally, if we want overall percentages instead (i.e. the sum of all the entries in the table is equal to 1):
+#' 
+## ------------------------------------------------------------------------
+prop.table(tab)
+
+#' 
+#' These `prop.table`s aren't very easy to look at, either: they have too many decimal places. We can round them as with `round`:
+#' 
+## ------------------------------------------------------------------------
+round(prop.table(tab, margin = 1), 3)
+
+#' 
+#' If we want 5 decimal places instead, we would change the 3 to a 5.
+#' 
+#' We can create barplots with the `tables` and `prop.tables`:
+#' 
+## ------------------------------------------------------------------------
+barplot(tab, legend.text = T)
+barplot(prop.table(tab, margin = 2), legend.text = T)
+
+#' 
+#' The position of the legends isn't great... We'll see how to fix that later in the semester. 
+#' 
+#' Finally, the code below runs a $\chi^2$-test:
+#' 
+## ------------------------------------------------------------------------
+chisq.test(tab)
+
+#' 
+#' The $p$-value is significant at the 0.05 significance level.
+#' 
+#' # Pairwise comparisons of normal means: Tukey HSD
+#' 
+#' Let's work again with `hsb2` in `library(openintro)`. 
+#' 
+#' Suppose that we want to compare the average scores in `math` among the levels of `race` doing pairwise tests, using Tukey HSD. The code is simple:
+#' 
+## ------------------------------------------------------------------------
+mod = aov(math~race, data=hsb2)
+TukeyHSD(mod)
+
+#' 
+#' We can check whether the pairwise differences are significant by checking the $p$-values. You can change the confidence level of the corrected intervals with the argument `conf.level`. For example, if we want 99\% confidence intervals instead:
+#' 
+## ------------------------------------------------------------------------
+TukeyHSD(mod, conf.level = 0.99)
+
+#' ```
