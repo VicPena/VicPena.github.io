@@ -69,6 +69,7 @@
 ### Week 9: Introduction to R
 
 * Handouts: [Introduction to R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.html), [Some hypothesis tests with R](http:/VicPena.github.io/sta9750/spring19/basicstats.html)
+* Data: [hsb2.csv](http:/VicPena.github.io/sta9750/spring19/hsb2.csv), [pharma.csv](http:/VicPena.github.io/sta9750/fall18/pharma.csv)
 * Code: [IntrotoR.R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.R), [basicstats.r](http:/VicPena.github.io/sta9750/spring19/basicstats.R)
 * Rmarkdown: [IntrotoR.Rmd](http:/VicPena.github.io/sta9750/spring19/IntrotoR.Rmd), [basicstats.Rmd](http:/VicPena.github.io/sta9750/spring19/basicstats.Rmd)
 
