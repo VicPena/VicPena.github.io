@@ -68,8 +68,8 @@
 
 ### Week 9: Introduction to R
 
-* Handouts: [Intro to R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.html)
-* Code: [IntrotoR.R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.R)
+* Handouts: [Introduction to R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.html)
+* Code: [Lecture15.R](http:/VicPena.github.io/sta9750/spring19/Lecture15.R)
 * Rmarkdown: [IntrotoR.Rmd](http:/VicPena.github.io/sta9750/spring19/IntrotoR.Rmd)
 
 ## Resources
