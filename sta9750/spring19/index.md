@@ -73,6 +73,13 @@
 * Code: [IntrotoR.R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.R), [basicstats.R](http:/VicPena.github.io/sta9750/spring19/basicstats.R)
 * Rmarkdown: [IntrotoR.Rmd](http:/VicPena.github.io/sta9750/spring19/IntrotoR.Rmd), [basicstats.Rmd](http:/VicPena.github.io/sta9750/spring19/basicstats.Rmd)
 
+### Week 10: Plotting and manipulating data with R
+
+* Handouts: [Introduction to `ggplot2`:](http:/VicPena.github.io/sta9750/spring19/introggplot2.html)
+* Data: [operation.csv](http:/VicPena.github.io/sta9750/spring19/introggplot2.Rmd)
+* Code: [simpsons.R](http:/VicPena.github.io/sta9750/spring19/simpsons.R), [introggplot2.R](http:/VicPena.github.io/sta9750/spring19/introggplot2.R)
+* Rmarkdown: [introggplot2.Rmd](http:/VicPena.github.io/sta9750/spring19/introggplot2.Rmd)
+
 ## Resources
 
 * Basic statistics
