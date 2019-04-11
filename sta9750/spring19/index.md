@@ -66,19 +66,19 @@
 * Data: [iq.txt](http://vicpena.github.io/sta9750/fall18/iq.txt), [speed_gender_height.csv](http:/VicPena.github.io/sta9750/spring19/speed_gender_height.csv), [evals_sas.csv](http://VicPena.github.io/sta9750/fall18/evals_sas.csv), [hsb2.csv](http:/VicPena.github.io/sta9750/spring19/hsb2.csv).
 * Code: [Lecture13.sas](http:/VicPena.github.io/sta9750/spring19/Lecture13.sas), [Lecture14.sas](http:/VicPena.github.io/sta9750/spring19/Lecture14.sas)
 
-### Week 9: Introduction to `R`
+### Week 9: Introduction to R
 
 * Handouts: [Introduction to R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.html), [Some hypothesis tests with R](http:/VicPena.github.io/sta9750/spring19/basicstats.html)
 * Data: [hsb2.csv](http:/VicPena.github.io/sta9750/spring19/hsb2.csv), [pharma.csv](http:/VicPena.github.io/sta9750/fall18/pharma.csv)
 * Code: [IntrotoR.R](http:/VicPena.github.io/sta9750/spring19/IntrotoR.R), [basicstats.R](http:/VicPena.github.io/sta9750/spring19/basicstats.R)
 * Rmarkdown: [IntrotoR.Rmd](http:/VicPena.github.io/sta9750/spring19/IntrotoR.Rmd), [basicstats.Rmd](http:/VicPena.github.io/sta9750/spring19/basicstats.Rmd)
 
-### Week 10: Plotting and linear regression with `R`
+### Week 10: Plotting and linear regression with R
 
-* Handouts: [Introduction to `ggplot2`:](http:/VicPena.github.io/sta9750/spring19/introggplot2.html)
+* Handouts: [Introduction to `ggplot2`:](http:/VicPena.github.io/sta9750/spring19/introggplot2.html), [Linear regression with `R`](http:/VicPena.github.io/sta9750/spring19/introregression.html)
 * Data: [operation.csv](http:/VicPena.github.io/sta9750/spring19/operation.csv), [nyc.csv](http:/VicPena.github.io/sta9750/spring19/nyc.csv), [nyctest.csv](http:/VicPena.github.io/sta9750/spring19/nyctest.csv)
-* Code: [simpsons.R](http:/VicPena.github.io/sta9750/spring19/simpsons.R), [introggplot2.R](http:/VicPena.github.io/sta9750/spring19/introggplot2.R)
-* Rmarkdown: [introggplot2.Rmd](http:/VicPena.github.io/sta9750/spring19/introggplot2.Rmd)
+* Code: [simpsons.R](http:/VicPena.github.io/sta9750/spring19/simpsons.R), [introggplot2.R](http:/VicPena.github.io/sta9750/spring19/introggplot2.R), [introregression.R]((http:/VicPena.github.io/sta9750/spring19/introregression.R)
+* Rmarkdown: [introggplot2.Rmd](http:/VicPena.github.io/sta9750/spring19/introggplot2.Rmd), [introregression.Rmd]((http:/VicPena.github.io/sta9750/spring19/introregression.Rmd)
 
 ## Resources
 
