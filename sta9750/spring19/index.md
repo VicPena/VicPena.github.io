@@ -80,7 +80,7 @@
 * Code: [simpsons.R](http:/VicPena.github.io/sta9750/spring19/simpsons.R), [introggplot2.R](http:/VicPena.github.io/sta9750/spring19/introggplot2.R), [introregression.R](http:/VicPena.github.io/sta9750/spring19/introregression.R)
 * Rmarkdown: [introggplot2.Rmd](http:/VicPena.github.io/sta9750/spring19/introggplot2.Rmd), [introregression.Rmd](http:/VicPena.github.io/sta9750/spring19/introregression.Rmd)
 
-### Week 10: Plotting and manipulating data with R
+### Week 11: Plotting and manipulating data with R
 
 * Handouts: [Linear regression with `R`](http:/VicPena.github.io/sta9750/spring19/introregression.html)
 * Data: [nyc.csv](http:/VicPena.github.io/sta9750/spring19/nyc.csv), [nyctest.csv](http:/VicPena.github.io/sta9750/spring19/nyctest.csv)
