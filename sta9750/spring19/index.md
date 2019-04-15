@@ -75,10 +75,17 @@
 
 ### Week 10: Plotting and linear regression with R
 
-* Handouts: [Introduction to `ggplot2`:](http:/VicPena.github.io/sta9750/spring19/introggplot2.html), [Linear regression with `R`](http:/VicPena.github.io/sta9750/spring19/introregression.html)
+* Handouts: [Introduction to `ggplot2`](http:/VicPena.github.io/sta9750/spring19/introggplot2.html), [Linear regression with `R`](http:/VicPena.github.io/sta9750/spring19/introregression.html)
 * Data: [operation.csv](http:/VicPena.github.io/sta9750/spring19/operation.csv), [nyc.csv](http:/VicPena.github.io/sta9750/spring19/nyc.csv), [nyctest.csv](http:/VicPena.github.io/sta9750/spring19/nyctest.csv)
 * Code: [simpsons.R](http:/VicPena.github.io/sta9750/spring19/simpsons.R), [introggplot2.R](http:/VicPena.github.io/sta9750/spring19/introggplot2.R), [introregression.R](http:/VicPena.github.io/sta9750/spring19/introregression.R)
 * Rmarkdown: [introggplot2.Rmd](http:/VicPena.github.io/sta9750/spring19/introggplot2.Rmd), [introregression.Rmd](http:/VicPena.github.io/sta9750/spring19/introregression.Rmd)
+
+### Week 10: Plotting and manipulating data with R
+
+* Handouts: [Linear regression with `R`](http:/VicPena.github.io/sta9750/spring19/introregression.html)
+* Data: [nyc.csv](http:/VicPena.github.io/sta9750/spring19/nyc.csv), [nyctest.csv](http:/VicPena.github.io/sta9750/spring19/nyctest.csv)
+* Code: [introregression.R](http:/VicPena.github.io/sta9750/spring19/introregression.R)
+* Rmarkdown: [introregression.Rmd](http:/VicPena.github.io/sta9750/spring19/introregression.Rmd)
 
 ## Resources
 
