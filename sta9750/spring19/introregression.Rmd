@@ -159,6 +159,73 @@ n = nrow(nyc)
 step(mod, direction='backward', k = log(n))
 ```
 
+### All subsets selection with `library(leaps)`
+
+If we want to find the "best" model given a set of predictors according to BIC or adjusted $R^2$, `library(leaps)` is helpful. For example, if we want to consider all models that might contain `Food`, `Decor`, `Service`, and `East`:
+
+```{r}
+library(leaps)
+allsubs = regsubsets(Price ~ Food + Decor + Service + East, data = nyc)
+```
+
+We can see the best models with 1, 2, 3, and 4 predictors using the `summary` function:
+```{r}
+summary(allsubs)
+```
+If we restrict ourselves to all models that have, say, **exactly** 2 predictors, the "best" models according to AIC, BIC, and adjusted $R^2$ will coincide: it will be the model with 2 predictors that has the smallest residual sum of squares. The overall "best" model will be one of the 4 "best" models for a fixed number of predictors. AIC and BIC need not agree on the overall best model, because they penalize model sizes differently (the penalty for AIC is smaller, which favors bigger models). 
+
+We can visualize the BICs of the "best" models (the model at the top of the plot is the best model overall):
+
+```{r}
+plot(allsubs)
+```
+
+We can also visualize the adjusted $R^2$:
+
+```{r}
+plot(allsubs, scale = 'adjr')
+```
+
+I haven't found a way to get AICs, unfortnuately. 
+
+## Prediction
+
+```{r, echo = FALSE}
+nyctest = read.csv('~/spring19/nyctest.csv')
+```
+
+
+The dataset `nyctest` has data for some Italian restaurants that weren't included in `nyc`. Let's see how well we predict the prices of the meals. We'll use the following model
+
+```{r}
+mod = lm(Price ~ Food + Decor + East, data = nyc)
+```
+
+We can find point predictions and 99\% prediction intervals as follows:
+
+```{r}
+preds = predict(mod, newdata = nyctest, interval = 'prediction', level = 0.99)
+preds
+```
+
+Let's compare them to the actual prices:
+
+```{r}
+compare = cbind(preds, nyctest$Price)
+```
+
+We can find a column that tests whether the prediction interval contain the prices:
+
+```{r}
+test = (compare[,4]>=compare[,2]) & (compare[,4] <= compare[,3])
+cbind(compare, test)
+```
+
+We can find the proportion of intervals that trap the true price as
+
+```{r}
+mean(test)
+```
 
 **Sources:**
 
