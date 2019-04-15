@@ -35,7 +35,7 @@ We'll analyze a dataset in Sheather (2009) that has information about 150 Italia
 
 * `Price`: average price of a meal and a drink 
 
-* `Food`: average [Zagat](www.zagat.com) rating of the quality of the food (from 0 to 25)
+* `Food`: average [Zagat](http://www.zagat.com) rating of the quality of the food (from 0 to 25)
 
 * `Decor`: same as above, but with quality of the decor 
 
@@ -180,13 +180,13 @@ We can visualize the BICs of the "best" models (the model at the top of the plot
 plot(allsubs)
 ```
 
-We can also visualize the adjusted $R^2$:
+We can also visualize the adjusted $R^2$s:
 
 ```{r}
 plot(allsubs, scale = 'adjr')
 ```
 
-I haven't found a way to get AICs, unfortnuately. 
+I haven't found a way to get AICs, unfortunately. 
 
 ## Prediction
 

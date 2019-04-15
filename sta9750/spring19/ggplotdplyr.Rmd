@@ -1,0 +1,304 @@
+---
+title: "More `ggplot2` and introduction to `dplyr` "
+author: "Víctor Peña"
+output:
+  html_document:
+    toc: true
+    theme: cosmo
+---
+
+
+## More `qplot`
+
+```{r, echo = FALSE}
+library(ggplot2)
+data(diamonds)
+```
+
+### More than 2 variables at once
+
+We can create scatterplots with colored dots of different shapes:
+
+```{r, message = FALSE}
+qplot(x=carat, y=price, color=cut, shape=cut, data=diamonds)
+```
+
+We can plot colored smoothed curves (potentially overlaid on points; not recommended, though).
+
+```{r}
+qplot(x=carat, y=price, color=cut, geom='smooth', data=diamonds)+geom_point(alpha=0.02)
+```
+
+We can plot panels with colored dots:
+```{r}
+qplot(x=carat, y=price, color=cut, facets=color ~ ., data=diamonds)
+```
+
+Double panels!
+```{r}
+qplot(x=carat, y=price, facets=color~cut, data=diamonds)
+```
+
+Double panels of colored dots... [Q: how many variables are we plotting at once now?]
+```{r}
+qplot(x=carat, y=price, color=clarity, facets=color~cut, data=diamonds)
+```
+
+We could redo all of these with smooth curves/lines instead. 
+
+How can we plot relationships between 3 numerical/quantitative variables? This is one option
+
+```{r}
+qplot(x=depth, y=carat, color=price, data=diamonds)
+```
+
+Another option is categorizing one of the variables, and then plotting bivariate relationships in panels. Below we partition the variable `depth` into 4 categories (defined by its quartiles):
+
+```{r}
+diamonds$depthcat = cut(diamonds$depth, breaks=quantile(diamonds$depth), include.lowest = TRUE)
+qplot(x=carat, y=price, facets=.~depthcat, data=diamonds)
+
+```
+
+### `grid.arrange`
+
+Sometimes it's useful to have unrelated plots in one panel. 
+
+**Exercise** With the base `graphics` package, we can do that with `par(mfrow=c( , ))`. For example, if we want a plot that has 2 rows, one with a histogram of `price` and another row which has a bar plot of cut, how would we do that?
+
+**Answer**
+
+```{r}
+par(mfrow=c(2,1))
+hist(diamonds$price)
+plot(diamonds$cut)
+```
+
+Unfortunately, `par(mfrow=c(,))` doesn't work with `ggplot`. Fortunately, we have `grid.arrange` in `library(gridExtra)`:
+
+```{r}
+library(gridExtra)
+p1 = qplot(price, data=diamonds)
+p2 = qplot(cut, data = diamonds)
+grid.arrange(p1, p2, nrow=2)
+```
+
+If you want to learn more options, you can go [here](https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html).
+
+### Some cool plots in `library(GGally)`
+
+There are some good extra plots based on `ggplot2` in `library(GGally)`. One of them is the equivalent of `plot(dataset)`:
+```{r, message=FALSE}
+library(GGally)
+ggpairs(diamonds[,5:10])
+```
+
+You can plot confidence intervals for regression coefficients easily:
+```{r, message=FALSE}
+data(mtcars)
+mod = lm(mpg~wt+qsec+cyl,data=mtcars)
+ggcoef(mod)
+```
+
+## More `ggplot`
+ 
+Today we'll cover more `ggplot`. Last time we used `qplot` and today we'll use the more general `ggplot` machinery. Plotting with `ggplot` can be more or less broken down into the following steps.
+
+1. Read in the data 
+
+2. Add *aesthetics* (`aes`): Which variables go into the plot? What are the `x` and `y`? What variables are you using for color-coding?
+
+3. Add `geom`s: What kind of plot do you want?
+
+4. Do data transformations, if needed.
+
+5. Change labels/theme.
+
+We'll see some concrete examples today.
+
+Let's read in the diamonds data first.
+
+```{r}
+library(ggplot2)
+data(diamonds)
+```
+
+Let's create a stacked % barplot:
+
+```{r}
+ggplot(diamonds) + aes(x=cut, fill=color) + geom_bar()
+```
+
+We can change the type of barplot easily by adding options in the `geom_bar` function:
+
+```{r}
+ggplot(diamonds) + aes(x=cut, fill=color) + geom_bar(position='fill')
+```
+
+If you want side-by-side bars, you can use `position = 'dodge' `
+
+```{r}
+ggplot(diamonds) + aes(x=cut, fill=color) + geom_bar(position='dodge')
+```
+
+We can use the same structure to produce a color-coded scatterplot:
+
+```{r}
+p = ggplot(diamonds) + aes(x=carat, y=price, color=cut) + geom_point()
+p
+```
+
+Note that we used the option `color` in `aes`. 
+
+We can break down plots in panels using `facet_grid`:
+
+```{r}
+p = p + facet_grid(. ~ cut)
+p
+```
+
+And you can combine `geom`s. For example
+
+```{r}
+ggplot(diamonds) + aes(x=price) + geom_histogram(binwidth = 500, aes(y=..density..))+geom_density(color='red', size=1)
+```
+
+## Axes, titles and labels
+
+The relevant commands here are
+
+* `ggtitle`: for changing the title
+
+* `xlab`, `ylab`: $x$ and $y$ labels
+
+* `xlim`, `ylim`: limits / scale of the plot
+
+
+```{r}
+p + xlab("carat (weight)") + ylab("price ($)") + ggtitle("Price vs carat vs quality") + xlim(c(0,10))+ylim(c(0,30000))
+```
+
+You can also transform the axes
+
+
+```{r}
+p + coord_trans(x='log',y='log')
+```
+
+
+## Intro to the `library(dplyr)`
+
+We can manipulate / filter datasets easily with functions in `library(dplyr)`. Let's use the `hsb2` dataset in `library(openintro)` to illustrate some of the functions.
+
+```{r, echo=FALSE, message=FALSE}
+library(dplyr)
+library(openintro)
+data(hsb2)
+hsb2 = as_tibble(hsb2)
+```
+
+### `select`: select / drop variables
+
+You can create subsets of the data that only contain a few of the variables with `select`. For example, if you want to create a subset that only has the variables `math`, `race`, `gender`, and `ses`:
+
+```{r}
+sub1 = hsb2 %>% select(math,race,gender,ses)
+sub1
+```
+
+The command `%>%` is the so-called pipe operator, which can be used to combine functions in `dplyr` (it's kind of the same idea as `+` in `library(ggplot2)`). 
+
+If, on the other hand, you want to create a subset that **excludes** the variables `math`, `race`, `gender`, and `ses`:
+
+```{r}
+sub2 =  hsb2 %>% select(-math,-race,-gender,-ses)
+sub2
+```
+
+
+### `filter`: filter by logical conditions
+
+This one is pretty self-explanatory. As a reminder, the logical operators in `R` are:
+
+* `==`: equal to
+
+* `!=`: not equal to
+
+* `>=`, `>`, `<`, `<=`: greater or equal to, greater than, less than, less than or equal to
+
+* `|`: or
+
+* `&`: and
+
+For example, if you want to create a subset that only contains people who went to public school and got a score in `math` greater than 70, you can do that as follows:
+
+```{r}
+sub3 = hsb2 %>% filter(math > 70, schtyp == 'public') 
+sub3
+```
+
+If, on the other hand, you want to filter those who got a score in `math` greater than 70 or went to public school (or both):
+
+```{r}
+hsb2 %>% filter(math > 70 | schtyp == 'public') 
+```
+
+You can combine `select` and `filter`. For example, if you only want to keep the values of `math` and `schtyp` for people who went to public school and got a score in `math` greater than 70, we can do that as follows
+
+```{r}
+sub3 = sub3 %>% select(math, schtyp)
+```
+
+Or, equivalently
+
+```{r}
+sub3 =  hsb2 %>% filter(math > 70, schtyp == 'public') %>% select(math, schtyp)
+```
+
+### `mutate`: transform variables
+
+We can use mutate if we want to transform/create new variables. For example, if we want to create a new variable called `avg` which contains the average schore in `read`, `write`, `science`, and `socst`:
+
+```{r}
+hsb2 =  hsb2 %>% mutate(avg=(read+write+science+socst)/4)
+```
+
+
+### `arrange`: sort 
+
+You can use `arrange` to sort the data by the values of some variable (default is ascending; you can use `desc()` to sort in descending order). 
+
+For example, if you want to sort by `avg`, which is the new variable we created in the previous section:
+
+```{r}
+hsb2 %>% arrange(avg)
+```
+
+If you want to sort in descending order
+
+```{r}
+hsb2 %>% arrange(desc(avg))
+```
+
+
+### `group_by` and `summarize`: obtain summaries by variables
+
+We can create objects which contain summaries for different groups by combining `group_by` and `summarize`:
+
+```{r}
+hsb2 %>% group_by(race) %>% summarize(medMath = median(math), sdMath = sd(math))
+```
+
+And you can combine these function with the other functions we learned today. For example:
+
+```{r}
+hsb2 %>% group_by(race) %>% filter(math > 70) %>% summarize(n=n())
+```
+
+Tells us that there are 10 people who got a `math` score greater than 70, and that 1 of them is `asian` and 9 of them are `white`. 
+
+### More?
+
+* Next time
+
+* [`dplyr` cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
