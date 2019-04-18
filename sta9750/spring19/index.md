@@ -82,10 +82,10 @@
 
 ### Week 11: Plotting and manipulating data with R
 
-* Handouts: [Linear regression with `R`](http:/VicPena.github.io/sta9750/spring19/introregression.html), [More `ggplot2` and introduction to `dplyr`](http:/VicPena.github.io/sta9750/spring19/ggplotdplyr.html)
+* Handouts: [Linear regression with `R`](http:/VicPena.github.io/sta9750/spring19/introregression.html), [More `ggplot2` and introduction to `dplyr`](http:/VicPena.github.io/sta9750/spring19/ggplotdplyr.html), [Tidying datasets](http:/VicPena.github.io/sta9750/spring19/tidying.html)
 * Data: [nyc.csv](http:/VicPena.github.io/sta9750/spring19/nyc.csv), [nyctest.csv](http:/VicPena.github.io/sta9750/spring19/nyctest.csv)
 * Code: [introregression.R](http:/VicPena.github.io/sta9750/spring19/introregression.R)
-* Rmarkdown: [introregression.Rmd](http:/VicPena.github.io/sta9750/spring19/introregression.Rmd), [More `ggplot2` and introduction to `dplyr`](http:/VicPena.github.io/sta9750/spring19/ggplotdplyr.Rmd)
+* Rmarkdown: [introregression.Rmd](http:/VicPena.github.io/sta9750/spring19/introregression.Rmd), [More `ggplot2` and introduction to `dplyr`](http:/VicPena.github.io/sta9750/spring19/ggplotdplyr.Rmd), [Tidying datasets](http:/VicPena.github.io/sta9750/spring19/tidying.html)
 
 ## Resources
 
