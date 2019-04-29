@@ -1,5 +1,5 @@
 ---
-title: "More `ggplot2` and introduction to `dplyr` "
+title: "Introduction to `dplyr` "
 author: "Víctor Peña"
 output:
   html_document:
@@ -213,7 +213,7 @@ out2 = gapminder %>%
 ggplot(out2, aes(x=year, y=lifeExp, color=country)) + geom_line(size=1.2)
 ```
 
-Let's do something a little more difficult. Let's try to find the population differential betyouen 2007 and 1957 (range of the data) and sort the data in ascending order by the population differential. A way to do this is
+Let's do something a little more difficult. Let's try to find the population differential between 1952 and 2007 (range of the data) and sort the data in ascending order by the population differential. A way to do this is
 
 ```{r}
 gapminder %>% select(country, year, pop) %>%
@@ -229,7 +229,7 @@ Notice the backticks in the variables when you define `diffPop`.
 
 ## Resources
 
-* [`tidyr` youbsite](https://tidyr.tidyverse.org/)
+* [`tidyr` website](https://tidyr.tidyverse.org/)
 
 * [Tutorial by Bradley Boehmke](https://rpubs.com/bradleyboehmke/data_wrangling)
 
