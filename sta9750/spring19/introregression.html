@@ -136,6 +136,7 @@ $(document).ready(function () {
 <li><a href="#all-subsets-selection-with-libraryleaps">All subsets selection with <code>library(leaps)</code></a></li>
 </ul></li>
 <li><a href="#prediction">Prediction</a></li>
+<li><a href="#interactions">Interactions</a></li>
 </ul></li>
 </ul>
 </div>
@@ -488,6 +489,37 @@ cbind(compare, test)</code></pre>
 <p>We can find the proportion of intervals that trap the true price as</p>
 <pre class="r"><code>mean(test)</code></pre>
 <pre><code>## [1] 0.9444444</code></pre>
+</div>
+<div id="interactions" class="section level2">
+<h2>Interactions</h2>
+<p>Fitting interactions with <code>R</code> amounts to writing a product term in the <code>lm</code> statement.</p>
+<p>For example, if we’re working with the <code>hsb2</code> dataset in <code>library(openintro)</code> and we want to fit a model to predict math scores as a function of the score in writing, socioeconomic status, and an interaction between the two, you can use the code below:</p>
+<pre class="r"><code>library(openintro)
+data(hsb2)
+mod = lm(math ~ write + ses + ses*write , data = hsb2)
+summary(mod)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = math ~ write + ses + ses * write, data = hsb2)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -17.0179  -4.5783  -0.2104   4.4228  21.5940 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     20.336920   5.861562   3.470 0.000642 ***
+## write            0.569636   0.113860   5.003 1.26e-06 ***
+## sesmiddle        1.938395   7.314626   0.265 0.791289    
+## seshigh          2.525714   8.265754   0.306 0.760264    
+## write:sesmiddle  0.006858   0.140908   0.049 0.961234    
+## write:seshigh    0.026098   0.153401   0.170 0.865085    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 7.329 on 194 degrees of freedom
+## Multiple R-squared:  0.4034, Adjusted R-squared:  0.388 
+## F-statistic: 26.24 on 5 and 194 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><strong>Sources:</strong></p>
 <ul>
 <li><p>Sheather, Simon. <em>A modern approach to regression with R.</em> Springer Science &amp; Business Media, 2009.</p></li>

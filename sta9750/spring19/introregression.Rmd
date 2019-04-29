@@ -227,6 +227,19 @@ We can find the proportion of intervals that trap the true price as
 mean(test)
 ```
 
+## Interactions 
+
+Fitting interactions with `R` amounts to writing a product term in the `lm` statement.
+ 
+For example, if we’re working with the `hsb2` dataset in `library(openintro)` and we want to fit a model to predict math scores as a function of the score in writing, socioeconomic status, and an interaction between the two, you can use the code below:
+
+```{r} 
+library(openintro)
+data(hsb2)
+mod = lm(math ~ write + ses + ses*write , data = hsb2)
+summary(mod)
+```
+
 **Sources:**
 
 * Sheather, Simon. *A modern approach to regression with R.* Springer Science & Business Media, 2009.
