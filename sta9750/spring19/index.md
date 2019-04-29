@@ -87,6 +87,11 @@
 * Code: [introregression.R](http:/VicPena.github.io/sta9750/spring19/introregression.R)
 * Rmarkdown: [introregression.Rmd](http:/VicPena.github.io/sta9750/spring19/introregression.Rmd), [More `ggplot2` and introduction to `dplyr`](http:/VicPena.github.io/sta9750/spring19/ggplotdplyr.Rmd), [Tidying datasets](http:/VicPena.github.io/sta9750/spring19/tidying.Rmd)
 
+## Week 13: Combining data with R
+
+* Handout: [Combining datasets](http:/VicPena.github.io/sta9750/spring19/combining.html)
+* Rmarkdown: [combining.Rmd](http:/VicPena.github.io/sta9750/spring19/combining.Rmd)
+
 ## Resources
 
 * Basic statistics
