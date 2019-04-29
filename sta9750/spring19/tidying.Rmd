@@ -1,5 +1,5 @@
 ---
-title: "Introduction to `dplyr` "
+title: "Tidying data"
 author: "Víctor Peña"
 output:
   html_document:
