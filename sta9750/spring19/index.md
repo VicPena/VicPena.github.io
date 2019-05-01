@@ -90,6 +90,8 @@
 ### Week 13: Combining data with R
 
 * Handout: [Combining datasets](http:/VicPena.github.io/sta9750/spring19/combining.html)
+* Data: [corvallis.csv](http:/VicPena.github.io/sta9750/spring19/corvallis.csv),  [ward_sales.csv](http:/VicPena.github.io/sta9750/spring19/ward_sales.csv)
+* Code: [spatial.R](http:/VicPena.github.io/sta9750/spring19/spatial.R)
 * Rmarkdown: [combining.Rmd](http:/VicPena.github.io/sta9750/spring19/combining.Rmd)
 
 ## Resources
