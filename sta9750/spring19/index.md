@@ -97,7 +97,7 @@
 ### Week 13: More geospatial data with R
 
 * Data: [corvallis.csv](http:/VicPena.github.io/sta9750/spring19/corvallis.csv)
-* Code: [spatial.R](http:/VicPena.github.io/sta9750/spring19/spatialColor.R)
+* Code: [spatialColor.R](http:/VicPena.github.io/sta9750/spring19/spatialColor.R)
 
 ## Resources
 
