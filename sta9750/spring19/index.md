@@ -118,6 +118,9 @@
   - [Quick-R](https://www.statmethods.net/index.html)
   - [Cookbook for R](http://www.cookbook-r.com/)
   - [Colors in R, by Tian Zheng @ Columbia](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)
+  - [ggplot2 website](https://ggplot2.tidyverse.org/index.html)
+  - [ggplot2 cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+ 
 * Other 
   - [An Introduction to Statistical Learning, by James, Witten, Hastie, and Tibshirani](http://www-bcf.usc.edu/~gareth/ISL/)
   - [Newsletter of the Cornell Statistical Consulting Unit](https://www.cscu.cornell.edu/news/archive.php)
