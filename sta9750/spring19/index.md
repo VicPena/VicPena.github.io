@@ -87,12 +87,17 @@
 * Code: [introregression.R](http:/VicPena.github.io/sta9750/spring19/introregression.R)
 * Rmarkdown: [introregression.Rmd](http:/VicPena.github.io/sta9750/spring19/introregression.Rmd), [More `ggplot2` and introduction to `dplyr`](http:/VicPena.github.io/sta9750/spring19/ggplotdplyr.Rmd), [Tidying datasets](http:/VicPena.github.io/sta9750/spring19/tidying.Rmd)
 
-### Week 12: Combining data with R
+### Week 12: Combining data with R and intro to geospatial data
 
 * Handout: [Combining datasets](http:/VicPena.github.io/sta9750/spring19/combining.html)
 * Data: [corvallis.csv](http:/VicPena.github.io/sta9750/spring19/corvallis.csv),  [ward_sales.csv](http:/VicPena.github.io/sta9750/spring19/ward_sales.csv)
 * Code: [spatial.R](http:/VicPena.github.io/sta9750/spring19/spatial.R)
 * Rmarkdown: [combining.Rmd](http:/VicPena.github.io/sta9750/spring19/combining.Rmd)
+
+### Week 13: More geospatial data with R
+
+* Data: [corvallis.csv](http:/VicPena.github.io/sta9750/spring19/corvallis.csv)
+* Code: [spatial.R](http:/VicPena.github.io/sta9750/spring19/spatialColor.R)
 
 ## Resources
 
