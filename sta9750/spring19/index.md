@@ -125,6 +125,7 @@
   - [Colors in R, by Tian Zheng @ Columbia](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)
   - [ggplot2 website](https://ggplot2.tidyverse.org/index.html)
   - [ggplot2 cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+  - [Data visualization, by Kieran Healy](https://socviz.co/)
 
 * Other 
   - [An Introduction to Statistical Learning, by James, Witten, Hastie, and Tibshirani](http://www-bcf.usc.edu/~gareth/ISL/)
