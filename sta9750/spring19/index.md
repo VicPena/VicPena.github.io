@@ -125,3 +125,5 @@
   - [An Introduction to Statistical Learning, by James, Witten, Hastie, and Tibshirani](http://www-bcf.usc.edu/~gareth/ISL/)
   - [Newsletter of the Cornell Statistical Consulting Unit](https://www.cscu.cornell.edu/news/archive.php)
   - [Markdown tutorial](https://www.markdowntutorial.com/)
+  - [Using github and R](https://happygitwithr.com/)
+
