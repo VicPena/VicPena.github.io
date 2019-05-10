@@ -94,7 +94,7 @@
 * Code: [spatial.R](http:/VicPena.github.io/sta9750/spring19/spatial.R)
 * Rmarkdown: [combining.Rmd](http:/VicPena.github.io/sta9750/spring19/combining.Rmd)
 
-### Week 13: More geospatial data with R
+### Week 13: More geospatial data with R and logistic regression
 
 * Data: [corvallis.csv](http:/VicPena.github.io/sta9750/spring19/corvallis.csv), [NFL field goal data](http://users.stat.ufl.edu/~winner/data/fieldgoal.dat) ([description](http://users.stat.ufl.edu/~winner/data/fieldgoal.txt))
 * Code: [spatialColor.R](http:/VicPena.github.io/sta9750/spring19/spatialColor.R), [may8.R](http:/VicPena.github.io/sta9750/spring19/may8.R)
