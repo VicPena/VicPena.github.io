@@ -99,6 +99,11 @@
 * Data: [corvallis.csv](http:/VicPena.github.io/sta9750/spring19/corvallis.csv), [NFL field goal data](http://users.stat.ufl.edu/~winner/data/fieldgoal.dat) ([description](http://users.stat.ufl.edu/~winner/data/fieldgoal.txt))
 * Code: [spatialColor.R](http:/VicPena.github.io/sta9750/spring19/spatialColor.R), [may8.R](http:/VicPena.github.io/sta9750/spring19/may8.R)
 
+### Week 14: More logistic regression with R
+
+* Data: [NFL field goal data](http://users.stat.ufl.edu/~winner/data/fieldgoal.dat) ([description](http://users.stat.ufl.edu/~winner/data/fieldgoal.txt)), [Interfaith dating](http://users.stat.ufl.edu/~winner/data/interfaith.dat)([description](http://users.stat.ufl.edu/~winner/data/interfaith.txt))
+* Code: [may13.R](http:/VicPena.github.io/sta9750/spring19/may13.R)
+
 ## Resources
 
 * Basic statistics
