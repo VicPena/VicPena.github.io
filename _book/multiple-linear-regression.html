@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Multiple linear regression | Statistical computing with R</title>
+  <meta name="description" content="These are some notes that can be used to teach R and some stats." />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Multiple linear regression | Statistical computing with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Multiple linear regression | Statistical computing with R" />
+  
+  <meta name="twitter:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+<meta name="author" content="Víctor Peña" />
+
+
+<meta name="date" content="2019-08-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="confidence-intervals-and-hypothesis-tests.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"> Statistical computing with R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Introduction to <code>R</code></a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#what-do-you-need-to-download"><i class="fa fa-check"></i><b>1.1</b> What do you need to download?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#creating-variables"><i class="fa fa-check"></i><b>1.2</b> Creating variables</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-variables"><i class="fa fa-check"></i><b>1.2.1</b> Operations with variables</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#arithmetic-functions"><i class="fa fa-check"></i><b>1.2.2</b> Arithmetic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#vectors"><i class="fa fa-check"></i><b>1.3</b> Vectors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-numeric-vectors"><i class="fa fa-check"></i><b>1.3.1</b> Operations with <code>numeric</code> vectors</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#concatenating"><i class="fa fa-check"></i><b>1.3.2</b> Concatenating</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#indexing"><i class="fa fa-check"></i><b>1.3.3</b> Indexing</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#matrices"><i class="fa fa-check"></i><b>1.4</b> Matrices</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#installing-libraries"><i class="fa fa-check"></i><b>1.5</b> Installing libraries</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#introduction-to-data.frames"><i class="fa fa-check"></i><b>1.6</b> Introduction to <code>data.frame</code>s</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction-to-r.html"><a href="introduction-to-r.html#factors"><i class="fa fa-check"></i><b>1.7</b> Factors</a></li>
+<li class="chapter" data-level="1.8" data-path="introduction-to-r.html"><a href="introduction-to-r.html#lists"><i class="fa fa-check"></i><b>1.8</b> Lists</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction-to-r.html"><a href="introduction-to-r.html#basic-data-summaries-with-r"><i class="fa fa-check"></i><b>1.9</b> Basic data summaries with <code>R</code></a></li>
+<li class="chapter" data-level="" data-path="introduction-to-r.html"><a href="introduction-to-r.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>2</b> Data wrangling</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#importing-and-exporting-data"><i class="fa fa-check"></i><b>2.1</b> Importing and exporting data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#data-subsetting"><i class="fa fa-check"></i><b>2.2</b> Data subsetting</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-variables"><i class="fa fa-check"></i><b>2.2.1</b> Subsetting variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-rows"><i class="fa fa-check"></i><b>2.2.2</b> Subsetting rows</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-wrangling.html"><a href="data-wrangling.html#missing-data"><i class="fa fa-check"></i><b>2.3</b> Missing data</a></li>
+<li class="chapter" data-level="2.4" data-path="data-wrangling.html"><a href="data-wrangling.html#sorting-data"><i class="fa fa-check"></i><b>2.4</b> Sorting data</a></li>
+<li class="chapter" data-level="2.5" data-path="data-wrangling.html"><a href="data-wrangling.html#type-conversions"><i class="fa fa-check"></i><b>2.5</b> Type conversions</a></li>
+<li class="chapter" data-level="2.6" data-path="data-wrangling.html"><a href="data-wrangling.html#reformatting-datasets"><i class="fa fa-check"></i><b>2.6</b> Reformatting datasets</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="data-wrangling.html"><a href="data-wrangling.html#aggregated-data"><i class="fa fa-check"></i><b>2.6.1</b> Aggregated data</a></li>
+<li class="chapter" data-level="2.6.2" data-path="data-wrangling.html"><a href="data-wrangling.html#gather-from-wide-format-to-long-format"><i class="fa fa-check"></i><b>2.6.2</b> <code>gather</code>: from wide format to long format</a></li>
+<li class="chapter" data-level="2.6.3" data-path="data-wrangling.html"><a href="data-wrangling.html#spread-from-long-to-wide-format"><i class="fa fa-check"></i><b>2.6.3</b> <code>spread</code>: from long to wide format</a></li>
+<li class="chapter" data-level="2.6.4" data-path="data-wrangling.html"><a href="data-wrangling.html#creating-and-renaming-variables"><i class="fa fa-check"></i><b>2.6.4</b> Creating and renaming variables</a></li>
+<li class="chapter" data-level="2.6.5" data-path="data-wrangling.html"><a href="data-wrangling.html#obtaining-summaries-by-categories-of-variables"><i class="fa fa-check"></i><b>2.6.5</b> Obtaining summaries by categories of variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting"><i class="fa fa-check"></i><b>2.7</b> Merging and splitting</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-variables"><i class="fa fa-check"></i><b>2.7.1</b> Merging and splitting variables</a></li>
+<li class="chapter" data-level="2.7.2" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-data"><i class="fa fa-check"></i><b>2.7.2</b> Merging and splitting data</a></li>
+<li class="chapter" data-level="2.7.3" data-path="data-wrangling.html"><a href="data-wrangling.html#set-operations-and-binding"><i class="fa fa-check"></i><b>2.7.3</b> Set operations and binding</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#references-1"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Data visualization with <code>ggplot2</code></a><ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#basic-plots-with-qplot"><i class="fa fa-check"></i><b>3.1</b> Basic plots with <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.1.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#univariate-plots"><i class="fa fa-check"></i><b>3.1.1</b> Univariate plots</a></li>
+<li class="chapter" data-level="3.1.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#bivariate"><i class="fa fa-check"></i><b>3.1.2</b> Bivariate</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels"><i class="fa fa-check"></i><b>3.2</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-qplot"><i class="fa fa-check"></i><b>3.3</b> More <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-than-2-variables-at-once"><i class="fa fa-check"></i><b>3.3.1</b> More than 2 variables at once</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#grid.arrange"><i class="fa fa-check"></i><b>3.3.2</b> <code>grid.arrange</code></a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#some-cool-plots-in-libraryggally"><i class="fa fa-check"></i><b>3.3.3</b> Some cool plots in <code>library(GGally)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-ggplot"><i class="fa fa-check"></i><b>3.4</b> More <code>ggplot</code></a></li>
+<li class="chapter" data-level="3.5" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels-1"><i class="fa fa-check"></i><b>3.5</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#references-2"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="basic-programming.html"><a href="basic-programming.html"><i class="fa fa-check"></i><b>4</b> Basic programming</a></li>
+<li class="chapter" data-level="5" data-path="basic-probability.html"><a href="basic-probability.html"><i class="fa fa-check"></i><b>5</b> Basic probability</a></li>
+<li class="chapter" data-level="6" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html"><i class="fa fa-check"></i><b>6</b> Confidence intervals and hypothesis tests</a><ul>
+<li class="chapter" data-level="6.1" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#one-normal-mean"><i class="fa fa-check"></i><b>6.1</b> One normal mean</a></li>
+<li class="chapter" data-level="6.2" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#two-independent-normal-means"><i class="fa fa-check"></i><b>6.2</b> Two independent normal means</a></li>
+<li class="chapter" data-level="6.3" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#chi2-tests-of-independence-for-categorical-variables"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(\chi^2\)</span>-tests of independence for categorical variables</a></li>
+<li class="chapter" data-level="6.4" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#pairwise-comparisons-of-normal-means-tukey-hsd"><i class="fa fa-check"></i><b>6.4</b> Pairwise comparisons of normal means: Tukey HSD</a></li>
+<li class="chapter" data-level="" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#references-3"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>7</b> Multiple linear regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>7.1</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#fitting-regression-models-with-the-lm-function"><i class="fa fa-check"></i><b>7.2</b> Fitting regression models with the <code>lm</code> function</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#automatic-model-selection"><i class="fa fa-check"></i><b>7.3</b> Automatic model selection</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#backward-forward-and-stepwise"><i class="fa fa-check"></i><b>7.3.1</b> Backward, forward, and stepwise</a></li>
+<li class="chapter" data-level="7.3.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#all-subsets-selection-with-libraryleaps"><i class="fa fa-check"></i><b>7.3.2</b> All subsets selection with <code>library(leaps)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#prediction"><i class="fa fa-check"></i><b>7.4</b> Prediction</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#interactions"><i class="fa fa-check"></i><b>7.5</b> Interactions</a></li>
+<li class="chapter" data-level="" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#references-4"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical computing with <code>R</code></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="multiple-linear-regression" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Multiple linear regression</h1>
+<p>We’ll analyze a dataset in Sheather (2009) that has information about 150 Italian restaurants in Manhattan that were open in 2001 (some of them are closed now). The variables are:</p>
+<ul>
+<li><p><code>Case</code>: case-indexing variable</p></li>
+<li><p><code>Restaurant</code>: name of the restaurant</p></li>
+<li><p><code>Price</code>: average price of a meal and a drink</p></li>
+<li><p><code>Food</code>: average <a href="http://www.zagat.com">Zagat</a> rating of the quality of the food (from 0 to 25)</p></li>
+<li><p><code>Decor</code>: same as above, but with quality of the decor</p></li>
+<li><p><code>Service</code>: same as above, but with quality of service</p></li>
+<li><p><code>East</code>: it is equal to <code>1</code> if the restaurant is on the East Side (i.e. east of Fifth Ave)</p></li>
+</ul>
+<p>In our analysis, the response variable will be <code>Price</code>.</p>
+<div id="exploratory-data-analysis" class="section level2">
+<h2><span class="header-section-number">7.1</span> Exploratory data analysis</h2>
+<p>The function <code>pairs</code> creates a scatterplot matrix:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairs</span>(nyc[,<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)])</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-269-1.png" width="672" /></p>
+<p>I wrote <code>nyc[,-c(1,2)]</code> instead of <code>nyc</code> so that the first two variables, <code>Case</code> and <code>Restaurant</code>, are not plotted.</p>
+<p>We can get quick and dirty summaries of the variables with <code>summary</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(nyc[,<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)])</code></pre></div>
+<pre><code>##      Price            Food           Decor          Service        East   
+##  Min.   :19.00   Min.   :16.00   Min.   : 6.00   Min.   :14.00   East:95  
+##  1st Qu.:35.25   1st Qu.:19.00   1st Qu.:16.00   1st Qu.:18.00   West:55  
+##  Median :42.00   Median :21.00   Median :18.00   Median :20.00            
+##  Mean   :42.62   Mean   :20.61   Mean   :17.69   Mean   :19.39            
+##  3rd Qu.:49.75   3rd Qu.:22.00   3rd Qu.:19.00   3rd Qu.:21.00            
+##  Max.   :65.00   Max.   :25.00   Max.   :25.00   Max.   :24.00</code></pre>
+<p>The function <code>ggpairs</code> in <code>library(GGally)</code> produces the equivalent plot, but with <code>ggplot2</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(GGally)
+<span class="kw">ggpairs</span>(nyc[,<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)])</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-271-1.png" width="672" /></p>
+<p>Do you see any interesting patterns?</p>
+</div>
+<div id="fitting-regression-models-with-the-lm-function" class="section level2">
+<h2><span class="header-section-number">7.2</span> Fitting regression models with the <code>lm</code> function</h2>
+<p>Fitting regression models with <code>R</code> is easy. For example, we can fit a model where the outcome is <code>Price</code> and the predictors are <code>Food</code>, <code>Decor</code>, <code>Service</code>, and <code>East</code> with the code</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod =<span class="st"> </span><span class="kw">lm</span>(Price <span class="op">~</span><span class="st"> </span>Food <span class="op">+</span><span class="st"> </span>Decor <span class="op">+</span><span class="st"> </span>Service <span class="op">+</span><span class="st"> </span>East, <span class="dt">data =</span> nyc)</code></pre></div>
+<p>Calling the object <code>mod</code> only gives us coefficients:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ Food + Decor + Service + East, data = nyc)
+## 
+## Coefficients:
+## (Intercept)         Food        Decor      Service     EastWest  
+##  -23.644163     1.634869     1.865549     0.007626    -1.613350</code></pre>
+<p>If we want <span class="math inline">\(p\)</span>-values, <span class="math inline">\(R^2\)</span>, and more, we can get them with <code>summary()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(mod)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ Food + Decor + Service + East, data = nyc)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -13.7995  -3.8323   0.0997   3.3449  16.8484 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -23.644163   5.079278  -4.655 7.25e-06 ***
+## Food          1.634869   0.384961   4.247 3.86e-05 ***
+## Decor         1.865549   0.221396   8.426 3.22e-14 ***
+## Service       0.007626   0.432210   0.018    0.986    
+## EastWest     -1.613350   1.000385  -1.613    0.109    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 5.692 on 145 degrees of freedom
+## Multiple R-squared:  0.6466, Adjusted R-squared:  0.6369 
+## F-statistic: 66.34 on 4 and 145 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>We can get diagnostic plots by <code>plot</code>ting the model. That will give us 4 diagnostic plots. We can arrange them in a figure with 2 rows and 2 columns with <code>par(mfrow=c(2,2))</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))
+<span class="kw">plot</span>(mod)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-275-1.png" width="672" /></p>
+<p>If, for some reason, we want them in 1 row and 4 columns:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>))
+<span class="kw">plot</span>(mod)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-276-1.png" width="672" /></p>
+<p>The instruction <code>par(mfrow=c(&lt;rows&gt;, &lt;columns&gt;)</code> isn’t specific to “models”. We can use it to arrange figures with multiple rows and columns of plots in <code>library(graphics)</code>. Unfortunately, it doesn’t work with <code>ggplot2</code>. The analogue instruction for <code>ggplot2</code> is <code>grid.arrange</code> (see <code>ggplot2</code> handout for examples).</p>
+<p>We can extract diagnostics from <code>mod</code>. For example, if we want to extract Cook’s distances and plot them against observation number, we can use:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cookd =<span class="st"> </span><span class="kw">cooks.distance</span>(mod)
+<span class="kw">plot</span>(cookd)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-277-1.png" width="672" /></p>
+<p>Other useful functions are <code>hatvalues</code> (for leverages), <code>residuals</code> (for residuals), and <code>rstandard</code> (for standardized residuals).</p>
+</div>
+<div id="automatic-model-selection" class="section level2">
+<h2><span class="header-section-number">7.3</span> Automatic model selection</h2>
+<div id="backward-forward-and-stepwise" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Backward, forward, and stepwise</h3>
+<p>Backward selection with AIC:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">step</span>(mod, <span class="dt">direction=</span><span class="st">&#39;backward&#39;</span>)</code></pre></div>
+<pre><code>## Start:  AIC=526.64
+## Price ~ Food + Decor + Service + East
+## 
+##           Df Sum of Sq    RSS    AIC
+## - Service  1      0.01 4698.0 524.64
+## &lt;none&gt;                 4698.0 526.64
+## - East     1     84.27 4782.2 527.30
+## - Food     1    584.35 5282.3 542.22
+## - Decor    1   2300.45 6998.4 584.42
+## 
+## Step:  AIC=524.64
+## Price ~ Food + Decor + East
+## 
+##         Df Sum of Sq    RSS    AIC
+## &lt;none&gt;               4698.0 524.64
+## - East   1     87.24 4785.2 525.40
+## - Food   1   1166.83 5864.8 555.91
+## - Decor  1   3062.26 7760.2 597.92</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ Food + Decor + East, data = nyc)
+## 
+## Coefficients:
+## (Intercept)         Food        Decor     EastWest  
+##     -23.628        1.640        1.867       -1.616</code></pre>
+<p>If we want to do forward selection, we have to give a starting model and a bigger model that contains the all the variables that we might want to include in our model.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nullmod =<span class="st"> </span><span class="kw">lm</span>(Price <span class="op">~</span><span class="st"> </span><span class="dv">1</span>, <span class="dt">data =</span> nyc) <span class="co"># no variables</span>
+fwd =<span class="st"> </span><span class="kw">step</span>(nullmod, 
+           <span class="dt">scope=</span><span class="kw">list</span>(<span class="dt">upper=</span>mod), 
+           <span class="dt">direction=</span><span class="st">&#39;forward&#39;</span>)</code></pre></div>
+<pre><code>## Start:  AIC=674.68
+## Price ~ 1
+## 
+##           Df Sum of Sq     RSS    AIC
+## + Decor    1    7157.2  6138.1 560.75
+## + Service  1    5794.1  7501.3 590.83
+## + Food     1    5505.8  7789.5 596.48
+## + East     1     380.3 12915.0 672.33
+## &lt;none&gt;                 13295.3 674.68
+## 
+## Step:  AIC=560.75
+## Price ~ Decor
+## 
+##           Df Sum of Sq    RSS    AIC
+## + Food     1   1352.93 4785.2 525.40
+## + Service  1    763.57 5374.6 542.82
+## + East     1    273.34 5864.8 555.91
+## &lt;none&gt;                 6138.1 560.75
+## 
+## Step:  AIC=525.4
+## Price ~ Decor + Food
+## 
+##           Df Sum of Sq    RSS    AIC
+## + East     1    87.239 4698.0 524.64
+## &lt;none&gt;                 4785.2 525.40
+## + Service  1     2.980 4782.2 527.30
+## 
+## Step:  AIC=524.64
+## Price ~ Decor + Food + East
+## 
+##           Df Sum of Sq  RSS    AIC
+## &lt;none&gt;                 4698 524.64
+## + Service  1  0.010086 4698 526.64</code></pre>
+<p>In the code above, the starting point was a model with no variables (<code>nullmod</code>) and the model that included the variables under consideration is <code>mod</code> (which contains <code>Food</code>, <code>Service</code>, <code>Decor</code>, and <code>East</code>).</p>
+<p>We can do forward selection starting with a model that has some variable(s) already. For example, we can start with a model that has <code>Service</code> already in.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod2 =<span class="st"> </span><span class="kw">lm</span>( Price <span class="op">~</span><span class="st"> </span>Service, <span class="dt">data =</span> nyc)
+fwd =<span class="st"> </span><span class="kw">step</span>(mod2, 
+           <span class="dt">scope=</span><span class="kw">list</span>(<span class="dt">upper=</span>mod), 
+           <span class="dt">direction=</span><span class="st">&#39;forward&#39;</span>)</code></pre></div>
+<pre><code>## Start:  AIC=590.83
+## Price ~ Service
+## 
+##         Df Sum of Sq    RSS    AIC
+## + Decor  1   2126.70 5374.6 542.82
+## + Food   1    498.33 7002.9 582.52
+## &lt;none&gt;               7501.3 590.83
+## + East   1      7.05 7494.2 592.69
+## 
+## Step:  AIC=542.82
+## Price ~ Service + Decor
+## 
+##        Df Sum of Sq    RSS    AIC
+## + Food  1    592.34 4782.2 527.30
+## + East  1     92.26 5282.3 542.22
+## &lt;none&gt;              5374.6 542.82
+## 
+## Step:  AIC=527.3
+## Price ~ Service + Decor + Food
+## 
+##        Df Sum of Sq    RSS    AIC
+## + East  1    84.268 4698.0 526.64
+## &lt;none&gt;              4782.2 527.30
+## 
+## Step:  AIC=526.64
+## Price ~ Service + Decor + Food + East</code></pre>
+<p>We can do stepwise regression with <code>direction = 'both'</code>. In stepwise regression, variables can get in or out of the model. We can specify the smallest and biggest model in our search with <code>scope</code>. For example, if we want to start our stepwise search with a model has <code>Service</code> as a predictor and we want to restrict our search to models that include <code>Service</code> and potentially include all the other predictors:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod2 =<span class="st"> </span><span class="kw">lm</span>( Price <span class="op">~</span><span class="st"> </span>Service, <span class="dt">data =</span> nyc)
+fwd =<span class="st"> </span><span class="kw">step</span>(mod2, 
+           <span class="dt">scope=</span><span class="kw">list</span>(<span class="dt">lower=</span>mod2, <span class="dt">upper=</span>mod), 
+           <span class="dt">direction=</span><span class="st">&#39;both&#39;</span>)</code></pre></div>
+<pre><code>## Start:  AIC=590.83
+## Price ~ Service
+## 
+##         Df Sum of Sq    RSS    AIC
+## + Decor  1   2126.70 5374.6 542.82
+## + Food   1    498.33 7002.9 582.52
+## &lt;none&gt;               7501.3 590.83
+## + East   1      7.05 7494.2 592.69
+## 
+## Step:  AIC=542.82
+## Price ~ Service + Decor
+## 
+##         Df Sum of Sq    RSS    AIC
+## + Food   1    592.34 4782.2 527.30
+## + East   1     92.26 5282.3 542.22
+## &lt;none&gt;               5374.6 542.82
+## - Decor  1   2126.70 7501.3 590.83
+## 
+## Step:  AIC=527.3
+## Price ~ Service + Decor + Food
+## 
+##         Df Sum of Sq    RSS    AIC
+## + East   1     84.27 4698.0 526.64
+## &lt;none&gt;               4782.2 527.30
+## - Food   1    592.34 5374.6 542.82
+## - Decor  1   2220.71 7002.9 582.52
+## 
+## Step:  AIC=526.64
+## Price ~ Service + Decor + Food + East
+## 
+##         Df Sum of Sq    RSS    AIC
+## &lt;none&gt;               4698.0 526.64
+## - East   1     84.27 4782.2 527.30
+## - Food   1    584.35 5282.3 542.22
+## - Decor  1   2300.45 6998.4 584.42</code></pre>
+<p>We can change our selection criterion to BIC by adding the command <code>k = log(number of observations)</code>. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n =<span class="st"> </span><span class="kw">nrow</span>(nyc) 
+<span class="kw">step</span>(mod, <span class="dt">direction=</span><span class="st">&#39;backward&#39;</span>, <span class="dt">k =</span> <span class="kw">log</span>(n))</code></pre></div>
+<pre><code>## Start:  AIC=541.69
+## Price ~ Food + Decor + Service + East
+## 
+##           Df Sum of Sq    RSS    AIC
+## - Service  1      0.01 4698.0 536.68
+## - East     1     84.27 4782.2 539.35
+## &lt;none&gt;                 4698.0 541.69
+## - Food     1    584.35 5282.3 554.27
+## - Decor    1   2300.45 6998.4 596.46
+## 
+## Step:  AIC=536.68
+## Price ~ Food + Decor + East
+## 
+##         Df Sum of Sq    RSS    AIC
+## - East   1     87.24 4785.2 534.43
+## &lt;none&gt;               4698.0 536.68
+## - Food   1   1166.83 5864.8 564.95
+## - Decor  1   3062.26 7760.2 606.95
+## 
+## Step:  AIC=534.43
+## Price ~ Food + Decor
+## 
+##         Df Sum of Sq    RSS    AIC
+## &lt;none&gt;               4785.2 534.43
+## - Food   1    1352.9 6138.1 566.77
+## - Decor  1    3004.3 7789.5 602.51</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ Food + Decor, data = nyc)
+## 
+## Coefficients:
+## (Intercept)         Food        Decor  
+##     -25.678        1.730        1.845</code></pre>
+</div>
+<div id="all-subsets-selection-with-libraryleaps" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> All subsets selection with <code>library(leaps)</code></h3>
+<p>If we want to find the “best” model given a set of predictors according to BIC or adjusted <span class="math inline">\(R^2\)</span>, <code>library(leaps)</code> is helpful. For example, if we want to consider all models that might contain <code>Food</code>, <code>Decor</code>, <code>Service</code>, and <code>East</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(leaps)
+allsubs =<span class="st"> </span><span class="kw">regsubsets</span>(Price <span class="op">~</span><span class="st"> </span>Food <span class="op">+</span><span class="st"> </span>Decor <span class="op">+</span><span class="st"> </span>Service <span class="op">+</span><span class="st"> </span>East, <span class="dt">data =</span> nyc)</code></pre></div>
+<p>We can see the best models with 1, 2, 3, and 4 predictors using the <code>summary</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(allsubs)</code></pre></div>
+<pre><code>## Subset selection object
+## Call: regsubsets.formula(Price ~ Food + Decor + Service + East, data = nyc)
+## 4 Variables  (and intercept)
+##          Forced in Forced out
+## Food         FALSE      FALSE
+## Decor        FALSE      FALSE
+## Service      FALSE      FALSE
+## EastWest     FALSE      FALSE
+## 1 subsets of each size up to 4
+## Selection Algorithm: exhaustive
+##          Food Decor Service EastWest
+## 1  ( 1 ) &quot; &quot;  &quot;*&quot;   &quot; &quot;     &quot; &quot;     
+## 2  ( 1 ) &quot;*&quot;  &quot;*&quot;   &quot; &quot;     &quot; &quot;     
+## 3  ( 1 ) &quot;*&quot;  &quot;*&quot;   &quot; &quot;     &quot;*&quot;     
+## 4  ( 1 ) &quot;*&quot;  &quot;*&quot;   &quot;*&quot;     &quot;*&quot;</code></pre>
+<p>If we restrict ourselves to all models that have, say, <strong>exactly</strong> 2 predictors, the “best” models according to AIC, BIC, and adjusted <span class="math inline">\(R^2\)</span> will coincide: it will be the model with 2 predictors that has the smallest residual sum of squares. The overall “best” model will be one of the 4 “best” models for a fixed number of predictors. AIC and BIC need not agree on the overall best model, because they penalize model sizes differently (the penalty for AIC is smaller, which favors bigger models).</p>
+<p>We can visualize the BICs of the “best” models (the model at the top of the plot is the best model overall):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(allsubs)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-285-1.png" width="672" /></p>
+<p>We can also visualize the adjusted <span class="math inline">\(R^2\)</span>s:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(allsubs, <span class="dt">scale =</span> <span class="st">&#39;adjr&#39;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-286-1.png" width="672" /></p>
+<p>I haven’t found a way to get AICs, unfortunately.</p>
+</div>
+</div>
+<div id="prediction" class="section level2">
+<h2><span class="header-section-number">7.4</span> Prediction</h2>
+<p>The dataset <code>nyctest</code> has data for some Italian restaurants that weren’t included in <code>nyc</code>. Let’s see how well we predict the prices of the meals. We’ll use the following model</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mod =<span class="st"> </span><span class="kw">lm</span>(Price <span class="op">~</span><span class="st"> </span>Food <span class="op">+</span><span class="st"> </span>Decor <span class="op">+</span><span class="st"> </span>East, <span class="dt">data =</span> nyc)</code></pre></div>
+<p>We can find point predictions and 99% prediction intervals as follows:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">preds =<span class="st"> </span><span class="kw">predict</span>(mod, <span class="dt">newdata =</span> nyctest, <span class="dt">interval =</span> <span class="st">&#39;prediction&#39;</span>, <span class="dt">level =</span> <span class="fl">0.99</span>)
+preds</code></pre></div>
+<pre><code>##         fit      lwr      upr
+## 1  44.44261 29.45164 59.43358
+## 2  46.05904 31.15867 60.95941
+## 3  39.04475 24.14123 53.94827
+## 4  39.27259 24.34107 54.20410
+## 5  54.94082 39.92882 69.95282
+## 6  35.76544 20.77548 50.75540
+## 7  37.40510 22.47519 52.33500
+## 8  44.41939 29.53641 59.30237
+## 9  49.56619 34.62748 64.50489
+## 10 46.05904 31.15867 60.95941
+## 11 41.14008 26.19025 56.08991
+## 12 41.14008 26.19025 56.08991
+## 13 39.29582 24.35479 54.23684
+## 14 41.39114 26.39525 56.38704
+## 15 33.69334 18.65313 48.73356
+## 16 36.01651 21.01412 51.01890
+## 17 44.67045 29.71621 59.62469
+## 18 46.31011 31.32610 61.29411</code></pre>
+<p>Let’s compare them to the actual prices:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">compare =<span class="st"> </span><span class="kw">cbind</span>(preds, nyctest<span class="op">$</span>Price)</code></pre></div>
+<p>We can find a column that tests whether the prediction interval contain the prices:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test =<span class="st"> </span>(compare[,<span class="dv">4</span>]<span class="op">&gt;=</span>compare[,<span class="dv">2</span>]) <span class="op">&amp;</span><span class="st"> </span>(compare[,<span class="dv">4</span>] <span class="op">&lt;=</span><span class="st"> </span>compare[,<span class="dv">3</span>])
+<span class="kw">cbind</span>(compare, test)</code></pre></div>
+<pre><code>##         fit      lwr      upr    test
+## 1  44.44261 29.45164 59.43358 43    1
+## 2  46.05904 31.15867 60.95941 45    1
+## 3  39.04475 24.14123 53.94827 43    1
+## 4  39.27259 24.34107 54.20410 43    1
+## 5  54.94082 39.92882 69.95282 58    1
+## 6  35.76544 20.77548 50.75540 54    0
+## 7  37.40510 22.47519 52.33500 31    1
+## 8  44.41939 29.53641 59.30237 50    1
+## 9  49.56619 34.62748 64.50489 46    1
+## 10 46.05904 31.15867 60.95941 50    1
+## 11 41.14008 26.19025 56.08991 39    1
+## 12 41.14008 26.19025 56.08991 43    1
+## 13 39.29582 24.35479 54.23684 45    1
+## 14 41.39114 26.39525 56.38704 40    1
+## 15 33.69334 18.65313 48.73356 23    1
+## 16 36.01651 21.01412 51.01890 38    1
+## 17 44.67045 29.71621 59.62469 39    1
+## 18 46.31011 31.32610 61.29411 50    1</code></pre>
+<p>We can find the proportion of intervals that trap the true price as</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(test)</code></pre></div>
+<pre><code>## [1] 0.9444444</code></pre>
+</div>
+<div id="interactions" class="section level2">
+<h2><span class="header-section-number">7.5</span> Interactions</h2>
+<p>Fitting interactions with <code>R</code> amounts to writing a product term in the <code>lm</code> statement.</p>
+<p>For example, if we’re working with the <code>hsb2</code> dataset in <code>library(openintro)</code> and we want to fit a model to predict math scores as a function of the score in writing, socioeconomic status, and an interaction between the two, you can use the code below:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(openintro)
+<span class="kw">data</span>(hsb2)
+mod =<span class="st"> </span><span class="kw">lm</span>(math <span class="op">~</span><span class="st"> </span>write <span class="op">+</span><span class="st"> </span>ses <span class="op">+</span><span class="st"> </span>ses<span class="op">*</span>write , <span class="dt">data =</span> hsb2)
+<span class="kw">summary</span>(mod)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = math ~ write + ses + ses * write, data = hsb2)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -17.0179  -4.5783  -0.2104   4.4228  21.5940 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     20.336920   5.861562   3.470 0.000642 ***
+## write            0.569636   0.113860   5.003 1.26e-06 ***
+## sesmiddle        1.938395   7.314626   0.265 0.791289    
+## seshigh          2.525714   8.265754   0.306 0.760264    
+## write:sesmiddle  0.006858   0.140908   0.049 0.961234    
+## write:seshigh    0.026098   0.153401   0.170 0.865085    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 7.329 on 194 degrees of freedom
+## Multiple R-squared:  0.4034, Adjusted R-squared:  0.388 
+## F-statistic: 26.24 on 5 and 194 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="references-4" class="section level2 unnumbered">
+<h2>References</h2>
+<ul>
+<li><p>Sheather, Simon. <em>A modern approach to regression with R.</em> Springer Science &amp; Business Media, 2009.</p></li>
+<li><p><a href="https://www.datacamp.com/courses/multiple-and-logistic-regression">Multiple and logistic regression</a>, Datacamp course by <a href="http://www.science.smith.edu/~bbaumer/w/">Ben Baumer</a>.</p></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="confidence-intervals-and-hypothesis-tests.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["statcompbook.pdf", "statcompbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

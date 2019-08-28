@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Data visualization with ggplot2 | Statistical computing with R</title>
+  <meta name="description" content="These are some notes that can be used to teach R and some stats." />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Data visualization with ggplot2 | Statistical computing with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Data visualization with ggplot2 | Statistical computing with R" />
+  
+  <meta name="twitter:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+<meta name="author" content="Víctor Peña" />
+
+
+<meta name="date" content="2019-08-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-wrangling.html">
+<link rel="next" href="basic-programming.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"> Statistical computing with R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Introduction to <code>R</code></a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#what-do-you-need-to-download"><i class="fa fa-check"></i><b>1.1</b> What do you need to download?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#creating-variables"><i class="fa fa-check"></i><b>1.2</b> Creating variables</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-variables"><i class="fa fa-check"></i><b>1.2.1</b> Operations with variables</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#arithmetic-functions"><i class="fa fa-check"></i><b>1.2.2</b> Arithmetic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#vectors"><i class="fa fa-check"></i><b>1.3</b> Vectors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-numeric-vectors"><i class="fa fa-check"></i><b>1.3.1</b> Operations with <code>numeric</code> vectors</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#concatenating"><i class="fa fa-check"></i><b>1.3.2</b> Concatenating</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#indexing"><i class="fa fa-check"></i><b>1.3.3</b> Indexing</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#matrices"><i class="fa fa-check"></i><b>1.4</b> Matrices</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#installing-libraries"><i class="fa fa-check"></i><b>1.5</b> Installing libraries</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#introduction-to-data.frames"><i class="fa fa-check"></i><b>1.6</b> Introduction to <code>data.frame</code>s</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction-to-r.html"><a href="introduction-to-r.html#factors"><i class="fa fa-check"></i><b>1.7</b> Factors</a></li>
+<li class="chapter" data-level="1.8" data-path="introduction-to-r.html"><a href="introduction-to-r.html#lists"><i class="fa fa-check"></i><b>1.8</b> Lists</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction-to-r.html"><a href="introduction-to-r.html#basic-data-summaries-with-r"><i class="fa fa-check"></i><b>1.9</b> Basic data summaries with <code>R</code></a></li>
+<li class="chapter" data-level="" data-path="introduction-to-r.html"><a href="introduction-to-r.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>2</b> Data wrangling</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#importing-and-exporting-data"><i class="fa fa-check"></i><b>2.1</b> Importing and exporting data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#data-subsetting"><i class="fa fa-check"></i><b>2.2</b> Data subsetting</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-variables"><i class="fa fa-check"></i><b>2.2.1</b> Subsetting variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-rows"><i class="fa fa-check"></i><b>2.2.2</b> Subsetting rows</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-wrangling.html"><a href="data-wrangling.html#missing-data"><i class="fa fa-check"></i><b>2.3</b> Missing data</a></li>
+<li class="chapter" data-level="2.4" data-path="data-wrangling.html"><a href="data-wrangling.html#sorting-data"><i class="fa fa-check"></i><b>2.4</b> Sorting data</a></li>
+<li class="chapter" data-level="2.5" data-path="data-wrangling.html"><a href="data-wrangling.html#type-conversions"><i class="fa fa-check"></i><b>2.5</b> Type conversions</a></li>
+<li class="chapter" data-level="2.6" data-path="data-wrangling.html"><a href="data-wrangling.html#reformatting-datasets"><i class="fa fa-check"></i><b>2.6</b> Reformatting datasets</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="data-wrangling.html"><a href="data-wrangling.html#aggregated-data"><i class="fa fa-check"></i><b>2.6.1</b> Aggregated data</a></li>
+<li class="chapter" data-level="2.6.2" data-path="data-wrangling.html"><a href="data-wrangling.html#gather-from-wide-format-to-long-format"><i class="fa fa-check"></i><b>2.6.2</b> <code>gather</code>: from wide format to long format</a></li>
+<li class="chapter" data-level="2.6.3" data-path="data-wrangling.html"><a href="data-wrangling.html#spread-from-long-to-wide-format"><i class="fa fa-check"></i><b>2.6.3</b> <code>spread</code>: from long to wide format</a></li>
+<li class="chapter" data-level="2.6.4" data-path="data-wrangling.html"><a href="data-wrangling.html#creating-and-renaming-variables"><i class="fa fa-check"></i><b>2.6.4</b> Creating and renaming variables</a></li>
+<li class="chapter" data-level="2.6.5" data-path="data-wrangling.html"><a href="data-wrangling.html#obtaining-summaries-by-categories-of-variables"><i class="fa fa-check"></i><b>2.6.5</b> Obtaining summaries by categories of variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting"><i class="fa fa-check"></i><b>2.7</b> Merging and splitting</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-variables"><i class="fa fa-check"></i><b>2.7.1</b> Merging and splitting variables</a></li>
+<li class="chapter" data-level="2.7.2" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-data"><i class="fa fa-check"></i><b>2.7.2</b> Merging and splitting data</a></li>
+<li class="chapter" data-level="2.7.3" data-path="data-wrangling.html"><a href="data-wrangling.html#set-operations-and-binding"><i class="fa fa-check"></i><b>2.7.3</b> Set operations and binding</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#references-1"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Data visualization with <code>ggplot2</code></a><ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#basic-plots-with-qplot"><i class="fa fa-check"></i><b>3.1</b> Basic plots with <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.1.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#univariate-plots"><i class="fa fa-check"></i><b>3.1.1</b> Univariate plots</a></li>
+<li class="chapter" data-level="3.1.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#bivariate"><i class="fa fa-check"></i><b>3.1.2</b> Bivariate</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels"><i class="fa fa-check"></i><b>3.2</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-qplot"><i class="fa fa-check"></i><b>3.3</b> More <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-than-2-variables-at-once"><i class="fa fa-check"></i><b>3.3.1</b> More than 2 variables at once</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#grid.arrange"><i class="fa fa-check"></i><b>3.3.2</b> <code>grid.arrange</code></a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#some-cool-plots-in-libraryggally"><i class="fa fa-check"></i><b>3.3.3</b> Some cool plots in <code>library(GGally)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-ggplot"><i class="fa fa-check"></i><b>3.4</b> More <code>ggplot</code></a></li>
+<li class="chapter" data-level="3.5" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels-1"><i class="fa fa-check"></i><b>3.5</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#references-2"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="basic-programming.html"><a href="basic-programming.html"><i class="fa fa-check"></i><b>4</b> Basic programming</a></li>
+<li class="chapter" data-level="5" data-path="basic-probability.html"><a href="basic-probability.html"><i class="fa fa-check"></i><b>5</b> Basic probability</a></li>
+<li class="chapter" data-level="6" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html"><i class="fa fa-check"></i><b>6</b> Confidence intervals and hypothesis tests</a><ul>
+<li class="chapter" data-level="6.1" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#one-normal-mean"><i class="fa fa-check"></i><b>6.1</b> One normal mean</a></li>
+<li class="chapter" data-level="6.2" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#two-independent-normal-means"><i class="fa fa-check"></i><b>6.2</b> Two independent normal means</a></li>
+<li class="chapter" data-level="6.3" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#chi2-tests-of-independence-for-categorical-variables"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(\chi^2\)</span>-tests of independence for categorical variables</a></li>
+<li class="chapter" data-level="6.4" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#pairwise-comparisons-of-normal-means-tukey-hsd"><i class="fa fa-check"></i><b>6.4</b> Pairwise comparisons of normal means: Tukey HSD</a></li>
+<li class="chapter" data-level="" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#references-3"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>7</b> Multiple linear regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>7.1</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#fitting-regression-models-with-the-lm-function"><i class="fa fa-check"></i><b>7.2</b> Fitting regression models with the <code>lm</code> function</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#automatic-model-selection"><i class="fa fa-check"></i><b>7.3</b> Automatic model selection</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#backward-forward-and-stepwise"><i class="fa fa-check"></i><b>7.3.1</b> Backward, forward, and stepwise</a></li>
+<li class="chapter" data-level="7.3.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#all-subsets-selection-with-libraryleaps"><i class="fa fa-check"></i><b>7.3.2</b> All subsets selection with <code>library(leaps)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#prediction"><i class="fa fa-check"></i><b>7.4</b> Prediction</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#interactions"><i class="fa fa-check"></i><b>7.5</b> Interactions</a></li>
+<li class="chapter" data-level="" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#references-4"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical computing with <code>R</code></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-visualization-with-ggplot2" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Data visualization with <code>ggplot2</code></h1>
+<p>In this chapter, we’ll learn the basics of <code>ggplot2</code>. There are many good resources on the topic.</p>
+<p>Some of them are:</p>
+<ul>
+<li><p><a href="http://www.cookbook-r.com/Graphs/">Cookbook for R</a></p></li>
+<li><p><a href="https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf">ggplot2 cheatsheet</a></p></li>
+<li><p><a href="http://r-statistics.co/ggplot2-cheatsheet.html">r-statistics.co</a></p></li>
+</ul>
+<p>We will use the <code>diamonds</code> dataset in <code>library(ggplot2)</code>, so we load the library and the dataset.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">data</span>(diamonds)</code></pre></div>
+<p>The dataset has 53940 observations and 10 columns, with column names</p>
+<pre><code>##  [1] &quot;carat&quot;   &quot;cut&quot;     &quot;color&quot;   &quot;clarity&quot; &quot;depth&quot;   &quot;table&quot;   &quot;price&quot;  
+##  [8] &quot;x&quot;       &quot;y&quot;       &quot;z&quot;</code></pre>
+<p>You can get more information on what the variables are by running the <code>R</code> command</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?diamonds</code></pre></div>
+<div id="basic-plots-with-qplot" class="section level2">
+<h2><span class="header-section-number">3.1</span> Basic plots with <code>qplot</code></h2>
+<p>We have seen how to create some basic plots with <code>qplot</code> already. Now it’s time to summarize what we learned and go a little deeper. The good thing about <code>qplot</code> is that it has good defaults for a decent amount of situations.</p>
+<div id="univariate-plots" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Univariate plots</h3>
+<p>One variable at a time!</p>
+<div id="categorical" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> Categorical</h4>
+<p>The most common plots for univariate categorical data are pie charts and bar plots. People who have done research on data visualization agree that pie charts are bad. For example, if you get help for the function <code>pie</code> (which produces pie charts in the base <code>graphics</code> library on <code>R</code>), you get the following <em>note</em>:</p>
+<blockquote>
+<p>Pie charts are a very bad way of displaying information. The eye is good at judging linear measures and bad at judging relative areas. A bar chart or dot chart is a preferable way of displaying this type of data.</p>
+</blockquote>
+<blockquote>
+<p>Cleveland (1985), page 264: “Data that can be shown by pie charts always can be shown by a dot chart. This means that judgements of position along a common scale can be made instead of the less accurate angle judgements.” This statement is based on the empirical investigations of Cleveland and McGill as well as investigations by perceptual psychologists.</p>
+</blockquote>
+<p>It’s possible to create pie charts with <code>ggplot2</code> (see e.g. <a href="https://stackoverflow.com/questions/20442693/how-to-use-ggplot2-to-generate-a-pie-graph">this link</a>) but we won’t cover them here.</p>
+<p>Creating a bar plot with <code>qplot</code> is very easy:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(cut, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-196-1.png" width="672" /></p>
+<p>In <code>ggplot2</code>, plots can be saved as variables. This is a useful feature because, in <code>ggplot2</code>, we create visualizations <em>sequentially</em> by adding layers to a plot. It also makes the code cleaner. Let’s save the plot in a variable and add stuff to it.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">barcut =<span class="st"> </span><span class="kw">qplot</span>(cut, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p>Sometimes I feel like the default fontsize of the plots is too small. You can change the font size as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">barcut =<span class="st"> </span>barcut<span class="op">+</span><span class="kw">theme</span>(<span class="dt">text=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">15</span>))
+barcut</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-198-1.png" width="672" /></p>
+<p>You can change the color of the bars:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">barcut =<span class="st"> </span>barcut<span class="op">+</span><span class="kw">geom_bar</span>(<span class="dt">fill=</span><span class="st">&#39;steelblue&#39;</span>)
+barcut</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-199-1.png" width="672" /></p>
+<p>And you can flip the coordinates</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">barcut =<span class="st"> </span>barcut<span class="op">+</span><span class="kw">coord_flip</span>()
+barcut</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-200-1.png" width="672" /></p>
+<p>You can add a title, too!</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">barcut =<span class="st"> </span>barcut<span class="op">+</span><span class="kw">ggtitle</span>(<span class="st">&quot;Quality of cut&quot;</span>)
+barcut </code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-201-1.png" width="672" /></p>
+<p>If you want to center the title:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">barcut <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust =</span> <span class="fl">0.5</span>))</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-202-1.png" width="672" /></p>
+<p>As you saw, since we were saving the changes as we produced them, all the previous changes to the plot were saved. As you might imagine, an equivalent chunk of code to produce the plot is</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(cut, <span class="dt">data=</span>diamonds)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">text=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">15</span>))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">fill=</span><span class="st">&#39;steelblue&#39;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Quality of cut&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust =</span> <span class="fl">0.5</span>))</code></pre></div>
+<p>You can change the general theme quite easily as well:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(cut, <span class="dt">data=</span>diamonds)<span class="op">+</span><span class="kw">theme_minimal</span>()</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-204-1.png" width="672" /></p>
+<p>You can find a list of default themes <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">here</a>. You’ll have access to more themes if you install <code>library(ggthemes)</code>. See <a href="http://www.sthda.com/english/wiki/ggplot2-themes-and-background-colors-the-3-elements">this reference</a> for more details.</p>
+</div>
+<div id="quantitative" class="section level4">
+<h4><span class="header-section-number">3.1.1.2</span> Quantitative</h4>
+<p>In <code>qplot</code>, the default plot for quantitative data looks like this</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(price,<span class="dt">data=</span>diamonds)</code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-205-1.png" width="672" /></p>
+<p>You can also make density plots.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(price, <span class="dt">geom=</span><span class="st">&#39;density&#39;</span>, <span class="dt">data=</span>diamonds) </code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-206-1.png" width="672" /></p>
+<p>You can change the color of the density plot as follows:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(price, <span class="dt">geom=</span><span class="st">&#39;density&#39;</span>, <span class="dt">data=</span>diamonds) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">fill=</span><span class="st">&#39;steelblue&#39;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-207-1.png" width="672" /></p>
+</div>
+</div>
+<div id="bivariate" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Bivariate</h3>
+<div id="categorical-vs-categorical" class="section level4">
+<h4><span class="header-section-number">3.1.2.1</span> Categorical vs Categorical</h4>
+<p>Creating stacked barplots is easy.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">q1 =<span class="st"> </span><span class="kw">qplot</span>(<span class="dt">x=</span>cut, <span class="dt">fill=</span>color, <span class="dt">data=</span>diamonds)
+q1</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-208-1.png" width="672" /></p>
+<p>Alternatively,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">q2 =<span class="st"> </span><span class="kw">qplot</span>(<span class="dt">x=</span>color, <span class="dt">fill=</span>cut, <span class="dt">data=</span>diamonds)
+q2 </code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-209-1.png" width="672" /></p>
+<p>You can play around with the color palette with <code>scale_fill_brewer</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">q2 <span class="op">+</span><span class="st"> </span><span class="kw">scale_fill_brewer</span>(<span class="dt">palette=</span><span class="st">&quot;Spectral&quot;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-210-1.png" width="672" /></p>
+<p>More info <a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">here</a> and <a href="http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/">here</a>.</p>
+<p><strong>Exercise</strong> How would you flip the coordinates?</p>
+<p><strong>Solution</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">q2 <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-211-1.png" width="672" /></p>
+<p><strong>Exercise</strong> Does the distribution of colors depend on the quality of the cut?</p>
+<p><strong>Solution</strong> We can answer this question with a <span class="math inline">\(\chi^2\)</span>-test.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tab =<span class="st"> </span><span class="kw">table</span>(diamonds<span class="op">$</span>color, diamonds<span class="op">$</span>cut)
+<span class="kw">round</span>(<span class="kw">prop.table</span>(tab,<span class="dv">1</span>),<span class="dv">2</span>)</code></pre></div>
+<pre><code>##    
+##     Fair Good Very Good Premium Ideal
+##   D 0.02 0.10      0.22    0.24  0.42
+##   E 0.02 0.10      0.24    0.24  0.40
+##   F 0.03 0.10      0.23    0.24  0.40
+##   G 0.03 0.08      0.20    0.26  0.43
+##   H 0.04 0.08      0.22    0.28  0.38
+##   I 0.03 0.10      0.22    0.26  0.39
+##   J 0.04 0.11      0.24    0.29  0.32</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">round</span>(<span class="kw">prop.table</span>(tab,<span class="dv">2</span>),<span class="dv">2</span>)</code></pre></div>
+<pre><code>##    
+##     Fair Good Very Good Premium Ideal
+##   D 0.10 0.13      0.13    0.12  0.13
+##   E 0.14 0.19      0.20    0.17  0.18
+##   F 0.19 0.19      0.18    0.17  0.18
+##   G 0.20 0.18      0.19    0.21  0.23
+##   H 0.19 0.14      0.15    0.17  0.14
+##   I 0.11 0.11      0.10    0.10  0.10
+##   J 0.07 0.06      0.06    0.06  0.04</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chisq.test</span>(tab)</code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  tab
+## X-squared = 310.32, df = 24, p-value &lt; 2.2e-16</code></pre>
+</div>
+<div id="categorical-vs-quantitative" class="section level4">
+<h4><span class="header-section-number">3.1.2.2</span> Categorical vs Quantitative</h4>
+<p>Different options here! But some of them are bad. For example, I think this is a bad plot:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>price, <span class="dt">fill=</span>cut, <span class="dt">data=</span>diamonds)</code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-213-1.png" width="672" /></p>
+<p>How can we create a better plot? A less bad plot is</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>price, <span class="dt">color=</span>cut, <span class="dt">geom=</span><span class="st">&#39;density&#39;</span>, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-214-1.png" width="672" /></p>
+<p>Side-by-side boxplots are a better alternative:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>cut, <span class="dt">y=</span>price, <span class="dt">geom=</span><span class="st">&#39;boxplot&#39;</span>, <span class="dt">data=</span>diamonds)<span class="op">+</span><span class="kw">coord_flip</span>()</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-215-1.png" width="672" /></p>
+<p>You can add color using <code>fill</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>cut, <span class="dt">y=</span>price, <span class="dt">fill=</span>cut, <span class="dt">geom=</span><span class="st">&#39;boxplot&#39;</span>, <span class="dt">data=</span>diamonds)<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;none&quot;</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>()</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-216-1.png" width="672" /></p>
+<p>The code <code>theme(legend.position=&quot;none&quot;)</code> gets rid of the legend.</p>
+<p>Another option is using <code>facets</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(price, <span class="dt">facets =</span> cut <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span>diamonds)</code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-217-1.png" width="672" /></p>
+</div>
+<div id="quantitative-vs-quantitative" class="section level4">
+<h4><span class="header-section-number">3.1.2.3</span> Quantitative vs Quantitative</h4>
+<p>Scatterplots are your best bet here.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-218-1.png" width="672" /></p>
+<p>You can add some smoothed trend:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">data=</span>diamonds)<span class="op">+</span><span class="kw">geom_smooth</span>()</code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-219-1.png" width="672" /></p>
+<p>And you can fit some linear trend:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">data=</span>diamonds)<span class="op">+</span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&#39;lm&#39;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-220-1.png" width="672" /></p>
+<p><strong>Exercise</strong> Can we use transformations to make the linear fit better?</p>
+<p><strong>Solution</strong> Yes, if you take logs of both variables, it’ll look better. There are still some patches which are probably due to the existence of some <em>hidden</em> variable(s). The variance doesn’t seem to be constant.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span><span class="kw">log</span>(carat), <span class="dt">y=</span><span class="kw">log</span>(price), <span class="dt">data=</span>diamonds)<span class="op">+</span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&#39;lm&#39;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-221-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="axes-titles-and-labels" class="section level2">
+<h2><span class="header-section-number">3.2</span> Axes, titles and labels</h2>
+<p>The relevant commands here are</p>
+<ul>
+<li><p><code>ggtitle</code>: for changing the title</p></li>
+<li><p><code>xlab</code>, <code>ylab</code>: <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> labels</p></li>
+<li><p><code>xlim</code>, <code>ylim</code>: limits / scale of the plot</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">data=</span>diamonds)<span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;carat (weight)&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;price ($)&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Price vs carat&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlim</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">10</span>))<span class="op">+</span>
+<span class="st">  </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">30000</span>))</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-222-1.png" width="672" /></p>
+</div>
+<div id="more-qplot" class="section level2">
+<h2><span class="header-section-number">3.3</span> More <code>qplot</code></h2>
+<div id="more-than-2-variables-at-once" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> More than 2 variables at once</h3>
+<p>We can create scatterplots with colored dots of different shapes:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">color=</span>cut, <span class="dt">shape=</span>cut, <span class="dt">data=</span>diamonds)</code></pre></div>
+<pre><code>## Warning: Using shapes for an ordinal variable is not advised</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-224-1.png" width="672" /></p>
+<p>We can plot colored smoothed curves (potentially overlaid on points; not recommended, though).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">color=</span>cut, <span class="dt">geom=</span><span class="st">&#39;smooth&#39;</span>, <span class="dt">data=</span>diamonds)<span class="op">+</span><span class="kw">geom_point</span>(<span class="dt">alpha=</span><span class="fl">0.02</span>)</code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-225-1.png" width="672" /></p>
+<p>We can plot panels with colored dots:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">color=</span>cut, <span class="dt">facets=</span>color <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-226-1.png" width="672" /></p>
+<p>Double panels!</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">facets=</span>color<span class="op">~</span>cut, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-227-1.png" width="672" /></p>
+<p>Double panels of colored dots… [Q: how many variables are we plotting at once now?]</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">color=</span>clarity, <span class="dt">facets=</span>color<span class="op">~</span>cut, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-228-1.png" width="672" /></p>
+<p>We could redo all of these with smooth curves/lines instead.</p>
+<p>How can we plot relationships between 3 numerical/quantitative variables? This is one option</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(<span class="dt">x=</span>depth, <span class="dt">y=</span>carat, <span class="dt">color=</span>price, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-229-1.png" width="672" /></p>
+<p>Another option is categorizing one of the variables, and then plotting bivariate relationships in panels. Below we partition the variable <code>depth</code> into 4 categories (defined by its quartiles):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds<span class="op">$</span>depthcat =<span class="st"> </span><span class="kw">cut</span>(diamonds<span class="op">$</span>depth, <span class="dt">breaks=</span><span class="kw">quantile</span>(diamonds<span class="op">$</span>depth), <span class="dt">include.lowest =</span> <span class="ot">TRUE</span>)
+<span class="kw">qplot</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">facets=</span>.<span class="op">~</span>depthcat, <span class="dt">data=</span>diamonds)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-230-1.png" width="672" /></p>
+</div>
+<div id="grid.arrange" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> <code>grid.arrange</code></h3>
+<p>Sometimes it’s useful to have unrelated plots in one panel.</p>
+<p><strong>Exercise</strong> With the base <code>graphics</code> package, we can do that with <code>par(mfrow=c( , ))</code>. For example, if we want a plot that has 2 rows, one with a histogram of <code>price</code> and another row which has a bar plot of cut, how would we do that?</p>
+<p><strong>Answer</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))
+<span class="kw">hist</span>(diamonds<span class="op">$</span>price)
+<span class="kw">plot</span>(diamonds<span class="op">$</span>cut)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-231-1.png" width="672" /></p>
+<p>Unfortunately, <code>par(mfrow=c(,))</code> doesn’t work with <code>ggplot</code>. Fortunately, we have <code>grid.arrange</code> in <code>library(gridExtra)</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(gridExtra)
+p1 =<span class="st"> </span><span class="kw">qplot</span>(price, <span class="dt">data=</span>diamonds)
+p2 =<span class="st"> </span><span class="kw">qplot</span>(cut, <span class="dt">data =</span> diamonds)
+<span class="kw">grid.arrange</span>(p1, p2, <span class="dt">nrow=</span><span class="dv">2</span>)</code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-232-1.png" width="672" /></p>
+<p>If you want to learn more options, you can go <a href="https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html">here</a>.</p>
+</div>
+<div id="some-cool-plots-in-libraryggally" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Some cool plots in <code>library(GGally)</code></h3>
+<p>There are some good extra plots based on <code>ggplot2</code> in <code>library(GGally)</code>. One of them is the equivalent of <code>plot(dataset)</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(GGally)
+<span class="kw">ggpairs</span>(diamonds[,<span class="dv">5</span><span class="op">:</span><span class="dv">10</span>])</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-233-1.png" width="672" /></p>
+<p>You can plot confidence intervals for regression coefficients easily:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(mtcars)
+mod =<span class="st"> </span><span class="kw">lm</span>(mpg<span class="op">~</span>wt<span class="op">+</span>qsec<span class="op">+</span>cyl,<span class="dt">data=</span>mtcars)
+<span class="kw">ggcoef</span>(mod)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-234-1.png" width="672" /></p>
+</div>
+</div>
+<div id="more-ggplot" class="section level2">
+<h2><span class="header-section-number">3.4</span> More <code>ggplot</code></h2>
+<p>Today we’ll cover more <code>ggplot</code>. Last time we used <code>qplot</code> and today we’ll use the more general <code>ggplot</code> machinery. Plotting with <code>ggplot</code> can be more or less broken down into the following steps.</p>
+<ol style="list-style-type: decimal">
+<li><p>Read in the data</p></li>
+<li><p>Add <em>aesthetics</em> (<code>aes</code>): Which variables go into the plot? What are the <code>x</code> and <code>y</code>? What variables are you using for color-coding?</p></li>
+<li><p>Add <code>geom</code>s: What kind of plot do you want?</p></li>
+<li><p>Do data transformations, if needed.</p></li>
+<li><p>Change labels/theme.</p></li>
+</ol>
+<p>We’ll see some concrete examples today.</p>
+<p>Let’s read in the diamonds data first.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">data</span>(diamonds)</code></pre></div>
+<p>Let’s create a stacked % barplot:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(diamonds) <span class="op">+</span><span class="st"> </span><span class="kw">aes</span>(<span class="dt">x=</span>cut, <span class="dt">fill=</span>color) <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>()</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-236-1.png" width="672" /></p>
+<p>We can change the type of barplot easily by adding options in the <code>geom_bar</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(diamonds) <span class="op">+</span><span class="st"> </span><span class="kw">aes</span>(<span class="dt">x=</span>cut, <span class="dt">fill=</span>color) <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>(<span class="dt">position=</span><span class="st">&#39;fill&#39;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-237-1.png" width="672" /></p>
+<p>If you want side-by-side bars, you can use <code>position = 'dodge'</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(diamonds) <span class="op">+</span><span class="st"> </span><span class="kw">aes</span>(<span class="dt">x=</span>cut, <span class="dt">fill=</span>color) <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>(<span class="dt">position=</span><span class="st">&#39;dodge&#39;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-238-1.png" width="672" /></p>
+<p>We can use the same structure to produce a color-coded scatterplot:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p =<span class="st"> </span><span class="kw">ggplot</span>(diamonds) <span class="op">+</span><span class="st"> </span><span class="kw">aes</span>(<span class="dt">x=</span>carat, <span class="dt">y=</span>price, <span class="dt">color=</span>cut) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()
+p</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-239-1.png" width="672" /></p>
+<p>Note that we used the option <code>color</code> in <code>aes</code>.</p>
+<p>We can break down plots in panels using <code>facet_grid</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p =<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>cut)
+p</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-240-1.png" width="672" /></p>
+<p>And you can combine <code>geom</code>s. For example</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(diamonds) <span class="op">+</span><span class="st"> </span><span class="kw">aes</span>(<span class="dt">x=</span>price) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">500</span>, <span class="kw">aes</span>(<span class="dt">y=</span>..density..))<span class="op">+</span><span class="kw">geom_density</span>(<span class="dt">color=</span><span class="st">&#39;red&#39;</span>, <span class="dt">size=</span><span class="dv">1</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-241-1.png" width="672" /></p>
+</div>
+<div id="axes-titles-and-labels-1" class="section level2">
+<h2><span class="header-section-number">3.5</span> Axes, titles and labels</h2>
+<p>The relevant commands here are</p>
+<ul>
+<li><p><code>ggtitle</code>: for changing the title</p></li>
+<li><p><code>xlab</code>, <code>ylab</code>: <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> labels</p></li>
+<li><p><code>xlim</code>, <code>ylim</code>: limits / scale of the plot</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p <span class="op">+</span><span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;carat (weight)&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;price ($)&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ggtitle</span>(<span class="st">&quot;Price vs carat vs quality&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">10</span>))<span class="op">+</span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">30000</span>))</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-242-1.png" width="672" /></p>
+<p>You can also transform the axes</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p <span class="op">+</span><span class="st"> </span><span class="kw">coord_trans</span>(<span class="dt">x=</span><span class="st">&#39;log&#39;</span>,<span class="dt">y=</span><span class="st">&#39;log&#39;</span>)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-243-1.png" width="672" /></p>
+</div>
+<div id="references-2" class="section level2 unnumbered">
+<h2>References</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-wrangling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-programming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["statcompbook.pdf", "statcompbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

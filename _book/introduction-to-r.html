@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Statistical computing with R</title>
+  <meta name="description" content="These are some notes that can be used to teach R and some stats." />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Statistical computing with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistical computing with R" />
+  
+  <meta name="twitter:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+<meta name="author" content="Víctor Peña" />
+
+
+<meta name="date" content="2019-08-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="data-wrangling.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"> Statistical computing with R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Introduction to <code>R</code></a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#what-do-you-need-to-download"><i class="fa fa-check"></i><b>1.1</b> What do you need to download?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#creating-variables"><i class="fa fa-check"></i><b>1.2</b> Creating variables</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-variables"><i class="fa fa-check"></i><b>1.2.1</b> Operations with variables</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#arithmetic-functions"><i class="fa fa-check"></i><b>1.2.2</b> Arithmetic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#vectors"><i class="fa fa-check"></i><b>1.3</b> Vectors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-numeric-vectors"><i class="fa fa-check"></i><b>1.3.1</b> Operations with <code>numeric</code> vectors</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#concatenating"><i class="fa fa-check"></i><b>1.3.2</b> Concatenating</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#indexing"><i class="fa fa-check"></i><b>1.3.3</b> Indexing</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#matrices"><i class="fa fa-check"></i><b>1.4</b> Matrices</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#installing-libraries"><i class="fa fa-check"></i><b>1.5</b> Installing libraries</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#introduction-to-data.frames"><i class="fa fa-check"></i><b>1.6</b> Introduction to <code>data.frame</code>s</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction-to-r.html"><a href="introduction-to-r.html#factors"><i class="fa fa-check"></i><b>1.7</b> Factors</a></li>
+<li class="chapter" data-level="1.8" data-path="introduction-to-r.html"><a href="introduction-to-r.html#lists"><i class="fa fa-check"></i><b>1.8</b> Lists</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction-to-r.html"><a href="introduction-to-r.html#basic-data-summaries-with-r"><i class="fa fa-check"></i><b>1.9</b> Basic data summaries with <code>R</code></a></li>
+<li class="chapter" data-level="" data-path="introduction-to-r.html"><a href="introduction-to-r.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>2</b> Data wrangling</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#importing-and-exporting-data"><i class="fa fa-check"></i><b>2.1</b> Importing and exporting data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#data-subsetting"><i class="fa fa-check"></i><b>2.2</b> Data subsetting</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-variables"><i class="fa fa-check"></i><b>2.2.1</b> Subsetting variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-rows"><i class="fa fa-check"></i><b>2.2.2</b> Subsetting rows</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-wrangling.html"><a href="data-wrangling.html#missing-data"><i class="fa fa-check"></i><b>2.3</b> Missing data</a></li>
+<li class="chapter" data-level="2.4" data-path="data-wrangling.html"><a href="data-wrangling.html#sorting-data"><i class="fa fa-check"></i><b>2.4</b> Sorting data</a></li>
+<li class="chapter" data-level="2.5" data-path="data-wrangling.html"><a href="data-wrangling.html#type-conversions"><i class="fa fa-check"></i><b>2.5</b> Type conversions</a></li>
+<li class="chapter" data-level="2.6" data-path="data-wrangling.html"><a href="data-wrangling.html#reformatting-datasets"><i class="fa fa-check"></i><b>2.6</b> Reformatting datasets</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="data-wrangling.html"><a href="data-wrangling.html#aggregated-data"><i class="fa fa-check"></i><b>2.6.1</b> Aggregated data</a></li>
+<li class="chapter" data-level="2.6.2" data-path="data-wrangling.html"><a href="data-wrangling.html#gather-from-wide-format-to-long-format"><i class="fa fa-check"></i><b>2.6.2</b> <code>gather</code>: from wide format to long format</a></li>
+<li class="chapter" data-level="2.6.3" data-path="data-wrangling.html"><a href="data-wrangling.html#spread-from-long-to-wide-format"><i class="fa fa-check"></i><b>2.6.3</b> <code>spread</code>: from long to wide format</a></li>
+<li class="chapter" data-level="2.6.4" data-path="data-wrangling.html"><a href="data-wrangling.html#creating-and-renaming-variables"><i class="fa fa-check"></i><b>2.6.4</b> Creating and renaming variables</a></li>
+<li class="chapter" data-level="2.6.5" data-path="data-wrangling.html"><a href="data-wrangling.html#obtaining-summaries-by-categories-of-variables"><i class="fa fa-check"></i><b>2.6.5</b> Obtaining summaries by categories of variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting"><i class="fa fa-check"></i><b>2.7</b> Merging and splitting</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-variables"><i class="fa fa-check"></i><b>2.7.1</b> Merging and splitting variables</a></li>
+<li class="chapter" data-level="2.7.2" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-data"><i class="fa fa-check"></i><b>2.7.2</b> Merging and splitting data</a></li>
+<li class="chapter" data-level="2.7.3" data-path="data-wrangling.html"><a href="data-wrangling.html#set-operations-and-binding"><i class="fa fa-check"></i><b>2.7.3</b> Set operations and binding</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#references-1"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Data visualization with <code>ggplot2</code></a><ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#basic-plots-with-qplot"><i class="fa fa-check"></i><b>3.1</b> Basic plots with <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.1.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#univariate-plots"><i class="fa fa-check"></i><b>3.1.1</b> Univariate plots</a></li>
+<li class="chapter" data-level="3.1.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#bivariate"><i class="fa fa-check"></i><b>3.1.2</b> Bivariate</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels"><i class="fa fa-check"></i><b>3.2</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-qplot"><i class="fa fa-check"></i><b>3.3</b> More <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-than-2-variables-at-once"><i class="fa fa-check"></i><b>3.3.1</b> More than 2 variables at once</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#grid.arrange"><i class="fa fa-check"></i><b>3.3.2</b> <code>grid.arrange</code></a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#some-cool-plots-in-libraryggally"><i class="fa fa-check"></i><b>3.3.3</b> Some cool plots in <code>library(GGally)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-ggplot"><i class="fa fa-check"></i><b>3.4</b> More <code>ggplot</code></a></li>
+<li class="chapter" data-level="3.5" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels-1"><i class="fa fa-check"></i><b>3.5</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#references-2"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="basic-programming.html"><a href="basic-programming.html"><i class="fa fa-check"></i><b>4</b> Basic programming</a></li>
+<li class="chapter" data-level="5" data-path="basic-probability.html"><a href="basic-probability.html"><i class="fa fa-check"></i><b>5</b> Basic probability</a></li>
+<li class="chapter" data-level="6" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html"><i class="fa fa-check"></i><b>6</b> Confidence intervals and hypothesis tests</a><ul>
+<li class="chapter" data-level="6.1" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#one-normal-mean"><i class="fa fa-check"></i><b>6.1</b> One normal mean</a></li>
+<li class="chapter" data-level="6.2" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#two-independent-normal-means"><i class="fa fa-check"></i><b>6.2</b> Two independent normal means</a></li>
+<li class="chapter" data-level="6.3" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#chi2-tests-of-independence-for-categorical-variables"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(\chi^2\)</span>-tests of independence for categorical variables</a></li>
+<li class="chapter" data-level="6.4" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#pairwise-comparisons-of-normal-means-tukey-hsd"><i class="fa fa-check"></i><b>6.4</b> Pairwise comparisons of normal means: Tukey HSD</a></li>
+<li class="chapter" data-level="" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#references-3"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>7</b> Multiple linear regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>7.1</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#fitting-regression-models-with-the-lm-function"><i class="fa fa-check"></i><b>7.2</b> Fitting regression models with the <code>lm</code> function</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#automatic-model-selection"><i class="fa fa-check"></i><b>7.3</b> Automatic model selection</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#backward-forward-and-stepwise"><i class="fa fa-check"></i><b>7.3.1</b> Backward, forward, and stepwise</a></li>
+<li class="chapter" data-level="7.3.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#all-subsets-selection-with-libraryleaps"><i class="fa fa-check"></i><b>7.3.2</b> All subsets selection with <code>library(leaps)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#prediction"><i class="fa fa-check"></i><b>7.4</b> Prediction</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#interactions"><i class="fa fa-check"></i><b>7.5</b> Interactions</a></li>
+<li class="chapter" data-level="" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#references-4"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical computing with <code>R</code></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Statistical computing with <code>R</code></h1>
+<p class="author"><em>Víctor Peña</em></p>
+<p class="date"><em>2019-08-28</em></p>
+</div>
+<div id="introduction-to-r" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction to <code>R</code></h1>
+<div id="what-do-you-need-to-download" class="section level2">
+<h2><span class="header-section-number">1.1</span> What do you need to download?</h2>
+<p>You’ll need:</p>
+<ul>
+<li><p><code>R</code>, which you can download <a href="https://www.r-project.org/">here</a>.</p></li>
+<li><p><code>RStudio</code>, which you can download <a href="https://www.rstudio.com/">here</a>.</p></li>
+</ul>
+<p>This <a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf"><code>Rstudio</code> cheat sheet</a> might be useful, especially if you want to learn some shortcuts that will help you write code faster.</p>
+</div>
+<div id="creating-variables" class="section level2">
+<h2><span class="header-section-number">1.2</span> Creating variables</h2>
+<p>We can create variables by assigning them values:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable =<span class="st"> </span><span class="dv">0</span> 
+secondvariable =<span class="st"> </span><span class="dv">10</span>
+thirdvariable =<span class="st"> </span><span class="ot">TRUE</span>
+fourthvariable =<span class="st"> &quot;hello&quot;</span></code></pre></div>
+<p>If we want to print a variable, we can type its name. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fourthvariable</code></pre></div>
+<pre><code>## [1] &quot;hello&quot;</code></pre>
+<p>The names of the variables are case sensitive. For example, if we try to print <code>Fourthvariable</code>, we’ll get an error because <code>R</code> doesn’t recognize it (try it yourself).</p>
+<p>With <code>R</code>, we can also assign values with <code>&lt;-</code> instead of <code>=</code>. For example, the following code is equivalent to the first chunk of code:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable &lt;-<span class="st"> </span><span class="dv">0</span> 
+secondvariable &lt;-<span class="st"> </span><span class="dv">10</span>
+thirdvariable &lt;-<span class="st"> </span><span class="ot">TRUE</span>
+fourthvariable &lt;-<span class="st"> &quot;hello&quot;</span></code></pre></div>
+<p>There isn’t any practical difference between using one or the other. I tend to use <code>=</code> because it’s less work.</p>
+<p>We can comment code writing <code>#</code> followed by some text. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># The code below creates a variable named greetings</span>
+greetings =<span class="st"> &quot;hello&quot;</span></code></pre></div>
+<p>As we learn more <code>R</code>, we’ll write somewhat complicated code. It’s good practice to add comments before steps that aren’t obvious (so that you don’t forget what the code does next time you look at it).</p>
+<p>We can rewrite variables. For example, if we type</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable =<span class="st"> </span><span class="dv">3</span></code></pre></div>
+<p>the previous value of <code>firstvariable</code> has been overwritten. Now it’s equal to 3:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable</code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>We can see the “type” of the variables using the function <code>class</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(firstvariable)</code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(thirdvariable)</code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(fourthvariable)</code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>The names of the types of these variables are intuitive, but here’s an explanation:</p>
+<ul>
+<li><p><code>numeric</code> variables can take on numerical values.</p></li>
+<li><p><code>logical</code> variables can take on the values <code>TRUE</code> and <code>FALSE</code>. The values <code>TRUE</code> and <code>FALSE</code> can be abbreviated to <code>T</code> and <code>F</code>.</p></li>
+<li><p><code>character</code> variables are characters. The characters can be numbers. The values of variables of type <code>character</code> are written between quotation marks. For example <code>var = &quot;3&quot;</code> creates a variable called <code>var</code> whose class is <code>character</code>. An equivalent alternative is using single quotes. For example, we could also equivalently write <code>var = '3'</code>. There is no difference. I tend to use double quotes, but sometimes I might use single quotes instead.</p></li>
+</ul>
+<p>There are other types of variables and we’ll see them as we learn more <code>R</code>.</p>
+<p><strong>Exercise</strong> What are the types of the following variables?</p>
+<ul>
+<li><p><code>var1 = 1000</code></p></li>
+<li><p><code>var2 = 1e3</code></p></li>
+<li><p><code>var3 = &quot;1000&quot;</code></p></li>
+<li><p><code>var4 = &quot;1e3&quot;</code></p></li>
+<li><p><code>var5 = &quot;T&quot;</code></p></li>
+<li><p><code>var6 = FALSE</code></p></li>
+</ul>
+<div id="operations-with-variables" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Operations with variables</h3>
+<p>We can add, subtract, multiply, divide, and exponentiate <code>numeric</code> variables:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable<span class="op">+</span>secondvariable</code></pre></div>
+<pre><code>## [1] 13</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable<span class="op">-</span>secondvariable</code></pre></div>
+<pre><code>## [1] -7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable<span class="op">*</span>secondvariable</code></pre></div>
+<pre><code>## [1] 30</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstvariable<span class="op">^</span>secondvariable <span class="co"># exponentiation</span></code></pre></div>
+<pre><code>## [1] 59049</code></pre>
+<p>We can combine operations. For example, we can compute the average of <code>firstvariable</code> and <code>secondvariable</code> as</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(firstvariable<span class="op">+</span>secondvariable)<span class="op">/</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 6.5</code></pre>
+<p><code>R</code> has a built-in <code>mean</code> function, which we’ll see later.</p>
+<p>We can’t add, subtract, multiply, divide or exponentiate <code>character</code> variables (try it out: it’ll give you an error), but we can add, subtract, multiply, divide or exponentiate <code>logical</code> variables. If the variable is <code>TRUE</code> it’ll be treated as a <code>1</code>; if it’s <code>FALSE</code>, it’ll be treated as a <code>0</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">logi1 =<span class="st"> </span>T
+logi2 =<span class="st"> </span>F</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">logi1<span class="op">+</span>logi2 </code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">logi1<span class="op">*</span>logi2 </code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">logi1<span class="op">/</span>logi2 </code></pre></div>
+<pre><code>## [1] Inf</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">logi1<span class="op">^</span>logi2</code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>We can combine <code>logical</code> and <code>numeric</code> variables in operations. Again, <code>TRUE</code> will be treated as a <code>1</code>, and <code>FALSE</code> will be treated as a <code>0</code>.</p>
+<p><strong>Exercise</strong> Let <code>var1 = 3</code>, <code>var2 = -3</code>, <code>var3 = 2</code>, <code>var4 = TRUE</code>, and <code>var5 = &quot;0&quot;</code>. Find the values of the following operations. Try to guess what the values will be before trying in <code>R</code>, just to make sure you understand the process.</p>
+<ul>
+<li><p><code>(var1 + var3*var4)/4</code></p></li>
+<li><p><code>var3^var1+var5^2</code></p></li>
+<li><p><code>var1^0+var2^0</code></p></li>
+</ul>
+<p>We can also do operations without using any variables at all. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">6</span><span class="op">/</span><span class="dv">2</span><span class="op">*</span>(<span class="dv">2</span><span class="op">+</span><span class="dv">1</span>)</code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<p><strong>Exercise</strong> Find the value of the following expressions:</p>
+<ul>
+<li><p><span class="math inline">\(10^3-3 \cdot 4\)</span></p></li>
+<li><p><span class="math inline">\(\frac{(6+4)\cdot 3}{2}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{3-4}{2+3}\)</span></p></li>
+<li><p>Think about what <code>6/2*(2+1+TRUE)</code> should be without using <code>R</code>. Then, try what <code>R</code> gives you and compare.</p></li>
+</ul>
+</div>
+<div id="arithmetic-functions" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Arithmetic functions</h3>
+<p>R has built-in functions such as <code>sqrt</code>, <code>exp</code>, <code>log</code>, etc.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">4</span>)</code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">exp</span>(firstvariable)</code></pre></div>
+<pre><code>## [1] 20.08554</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">10</span>, <span class="dt">base=</span><span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1] 3.321928</code></pre>
+<p>If you’re not sure how a function works, you can ask for help by writing <code>?</code> before the name of the function.</p>
+<p>The number <span class="math inline">\(\pi\)</span> is “pre-defined” as a variable. That is,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pi</code></pre></div>
+<pre><code>## [1] 3.141593</code></pre>
+<p>Note that we never defined a variable called <code>pi</code>, but the code above still worked.</p>
+<p><strong>Exercise</strong> Let <code>var1 = TRUE</code>, <code>var2 = 1e3</code>, <code>var3 = pi</code>, <code>var4 = -3</code>. Find the values of the operations below.</p>
+<ul>
+<li><p><span class="math inline">\(\frac{(\exp(\mathrm{var1}) + \sqrt{\mathrm{var3}})^2}{\mathrm{var4}+\mathrm{var3}}\)</span></p></li>
+<li><p><span class="math inline">\(3 -\frac{\mathrm{var2}-\mathrm{var4}}{3+\mathrm{TRUE}}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{\log_{10}(\mathrm{var2})}{\mathrm{var1}}\)</span></p></li>
+<li><p><span class="math inline">\(\exp(\sqrt{-1} \pi) + 1\)</span></p></li>
+</ul>
+</div>
+</div>
+<div id="vectors" class="section level2">
+<h2><span class="header-section-number">1.3</span> Vectors</h2>
+<p>We can define vectors as follows:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>)
+y1 =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>,<span class="st">&quot;efg&quot;</span>)
+z1 =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="st">&quot;e&quot;</span>)</code></pre></div>
+<p>We can print them by writing their name. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z1</code></pre></div>
+<pre><code>## [1] &quot;a&quot; &quot;2&quot; &quot;3&quot; &quot;e&quot;</code></pre>
+<p>We can find the types of their entries with <code>class</code>, just as we did with variables that only had one entry:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(x1)</code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(y1)</code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(z1)</code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>Note that if a vector has mixed <code>numeric</code> and <code>character</code> entries, it gets saved as <code>character</code> (see <code>z1</code>).</p>
+<p>We can create ranges of values with <code>:</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">10</span><span class="op">:</span><span class="dv">6</span></code></pre></div>
+<pre><code>## [1] 10  9  8  7  6</code></pre>
+<p>You can also find the length of a vector:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(z1)</code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div id="operations-with-numeric-vectors" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Operations with <code>numeric</code> vectors</h3>
+<p>We can add, multiply, divide, etc. all the components of a <code>numeric</code> vector by the same number:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1<span class="op">+</span><span class="dv">5</span></code></pre></div>
+<pre><code>## [1]  6  7  8  9 10 11</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1<span class="op">*</span><span class="dv">5</span></code></pre></div>
+<pre><code>## [1]  5 10 15 20 25 30</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1<span class="op">/</span><span class="dv">5</span></code></pre></div>
+<pre><code>## [1] 0.2 0.4 0.6 0.8 1.0 1.2</code></pre>
+<p>We can add and subtract vectors of the same length:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x2 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>)
+x1<span class="op">+</span>x2</code></pre></div>
+<pre><code>## [1]  8 10 12 14 16 18</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1<span class="op">-</span>x2</code></pre></div>
+<pre><code>## [1] -6 -6 -6 -6 -6 -6</code></pre>
+<p>Similarly, we can do <strong>componentwise</strong> multiplication and division:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1<span class="op">*</span>x2</code></pre></div>
+<pre><code>## [1]  7 16 27 40 55 72</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1<span class="op">/</span>x2</code></pre></div>
+<pre><code>## [1] 0.1428571 0.2500000 0.3333333 0.4000000 0.4545455 0.5000000</code></pre>
+<p>If two vectors are of different lengths, we have to be careful! <code>R</code> won’t give us a warning message:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x3 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)
+x1<span class="op">+</span>x3</code></pre></div>
+<pre><code>## [1] 3 5 5 7 7 9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1<span class="op">*</span>x3 </code></pre></div>
+<pre><code>## [1]  2  6  6 12 10 18</code></pre>
+<p>We can compute means, standard deviations, variances, etc:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(x1)</code></pre></div>
+<pre><code>## [1] 3.5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(x1)</code></pre></div>
+<pre><code>## [1] 1.870829</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(x1)</code></pre></div>
+<pre><code>## [1] 3.5</code></pre>
+<p>We can also take the sum or the product of the elements of a <code>numeric</code> vector:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(x1)</code></pre></div>
+<pre><code>## [1] 21</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prod</span>(x1)</code></pre></div>
+<pre><code>## [1] 720</code></pre>
+<p><strong>Exercise</strong></p>
+<ul>
+<li><p>What is the value of the sum <span class="math inline">\(1 + 2 + 3 + \, \cdots \, + 2019\)</span>?</p></li>
+<li><p>What about the product <span class="math inline">\(1 \cdot 2 \cdot 3 \cdot \, \cdots \, \cdot 10\)</span>? [It’s not part of the (graded) question, but try computing <span class="math inline">\(1 \cdot 2 \cdot 3 \cdot \, \cdots \, \cdot 2019\)</span>. What do you get?]</p></li>
+<li><p>The final grade of a course is equal to the average of 3 assignments. A student got a 100% in 2 of the tests and didn’t show up for the last one. What is her final grade? (in grade %).</p></li>
+<li><p>Consider the same setup that we had in the previous question, but now assume that the instructor computes the final grade using the <a href="https://en.wikipedia.org/wiki/Geometric_mean">geometric mean</a> instead. What is her final grade?</p></li>
+<li><p>Find the usual (arithmetic) average, the geometric average, and the standard deviation of the grades of the following 3 students in the class. Alice got a 75 in the first, second, and third exam. Bob got a 100 in the first one, another perfect 100 in the second exam, but he tanked the third and got only a 25. Finally, Carol started strong with a 93, but then lost steam. In the second exam, she got a 70, and in the last exam, she got a 63. Comment on the results. [To be discussed in class.]</p></li>
+<li><p>Let <code>x = 1:10</code> and <code>y = 11:20.</code> What is the value that you get after applying the <code>R</code> equivalent of the function <code>SUMPRODUCT</code> in Excel?</p></li>
+</ul>
+</div>
+<div id="concatenating" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Concatenating</h3>
+<p>We can add new entries in an existing vector as follows:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(x1,<span class="dv">10</span>) <span class="co"># add at the end</span></code></pre></div>
+<pre><code>## [1]  1  2  3  4  5  6 10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="dv">10</span>, x1) <span class="co"># add at the beginning</span></code></pre></div>
+<pre><code>## [1] 10  1  2  3  4  5  6</code></pre>
+<p>We can concatenate vectors, too:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(x1, x2)</code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12</code></pre>
+</div>
+<div id="indexing" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Indexing</h3>
+<p>We can look at particular entries of a vector using brackets.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="dv">1</span>] <span class="co"># first entry</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="dv">4</span>] <span class="co"># 4th entry</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="kw">length</span>(x1)] <span class="co"># last entry</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<p>In <code>R</code>, indices start at <code>1</code> (in some other programming languages, indices start at <code>0</code>).</p>
+<p>We can access subsets of vectors using vectors. For example, if we want to print the third and fifth entries of <code>x1</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">5</span>)]</code></pre></div>
+<pre><code>## [1] 3 5</code></pre>
+<p>We can subset using ranges of values with <code>:</code>. For instance, if we want to select the second, third, fourth, and fifth entries of <code>x1</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]</code></pre></div>
+<pre><code>## [1] 2 3 4 5</code></pre>
+<p>We can also index by excluding certain observations. For example, if we want a vector that contains all the components in <code>x1</code> except the first one, we can write</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="op">-</span><span class="dv">1</span>]</code></pre></div>
+<pre><code>## [1] 2 3 4 5 6</code></pre>
+<p>This trick can also be used with vectors and ranges:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="op">-</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">5</span>)]</code></pre></div>
+<pre><code>## [1] 1 2 4 6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x1[<span class="op">-</span>(<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>)]</code></pre></div>
+<pre><code>## [1] 1 6</code></pre>
+<p><strong>Exercise</strong> This exercise is not on <em>TopHat</em>, but please do it. Otherwise, you might get stuck further on.</p>
+<ul>
+<li><p>Create a vector that contains the second, fourth, and sixth entries of <code>x1 = c(1,2,3,1,2,5,2,2,2)</code>.</p></li>
+<li><p>Create a vector that contains all but the second, fourth, and sixth entries of <code>x1 = c(1,2,3,1,2,5,2,2,2)</code>.</p></li>
+<li><p>Let <code>x = 1:50</code> and <code>y = 51:100</code>. Create a new vector <code>z</code> that concatenates the entries of <code>x</code> and <code>y</code>. Then, create a vector that contains the even entries of <code>z</code> and another one that contains the odd entries of <code>z</code>.</p></li>
+</ul>
+</div>
+</div>
+<div id="matrices" class="section level2">
+<h2><span class="header-section-number">1.4</span> Matrices</h2>
+<p>Matrices are “boxes” that can contain <code>numeric</code>, <code>logical</code>, or <code>character</code> entries.</p>
+<p>We can create matrices as follows:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="dt">nrow=</span><span class="dv">2</span>, <span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>) <span class="co"># read by row </span>
+A2 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>), <span class="dt">nrow=</span><span class="dv">2</span>, <span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">FALSE</span>) <span class="co"># read by column</span></code></pre></div>
+<p>And we can print them as usual:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A2</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4</code></pre>
+<p>If <code>byrow</code> isn’t specified, the default is <code>byrow = FALSE</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A3 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">2</span>)
+A3</code></pre></div>
+<pre><code>##       [,1]  [,2]
+## [1,]  TRUE  TRUE
+## [2,] FALSE FALSE</code></pre>
+<p>Doing operations with matrices is straightforward:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1<span class="op">*</span>A2 <span class="co"># componentwise product</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    4
+## [2,]    9   16</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1<span class="op">+</span>A2  <span class="co"># componentwise addition</span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    2    4
+## [2,]    6    8</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(A1) <span class="co"># taking the log of the components</span></code></pre></div>
+<pre><code>##          [,1]      [,2]
+## [1,] 0.000000 0.6931472
+## [2,] 1.098612 1.3862944</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1[<span class="dv">1</span>,] <span class="co"># multiply all of A1 by 7</span></code></pre></div>
+<pre><code>## [1] 1 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">7</span><span class="op">*</span>A1[<span class="dv">1</span>,] <span class="co"># multiply the first row of A1 by 7</span></code></pre></div>
+<pre><code>## [1]  7 14</code></pre>
+<p>Indexing matrices is similar to indexing vectors. For example, if we want to access the element in the first row and second column of <code>A1</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1[<span class="dv">1</span>,<span class="dv">2</span>] <span class="co"># accessing entries: rows first, then columns</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>You can also get out full rows and columns of a matrix. For example, if you want to select the first row of <code>A1</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1[<span class="dv">1</span>,]</code></pre></div>
+<pre><code>## [1] 1 2</code></pre>
+<p>If you want to access the second column:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A1[,<span class="dv">2</span>]</code></pre></div>
+<pre><code>## [1] 2 4</code></pre>
+<p>You can also access subsets of matrices. For example, let</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">B =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>), <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">3</span>)</code></pre></div>
+<p>You can access the first two rows and columns as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">B[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    4
+## [2,]    2    5</code></pre>
+<p>You can name the rows and columns of matrices. For example if we want the rows of <code>B</code> to be called <code>R1</code>, <code>R2</code>, and <code>R3</code> and the columns of <code>B</code> to be named <code>C1</code>, <code>C2</code>, <code>C3</code>, we can type</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rownames</span>(B) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;R1&quot;</span>, <span class="st">&quot;R2&quot;</span>, <span class="st">&quot;R3&quot;</span>)
+<span class="kw">colnames</span>(B) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;C1&quot;</span>, <span class="st">&quot;C2&quot;</span>, <span class="st">&quot;C3&quot;</span>)</code></pre></div>
+<p>And then print</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">B</code></pre></div>
+<pre><code>##    C1 C2 C3
+## R1  1  4  7
+## R2  2  5  8
+## R3  3  6  9</code></pre>
+<p>The functions <code>colSums</code> and <code>rowSums</code> give us column sums and row sums of matrices, which is often useful. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rowSums</span>(B)</code></pre></div>
+<pre><code>## R1 R2 R3 
+## 12 15 18</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colSums</span>(B)</code></pre></div>
+<pre><code>## C1 C2 C3 
+##  6 15 24</code></pre>
+<p>You can also apply the function <code>sum</code> to the matrix to add up all the numbers in the matrix:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(B)</code></pre></div>
+<pre><code>## [1] 45</code></pre>
+<p><strong>Exercise</strong></p>
+<p>Bob is on a health kick and is keeping track of the macronutrients and calories in what he eats. Yesterday, he ate</p>
+<ul>
+<li><p>Breakfast: 50g of carbs, 8g of fat, and 20g of protein</p></li>
+<li><p>Lunch: 60g of carbs, 30g of fat, and 40g of protein</p></li>
+<li><p>Dinner: 40g of carbs, 30g of fat, 40g of protein</p></li>
+</ul>
+<p>Create a matrix that combines the information above. Each meal should be in a different row and the columns should contain the grams of carbs, fat, and protein in the meals. The <code>rownames</code> of the matrix should be <code>breakfast</code>, <code>lunch</code>, and <code>dinner</code>. The <code>colnames</code> should be <code>carbs</code>, <code>fat</code>, and <code>protein</code>. Once you’ve done that, use <code>R</code> to answer the following questions:</p>
+<ul>
+<li><p>How many grams of carbs, fat, and protein did Bob eat yesterday? (give them separately; your answer should look something like 50g of carbs, 30g of fat, 20g of protein, but with different numbers)</p></li>
+<li><p>Assume that each gram of carbs yields 4 calories, each gram of protein yields 4 calories, and each gram of fat yields 9 calories. How many calories did Bob eat for breakfast, lunch, and dinner yesterday? (give them separately; your answer should look something like 200 calories for breakfast, 500 calories for lunch, and 300 for dinner, but with different numbers) yesterday? How many calories did he eat in total? Did he stay under his goal of 1800 calories per day?</p></li>
+<li><p>What percentage of the calories he ate yesterday come from carbs, protein, and fat, respectively? (give them separately; your answer should look something like 100 cal from carbs, 300 cal from fat, 300 cal from protein, but potentially with different numbers). He is trying to follow the so-called 40/30/30 diet, where 40 percent of the calories eaten should come from carbs, 30 percent from protein, and 30 percent from fat. Is he close to his goal? If not, suggest how he could get closer</p></li>
+</ul>
+<p>You can add rows and columns to a <code>matrix</code> using <code>rbind</code> and <code>cbind</code>, respectively.</p>
+<p>Let’s define 2 matrices <code>A</code> and <code>B</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">A =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="dt">nrow=</span><span class="dv">2</span>, <span class="dt">ncol=</span><span class="dv">2</span>)
+B =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>), <span class="dt">nrow=</span><span class="dv">2</span>, <span class="dt">ncol=</span><span class="dv">2</span>)</code></pre></div>
+<p>Let’s use <code>rbind</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rbind</span>(A,B)</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
+## [3,]    5    7
+## [4,]    6    8</code></pre>
+<p>And <code>cbind</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cbind</span>(A,B)</code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    3    5    7
+## [2,]    2    4    6    8</code></pre>
+<p>As you can imagine, the order matters. Try out <code>rbind(B,A)</code> and check that you get the output that you’d expect.</p>
+<p>** Create exercise where they have to combine matrices and compute some stuff **</p>
+</div>
+<div id="installing-libraries" class="section level2">
+<h2><span class="header-section-number">1.5</span> Installing libraries</h2>
+<p>Statisticians use <code>R</code> because there are many libraries that contain useful functions. We can install libraries with <code>install.packages</code>. For example, if we want to install <code>ggplot2</code>, which is a useful library for plotting:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&#39;ggplot2&#39;</span>)</code></pre></div>
+<p>Once the library is installed, we can load it using <code>library()</code>. If we want to load <code>ggplot2</code>, we need to type:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)</code></pre></div>
+</div>
+<div id="introduction-to-data.frames" class="section level2">
+<h2><span class="header-section-number">1.6</span> Introduction to <code>data.frame</code>s</h2>
+<p>We’ll use the dataset <code>iris</code>, which is in the built-in library <code>datasets</code>. First, we load it:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(iris) </code></pre></div>
+<p>You can get information about the dataset by typing <code>?iris</code>.</p>
+<p>The class of the dataset is <code>data.frame</code> (and others), which are matrices that have columns that can have different types.</p>
+<p>The function <code>str</code> gives us some information about the variables in the dataset:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(iris) </code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>We have 150 observtions and 5 variables. The first 4 variables are <code>numerical</code> and <code>Species</code> is a <code>factor</code>. We’ll cover <code>factors</code> in the next section.</p>
+<p>You can get a quick summary of the data with</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(iris)</code></pre></div>
+<pre><code>##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50  
+##                 
+##                 
+## </code></pre>
+<p>We’ll come back to this later.</p>
+<p>We can print the first and last 5 observations in the dataset using <code>head</code> and <code>tail</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris)</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(iris)</code></pre></div>
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 145          6.7         3.3          5.7         2.5 virginica
+## 146          6.7         3.0          5.2         2.3 virginica
+## 147          6.3         2.5          5.0         1.9 virginica
+## 148          6.5         3.0          5.2         2.0 virginica
+## 149          6.2         3.4          5.4         2.3 virginica
+## 150          5.9         3.0          5.1         1.8 virginica</code></pre>
+<p>We can index the rows and columns of <code>mpg</code> using the same syntax we used for indexing matrices:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span><span class="op">:</span><span class="dv">5</span>)]</code></pre></div>
+<pre><code>##   Sepal.Length Petal.Width Species
+## 3          4.7         0.2  setosa
+## 4          4.6         0.2  setosa
+## 5          5.0         0.2  setosa
+## 6          5.4         0.4  setosa
+## 7          4.6         0.3  setosa</code></pre>
+<p>With <code>data.frame</code>s, we can extract variables using <code>$</code> followed by their name. For example, if we want to create a variable named <code>spec</code> that contains the column of <code>iris</code> which has named <code>Species</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">spec =<span class="st"> </span>iris<span class="op">$</span>Species</code></pre></div>
+<p>We can also index by logical conditions. For instance, if we want to work with the subset of the data where <code>Species</code> is equal to <code>setosa</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris[iris<span class="op">$</span>Species <span class="op">==</span><span class="st"> &quot;setosa&quot;</span>,]</code></pre></div>
+<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1           5.1         3.5          1.4         0.2  setosa
+## 2           4.9         3.0          1.4         0.2  setosa
+## 3           4.7         3.2          1.3         0.2  setosa
+## 4           4.6         3.1          1.5         0.2  setosa
+## 5           5.0         3.6          1.4         0.2  setosa
+## 6           5.4         3.9          1.7         0.4  setosa
+## 7           4.6         3.4          1.4         0.3  setosa
+## 8           5.0         3.4          1.5         0.2  setosa
+## 9           4.4         2.9          1.4         0.2  setosa
+## 10          4.9         3.1          1.5         0.1  setosa
+## 11          5.4         3.7          1.5         0.2  setosa
+## 12          4.8         3.4          1.6         0.2  setosa
+## 13          4.8         3.0          1.4         0.1  setosa
+## 14          4.3         3.0          1.1         0.1  setosa
+## 15          5.8         4.0          1.2         0.2  setosa
+## 16          5.7         4.4          1.5         0.4  setosa
+## 17          5.4         3.9          1.3         0.4  setosa
+## 18          5.1         3.5          1.4         0.3  setosa
+## 19          5.7         3.8          1.7         0.3  setosa
+## 20          5.1         3.8          1.5         0.3  setosa
+## 21          5.4         3.4          1.7         0.2  setosa
+## 22          5.1         3.7          1.5         0.4  setosa
+## 23          4.6         3.6          1.0         0.2  setosa
+## 24          5.1         3.3          1.7         0.5  setosa
+## 25          4.8         3.4          1.9         0.2  setosa
+## 26          5.0         3.0          1.6         0.2  setosa
+## 27          5.0         3.4          1.6         0.4  setosa
+## 28          5.2         3.5          1.5         0.2  setosa
+## 29          5.2         3.4          1.4         0.2  setosa
+## 30          4.7         3.2          1.6         0.2  setosa
+## 31          4.8         3.1          1.6         0.2  setosa
+## 32          5.4         3.4          1.5         0.4  setosa
+## 33          5.2         4.1          1.5         0.1  setosa
+## 34          5.5         4.2          1.4         0.2  setosa
+## 35          4.9         3.1          1.5         0.2  setosa
+## 36          5.0         3.2          1.2         0.2  setosa
+## 37          5.5         3.5          1.3         0.2  setosa
+## 38          4.9         3.6          1.4         0.1  setosa
+## 39          4.4         3.0          1.3         0.2  setosa
+## 40          5.1         3.4          1.5         0.2  setosa
+## 41          5.0         3.5          1.3         0.3  setosa
+## 42          4.5         2.3          1.3         0.3  setosa
+## 43          4.4         3.2          1.3         0.2  setosa
+## 44          5.0         3.5          1.6         0.6  setosa
+## 45          5.1         3.8          1.9         0.4  setosa
+## 46          4.8         3.0          1.4         0.3  setosa
+## 47          5.1         3.8          1.6         0.2  setosa
+## 48          4.6         3.2          1.4         0.2  setosa
+## 49          5.3         3.7          1.5         0.2  setosa
+## 50          5.0         3.3          1.4         0.2  setosa</code></pre>
+<p>Notice that we used <code>==</code> instead of a single <code>=</code>. We’ll learn more about data-subsetting in the next chapter.</p>
+<p><strong>Exercise</strong> Not on <em>Top Hat</em>, but I strongly recommend doing it.</p>
+<ul>
+<li><p>Create a new <code>data.frame</code> named <code>color</code> that contains all the rows in <code>iris</code> so that <code>Species</code> is equal to <code>versicolor</code>.</p></li>
+<li><p>Create a new <code>data.frame</code> named <code>first100</code> that contains the first 100 rows of <code>iris</code>.</p></li>
+<li><p>Create a new <code>data.frame</code> named <code>Petal</code> that only contains the variables <code>Petal.Length</code> and <code>Petal.Width</code>.</p></li>
+</ul>
+<p>Creating <code>data.frame</code>s from scratch is straightforward. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">var1 =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">var2 =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>))</code></pre></div>
+<p>creates a <code>data.frame</code> with two columns named <code>var1</code> and <code>var2</code> which contain the <code>vector</code>s <code>c(1,2,3)</code> and <code>c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;)</code>. You can create a <code>data.frame</code> from existing vectors as well. For example, the following chunk of code is equivalent to the previous one</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">var1 =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)
+var2 =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>)
+df =<span class="st"> </span><span class="kw">data.frame</span>(var1, var2)</code></pre></div>
+<p>The rows and columns of <code>data.frame</code>s can be named using <code>rownames</code> and <code>colnames</code> (just as we did with <code>matrix</code>-type variables).</p>
+<p>We can easily add new variables to an existing <code>data.frame</code>. For example, we can add</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">var3 =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;X&quot;</span>, <span class="st">&quot;Y&quot;</span>, <span class="st">&quot;Z&quot;</span>)</code></pre></div>
+<p>By writing</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>var3 =<span class="st"> </span>var3 </code></pre></div>
+<p>We could’ve also skipped a step and written</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>var3 =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;X&quot;</span>, <span class="st">&quot;Y&quot;</span>, <span class="st">&quot;Z&quot;</span>)</code></pre></div>
+<p>Another alternative is using <code>cbind</code>, which we saw when we were working with matrices. The function <code>rbind</code> works with <code>data.frame</code>s as well.</p>
+</div>
+<div id="factors" class="section level2">
+<h2><span class="header-section-number">1.7</span> Factors</h2>
+<p><code>factor</code> is a variable type in <code>R</code> useful for encoding categorical variables. In the <code>iris</code> dataset, <code>species</code> is a <code>factor</code>. Variables of type <code>character</code> and <code>factor</code> are (conceptually similar) but they have different properties. When we work with <code>data.frame</code>s, we’ll work with factors. When we work with matrices, we’ll work with <code>character</code>-type variables. This can be a bit of a headache because, sometimes, we want to convert <code>matrix</code> objects to <code>data.frame</code>s. We’ll see some of that later in the semester.</p>
+<p>Defining a factor from scratch is easy:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fac1 =<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;dog&quot;</span>,<span class="st">&quot;cat&quot;</span>,<span class="st">&quot;cat&quot;</span>,<span class="st">&quot;dog&quot;</span>))</code></pre></div>
+<p>We can use <code>summary</code> to create a quick table:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(fac1)</code></pre></div>
+<pre><code>## cat dog 
+##   2   2</code></pre>
+<p>The default ordering of the categories in a factor is alphabetical, which isn’t always the best or most intutive. We can see the different categories (in <code>R</code> lingo, levels) of a factor and its ordering using <code>levels</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(fac1)</code></pre></div>
+<pre><code>## [1] &quot;cat&quot; &quot;dog&quot;</code></pre>
+<p><strong>Exercise</strong></p>
+<p>In the <code>iris</code> dataset, how many species of type <code>setosa</code> are there?</p>
+<p>Let’s use a dataset named <code>hsb2</code> to illustrate this point.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hsb2  =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://vicpena.github.io/sta9750/spring19/hsb2.csv&quot;</span>)</code></pre></div>
+<p>The dataset contains a variable called <code>ses</code>, which is socioeconomic status of the student. It can take on the values <code>low</code>, <code>middle</code>, and <code>high</code>. Unfortunately, the default ordering of the factor is alphabetical, that is:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(hsb2<span class="op">$</span>ses)</code></pre></div>
+<pre><code>## [1] &quot;high&quot;   &quot;low&quot;    &quot;middle&quot;</code></pre>
+<p>The problem with this ordering is that if we create tables, plots, etc. <code>R</code> will use this ordering, which is counterintuitive. For instance, if we create a 2 x 2 table of <code>ses</code> and <code>race</code>, we get</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(hsb2<span class="op">$</span>ses, hsb2<span class="op">$</span>race)</code></pre></div>
+<pre><code>##         
+##          african american asian hispanic white
+##   high                  3     3        4    48
+##   low                  11     3        9    24
+##   middle                6     5       11    73</code></pre>
+<p>This is not great.</p>
+<p>How can we reorder the levels of a factor? The answer is</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hsb2<span class="op">$</span>ses =<span class="st"> </span><span class="kw">factor</span>(hsb2<span class="op">$</span>ses, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;low&quot;</span>, <span class="st">&quot;middle&quot;</span>, <span class="st">&quot;high&quot;</span>))</code></pre></div>
+<p>The code above rewrites the <code>ses</code> variable in <code>hsb2</code> to an ordered factor whose levels are <code>low</code>, <code>middle</code>, and <code>high</code> (in that order).</p>
+<p>Here’s the code to verify that <code>ses</code> is now ordered:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(hsb2<span class="op">$</span>ses)</code></pre></div>
+<pre><code>## [1] &quot;low&quot;    &quot;middle&quot; &quot;high&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(hsb2<span class="op">$</span>ses, hsb2<span class="op">$</span>race)</code></pre></div>
+<pre><code>##         
+##          african american asian hispanic white
+##   low                  11     3        9    24
+##   middle                6     5       11    73
+##   high                  3     3        4    48</code></pre>
+<p><strong>Exercise</strong> Not on <em>TopHat</em>.</p>
+<p>Create a factor which takes on the values <code>bad</code>, <code>good</code>, <code>mediocre</code>. Reorder it so that the levels are sorted as <code>bad</code>, <code>mediocre</code>, <code>good</code>.</p>
+</div>
+<div id="lists" class="section level2">
+<h2><span class="header-section-number">1.8</span> Lists</h2>
+<p>We won’t say much about <code>list</code>s, but they’re useful if we want to keep objects of different types in a single place.</p>
+<p>For example, suppose that we have a <code>vector</code> and a <code>matrix</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">6</span>
+m =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">byrow=</span>T,<span class="dt">nrow=</span><span class="dv">2</span>)</code></pre></div>
+<p>Then, the following code creates a <code>list</code> whose entries are the vector <code>v</code> and the matrix <code>m</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l =<span class="st"> </span><span class="kw">list</span>(v,m)</code></pre></div>
+<p>We can access, say, the second element of the list with</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l[[<span class="dv">2</span>]]</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    0
+## [2,]    0    1</code></pre>
+<p>And we can do things such as</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l[[<span class="dv">2</span>]][<span class="dv">2</span>,<span class="dv">1</span>]</code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l[[<span class="dv">1</span>]][<span class="dv">4</span>]</code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>We can add a new element to the list indexing by a new element</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v2 =<span class="st"> </span><span class="dv">3</span><span class="op">:</span><span class="dv">4</span>
+l[[<span class="dv">3</span>]] =<span class="st"> </span>v2</code></pre></div>
+<p>We probably won’t see <code>list</code>s again in the course, but it’s good to know that they exist.</p>
+</div>
+<div id="basic-data-summaries-with-r" class="section level2">
+<h2><span class="header-section-number">1.9</span> Basic data summaries with <code>R</code></h2>
+<p>In this section, we’ll use the <code>mpg</code> dataset in <code>library(ggplot2)</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">data</span>(mpg)</code></pre></div>
+<p>We can get quick summaries of <code>numeric</code> variables with <code>summary</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(mpg) </code></pre></div>
+<pre><code>##  manufacturer          model               displ            year     
+##  Length:234         Length:234         Min.   :1.600   Min.   :1999  
+##  Class :character   Class :character   1st Qu.:2.400   1st Qu.:1999  
+##  Mode  :character   Mode  :character   Median :3.300   Median :2004  
+##                                        Mean   :3.472   Mean   :2004  
+##                                        3rd Qu.:4.600   3rd Qu.:2008  
+##                                        Max.   :7.000   Max.   :2008  
+##       cyl           trans               drv                 cty       
+##  Min.   :4.000   Length:234         Length:234         Min.   : 9.00  
+##  1st Qu.:4.000   Class :character   Class :character   1st Qu.:14.00  
+##  Median :6.000   Mode  :character   Mode  :character   Median :17.00  
+##  Mean   :5.889                                         Mean   :16.86  
+##  3rd Qu.:8.000                                         3rd Qu.:19.00  
+##  Max.   :8.000                                         Max.   :35.00  
+##       hwy             fl               class          
+##  Min.   :12.00   Length:234         Length:234        
+##  1st Qu.:18.00   Class :character   Class :character  
+##  Median :24.00   Mode  :character   Mode  :character  
+##  Mean   :23.44                                        
+##  3rd Qu.:27.00                                        
+##  Max.   :44.00</code></pre>
+<p>We can create one-way and two-way tables with <code>table</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(mpg<span class="op">$</span>manufacturer) </code></pre></div>
+<pre><code>## 
+##       audi  chevrolet      dodge       ford      honda    hyundai 
+##         18         19         37         25          9         14 
+##       jeep land rover    lincoln    mercury     nissan    pontiac 
+##          8          4          3          4         13          5 
+##     subaru     toyota volkswagen 
+##         14         34         27</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(mpg<span class="op">$</span>manufacturer,mpg<span class="op">$</span>year)</code></pre></div>
+<pre><code>##             
+##              1999 2008
+##   audi          9    9
+##   chevrolet     7   12
+##   dodge        16   21
+##   ford         15   10
+##   honda         5    4
+##   hyundai       6    8
+##   jeep          2    6
+##   land rover    2    2
+##   lincoln       2    1
+##   mercury       2    2
+##   nissan        6    7
+##   pontiac       3    2
+##   subaru        6    8
+##   toyota       20   14
+##   volkswagen   16   11</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(mpg<span class="op">$</span>year)</code></pre></div>
+<pre><code>## 
+## 1999 2008 
+##  117  117</code></pre>
+<p>We can also find proportion tables with <code>prop.table</code>. If we want to use <code>prop.table</code>, we have to save a table object first, and then call <code>prop.table</code>. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">manutable =<span class="st"> </span><span class="kw">table</span>(mpg<span class="op">$</span>manufacturer)
+<span class="kw">prop.table</span>(manutable)</code></pre></div>
+<pre><code>## 
+##       audi  chevrolet      dodge       ford      honda    hyundai 
+## 0.07692308 0.08119658 0.15811966 0.10683761 0.03846154 0.05982906 
+##       jeep land rover    lincoln    mercury     nissan    pontiac 
+## 0.03418803 0.01709402 0.01282051 0.01709402 0.05555556 0.02136752 
+##     subaru     toyota volkswagen 
+## 0.05982906 0.14529915 0.11538462</code></pre>
+<p>We can create two-way proportion tables using the same idea. For instance,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">manuyear =<span class="st"> </span><span class="kw">table</span>(mpg<span class="op">$</span>manufacturer, mpg<span class="op">$</span>year)
+<span class="kw">prop.table</span>(manuyear)</code></pre></div>
+<pre><code>##             
+##                     1999        2008
+##   audi       0.038461538 0.038461538
+##   chevrolet  0.029914530 0.051282051
+##   dodge      0.068376068 0.089743590
+##   ford       0.064102564 0.042735043
+##   honda      0.021367521 0.017094017
+##   hyundai    0.025641026 0.034188034
+##   jeep       0.008547009 0.025641026
+##   land rover 0.008547009 0.008547009
+##   lincoln    0.008547009 0.004273504
+##   mercury    0.008547009 0.008547009
+##   nissan     0.025641026 0.029914530
+##   pontiac    0.012820513 0.008547009
+##   subaru     0.025641026 0.034188034
+##   toyota     0.085470085 0.059829060
+##   volkswagen 0.068376068 0.047008547</code></pre>
+<p>The table above is a total proportions table (that is, if we add up all the numbers in the table, we get 1).</p>
+<p>If we want row proportions,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(manuyear, <span class="dv">1</span>)</code></pre></div>
+<pre><code>##             
+##                   1999      2008
+##   audi       0.5000000 0.5000000
+##   chevrolet  0.3684211 0.6315789
+##   dodge      0.4324324 0.5675676
+##   ford       0.6000000 0.4000000
+##   honda      0.5555556 0.4444444
+##   hyundai    0.4285714 0.5714286
+##   jeep       0.2500000 0.7500000
+##   land rover 0.5000000 0.5000000
+##   lincoln    0.6666667 0.3333333
+##   mercury    0.5000000 0.5000000
+##   nissan     0.4615385 0.5384615
+##   pontiac    0.6000000 0.4000000
+##   subaru     0.4285714 0.5714286
+##   toyota     0.5882353 0.4117647
+##   volkswagen 0.5925926 0.4074074</code></pre>
+<p>And if we want column proportions:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(manuyear,<span class="dv">2</span> )</code></pre></div>
+<pre><code>##             
+##                     1999        2008
+##   audi       0.076923077 0.076923077
+##   chevrolet  0.059829060 0.102564103
+##   dodge      0.136752137 0.179487179
+##   ford       0.128205128 0.085470085
+##   honda      0.042735043 0.034188034
+##   hyundai    0.051282051 0.068376068
+##   jeep       0.017094017 0.051282051
+##   land rover 0.017094017 0.017094017
+##   lincoln    0.017094017 0.008547009
+##   mercury    0.017094017 0.017094017
+##   nissan     0.051282051 0.059829060
+##   pontiac    0.025641026 0.017094017
+##   subaru     0.051282051 0.068376068
+##   toyota     0.170940171 0.119658120
+##   volkswagen 0.136752137 0.094017094</code></pre>
+<p>We can plot stuff, too. For example, <code>hist</code> does histograms:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mpg<span class="op">$</span>displ, <span class="dt">main=</span><span class="st">&quot;Engine displacement (in litres)&quot;</span>,
+     <span class="dt">col=</span><span class="kw">rainbow</span>(<span class="dv">20</span>),
+     <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">10</span>))</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-83-1.png" width="672" /></p>
+<p>You can learn more about how to change the attributes of the plot with <code>?hist</code>.</p>
+<p>We can create individual boxplots and boxplots grouped by values of categorical variables:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(mpg<span class="op">$</span>displ)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(mpg<span class="op">$</span>displ<span class="op">~</span>mpg<span class="op">$</span>manufacturer)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-84-2.png" width="672" /></p>
+<p>These plots are created using the <code>graphics</code> library. There are other libraries that you can use to produce plots. One of them is <code>ggplot2</code>, which we installed earlier. A nice thing about <code>ggplot2</code> is that it has the function <code>qplot</code>, which produces good-looking plots by default. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(mpg<span class="op">$</span>displ)</code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qplot</span>(mpg<span class="op">$</span>manufacturer)</code></pre></div>
+<p><img src="statcompbook_files/figure-html/unnamed-chunk-85-2.png" width="672" /></p>
+<p><code>qplot</code> is smart enough to produce different plots depending on the type of the object. We’ll cover <code>ggplot2</code> in more detail later in the semester.</p>
+<p><strong>Exercise</strong></p>
+<ul>
+<li><p>What is the maximum value of highway miles per gallon in the <code>mpg</code> dataset?</p></li>
+<li><p>How many cars with manual transmission are there in the <code>mpg</code> dataset?</p></li>
+<li><p>What % of the cars in the <code>mpg</code> dataset are SUVs?</p></li>
+<li><p>How many SUVs in the <code>mpg</code> dataset are 4-wheel drives?</p></li>
+<li><p>What is the % of Toyotas in the <code>mpg</code> dataset that are SUVs?</p></li>
+<li><p>(Not on TopHat) Create a barplot that shows how many cars are front-wheel drives, rear-wheel drives, and 4wd</p></li>
+</ul>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<ul>
+<li><a href="https://www.datacamp.com/courses/free-introduction-to-r">Datacamp: introduction to <code>R</code></a></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="data-wrangling.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["statcompbook.pdf", "statcompbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

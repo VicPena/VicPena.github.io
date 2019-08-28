@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Data wrangling | Statistical computing with R</title>
+  <meta name="description" content="These are some notes that can be used to teach R and some stats." />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Data wrangling | Statistical computing with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Data wrangling | Statistical computing with R" />
+  
+  <meta name="twitter:description" content="These are some notes that can be used to teach R and some stats." />
+  
+
+<meta name="author" content="Víctor Peña" />
+
+
+<meta name="date" content="2019-08-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-r.html">
+<link rel="next" href="data-visualization-with-ggplot2.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"> Statistical computing with R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Introduction to <code>R</code></a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#what-do-you-need-to-download"><i class="fa fa-check"></i><b>1.1</b> What do you need to download?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#creating-variables"><i class="fa fa-check"></i><b>1.2</b> Creating variables</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-variables"><i class="fa fa-check"></i><b>1.2.1</b> Operations with variables</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#arithmetic-functions"><i class="fa fa-check"></i><b>1.2.2</b> Arithmetic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#vectors"><i class="fa fa-check"></i><b>1.3</b> Vectors</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#operations-with-numeric-vectors"><i class="fa fa-check"></i><b>1.3.1</b> Operations with <code>numeric</code> vectors</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#concatenating"><i class="fa fa-check"></i><b>1.3.2</b> Concatenating</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#indexing"><i class="fa fa-check"></i><b>1.3.3</b> Indexing</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#matrices"><i class="fa fa-check"></i><b>1.4</b> Matrices</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#installing-libraries"><i class="fa fa-check"></i><b>1.5</b> Installing libraries</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#introduction-to-data.frames"><i class="fa fa-check"></i><b>1.6</b> Introduction to <code>data.frame</code>s</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction-to-r.html"><a href="introduction-to-r.html#factors"><i class="fa fa-check"></i><b>1.7</b> Factors</a></li>
+<li class="chapter" data-level="1.8" data-path="introduction-to-r.html"><a href="introduction-to-r.html#lists"><i class="fa fa-check"></i><b>1.8</b> Lists</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction-to-r.html"><a href="introduction-to-r.html#basic-data-summaries-with-r"><i class="fa fa-check"></i><b>1.9</b> Basic data summaries with <code>R</code></a></li>
+<li class="chapter" data-level="" data-path="introduction-to-r.html"><a href="introduction-to-r.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>2</b> Data wrangling</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#importing-and-exporting-data"><i class="fa fa-check"></i><b>2.1</b> Importing and exporting data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#data-subsetting"><i class="fa fa-check"></i><b>2.2</b> Data subsetting</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-variables"><i class="fa fa-check"></i><b>2.2.1</b> Subsetting variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-wrangling.html"><a href="data-wrangling.html#subsetting-rows"><i class="fa fa-check"></i><b>2.2.2</b> Subsetting rows</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-wrangling.html"><a href="data-wrangling.html#missing-data"><i class="fa fa-check"></i><b>2.3</b> Missing data</a></li>
+<li class="chapter" data-level="2.4" data-path="data-wrangling.html"><a href="data-wrangling.html#sorting-data"><i class="fa fa-check"></i><b>2.4</b> Sorting data</a></li>
+<li class="chapter" data-level="2.5" data-path="data-wrangling.html"><a href="data-wrangling.html#type-conversions"><i class="fa fa-check"></i><b>2.5</b> Type conversions</a></li>
+<li class="chapter" data-level="2.6" data-path="data-wrangling.html"><a href="data-wrangling.html#reformatting-datasets"><i class="fa fa-check"></i><b>2.6</b> Reformatting datasets</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="data-wrangling.html"><a href="data-wrangling.html#aggregated-data"><i class="fa fa-check"></i><b>2.6.1</b> Aggregated data</a></li>
+<li class="chapter" data-level="2.6.2" data-path="data-wrangling.html"><a href="data-wrangling.html#gather-from-wide-format-to-long-format"><i class="fa fa-check"></i><b>2.6.2</b> <code>gather</code>: from wide format to long format</a></li>
+<li class="chapter" data-level="2.6.3" data-path="data-wrangling.html"><a href="data-wrangling.html#spread-from-long-to-wide-format"><i class="fa fa-check"></i><b>2.6.3</b> <code>spread</code>: from long to wide format</a></li>
+<li class="chapter" data-level="2.6.4" data-path="data-wrangling.html"><a href="data-wrangling.html#creating-and-renaming-variables"><i class="fa fa-check"></i><b>2.6.4</b> Creating and renaming variables</a></li>
+<li class="chapter" data-level="2.6.5" data-path="data-wrangling.html"><a href="data-wrangling.html#obtaining-summaries-by-categories-of-variables"><i class="fa fa-check"></i><b>2.6.5</b> Obtaining summaries by categories of variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting"><i class="fa fa-check"></i><b>2.7</b> Merging and splitting</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-variables"><i class="fa fa-check"></i><b>2.7.1</b> Merging and splitting variables</a></li>
+<li class="chapter" data-level="2.7.2" data-path="data-wrangling.html"><a href="data-wrangling.html#merging-and-splitting-data"><i class="fa fa-check"></i><b>2.7.2</b> Merging and splitting data</a></li>
+<li class="chapter" data-level="2.7.3" data-path="data-wrangling.html"><a href="data-wrangling.html#set-operations-and-binding"><i class="fa fa-check"></i><b>2.7.3</b> Set operations and binding</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#references-1"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Data visualization with <code>ggplot2</code></a><ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#basic-plots-with-qplot"><i class="fa fa-check"></i><b>3.1</b> Basic plots with <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.1.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#univariate-plots"><i class="fa fa-check"></i><b>3.1.1</b> Univariate plots</a></li>
+<li class="chapter" data-level="3.1.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#bivariate"><i class="fa fa-check"></i><b>3.1.2</b> Bivariate</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels"><i class="fa fa-check"></i><b>3.2</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-qplot"><i class="fa fa-check"></i><b>3.3</b> More <code>qplot</code></a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-than-2-variables-at-once"><i class="fa fa-check"></i><b>3.3.1</b> More than 2 variables at once</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#grid.arrange"><i class="fa fa-check"></i><b>3.3.2</b> <code>grid.arrange</code></a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#some-cool-plots-in-libraryggally"><i class="fa fa-check"></i><b>3.3.3</b> Some cool plots in <code>library(GGally)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#more-ggplot"><i class="fa fa-check"></i><b>3.4</b> More <code>ggplot</code></a></li>
+<li class="chapter" data-level="3.5" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#axes-titles-and-labels-1"><i class="fa fa-check"></i><b>3.5</b> Axes, titles and labels</a></li>
+<li class="chapter" data-level="" data-path="data-visualization-with-ggplot2.html"><a href="data-visualization-with-ggplot2.html#references-2"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="basic-programming.html"><a href="basic-programming.html"><i class="fa fa-check"></i><b>4</b> Basic programming</a></li>
+<li class="chapter" data-level="5" data-path="basic-probability.html"><a href="basic-probability.html"><i class="fa fa-check"></i><b>5</b> Basic probability</a></li>
+<li class="chapter" data-level="6" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html"><i class="fa fa-check"></i><b>6</b> Confidence intervals and hypothesis tests</a><ul>
+<li class="chapter" data-level="6.1" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#one-normal-mean"><i class="fa fa-check"></i><b>6.1</b> One normal mean</a></li>
+<li class="chapter" data-level="6.2" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#two-independent-normal-means"><i class="fa fa-check"></i><b>6.2</b> Two independent normal means</a></li>
+<li class="chapter" data-level="6.3" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#chi2-tests-of-independence-for-categorical-variables"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(\chi^2\)</span>-tests of independence for categorical variables</a></li>
+<li class="chapter" data-level="6.4" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#pairwise-comparisons-of-normal-means-tukey-hsd"><i class="fa fa-check"></i><b>6.4</b> Pairwise comparisons of normal means: Tukey HSD</a></li>
+<li class="chapter" data-level="" data-path="confidence-intervals-and-hypothesis-tests.html"><a href="confidence-intervals-and-hypothesis-tests.html#references-3"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html"><i class="fa fa-check"></i><b>7</b> Multiple linear regression</a><ul>
+<li class="chapter" data-level="7.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>7.1</b> Exploratory data analysis</a></li>
+<li class="chapter" data-level="7.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#fitting-regression-models-with-the-lm-function"><i class="fa fa-check"></i><b>7.2</b> Fitting regression models with the <code>lm</code> function</a></li>
+<li class="chapter" data-level="7.3" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#automatic-model-selection"><i class="fa fa-check"></i><b>7.3</b> Automatic model selection</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#backward-forward-and-stepwise"><i class="fa fa-check"></i><b>7.3.1</b> Backward, forward, and stepwise</a></li>
+<li class="chapter" data-level="7.3.2" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#all-subsets-selection-with-libraryleaps"><i class="fa fa-check"></i><b>7.3.2</b> All subsets selection with <code>library(leaps)</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#prediction"><i class="fa fa-check"></i><b>7.4</b> Prediction</a></li>
+<li class="chapter" data-level="7.5" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#interactions"><i class="fa fa-check"></i><b>7.5</b> Interactions</a></li>
+<li class="chapter" data-level="" data-path="multiple-linear-regression.html"><a href="multiple-linear-regression.html#references-4"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical computing with <code>R</code></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-wrangling" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Data wrangling</h1>
+<div id="importing-and-exporting-data" class="section level2">
+<h2><span class="header-section-number">2.1</span> Importing and exporting data</h2>
+<p><code>R</code> can read data in many different formats and it has several functions that can help us with that. The functions themselves have numerous parameters and options that can be used to read messy data. I am not going to cover the ins and outs of that (it’s rather tedious). If you’re interested in learning more, I recommend <a href="https://www.datacamp.com/community/tutorials/r-data-import-tutorial">this article</a>.</p>
+<p>My personal workflow to importing data is (1) clean the data using some spreadsheet software (Excel, Numbers, Google Sheets) and then (2) read the spreadsheet using the “Import Dataset” option in <code>RStudio</code> (top-right corner).</p>
+<p>However, if the data are nicely formatted in <code>*.csv</code> or plain text format, using the functions <code>read.csv</code> and <code>read.table</code> is relatively painless.</p>
+<p>For example, you can read <a href="http://vicpena.github.io/sta9750/fall18/depression.csv">this dataset</a> (hosted on my website) with the instruction</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">depression =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;http://vicpena.github.io/sta9750/fall18/depression.csv&quot;</span>)</code></pre></div>
+<p>If the dataset doesn’t have column names, you only need to add <code>header = FALSE</code>. For example, suppose that we want to read in <a href="http://users.stat.ufl.edu/~winner/data/femrole.dat">this dataset</a>, which is in plain text format. It doesn’t have variable names. We can read it in with</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">femrole =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;http://users.stat.ufl.edu/~winner/data/femrole.dat&quot;</span>, <span class="dt">header=</span>F)</code></pre></div>
+<p>Exporting data with <code>R</code> is easy. If we want to export an existing <code>data.frame</code> to a <code>*.csv</code> file (which can be opened with Excel, Numbers, or any statistical package), we can use the function <code>write.csv</code>. For example, if we want to export the <code>iris</code> dataset into a file named <code>iris.csv</code> in the working directory:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.csv</span>(iris, <span class="dt">file =</span> <span class="st">&quot;./iris.csv&quot;</span>)</code></pre></div>
+<p>If you want the file to be saved somewhere else, you can change <code>./</code> by any path you want.</p>
+<p>Another option is saving the workspace. That is, creating a file that has all the objects that we are currently working with (variables, <code>data.frame</code>s, etc.). The function that allows us to do that is <code>save</code>. If we want to save all the variables and objects, we can simply type <code>save(file='&lt;path&gt;/&lt;filename&gt;.RData')</code>, where <code>&lt;path&gt;</code> is the path where the file will be saved and <code>&lt;filename&gt;</code> is the filename. We can also save only a subset of the variables. For example, suppose we want to save 2 objects named <code>var1</code> and <code>df</code>. The command <code>save(var1, df, file = '&lt;path&gt;/&lt;filename&gt;.RData')</code> will do that for us.</p>
+</div>
+<div id="data-subsetting" class="section level2">
+<h2><span class="header-section-number">2.2</span> Data subsetting</h2>
+<p>In this section, we’ll cover how to subset variables and rows of datasets (mainly <code>data.frame</code>s). We’ll cover 2 different ways of filtering. We’ll use the “traditional” way to do that (which doesn’t require any extra <code>libraries</code>) and we’ll use functions in <code>library(dplyr)</code> (which are faster in big datasets and more “intuitive”).</p>
+<div id="subsetting-variables" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Subsetting variables</h3>
+<p>We saw some of that in the previous chapter. Let’s load the <code>iris</code> dataset.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;iris&quot;</span>)
+<span class="kw">str</span>(iris)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>If we want to create a subset that contains, say, the first, the second, and the fifth columns, it’s as easy as typing</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub1 =<span class="st"> </span>iris[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)]
+<span class="kw">str</span>(sub1)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  3 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>We can also create subsets by specifying which columns we want to remove. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub2 =<span class="st"> </span>iris[,<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)]
+<span class="kw">str</span>(sub2)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  2 variables:
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...</code></pre>
+<p>contains all the columns in <em>except</em> the first, the second, and the fifth.</p>
+<p>If we want to access specific columns of <code>iris</code>, we can use <code>$</code> followed by the name of the variable. For example, if we want to take a look at <code>Species</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris<span class="op">$</span>Species</code></pre></div>
+<pre><code>##   [1] setosa     setosa     setosa     setosa     setosa     setosa    
+##   [7] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [13] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [19] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [25] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [31] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [37] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [43] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [49] setosa     setosa     versicolor versicolor versicolor versicolor
+##  [55] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [61] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [67] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [73] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [79] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [85] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [91] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [97] versicolor versicolor versicolor versicolor virginica  virginica 
+## [103] virginica  virginica  virginica  virginica  virginica  virginica 
+## [109] virginica  virginica  virginica  virginica  virginica  virginica 
+## [115] virginica  virginica  virginica  virginica  virginica  virginica 
+## [121] virginica  virginica  virginica  virginica  virginica  virginica 
+## [127] virginica  virginica  virginica  virginica  virginica  virginica 
+## [133] virginica  virginica  virginica  virginica  virginica  virginica 
+## [139] virginica  virginica  virginica  virginica  virginica  virginica 
+## [145] virginica  virginica  virginica  virginica  virginica  virginica 
+## Levels: setosa versicolor virginica</code></pre>
+<p>What we just covered is the traditional way of subsetting variables with <code>R</code>. With <code>library(dplyr)</code>, we can use the command <code>select</code>. First, let’s load the library.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)</code></pre></div>
+<p>The following command creates a subset that contains the first, the second, and the fifth variables,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub3 =<span class="st"> </span>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)
+<span class="kw">str</span>(sub3)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  3 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>Note that there’s a <code>%&gt;%</code> separating <code>iris</code> and <code>select</code>. The operator <code>%&gt;%</code> is what we call a “pipe”. The commands in <code>library(dplyr)</code> (and <code>library(tidyr)</code>, which we’ll also cover) can be concatenated using the pipe operator. It ends up being pretty convenient. It looks odd at first, but you’ll get used to it.</p>
+<p>A nice feature of <code>select</code> is that we can easily select variables using their names:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub4 =<span class="st"> </span>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(Sepal.Length, Sepal.Width, Species)
+<span class="kw">head</span>(sub4)</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Species
+## 1          5.1         3.5  setosa
+## 2          4.9         3.0  setosa
+## 3          4.7         3.2  setosa
+## 4          4.6         3.1  setosa
+## 5          5.0         3.6  setosa
+## 6          5.4         3.9  setosa</code></pre>
+<p>As you can imagine, we can also create subsets by specifying which variables we want to exclude:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub5 =<span class="st"> </span>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>))
+<span class="kw">str</span>(sub5)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  2 variables:
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub6 =<span class="st"> </span>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">c</span>(Sepal.Length, Sepal.Width, Species))
+<span class="kw">str</span>(sub6)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    150 obs. of  2 variables:
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...</code></pre>
+</div>
+<div id="subsetting-rows" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Subsetting rows</h3>
+<p>We can subset rows by indicating which row numbers we want to keep (or exclude). For example, we can create a subset with the first, the thirtieth, and the fiftieth observations in the <code>iris</code> dataset as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub1 =<span class="st"> </span>iris[<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">30</span>, <span class="dv">50</span>),]
+<span class="kw">str</span>(sub1)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    3 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.7 5
+##  $ Sepal.Width : num  3.5 3.2 3.3
+##  $ Petal.Length: num  1.4 1.6 1.4
+##  $ Petal.Width : num  0.2 0.2 0.2
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1</code></pre>
+<p>And if we want to create a subset that includes all but the first, the thirtieth and the fiftieth observations:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub2 =<span class="st"> </span>iris[<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">30</span>, <span class="dv">50</span>),]
+<span class="kw">str</span>(sub2)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    147 obs. of  5 variables:
+##  $ Sepal.Length: num  4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 5.4 ...
+##  $ Sepal.Width : num  3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 ...
+##  $ Petal.Length: num  1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>This is alright, but not very useful in practice. We’re usually interested in subsets of rows that satisfy a certain condition. For example, we might be interested in creating a subset that only contains flowers of the <code>setosa</code> species. The following commands will do that for us</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cond1 =<span class="st"> </span>(iris<span class="op">$</span>Species <span class="op">==</span><span class="st"> &#39;setosa&#39;</span>)
+<span class="kw">str</span>(cond1)</code></pre></div>
+<pre><code>##  logi [1:150] TRUE TRUE TRUE TRUE TRUE TRUE ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub3 =<span class="st"> </span>iris[cond1,]
+<span class="kw">str</span>(sub3)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    50 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>In the first command, we create a <code>logical</code> type variable that takes on the value <code>TRUE</code> if <code>Species</code> is equal to <code>setosa</code> and <code>FALSE</code> otherwise (note that there are 2 equal signs between <code>iris$Species</code> and <code>setosa</code>). In the second command, we use the logical variable to filter the <code>iris</code> dataset. We can use a similar strategy to create all sorts of subsets according to logical conditions. The operators are</p>
+<ul>
+<li><p><code>==</code>: equal to</p></li>
+<li><p><code>!=</code>: not equal to</p></li>
+<li><p><code>&gt;</code>: greater than</p></li>
+<li><p><code>&lt;</code>: less than</p></li>
+<li><p><code>&gt;=</code>: greater or equal to</p></li>
+<li><p><code>&lt;=</code>: less than or equal to</p></li>
+</ul>
+<p>For example, we can create a subset that contains only observations whose <code>ngth</code> is greater than 5</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cond2 =<span class="st"> </span>(iris<span class="op">$</span>Sepal.Length <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>)
+sub4 =<span class="st"> </span>iris[cond2,]</code></pre></div>
+<p>And we can create a subset that contain all the observations whose <code>Species</code> isn’t equal to <code>setosa</code> with either</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cond1 =<span class="st"> </span>(iris<span class="op">$</span>Species <span class="op">==</span><span class="st"> &#39;setosa&#39;</span>)
+sub5 =<span class="st"> </span>iris[<span class="op">-</span>cond1,]
+<span class="kw">str</span>(sub5)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    149 obs. of  5 variables:
+##  $ Sepal.Length: num  4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 5.4 ...
+##  $ Sepal.Width : num  3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 ...
+##  $ Petal.Length: num  1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cond3 =<span class="st"> </span>iris<span class="op">$</span>Species <span class="op">!=</span><span class="st"> &#39;setosa&#39;</span>
+sub6 =<span class="st"> </span>iris[<span class="op">-</span>cond3,]
+<span class="kw">str</span>(sub6)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    149 obs. of  5 variables:
+##  $ Sepal.Length: num  4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 5.4 ...
+##  $ Sepal.Width : num  3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 ...
+##  $ Petal.Length: num  1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>Logical conditions can be combined with “and”, “or”, and “not” operators, which in <code>R</code> are:</p>
+<ul>
+<li><p><code>&amp;</code>: and</p></li>
+<li><p><code>|</code>: or</p></li>
+<li><p><code>!</code>: not</p></li>
+</ul>
+<p>For example, we can create a subset that contains <code>setosa</code>s whose <code>Sepal.Length</code> is greater than 5 with</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cond4 =<span class="st"> </span>(iris<span class="op">$</span>Species <span class="op">==</span><span class="st"> &#39;setosa&#39;</span>)<span class="op">&amp;</span>(iris<span class="op">$</span>Sepal.Length <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>)
+sub7 =<span class="st"> </span>iris[cond4,]
+<span class="kw">str</span>(sub7)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    22 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 5.4 5.4 5.8 5.7 5.4 5.1 5.7 5.1 5.4 ...
+##  $ Sepal.Width : num  3.5 3.9 3.7 4 4.4 3.9 3.5 3.8 3.8 3.4 ...
+##  $ Petal.Length: num  1.4 1.7 1.5 1.2 1.5 1.3 1.4 1.7 1.5 1.7 ...
+##  $ Petal.Width : num  0.2 0.4 0.2 0.2 0.4 0.4 0.3 0.3 0.3 0.2 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>We can create a subset that contains observations that are not <code>setosa</code>s or whose <code>Sepal.Width</code> is less than or equal to 4 with</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cond5 =<span class="st"> </span><span class="op">!</span>(iris<span class="op">$</span>Species <span class="op">==</span><span class="st"> &#39;setosa&#39;</span>)<span class="op">|</span>(iris<span class="op">$</span>Sepal.Width <span class="op">&lt;=</span><span class="st"> </span><span class="dv">4</span>)
+sub8 =<span class="st"> </span>iris[cond5,]
+<span class="kw">str</span>(sub8)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    147 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>We could’ve also written <code>iris$Species != 'setosa'</code>.</p>
+<p>What we just covered is the traditional way of subsetting rows with <code>R</code>. <code>library(dplyr)</code> has the function <code>filter</code>, which does the same thing with a cleaner syntax.</p>
+<p>For example, we can create a subset that contains <code>setosa</code>s whose <code>Sepal.Length</code> is greater than 5 as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub1 =<span class="st"> </span>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(Species <span class="op">==</span><span class="st"> &#39;setosa&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Sepal.Length <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>)</code></pre></div>
+<p>And we can create a subset that contains flowers whose <code>Species</code> isn’t <code>setosa</code> or whose <code>Sepal.Width</code> is less than or equal to 4</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub2 =<span class="st"> </span>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(Species <span class="op">!=</span><span class="st"> &#39;setosa&#39;</span> <span class="op">|</span><span class="st"> </span>Sepal.Width <span class="op">&lt;=</span><span class="st"> </span><span class="dv">4</span>)</code></pre></div>
+<p>As you can see, with <code>filter</code> we don’t have to type in <code>iris$</code> whenever we want to specify a condition for a variables in <code>iris</code>.</p>
+<p>We can combine <code>select</code> and <code>filter</code> statements. For example, we can create a subset that excludes <code>Species</code> and only contains <code>setosas</code> as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sub3 =<span class="st"> </span>iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(Species <span class="op">==</span><span class="st"> &#39;setosa&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>Species) 
+<span class="kw">str</span>(sub3)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    50 obs. of  4 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...</code></pre>
+<p>The order in which <code>filter</code> and <code>select</code> appear matters. If we typed the <code>select</code> statement first, we would get an error because when <code>R</code> tries to apply the <code>filter</code>, <code>Species</code> has already been excluded.</p>
+<p>** Exercises on column and row subsetting, make them do summary statistics, count, etc. Rewrite missing values using filters **</p>
+</div>
+</div>
+<div id="missing-data" class="section level2">
+<h2><span class="header-section-number">2.3</span> Missing data</h2>
+<p>Sometimes our datasets have missing values. In <code>R</code>, missing values are marked as <code>NA</code>.</p>
+<p>For example, we can a vector with a missing value as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="ot">NA</span>)
+x</code></pre></div>
+<pre><code>## [1]  1  2  3  4  5 NA</code></pre>
+<p>When we have missing values, we have to be careful. For example, if we try to take the average of <code>x</code> with <code>mean</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(x)</code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>In general, arithmetic operations with <code>NA</code>s return <code>NA</code>s:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">0</span><span class="op">+</span><span class="ot">NA</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span><span class="op">*</span><span class="ot">NA</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span><span class="op">/</span><span class="ot">NA</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>The function <code>is.na</code> can be used to filter missing values. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cond =<span class="st"> </span><span class="kw">is.na</span>(x)
+cond</code></pre></div>
+<pre><code>## [1] FALSE FALSE FALSE FALSE FALSE  TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x =<span class="st"> </span>x[<span class="op">!</span>cond]
+x</code></pre></div>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<p>For <code>data.frame</code>s, the functions <code>complete.cases</code> and <code>na.omit</code> are useful.</p>
+<p>Let’s load the <code>airquality</code> dataset, which is built-in in `R``.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(airquality)</code></pre></div>
+<p>The dataset has some air quality measurements that were taken in NYC from May to September in 1973 (see <code>?airquality</code> for more details). The dataset has some missing values</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(airquality)</code></pre></div>
+<pre><code>##      Ozone           Solar.R           Wind             Temp      
+##  Min.   :  1.00   Min.   :  7.0   Min.   : 1.700   Min.   :56.00  
+##  1st Qu.: 18.00   1st Qu.:115.8   1st Qu.: 7.400   1st Qu.:72.00  
+##  Median : 31.50   Median :205.0   Median : 9.700   Median :79.00  
+##  Mean   : 42.13   Mean   :185.9   Mean   : 9.958   Mean   :77.88  
+##  3rd Qu.: 63.25   3rd Qu.:258.8   3rd Qu.:11.500   3rd Qu.:85.00  
+##  Max.   :168.00   Max.   :334.0   Max.   :20.700   Max.   :97.00  
+##  NA&#39;s   :37       NA&#39;s   :7                                       
+##      Month            Day      
+##  Min.   :5.000   Min.   : 1.0  
+##  1st Qu.:6.000   1st Qu.: 8.0  
+##  Median :7.000   Median :16.0  
+##  Mean   :6.993   Mean   :15.8  
+##  3rd Qu.:8.000   3rd Qu.:23.0  
+##  Max.   :9.000   Max.   :31.0  
+## </code></pre>
+<p>There are 37 missing <code>Ozone</code> readings and 7 missing values in <code>Solar.R</code>. The function <code>complete.cases</code>, when applied to <code>airquality</code>, will create a <code>logical</code> vector whose values will be <code>TRUE</code> if the observation is “complete” (i.e., doesn’t have any missing values) and <code>FALSE</code> if there is at least one variable with a missing value.</p>
+<p>We can create a new dataset called <code>aircomp</code> that only contains complete observations as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">aircomp =<span class="st"> </span>airquality[<span class="kw">complete.cases</span>(airquality),]</code></pre></div>
+<p>The command above is equivalent to</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">aircomp =<span class="st"> </span><span class="kw">na.omit</span>(aircomp)</code></pre></div>
+<p>We are covering <code>complete.cases</code> because having a <code>logical</code> vector can help us identify the observations that have missing values. Indeed, we can filter the observations that are NOT complete cases, that is:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">airquality[<span class="op">!</span><span class="kw">complete.cases</span>(airquality),]</code></pre></div>
+<pre><code>##     Ozone Solar.R Wind Temp Month Day
+## 5      NA      NA 14.3   56     5   5
+## 6      28      NA 14.9   66     5   6
+## 10     NA     194  8.6   69     5  10
+## 11      7      NA  6.9   74     5  11
+## 25     NA      66 16.6   57     5  25
+## 26     NA     266 14.9   58     5  26
+## 27     NA      NA  8.0   57     5  27
+## 32     NA     286  8.6   78     6   1
+## 33     NA     287  9.7   74     6   2
+## 34     NA     242 16.1   67     6   3
+## 35     NA     186  9.2   84     6   4
+## 36     NA     220  8.6   85     6   5
+## 37     NA     264 14.3   79     6   6
+## 39     NA     273  6.9   87     6   8
+## 42     NA     259 10.9   93     6  11
+## 43     NA     250  9.2   92     6  12
+## 45     NA     332 13.8   80     6  14
+## 46     NA     322 11.5   79     6  15
+## 52     NA     150  6.3   77     6  21
+## 53     NA      59  1.7   76     6  22
+## 54     NA      91  4.6   76     6  23
+## 55     NA     250  6.3   76     6  24
+## 56     NA     135  8.0   75     6  25
+## 57     NA     127  8.0   78     6  26
+## 58     NA      47 10.3   73     6  27
+## 59     NA      98 11.5   80     6  28
+## 60     NA      31 14.9   77     6  29
+## 61     NA     138  8.0   83     6  30
+## 65     NA     101 10.9   84     7   4
+## 72     NA     139  8.6   82     7  11
+## 75     NA     291 14.9   91     7  14
+## 83     NA     258  9.7   81     7  22
+## 84     NA     295 11.5   82     7  23
+## 96     78      NA  6.9   86     8   4
+## 97     35      NA  7.4   85     8   5
+## 98     66      NA  4.6   87     8   6
+## 102    NA     222  8.6   92     8  10
+## 103    NA     137 11.5   86     8  11
+## 107    NA      64 11.5   79     8  15
+## 115    NA     255 12.6   75     8  23
+## 119    NA     153  5.7   88     8  27
+## 150    NA     145 13.2   77     9  27</code></pre>
+</div>
+<div id="sorting-data" class="section level2">
+<h2><span class="header-section-number">2.4</span> Sorting data</h2>
+<p>We can sort variables with the <code>sort</code> function. The default ordering is increasing. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(iris<span class="op">$</span>Sepal.Length)</code></pre></div>
+<pre><code>##   [1] 4.3 4.4 4.4 4.4 4.5 4.6 4.6 4.6 4.6 4.7 4.7 4.8 4.8 4.8 4.8 4.8 4.9
+##  [18] 4.9 4.9 4.9 4.9 4.9 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.1 5.1
+##  [35] 5.1 5.1 5.1 5.1 5.1 5.1 5.1 5.2 5.2 5.2 5.2 5.3 5.4 5.4 5.4 5.4 5.4
+##  [52] 5.4 5.5 5.5 5.5 5.5 5.5 5.5 5.5 5.6 5.6 5.6 5.6 5.6 5.6 5.7 5.7 5.7
+##  [69] 5.7 5.7 5.7 5.7 5.7 5.8 5.8 5.8 5.8 5.8 5.8 5.8 5.9 5.9 5.9 6.0 6.0
+##  [86] 6.0 6.0 6.0 6.0 6.1 6.1 6.1 6.1 6.1 6.1 6.2 6.2 6.2 6.2 6.3 6.3 6.3
+## [103] 6.3 6.3 6.3 6.3 6.3 6.3 6.4 6.4 6.4 6.4 6.4 6.4 6.4 6.5 6.5 6.5 6.5
+## [120] 6.5 6.6 6.6 6.7 6.7 6.7 6.7 6.7 6.7 6.7 6.7 6.8 6.8 6.8 6.9 6.9 6.9
+## [137] 6.9 7.0 7.1 7.2 7.2 7.2 7.3 7.4 7.6 7.7 7.7 7.7 7.7 7.9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(iris<span class="op">$</span>Species)</code></pre></div>
+<pre><code>##   [1] setosa     setosa     setosa     setosa     setosa     setosa    
+##   [7] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [13] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [19] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [25] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [31] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [37] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [43] setosa     setosa     setosa     setosa     setosa     setosa    
+##  [49] setosa     setosa     versicolor versicolor versicolor versicolor
+##  [55] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [61] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [67] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [73] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [79] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [85] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [91] versicolor versicolor versicolor versicolor versicolor versicolor
+##  [97] versicolor versicolor versicolor versicolor virginica  virginica 
+## [103] virginica  virginica  virginica  virginica  virginica  virginica 
+## [109] virginica  virginica  virginica  virginica  virginica  virginica 
+## [115] virginica  virginica  virginica  virginica  virginica  virginica 
+## [121] virginica  virginica  virginica  virginica  virginica  virginica 
+## [127] virginica  virginica  virginica  virginica  virginica  virginica 
+## [133] virginica  virginica  virginica  virginica  virginica  virginica 
+## [139] virginica  virginica  virginica  virginica  virginica  virginica 
+## [145] virginica  virginica  virginica  virginica  virginica  virginica 
+## Levels: setosa versicolor virginica</code></pre>
+<p>If we want descending order, we can add the option <code>decreasing = TRUE</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(iris<span class="op">$</span>Sepal.Length, <span class="dt">decreasing =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>##   [1] 7.9 7.7 7.7 7.7 7.7 7.6 7.4 7.3 7.2 7.2 7.2 7.1 7.0 6.9 6.9 6.9 6.9
+##  [18] 6.8 6.8 6.8 6.7 6.7 6.7 6.7 6.7 6.7 6.7 6.7 6.6 6.6 6.5 6.5 6.5 6.5
+##  [35] 6.5 6.4 6.4 6.4 6.4 6.4 6.4 6.4 6.3 6.3 6.3 6.3 6.3 6.3 6.3 6.3 6.3
+##  [52] 6.2 6.2 6.2 6.2 6.1 6.1 6.1 6.1 6.1 6.1 6.0 6.0 6.0 6.0 6.0 6.0 5.9
+##  [69] 5.9 5.9 5.8 5.8 5.8 5.8 5.8 5.8 5.8 5.7 5.7 5.7 5.7 5.7 5.7 5.7 5.7
+##  [86] 5.6 5.6 5.6 5.6 5.6 5.6 5.5 5.5 5.5 5.5 5.5 5.5 5.5 5.4 5.4 5.4 5.4
+## [103] 5.4 5.4 5.3 5.2 5.2 5.2 5.2 5.1 5.1 5.1 5.1 5.1 5.1 5.1 5.1 5.1 5.0
+## [120] 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 4.9 4.9 4.9 4.9 4.9 4.9 4.8 4.8
+## [137] 4.8 4.8 4.8 4.7 4.7 4.6 4.6 4.6 4.6 4.5 4.4 4.4 4.4 4.3</code></pre>
+<p>This only works with variables. What if we want to order a <code>data.frame</code> according to the values of one of the variables? For that task, we can use <code>order</code>.</p>
+<p>For example, if we want to order <code>iris</code> in ascending order by <code>Sepal.Length</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris[<span class="kw">order</span>(iris<span class="op">$</span>Sepal.Length),])</code></pre></div>
+<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 14          4.3         3.0          1.1         0.1  setosa
+## 9           4.4         2.9          1.4         0.2  setosa
+## 39          4.4         3.0          1.3         0.2  setosa
+## 43          4.4         3.2          1.3         0.2  setosa
+## 42          4.5         2.3          1.3         0.3  setosa
+## 4           4.6         3.1          1.5         0.2  setosa</code></pre>
+<p>I’m adding <code>head()</code> so that <code>R</code> doesn’t print the full dataset.</p>
+<p>If we want descending order instead:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris[<span class="kw">order</span>(<span class="op">-</span>iris<span class="op">$</span>Sepal.Length),])</code></pre></div>
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 132          7.9         3.8          6.4         2.0 virginica
+## 118          7.7         3.8          6.7         2.2 virginica
+## 119          7.7         2.6          6.9         2.3 virginica
+## 123          7.7         2.8          6.7         2.0 virginica
+## 136          7.7         3.0          6.1         2.3 virginica
+## 106          7.6         3.0          6.6         2.1 virginica</code></pre>
+<p>When there are “ties”, we can also sort the data by a second variable. For example, if we sort the data in descending order by <code>Species</code>, there will be a lot of observations that will share the same value of <code>Species</code>. If, given the species, we want to sort in ascending order by <code>Petal.Width</code>, this will do that for us</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris[<span class="kw">order</span>(<span class="op">-</span>iris<span class="op">$</span>Species, iris<span class="op">$</span>Petal.Width),])</code></pre></div>
+<pre><code>## Warning in Ops.factor(iris$Species): &#39;-&#39; not meaningful for factors</code></pre>
+<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 10          4.9         3.1          1.5         0.1  setosa
+## 13          4.8         3.0          1.4         0.1  setosa
+## 14          4.3         3.0          1.1         0.1  setosa
+## 33          5.2         4.1          1.5         0.1  setosa
+## 38          4.9         3.6          1.4         0.1  setosa
+## 1           5.1         3.5          1.4         0.2  setosa</code></pre>
+<p><code>library(dplyr)</code> has the function <code>arrange</code>, which is the analogue of <code>order</code>.</p>
+<p>The following piece of code sorts the dataset in ascending order by <code>Sepal.Length</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(Sepal.Length))</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          4.3         3.0          1.1         0.1  setosa
+## 2          4.4         2.9          1.4         0.2  setosa
+## 3          4.4         3.0          1.3         0.2  setosa
+## 4          4.4         3.2          1.3         0.2  setosa
+## 5          4.5         2.3          1.3         0.3  setosa
+## 6          4.6         3.1          1.5         0.2  setosa</code></pre>
+<p>If we want descending order</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(Sepal.Length)))</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 1          7.9         3.8          6.4         2.0 virginica
+## 2          7.7         3.8          6.7         2.2 virginica
+## 3          7.7         2.6          6.9         2.3 virginica
+## 4          7.7         2.8          6.7         2.0 virginica
+## 5          7.7         3.0          6.1         2.3 virginica
+## 6          7.6         3.0          6.6         2.1 virginica</code></pre>
+<p>And the following sorts in descending order by <code>Species</code>, and then in ascending order by <code>Petal.Width</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(Species), Petal.Width))</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 1          6.1         2.6          5.6         1.4 virginica
+## 2          6.0         2.2          5.0         1.5 virginica
+## 3          6.3         2.8          5.1         1.5 virginica
+## 4          7.2         3.0          5.8         1.6 virginica
+## 5          4.9         2.5          4.5         1.7 virginica
+## 6          6.3         2.9          5.6         1.8 virginica</code></pre>
+<p>An advantage of using <code>arrange</code> is that we don’t have to type <code>iris$&lt;variable name&gt;</code> all the time.</p>
+</div>
+<div id="type-conversions" class="section level2">
+<h2><span class="header-section-number">2.5</span> Type conversions</h2>
+<p>Oftentimes, categorical variables are coded as numerical. For example, let’s look at the dataset <code>femrole.dat</code>, which is uploaded on Professor Winner’s website. A description of the dataset can be found <a href="http://users.stat.ufl.edu/~winner/data/femrole.txt">here</a> and the data can be accessed <a href="http://users.stat.ufl.edu/~winner/data/femrole.dat">here</a>. As you can see, there are 4 categorical variables that are coded as numerical. How do we convert these variables to <code>factor</code>s?</p>
+<p>The following instruction reads in the data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">femrole =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;http://users.stat.ufl.edu/~winner/data/femrole.dat&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>Now, we can print it</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">femrole</code></pre></div>
+<pre><code>##    V1 V2 V3 V4 V5
+## 1   1  1  1  1 11
+## 2   1  2  1  1 12
+## 3   2  1  1  1 10
+## 4   2  2  1  1 12
+## 5   1  1  1  2 13
+## 6   1  2  1  2 12
+## 7   2  1  1  2  8
+## 8   2  2  1  2 29
+## 9   1  1  2  1 11
+## 10  1  2  2  1  6
+## 11  2  1  2  1  4
+## 12  2  2  2  1 13
+## 13  1  1  2  2 17
+## 14  1  2  2  2  8
+## 15  2  1  2  2  9
+## 16  2  2  2  2 33</code></pre>
+<p>First of all, the columns don’t have interpretable names. We can change the names as follows:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(femrole) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;personality&quot;</span>, <span class="st">&quot;role&quot;</span>, <span class="st">&quot;friends&quot;</span>, <span class="st">&quot;dates&quot;</span>, <span class="st">&quot;count&quot;</span>)</code></pre></div>
+<p>The variables <code>personality</code>, <code>role</code>, <code>friends</code>, and <code>dates</code> are categorical, but in <code>femrole</code> they are coded as numerical. To see this, we can run</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(femrole)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    16 obs. of  5 variables:
+##  $ personality: int  1 1 2 2 1 1 2 2 1 1 ...
+##  $ role       : int  1 2 1 2 1 2 1 2 1 2 ...
+##  $ friends    : int  1 1 1 1 1 1 1 1 2 2 ...
+##  $ dates      : int  1 1 1 1 2 2 2 2 1 1 ...
+##  $ count      : int  11 12 10 12 13 12 8 29 11 6 ...</code></pre>
+<p>The output tells us that <code>personality</code>, <code>role</code>, <code>friends</code>, <code>dates</code>, and <code>count</code> are of type <code>int</code>, which means that they’re coded as integers.</p>
+<p>The way that certain <code>R</code> functions treat variables depends on whether the variables are numerical or categorical. If we don’t convert the variables, we can get meaningless output.</p>
+<p>We can convert the variables to <code>factor</code>s using <code>as.factor</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">femrole<span class="op">$</span>personality =<span class="st"> </span><span class="kw">as.factor</span>(femrole<span class="op">$</span>personality)
+femrole<span class="op">$</span>role =<span class="st"> </span><span class="kw">as.factor</span>(femrole<span class="op">$</span>role)
+femrole<span class="op">$</span>friends =<span class="st"> </span><span class="kw">as.factor</span>(femrole<span class="op">$</span>friends)
+femrole<span class="op">$</span>dates =<span class="st"> </span><span class="kw">as.factor</span>(femrole<span class="op">$</span>dates)</code></pre></div>
+<p>Let’s run <code>str</code> again:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(femrole)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    16 obs. of  5 variables:
+##  $ personality: Factor w/ 2 levels &quot;1&quot;,&quot;2&quot;: 1 1 2 2 1 1 2 2 1 1 ...
+##  $ role       : Factor w/ 2 levels &quot;1&quot;,&quot;2&quot;: 1 2 1 2 1 2 1 2 1 2 ...
+##  $ friends    : Factor w/ 2 levels &quot;1&quot;,&quot;2&quot;: 1 1 1 1 1 1 1 1 2 2 ...
+##  $ dates      : Factor w/ 2 levels &quot;1&quot;,&quot;2&quot;: 1 1 1 1 2 2 2 2 1 1 ...
+##  $ count      : int  11 12 10 12 13 12 8 29 11 6 ...</code></pre>
+<p>We have succesfully changed the type of the variables from <code>integer</code> to <code>factor</code>. However, the levels of the factors are noninformative. We can change them using <code>levels</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(femrole<span class="op">$</span>personality) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Modern&quot;</span>, <span class="st">&quot;Traditional&quot;</span>)
+<span class="kw">levels</span>(femrole<span class="op">$</span>role) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Modern&quot;</span>, <span class="st">&quot;Traditional&quot;</span>)
+<span class="kw">levels</span>(femrole<span class="op">$</span>friends) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Low&quot;</span>, <span class="st">&quot;High&quot;</span>)
+<span class="kw">levels</span>(femrole<span class="op">$</span>dates) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Low&quot;</span>, <span class="st">&quot;High&quot;</span>)</code></pre></div>
+<p>** Exercise ** Read in the dataset <code>interfaith.dat</code>, which is available on Professor Winner’s website or by clicking <a href="http://users.stat.ufl.edu/~winner/data/interfaith.dat">here</a> (the description is available <a href="http://users.stat.ufl.edu/~winner/data/interfaith.txt">here</a>). Change the variable names to something informative, convert the appropriate variables into <code>factor</code>s, and rename the levels of the factors using meaningful labels. [Make them do 2 way tables and count frequencies and percentages]</p>
+<p>As you can imagine, other type conversions are possible. For instance, we can convert from <code>matrix</code> to <code>data.frame</code> with <code>as.data.frame</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mat =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>), <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)
+df =<span class="st"> </span><span class="kw">as.data.frame</span>(mat)</code></pre></div>
+<p>Now, <code>df</code> is of class <code>data.frame</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(df)</code></pre></div>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<p>We can also convert <code>data.frame</code>s that contain <code>numeric</code> variables to <code>matrix</code> using <code>as.matrix</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">var1 =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">var2 =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)
+mat =<span class="st"> </span><span class="kw">as.matrix</span>(df)</code></pre></div>
+<p>And, unsurprisingly,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(mat)</code></pre></div>
+<pre><code>## [1] &quot;matrix&quot;</code></pre>
+</div>
+<div id="reformatting-datasets" class="section level2">
+<h2><span class="header-section-number">2.6</span> Reformatting datasets</h2>
+<div id="aggregated-data" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Aggregated data</h3>
+<p>Let’s take a closer look at the <code>femrole</code> dataset, which we formatted in a previous section.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">femrole</code></pre></div>
+<pre><code>##    personality        role friends dates count
+## 1       Modern      Modern     Low   Low    11
+## 2       Modern Traditional     Low   Low    12
+## 3  Traditional      Modern     Low   Low    10
+## 4  Traditional Traditional     Low   Low    12
+## 5       Modern      Modern     Low  High    13
+## 6       Modern Traditional     Low  High    12
+## 7  Traditional      Modern     Low  High     8
+## 8  Traditional Traditional     Low  High    29
+## 9       Modern      Modern    High   Low    11
+## 10      Modern Traditional    High   Low     6
+## 11 Traditional      Modern    High   Low     4
+## 12 Traditional Traditional    High   Low    13
+## 13      Modern      Modern    High  High    17
+## 14      Modern Traditional    High  High     8
+## 15 Traditional      Modern    High  High     9
+## 16 Traditional Traditional    High  High    33</code></pre>
+<p>The data are aggregated: each row corresponds to a certain social <em>profile</em>. The last column counts how many observations there are for each profile. Unfortunately, <code>R</code> isn’t very good at working with data in this format. For example, suppose that we’re interested in knowing how many women in the dataset have a <code>High</code> number of dates. If we type in</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(femrole<span class="op">$</span>dates)</code></pre></div>
+<pre><code>## 
+##  Low High 
+##    8    8</code></pre>
+<p>we get the wrong answer.</p>
+<p>It’s not only tables: plots and statistical methods in <code>R</code> are coded in a way that makes working with aggregated data difficult.</p>
+<p>The most convenient format is a dataset where the rows correspond to different individuals (in this case, each row should correspond to a different woman). Thankfully, the function <code>uncount</code> in <code>library(tidyr)</code> makes the conversion easy.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">unaggregated =<span class="st"> </span>femrole <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">uncount</span>(count)</code></pre></div>
+<p>The argument of <code>uncount</code> is the variable that contains the counts (which, in this case, is conveniently named <code>count</code>). If you want to convert individual data to an aggregated format, you can use the function <code>count</code>.</p>
+<p>Let’s create an object named <code>indiv</code> which contains the individual data:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">indiv =<span class="st"> </span>femrole <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">uncount</span>(count)</code></pre></div>
+<p>We can convert the dataset into an aggregated format as follows:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">indiv <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">count</span>(personality, role, friends, dates)</code></pre></div>
+<pre><code>## # A tibble: 16 x 5
+##    personality role        friends dates     n
+##    &lt;fct&gt;       &lt;fct&gt;       &lt;fct&gt;   &lt;fct&gt; &lt;int&gt;
+##  1 Modern      Modern      Low     Low      11
+##  2 Modern      Modern      Low     High     13
+##  3 Modern      Modern      High    Low      11
+##  4 Modern      Modern      High    High     17
+##  5 Modern      Traditional Low     Low      12
+##  6 Modern      Traditional Low     High     12
+##  7 Modern      Traditional High    Low       6
+##  8 Modern      Traditional High    High      8
+##  9 Traditional Modern      Low     Low      10
+## 10 Traditional Modern      Low     High      8
+## 11 Traditional Modern      High    Low       4
+## 12 Traditional Modern      High    High      9
+## 13 Traditional Traditional Low     Low      12
+## 14 Traditional Traditional Low     High     29
+## 15 Traditional Traditional High    Low      13
+## 16 Traditional Traditional High    High     33</code></pre>
+<p>The arguments in <code>count</code> are the variables which we use for counting. For instance, compare the result above to</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">indiv <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">count</span>(personality, dates)</code></pre></div>
+<pre><code>## # A tibble: 4 x 3
+##   personality dates     n
+##   &lt;fct&gt;       &lt;fct&gt; &lt;int&gt;
+## 1 Modern      Low      40
+## 2 Modern      High     50
+## 3 Traditional Low      39
+## 4 Traditional High     79</code></pre>
+</div>
+<div id="gather-from-wide-format-to-long-format" class="section level3">
+<h3><span class="header-section-number">2.6.2</span> <code>gather</code>: from wide format to long format</h3>
+<p>Suppose you want to compare outcomes with 3 treatments, and your data look like this</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wide</code></pre></div>
+<pre><code>## # A tibble: 5 x 3
+##   Treat1 Treat2 Treat3
+##    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 -1.60   0.983 -0.2  
+## 2  0.409 -0.671 -0.022
+## 3 -0.019 -0.313 -1.74 
+## 4 -0.251  3.25   1.88 
+## 5  0.306  2.06  -0.083</code></pre>
+<p>Some people would say that the data is in “wide format.”</p>
+<p>Data in wide format aren’t convenient for running our analyses: if you want to run statistical methods or create plots, most <code>R</code> functions expect to have all the outcomes in one column, and the categories (treatments) in another column. This alternative formatting is called “long format”. You can go from wide to long format using <code>gather</code> in <code>library(tidyr)</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(<span class="dt">key=</span>treatment, <span class="dt">value=</span>outcome, Treat1, Treat2, Treat3)</code></pre></div>
+<pre><code>## # A tibble: 15 x 2
+##    treatment outcome
+##    &lt;chr&gt;       &lt;dbl&gt;
+##  1 Treat1     -1.60 
+##  2 Treat1      0.409
+##  3 Treat1     -0.019
+##  4 Treat1     -0.251
+##  5 Treat1      0.306
+##  6 Treat2      0.983
+##  7 Treat2     -0.671
+##  8 Treat2     -0.313
+##  9 Treat2      3.25 
+## 10 Treat2      2.06 
+## 11 Treat3     -0.2  
+## 12 Treat3     -0.022
+## 13 Treat3     -1.74 
+## 14 Treat3      1.88 
+## 15 Treat3     -0.083</code></pre>
+<p>The first argument in <code>gather</code> is for naming the new column that contains the categories (the <code>key</code>), the second one is for naming the column where the new outcomes will be stored (the <code>value</code>), and then you write the names of the columns that contain the outcomes you want to <code>gather</code>. An equivalent way of writing the same thing is:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(<span class="dt">key=</span>treatment, <span class="dt">value=</span>outcome, Treat1<span class="op">:</span>Treat3)</code></pre></div>
+<pre><code>## # A tibble: 15 x 2
+##    treatment outcome
+##    &lt;chr&gt;       &lt;dbl&gt;
+##  1 Treat1     -1.60 
+##  2 Treat1      0.409
+##  3 Treat1     -0.019
+##  4 Treat1     -0.251
+##  5 Treat1      0.306
+##  6 Treat2      0.983
+##  7 Treat2     -0.671
+##  8 Treat2     -0.313
+##  9 Treat2      3.25 
+## 10 Treat2      2.06 
+## 11 Treat3     -0.2  
+## 12 Treat3     -0.022
+## 13 Treat3     -1.74 
+## 14 Treat3      1.88 
+## 15 Treat3     -0.083</code></pre>
+<p>In <code>Treat1:Treat3</code> we gave <code>R</code> a range of columns which we want to <code>gather</code> (first to last). This is useful if you have many variables.</p>
+<p>What if your data is in wide format, but you have an uneven number of observations? That is, your data looks something like this</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">uneven</code></pre></div>
+<pre><code>## # A tibble: 5 x 3
+##    Treat1 Treat2  Treat3
+##     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+## 1  -1.60   0.983  -0.2  
+## 2   0.409 -0.671  -0.022
+## 3  -0.019 -0.313  -1.74 
+## 4  -0.251  3.25   NA    
+## 5  NA      2.06   NA</code></pre>
+<p>Let’s try to <code>gather</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">uneven <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(<span class="dt">key =</span> treatment, <span class="dt">value =</span> outcome, Treat1<span class="op">:</span>Treat3)</code></pre></div>
+<pre><code>## # A tibble: 15 x 2
+##    treatment outcome
+##    &lt;chr&gt;       &lt;dbl&gt;
+##  1 Treat1     -1.60 
+##  2 Treat1      0.409
+##  3 Treat1     -0.019
+##  4 Treat1     -0.251
+##  5 Treat1     NA    
+##  6 Treat2      0.983
+##  7 Treat2     -0.671
+##  8 Treat2     -0.313
+##  9 Treat2      3.25 
+## 10 Treat2      2.06 
+## 11 Treat3     -0.2  
+## 12 Treat3     -0.022
+## 13 Treat3     -1.74 
+## 14 Treat3     NA    
+## 15 Treat3     NA</code></pre>
+<p>Unfortunately, we get some <code>NA</code>s. We can get rid of them with <code>na.omit</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">uneven <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(<span class="dt">key =</span> treatment, <span class="dt">value =</span> outcome, Treat1<span class="op">:</span>Treat3) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">           </span>na.omit</code></pre></div>
+<pre><code>## # A tibble: 12 x 2
+##    treatment outcome
+##    &lt;chr&gt;       &lt;dbl&gt;
+##  1 Treat1     -1.60 
+##  2 Treat1      0.409
+##  3 Treat1     -0.019
+##  4 Treat1     -0.251
+##  5 Treat2      0.983
+##  6 Treat2     -0.671
+##  7 Treat2     -0.313
+##  8 Treat2      3.25 
+##  9 Treat2      2.06 
+## 10 Treat3     -0.2  
+## 11 Treat3     -0.022
+## 12 Treat3     -1.74</code></pre>
+</div>
+<div id="spread-from-long-to-wide-format" class="section level3">
+<h3><span class="header-section-number">2.6.3</span> <code>spread</code>: from long to wide format</h3>
+<p>If you want to go from long to wide format, you can use <code>spread</code>.</p>
+<p>For example, if your data are</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data2</code></pre></div>
+<pre><code>## # A tibble: 15 x 3
+## # Groups:   treatment [3]
+##    treatment outcome   ind
+##    &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;
+##  1 Treat1     -1.60      1
+##  2 Treat1      0.409     2
+##  3 Treat1     -0.019     3
+##  4 Treat1     -0.251     4
+##  5 Treat1      0.306     5
+##  6 Treat2      0.983     1
+##  7 Treat2     -0.671     2
+##  8 Treat2     -0.313     3
+##  9 Treat2      3.25      4
+## 10 Treat2      2.06      5
+## 11 Treat3     -0.2       1
+## 12 Treat3     -0.022     2
+## 13 Treat3     -1.74      3
+## 14 Treat3      1.88      4
+## 15 Treat3     -0.083     5</code></pre>
+<p>You can convert it to wide format as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spread</span>(treatment, outcome)</code></pre></div>
+<pre><code>## # A tibble: 5 x 4
+##     ind Treat1 Treat2 Treat3
+##   &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1     1 -1.60   0.983 -0.2  
+## 2     2  0.409 -0.671 -0.022
+## 3     3 -0.019 -0.313 -1.74 
+## 4     4 -0.251  3.25   1.88 
+## 5     5  0.306  2.06  -0.083</code></pre>
+<p>Note that <code>data2</code> isn’t just our dataset that came out of <code>gather</code>ing. In fact, if you start with</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gath =<span class="st"> </span>data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(<span class="dt">key=</span>treatment, <span class="dt">value=</span>outcome, Treat1<span class="op">:</span>Treat3)</code></pre></div>
+<p>and you try to <code>spread</code>, you’ll get an error. <code>R</code> complains because the rows of <code>gath</code> aren’t uniquely identifiable. A way to get around that is creating index variables within the treatments</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gath =<span class="st"> </span>gath <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(treatment) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">id=</span><span class="kw">row_number</span>())
+gath</code></pre></div>
+<pre><code>## # A tibble: 15 x 3
+## # Groups:   treatment [3]
+##    treatment outcome    id
+##    &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;
+##  1 Treat1     -1.60      1
+##  2 Treat1      0.409     2
+##  3 Treat1     -0.019     3
+##  4 Treat1     -0.251     4
+##  5 Treat1      0.306     5
+##  6 Treat2      0.983     1
+##  7 Treat2     -0.671     2
+##  8 Treat2     -0.313     3
+##  9 Treat2      3.25      4
+## 10 Treat2      2.06      5
+## 11 Treat3     -0.2       1
+## 12 Treat3     -0.022     2
+## 13 Treat3     -1.74      3
+## 14 Treat3      1.88      4
+## 15 Treat3     -0.083     5</code></pre>
+<p>and then, you can <code>spread</code> (and get rid of <code>id</code>):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gath <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spread</span>(treatment, outcome) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>id)</code></pre></div>
+<pre><code>## # A tibble: 5 x 3
+##   Treat1 Treat2 Treat3
+##    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 -1.60   0.983 -0.2  
+## 2  0.409 -0.671 -0.022
+## 3 -0.019 -0.313 -1.74 
+## 4 -0.251  3.25   1.88 
+## 5  0.306  2.06  -0.083</code></pre>
+</div>
+<div id="creating-and-renaming-variables" class="section level3">
+<h3><span class="header-section-number">2.6.4</span> Creating and renaming variables</h3>
+<p>[Add <code>rename()</code>] and old <code>R</code> ways of doing this</p>
+<p>We can use mutate if we want to transform/create new variables. For example, if we want to create a new variable called <code>avg</code> which contains the average schore in <code>read</code>, <code>write</code>, <code>science</code>, and <code>socst</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hsb2 =<span class="st">  </span>hsb2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">avg=</span>(read<span class="op">+</span>write<span class="op">+</span>science<span class="op">+</span>socst)<span class="op">/</span><span class="dv">4</span>)</code></pre></div>
+</div>
+<div id="obtaining-summaries-by-categories-of-variables" class="section level3">
+<h3><span class="header-section-number">2.6.5</span> Obtaining summaries by categories of variables</h3>
+<p>We can create objects which contain summaries for different groups by combining <code>group_by</code> and <code>summarize</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hsb2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(race) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">medMath =</span> <span class="kw">median</span>(math), <span class="dt">sdMath =</span> <span class="kw">sd</span>(math))</code></pre></div>
+<pre><code>## # A tibble: 4 x 3
+##   race             medMath sdMath
+##   &lt;fct&gt;              &lt;dbl&gt;  &lt;dbl&gt;
+## 1 african american      45   6.49
+## 2 asian                 61  10.1 
+## 3 hispanic              47   6.98
+## 4 white                 54   9.38</code></pre>
+<p>And you can combine these function with the other functions we learned today. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hsb2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(race) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(math <span class="op">&gt;</span><span class="st"> </span><span class="dv">70</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">n=</span><span class="kw">n</span>())</code></pre></div>
+<pre><code>## # A tibble: 2 x 2
+##   race      n
+##   &lt;fct&gt; &lt;int&gt;
+## 1 asian     1
+## 2 white     9</code></pre>
+<p>Tells us that there are 10 people who got a <code>math</code> score greater than 70, and that 1 of them is <code>asian</code> and 9 of them are <code>white</code>.</p>
+</div>
+</div>
+<div id="merging-and-splitting" class="section level2">
+<h2><span class="header-section-number">2.7</span> Merging and splitting</h2>
+<div id="merging-and-splitting-variables" class="section level3">
+<h3><span class="header-section-number">2.7.1</span> Merging and splitting variables</h3>
+<p>Suppose you have the following dataset</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">drinks</code></pre></div>
+<pre><code>## # A tibble: 6 x 3
+##   spirit         mixer        total
+##   &lt;chr&gt;          &lt;chr&gt;        &lt;dbl&gt;
+## 1 gin            tonic            8
+## 2 sparkling wine orange juice     6
+## 3 rum            coke             7
+## 4 red wine       coke             5
+## 5 &lt;NA&gt;           seltzer          5
+## 6 beer           &lt;NA&gt;             5</code></pre>
+<p>If you would like to create a new column that merges the information in <code>spirit</code> and <code>mixer</code>, you can use the command <code>unite</code>.</p>
+<p>For example, you can try</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">drinks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">unite</span>(name, spirit, mixer, <span class="dt">sep=</span><span class="st">&#39; &amp; &#39;</span>)  </code></pre></div>
+<pre><code>## # A tibble: 6 x 2
+##   name                          total
+##   &lt;chr&gt;                         &lt;dbl&gt;
+## 1 gin &amp; tonic                       8
+## 2 sparkling wine &amp; orange juice     6
+## 3 rum &amp; coke                        7
+## 4 red wine &amp; coke                   5
+## 5 NA &amp; seltzer                      5
+## 6 beer &amp; NA                         5</code></pre>
+<p>Unfortunately, it doesn’t look great because there are <code>NA</code>s. You can substitute the <code>NA</code>s by <code>nothing</code> using <code>coalesce</code> to make the output look a little nicer:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">new =<span class="st"> </span>drinks <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">        </span><span class="kw">mutate</span>(<span class="dt">spirit=</span><span class="kw">coalesce</span>(spirit, <span class="st">&quot;nothing&quot;</span>), <span class="dt">mixer=</span><span class="kw">coalesce</span>(mixer, <span class="st">&quot;nothing&quot;</span>)) <span class="op">%&gt;%</span>
+<span class="st">        </span><span class="kw">unite</span>(name, spirit, mixer, <span class="dt">sep=</span><span class="st">&#39; &amp; &#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">        </span><span class="kw">mutate</span>(<span class="dt">name=</span><span class="kw">trimws</span>(name))
+new</code></pre></div>
+<pre><code>## # A tibble: 6 x 2
+##   name                          total
+##   &lt;chr&gt;                         &lt;dbl&gt;
+## 1 gin &amp; tonic                       8
+## 2 sparkling wine &amp; orange juice     6
+## 3 rum &amp; coke                        7
+## 4 red wine &amp; coke                   5
+## 5 nothing &amp; seltzer                 5
+## 6 beer &amp; nothing                    5</code></pre>
+<p>The function <code>trimws</code> got rid of some empty spaces at the beginning and end of <code>name</code>.</p>
+<p>If you are willing to work a little bit more, you can make the new variable look even nicer:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">final =<span class="st"> </span>new <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">name1 =</span> <span class="kw">gsub</span>(<span class="st">&quot;&amp; nothing&quot;</span>,<span class="st">&quot;&quot;</span>,name),
+                       <span class="dt">name =</span> <span class="kw">trimws</span>(<span class="kw">gsub</span>(<span class="st">&quot;nothing &amp;&quot;</span>,<span class="st">&quot;&quot;</span>,name1))) <span class="op">%&gt;%</span>
+<span class="st">                       </span><span class="kw">select</span>(<span class="op">-</span>name1)
+final</code></pre></div>
+<pre><code>## # A tibble: 6 x 2
+##   name                          total
+##   &lt;chr&gt;                         &lt;dbl&gt;
+## 1 gin &amp; tonic                       8
+## 2 sparkling wine &amp; orange juice     6
+## 3 rum &amp; coke                        7
+## 4 red wine &amp; coke                   5
+## 5 seltzer                           5
+## 6 beer                              5</code></pre>
+<p>We used the function <code>gsub</code> to substitute <code>&amp; nothing</code> and <code>nothing &amp;</code> by (literally) nothing.</p>
+<p>You can split up variables using <code>separate</code>. For example, if you start with</p>
+<pre><code>## # A tibble: 6 x 2
+##   name                          total
+##   &lt;chr&gt;                         &lt;dbl&gt;
+## 1 gin &amp; tonic                       8
+## 2 sparkling wine &amp; orange juice     6
+## 3 rum &amp; coke                        7
+## 4 red wine &amp; coke                   5
+## 5 nothing &amp; seltzer                 5
+## 6 beer &amp; nothing                    5</code></pre>
+<p>We can split up <code>name</code> into <code>spirit</code> and <code>mixer</code> with</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">new <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">separate</span>(name, <span class="dt">into=</span><span class="kw">c</span>(<span class="st">&quot;spirit&quot;</span>, <span class="st">&quot;mixer&quot;</span>), <span class="dt">sep=</span><span class="st">&quot; &amp; &quot;</span>)</code></pre></div>
+<pre><code>## # A tibble: 6 x 3
+##   spirit         mixer        total
+##   &lt;chr&gt;          &lt;chr&gt;        &lt;dbl&gt;
+## 1 gin            tonic            8
+## 2 sparkling wine orange juice     6
+## 3 rum            coke             7
+## 4 red wine       coke             5
+## 5 nothing        seltzer          5
+## 6 beer           nothing          5</code></pre>
+<p>If you use the dataset <code>final</code> instead, you would have to do more work to <code>separate</code> correctly.</p>
+</div>
+<div id="merging-and-splitting-data" class="section level3">
+<h3><span class="header-section-number">2.7.2</span> Merging and splitting data</h3>
+<p>In lecture, we learned about <code>left_join</code>, <code>right_join</code>, <code>inner_join</code>, and <code>full_join</code>. Our starting point is 2 datasets <code>a</code> and <code>b</code>, which have a variable in common named <code>x</code>. We wish to <em>merge</em> the datasets by matching values of <code>x</code>.</p>
+<ul>
+<li><p><code>left_join(a, b, by='x')</code>: Keep all the rows in <code>a</code>, find rows in dataset <code>b</code> that have matching values of <code>x</code> in <code>a</code>, and include the extra columns in <code>b</code> that don’t appear in <code>a</code>. Don’t include rows in <code>b</code> that have no matching value of <code>x</code> in <code>b</code>.</p></li>
+<li><p><code>right_join(a, b, by='x')</code>: Keep all the rows in <code>b</code>, find rows in dataset <code>a</code> that have matching values of <code>x</code> in <code>b</code>, and include the extra columns in <code>a</code> that don’t appear in <code>b</code>. Don’t include rows in <code>a</code> that have no matching value of <code>x</code> in <code>b</code>.</p></li>
+<li><p><code>inner_join(a, b, by='x')</code>: Keep rows that have values of <code>x</code> that appear in <strong>both</strong> <code>a</code> and <code>b</code>.</p></li>
+<li><p><code>full_join(a, b, by='x')</code>: Keep all the rows in <code>a</code> and <code>b</code>, even if they don’t have matching values in <code>x</code>.</p></li>
+</ul>
+<p>To make this concrete, let’s work with a specific example. The <code>tibbles</code> below contain names of drinks:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nonalcoholic =<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">name=</span><span class="kw">c</span>(<span class="st">&quot;g&amp;t&quot;</span>,<span class="st">&quot;mimosa&quot;</span>,<span class="st">&quot;rum and coke&quot;</span>,<span class="st">&quot;calimocho&quot;</span>,<span class="st">&quot;polar&quot;</span>), 
+                      <span class="dt">mixer=</span><span class="kw">c</span>(<span class="st">&quot;tonic&quot;</span>,<span class="st">&quot;orange juice&quot;</span>, <span class="st">&quot;coke&quot;</span>, <span class="st">&quot;coke&quot;</span>,<span class="st">&quot;seltzer&quot;</span>))
+alcoholic =<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">name=</span><span class="kw">c</span>(<span class="st">&quot;g&amp;t&quot;</span>,<span class="st">&quot;mimosa&quot;</span>,<span class="st">&quot;rum and coke&quot;</span>,<span class="st">&quot;calimocho&quot;</span>,<span class="st">&quot;IPA&quot;</span>,<span class="st">&quot;dark and stormy&quot;</span>), 
+                    <span class="dt">spirit=</span><span class="kw">c</span>(<span class="st">&quot;gin&quot;</span>,<span class="st">&quot;sparkling wine&quot;</span>, <span class="st">&quot;rum&quot;</span>, <span class="st">&quot;red wine&quot;</span>,<span class="st">&quot;beer&quot;</span>,<span class="st">&quot;rum&quot;</span>))</code></pre></div>
+<p>Let’s try out what happens when we try the different <code>join</code>s on the <code>tibble</code>s:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">left_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) </code></pre></div>
+<pre><code>## # A tibble: 5 x 3
+##   name         mixer        spirit        
+##   &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t          tonic        gin           
+## 2 mimosa       orange juice sparkling wine
+## 3 rum and coke coke         rum           
+## 4 calimocho    coke         red wine      
+## 5 polar        seltzer      &lt;NA&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">right_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) </code></pre></div>
+<pre><code>## # A tibble: 6 x 3
+##   name            mixer        spirit        
+##   &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t             tonic        gin           
+## 2 mimosa          orange juice sparkling wine
+## 3 rum and coke    coke         rum           
+## 4 calimocho       coke         red wine      
+## 5 IPA             &lt;NA&gt;         beer          
+## 6 dark and stormy &lt;NA&gt;         rum</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">inner_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) </code></pre></div>
+<pre><code>## # A tibble: 4 x 3
+##   name         mixer        spirit        
+##   &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t          tonic        gin           
+## 2 mimosa       orange juice sparkling wine
+## 3 rum and coke coke         rum           
+## 4 calimocho    coke         red wine</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">full_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>)</code></pre></div>
+<pre><code>## # A tibble: 7 x 3
+##   name            mixer        spirit        
+##   &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;         
+## 1 g&amp;t             tonic        gin           
+## 2 mimosa          orange juice sparkling wine
+## 3 rum and coke    coke         rum           
+## 4 calimocho       coke         red wine      
+## 5 polar           seltzer      &lt;NA&gt;          
+## 6 IPA             &lt;NA&gt;         beer          
+## 7 dark and stormy &lt;NA&gt;         rum</code></pre>
+<p>We can also use <code>join</code>s for filtering. For example, <code>semi_join(a, b, by='x')</code> keeps all the rows in <code>a</code> that have a matching value of <code>x</code> in <code>b</code> (it doesn’t create more columns with the information in <code>b</code>), and <code>anti_join(a, b, by='x')</code> keeps the rows in <code>a</code> that don’t have a matching value of <code>x</code> in <code>b</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">semi_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>)</code></pre></div>
+<pre><code>## # A tibble: 4 x 2
+##   name         mixer       
+##   &lt;chr&gt;        &lt;chr&gt;       
+## 1 g&amp;t          tonic       
+## 2 mimosa       orange juice
+## 3 rum and coke coke        
+## 4 calimocho    coke</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">anti_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>)</code></pre></div>
+<pre><code>## # A tibble: 1 x 2
+##   name  mixer  
+##   &lt;chr&gt; &lt;chr&gt;  
+## 1 polar seltzer</code></pre>
+<p>Suppose we get prices for the drinks:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nonalcoholic =<span class="st"> </span>nonalcoholic <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">price=</span><span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">5</span>))
+alcoholic =<span class="st"> </span>alcoholic  <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="st">&#39;$&#39;</span>=<span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="ot">NA</span>))</code></pre></div>
+<p>How can we join the new <code>tibbles</code> nicely?</p>
+<p>First, we can rename the price variable in <code>alcoholic</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">alcoholic =<span class="st"> </span>alcoholic <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">price=</span><span class="st">&#39;$&#39;</span>)</code></pre></div>
+<p>And then, we can <code>full_join</code> the <code>tibbles</code> by their <code>name</code> and <code>price</code> (we want a double match):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">join =<span class="st"> </span><span class="kw">full_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&#39;name&#39;</span>,<span class="st">&#39;price&#39;</span>))
+join</code></pre></div>
+<pre><code>## # A tibble: 7 x 4
+##   name            mixer        price spirit        
+##   &lt;chr&gt;           &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;         
+## 1 g&amp;t             tonic            8 gin           
+## 2 mimosa          orange juice     6 sparkling wine
+## 3 rum and coke    coke             7 rum           
+## 4 calimocho       coke             5 red wine      
+## 5 polar           seltzer          5 &lt;NA&gt;          
+## 6 IPA             &lt;NA&gt;             5 beer          
+## 7 dark and stormy &lt;NA&gt;            NA rum</code></pre>
+<p>If we want to reorder the columns so that the spirit comes first, followed by the mixer, we can use <code>select</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">join =<span class="st"> </span>join <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(name, spirit, mixer, price)
+join</code></pre></div>
+<pre><code>## # A tibble: 7 x 4
+##   name            spirit         mixer        price
+##   &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt;        &lt;dbl&gt;
+## 1 g&amp;t             gin            tonic            8
+## 2 mimosa          sparkling wine orange juice     6
+## 3 rum and coke    rum            coke             7
+## 4 calimocho       red wine       coke             5
+## 5 polar           &lt;NA&gt;           seltzer          5
+## 6 IPA             beer           &lt;NA&gt;             5
+## 7 dark and stormy rum            &lt;NA&gt;            NA</code></pre>
+<p>Now, suppose we got a new <code>tibble</code> with the extra components that were missing for <code>dark and stormy</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ds =<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">name=</span><span class="st">&#39;dark and stormy&#39;</span>, <span class="dt">spirit=</span><span class="st">&#39;ginger beer&#39;</span>, <span class="dt">price =</span> <span class="dv">8</span>)</code></pre></div>
+<p>How can we incorporate this new information?</p>
+<p>We can start by <code>full_join</code>ing</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">full_join</span>(join, ds, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>)</code></pre></div>
+<pre><code>## # A tibble: 7 x 6
+##   name            spirit.x       mixer        price.x spirit.y    price.y
+##   &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;
+## 1 g&amp;t             gin            tonic              8 &lt;NA&gt;             NA
+## 2 mimosa          sparkling wine orange juice       6 &lt;NA&gt;             NA
+## 3 rum and coke    rum            coke               7 &lt;NA&gt;             NA
+## 4 calimocho       red wine       coke               5 &lt;NA&gt;             NA
+## 5 polar           &lt;NA&gt;           seltzer            5 &lt;NA&gt;             NA
+## 6 IPA             beer           &lt;NA&gt;               5 &lt;NA&gt;             NA
+## 7 dark and stormy rum            &lt;NA&gt;              NA ginger beer       8</code></pre>
+<p>This <code>join</code> has a few problems. We’d like to combine <code>price.x</code> and <code>price.y</code>. We can do that using the function <code>coalesce</code>, and then getting rid of <code>price.x</code> and <code>price.y</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">full_join</span>(join, ds, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) <span class="op">%&gt;%</span><span class="st">  </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">price=</span><span class="kw">coalesce</span>(price.x,price.y)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>price.x, <span class="op">-</span>price.y)</code></pre></div>
+<pre><code>## # A tibble: 7 x 5
+##   name            spirit.x       mixer        spirit.y    price
+##   &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;       &lt;dbl&gt;
+## 1 g&amp;t             gin            tonic        &lt;NA&gt;            8
+## 2 mimosa          sparkling wine orange juice &lt;NA&gt;            6
+## 3 rum and coke    rum            coke         &lt;NA&gt;            7
+## 4 calimocho       red wine       coke         &lt;NA&gt;            5
+## 5 polar           &lt;NA&gt;           seltzer      &lt;NA&gt;            5
+## 6 IPA             beer           &lt;NA&gt;         &lt;NA&gt;            5
+## 7 dark and stormy rum            &lt;NA&gt;         ginger beer     8</code></pre>
+<p>This is mostly fine. If we want to combine <code>spirit.x</code> and <code>spirit.y</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">full_join</span>(join, ds, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) <span class="op">%&gt;%</span><span class="st">  </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">price=</span><span class="kw">coalesce</span>(price.x,price.y)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>price.x, <span class="op">-</span>price.y) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">replace</span>(<span class="kw">is.na</span>(.),<span class="st">&quot;&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw">unite</span>(spirit, spirit.x, spirit.y, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</code></pre></div>
+<pre><code>## # A tibble: 7 x 4
+##   name            spirit         mixer        price
+##   &lt;chr&gt;           &lt;chr&gt;          &lt;chr&gt;        &lt;dbl&gt;
+## 1 g&amp;t             gin            tonic            8
+## 2 mimosa          sparkling wine orange juice     6
+## 3 rum and coke    rum            coke             7
+## 4 calimocho       red wine       coke             5
+## 5 polar           &quot;&quot;             seltzer          5
+## 6 IPA             beer           &quot;&quot;               5
+## 7 dark and stormy rumginger beer &quot;&quot;               8</code></pre>
+<p>First, we replaced the <code>NAs</code> by empty spaces, and then we joined the variables <code>spirit.x</code>, and <code>spirit.y</code> using <code>unite</code>. The formatting isn’t great, unforunately. We can play around a little bit to make it look nicer:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ds =<span class="st"> </span>ds <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">spirit=</span><span class="kw">paste</span>(<span class="st">&quot; &quot;</span>, spirit,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>))
+final =<span class="st"> </span><span class="kw">full_join</span>(join, ds, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) <span class="op">%&gt;%</span><span class="st">  </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">price=</span><span class="kw">coalesce</span>(price.x,price.y)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>price.x, <span class="op">-</span>price.y)  <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">replace</span>(<span class="kw">is.na</span>(.),<span class="st">&quot;&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">unite</span>(spirit, spirit.x, spirit.y, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)
+final</code></pre></div>
+<pre><code>## # A tibble: 7 x 4
+##   name            spirit          mixer        price
+##   &lt;chr&gt;           &lt;chr&gt;           &lt;chr&gt;        &lt;dbl&gt;
+## 1 g&amp;t             gin             tonic            8
+## 2 mimosa          sparkling wine  orange juice     6
+## 3 rum and coke    rum             coke             7
+## 4 calimocho       red wine        coke             5
+## 5 polar           &quot;&quot;              seltzer          5
+## 6 IPA             beer            &quot;&quot;               5
+## 7 dark and stormy rum ginger beer &quot;&quot;               8</code></pre>
+<p>Now suppose that we’re at some bar where the total price for a mixed drink is equal to the sum of the prices of the components. The prices are</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nonalcoholic =<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">name=</span><span class="kw">c</span>(<span class="st">&quot;g&amp;t&quot;</span>,<span class="st">&quot;mimosa&quot;</span>,<span class="st">&quot;rum and coke&quot;</span>,<span class="st">&quot;calimocho&quot;</span>,<span class="st">&quot;polar&quot;</span>), 
+                      <span class="dt">mixer=</span><span class="kw">c</span>(<span class="st">&quot;tonic&quot;</span>,<span class="st">&quot;orange juice&quot;</span>, <span class="st">&quot;coke&quot;</span>, <span class="st">&quot;coke&quot;</span>,<span class="st">&quot;seltzer&quot;</span>))  <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">                      </span><span class="kw">mutate</span>(<span class="dt">price=</span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">5</span>))
+alcoholic =<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">name=</span><span class="kw">c</span>(<span class="st">&quot;g&amp;t&quot;</span>,<span class="st">&quot;mimosa&quot;</span>,<span class="st">&quot;rum and coke&quot;</span>,<span class="st">&quot;calimocho&quot;</span>,<span class="st">&quot;IPA&quot;</span>), 
+                    <span class="dt">spirit=</span><span class="kw">c</span>(<span class="st">&quot;gin&quot;</span>,<span class="st">&quot;sparkling wine&quot;</span>, <span class="st">&quot;rum&quot;</span>, <span class="st">&quot;red wine&quot;</span>,<span class="st">&quot;beer&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">                    </span><span class="kw">mutate</span>(<span class="dt">price=</span><span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>))</code></pre></div>
+<p>How can we merge the data and combine (add) prices?</p>
+<p>We can start by <code>full_join</code>ing by name</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">full_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>)</code></pre></div>
+<pre><code>## # A tibble: 6 x 5
+##   name         mixer        price.x spirit         price.y
+##   &lt;chr&gt;        &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt;
+## 1 g&amp;t          tonic              3 gin                  5
+## 2 mimosa       orange juice       2 sparkling wine       4
+## 3 rum and coke coke               2 rum                  5
+## 4 calimocho    coke               2 red wine             3
+## 5 polar        seltzer            5 &lt;NA&gt;                NA
+## 6 IPA          &lt;NA&gt;              NA beer                 5</code></pre>
+<p>Unfortunately, a simple <code>mutate</code> instruction isn’t satisfactory because the sum of an <code>NA</code> + a number is equal to <code>NA</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">full_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">total=</span>price.x<span class="op">+</span>price.y)</code></pre></div>
+<pre><code>## # A tibble: 6 x 6
+##   name         mixer        price.x spirit         price.y total
+##   &lt;chr&gt;        &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt;
+## 1 g&amp;t          tonic              3 gin                  5     8
+## 2 mimosa       orange juice       2 sparkling wine       4     6
+## 3 rum and coke coke               2 rum                  5     7
+## 4 calimocho    coke               2 red wine             3     5
+## 5 polar        seltzer            5 &lt;NA&gt;                NA    NA
+## 6 IPA          &lt;NA&gt;              NA beer                 5    NA</code></pre>
+<p>We can solve this problem in different ways. One way is using <code>coalesce</code> to replace the <code>NA</code>s by zeros in <code>price.x</code> and <code>price.y</code>, and then adding:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">full_join</span>(nonalcoholic, alcoholic, <span class="dt">by=</span><span class="st">&#39;name&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">price.x=</span><span class="kw">coalesce</span>(price.x,<span class="dv">0</span>), <span class="dt">price.y=</span><span class="kw">coalesce</span>(price.y,<span class="dv">0</span>), <span class="dt">total=</span>price.x<span class="op">+</span>price.y) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(name, spirit, mixer, total)</code></pre></div>
+<pre><code>## # A tibble: 6 x 4
+##   name         spirit         mixer        total
+##   &lt;chr&gt;        &lt;chr&gt;          &lt;chr&gt;        &lt;dbl&gt;
+## 1 g&amp;t          gin            tonic            8
+## 2 mimosa       sparkling wine orange juice     6
+## 3 rum and coke rum            coke             7
+## 4 calimocho    red wine       coke             5
+## 5 polar        &lt;NA&gt;           seltzer          5
+## 6 IPA          beer           &lt;NA&gt;             5</code></pre>
+<p>In general, the way that <code>R</code> deals with <code>NA</code>s can be a little frustrating, as these examples show.</p>
+</div>
+<div id="set-operations-and-binding" class="section level3">
+<h3><span class="header-section-number">2.7.3</span> Set operations and binding</h3>
+<p>Source: <a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data wrangling cheat sheet</a></p>
+<p>Consider the <code>tibble</code>s <code>y</code> and <code>z</code>, which have matching variable names <code>x1</code> and <code>x2</code> (this is important!):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y</code></pre></div>
+<pre><code>## # A tibble: 3 x 2
+##   x1       x2
+##   &lt;chr&gt; &lt;int&gt;
+## 1 A         1
+## 2 B         2
+## 3 C         3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z</code></pre></div>
+<pre><code>## # A tibble: 3 x 2
+##   x1       x2
+##   &lt;chr&gt; &lt;int&gt;
+## 1 B         2
+## 2 C         3
+## 3 D         4</code></pre>
+<p><strong>Set operations</strong></p>
+<ul>
+<li><code>intersect(y,z)</code>: find rows that appear in both <code>y</code> and <code>z</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">intersect</span>(y,z)</code></pre></div>
+<pre><code>## # A tibble: 2 x 2
+##   x1       x2
+##   &lt;chr&gt; &lt;int&gt;
+## 1 B         2
+## 2 C         3</code></pre>
+<ul>
+<li><code>union(y,z)</code>: find rows that appear in <code>y</code> or <code>z</code> (or both):</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">union</span>(y,z)</code></pre></div>
+<pre><code>## # A tibble: 4 x 2
+##   x1       x2
+##   &lt;chr&gt; &lt;int&gt;
+## 1 D         4
+## 2 C         3
+## 3 B         2
+## 4 A         1</code></pre>
+<ul>
+<li><code>setdiff(y, z)</code>: find rows that appear in <code>y</code> but not in <code>z</code>:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setdiff</span>(y,z)</code></pre></div>
+<pre><code>## # A tibble: 1 x 2
+##   x1       x2
+##   &lt;chr&gt; &lt;int&gt;
+## 1 A         1</code></pre>
+<p><strong>Binding rows and columns</strong></p>
+<p>If you want to bind the rows of <code>y</code> and <code>z</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bind_rows</span>(y,z)</code></pre></div>
+<pre><code>## # A tibble: 6 x 2
+##   x1       x2
+##   &lt;chr&gt; &lt;int&gt;
+## 1 A         1
+## 2 B         2
+## 3 C         3
+## 4 B         2
+## 5 C         3
+## 6 D         4</code></pre>
+<p>If you want to bind the columns of <code>y</code> and <code>z</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bind_cols</span>(y,z)</code></pre></div>
+<pre><code>## # A tibble: 3 x 4
+##   x1       x2 x11     x21
+##   &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;int&gt;
+## 1 A         1 B         2
+## 2 B         2 C         3
+## 3 C         3 D         4</code></pre>
+</div>
+</div>
+<div id="references-1" class="section level2 unnumbered">
+<h2>References</h2>
+<ul>
+<li><p><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf"><code>dplyr</code> cheat sheet</a></p></li>
+<li><p><a href="https://tidyr.tidyverse.org/"><code>tidyr</code> website</a></p></li>
+<li><p><a href="https://rpubs.com/bradleyboehmke/data_wrangling">Tutorial by Bradley Boehmke</a></p></li>
+<li><p><a href="https://ademos.people.uic.edu/Chapter9.html">Tutorial by Olivia L. Holmes</a></p></li>
+<li><p><a href="https://bookdown.org/rdpeng/rprogdatascience/">Chapter 12 of R Programming for Data Science, by Roger D. Peng</a></p></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-visualization-with-ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["statcompbook.pdf", "statcompbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
