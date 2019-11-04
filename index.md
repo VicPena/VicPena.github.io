@@ -4,14 +4,16 @@ I'm an assistant professor in statistics at [Baruch College](http://www.baruch.c
 My email address is ``victor.pena@baruch.cuny.edu``.
 
 # Publications & preprints
-* Peña, V. & Berger, J. O. [Restricted type II maximum likelihood priors on regression coefficients.](https://arxiv.org/abs/1711.08072) 
-* Peña, V. & Berger, J. O. [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
-*  Berger, J.O., Garcia-Donato, G., Martinez-Beneito, M.A, & Peña, V. [Bayesian variable selection in high dimensional problems without assumptions on prior model probabilities.](https://arxiv.org/abs/1607.02993)
+
+* Peña, V. & Berger, J. O. [Restricted type II maximum likelihood priors on regression coefficients.](https://arxiv.org/abs/1711.08072) *To appear in Bayesian Analysis*.
 * Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://arxiv.org/abs/1710.09700) *To appear in TEST*.
 * Barrientos, A. F. & Peña, V. [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *To appear in Bayesian Analysis*.
-* Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica, 27(4), 1554-1559.*
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
 * Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
+
+* Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica, 27(4), 1554-1559.*
+* Peña, V. & Berger, J. O. [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
+*  Berger, J.O., Garcia-Donato, G., Martinez-Beneito, M.A, & Peña, V. [Bayesian variable selection in high dimensional problems without assumptions on prior model probabilities.](https://arxiv.org/abs/1607.02993)
 
 # Talks & posters
 * [Crteria for Bayesian hypothesis testing in two-sample problems](http://VicPena.github.io/UConn.pdf) @ UConn and NESS, 2019.
