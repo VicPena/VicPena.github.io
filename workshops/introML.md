@@ -44,6 +44,8 @@ If you don't have a strong coding background (e.g. if you're not comfortable wit
 
 Once you finish the course, I suggest that you take a look at my short notes on [using `library(caret)` for doing cross-validation](http://vicpena.github.io/workshops/caretCV.html).
 
+After taking the course and reading through my notes on `library(caret)`, I recommend that you take [Introduction to text analysis in `R`](https://campus.datacamp.com/courses/introduction-to-text-analysis-in-r/) on Datacamp. It's a nice and gentle introduction to text analysis which uses packages in the `tidyverse`. 
+
 ## Books (all open-access)
 
 * [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/), by James, Witten, Hastie, and Tibshirani.
