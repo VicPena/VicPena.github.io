@@ -16,7 +16,7 @@
 
 * Some working knowledge of linear regression.
 
-* Some further prior coding background can be helpful, but it's not essential. 
+* Some prior coding background can be helpful, but it's not essential. 
 
 * **Get access to Datacamp by [clicking on this link](https://www.datacamp.com/groups/shared_links/927d5587f2230ed904196a426e960624ab38eb26)**. Use your `@baruch.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know.
 
