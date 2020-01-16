@@ -36,11 +36,11 @@ I suggest that you work through the [Introduction to Machine Learning](https://w
 
 If you don't have a strong coding background (e.g. if you're not comfortable with `for` loops), here's a list of exercises you might want to skip:
 
-* "Using CV": this exercises uses  a `for` loop to implement cross-validation; in practice, we can use `library(caret)`, which does that automatically for us.  
-* "Increasing the bias": this exercise involves editing a custom-made function in a hard-coded classifier, something that rarely happens in practice.
-* "K's choice": you can tune this parameter using cross-validation, which is implemented in `library(caret)` .
-* "Making a scree plot!": you can tune this parameter using cross-validation, which is implemented in `library(caret)`.
-* "Your own k-NN algorithm": you can use `library(caret)` to fit this model without using a custom function.
+* **"Using CV":** this exercise uses  a `for` loop to implement cross-validation; in practice, we can use `library(caret)`, which does that automatically for us.  
+* **"Increasing the bias":** this exercise involves editing a custom-made function in a hard-coded classifier, something that rarely happens in practice.
+* **"K's choice":** you can tune this parameter using cross-validation, which is implemented in `library(caret)` .
+* **"Making a scree plot!":** you can tune this parameter using cross-validation, which is implemented in `library(caret)`.
+* **"Your own k-NN algorithm":** you can use `library(caret)` to fit this model without using a custom function.
 
 Once you finish the course, I suggest that you take a look at my short notes on [using `library(caret)` for doing cross-validation](http://vicpena.github.io/workshops/caretCV.html).
 
