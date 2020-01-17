@@ -44,9 +44,11 @@ If you don't have a strong coding background (e.g. if you're not comfortable wit
 
 Once you finish the course, I suggest that you take a look at my short notes on [using `library(caret)` for doing cross-validation](http://vicpena.github.io/workshops/caretCV.html).
 
-After taking the course and reading through my notes on `library(caret)`, I recommend that you take [Introduction to text analysis in `R`](https://campus.datacamp.com/courses/introduction-to-text-analysis-in-r/) on Datacamp. It's a nice and gentle introduction to text analysis which uses packages in the `tidyverse`. 
+After taking the course and reading through my notes on `library(caret)`, I recommend that you take [Introduction to text analysis in `R`](https://campus.datacamp.com/courses/introduction-to-text-analysis-in-r/) on Datacamp. It's a nice and gentle introduction to text analysis which uses packages in the `tidyverse`. After you take that, if you want to learn more text mining with `R`, I strongly recommend that you take a look at the book [Text Mining with `R`](https://www.tidytextmining.com/). I haven't gone through it in detail, but it looks great. It's been written by Silge and Robinson, who wrote the `library(tidytext)` package.  
 
 ## Books (all open-access)
+
+* [Text Mining with `R`](https://www.tidytextmining.com/), by Julia Silge and David Robinson.
 
 * [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/), by James, Witten, Hastie, and Tibshirani.
 
