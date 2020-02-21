@@ -6,7 +6,7 @@ My email address is ``victor.pena@baruch.cuny.edu``.
 # Publications & preprints
 
 * Peña, V. & Berger, J. O. [Restricted type II maximum likelihood priors on regression coefficients.](https://arxiv.org/abs/1711.08072) *To appear in Bayesian Analysis*.
-* Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://arxiv.org/abs/1710.09700) *To appear in TEST*.
+* Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2020) [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://link.springer.com/article/10.1007/s11749-020-00704-4?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst&utm_source=ArticleAuthorOnlineFirst&utm_medium=email&utm_content=AA_en_06082018&ArticleAuthorOnlineFirst_20200221) *TEST*.
 * Barrientos, A. F. & Peña, V. [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *To appear in Bayesian Analysis*.
 * Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
 * Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
