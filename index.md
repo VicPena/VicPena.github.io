@@ -5,6 +5,7 @@ My email address is ``victor.pena@baruch.cuny.edu``.
 
 # Publications & preprints
 
+* Peña, V. & Irie, K. [On the relationship between beta-Bartlett and Uhlig extended processes.](https://arxiv.org/abs/2006.13868)
 * Peña, V. & Berger, J. O. [Restricted type II maximum likelihood priors on regression coefficients.](https://arxiv.org/abs/1711.08072) *To appear in Bayesian Analysis*.
 * Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2020) [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://link.springer.com/article/10.1007/s11749-020-00704-4?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst&utm_source=ArticleAuthorOnlineFirst&utm_medium=email&utm_content=AA_en_06082018&ArticleAuthorOnlineFirst_20200221) *TEST*.
 * Barrientos, A. F. & Peña, V. [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *To appear in Bayesian Analysis*.
