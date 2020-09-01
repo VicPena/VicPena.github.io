@@ -7,4 +7,4 @@
 3. [Vectors](https://youtu.be/lu8ETrp5TxE) (code available [here](https://vicpena.github.io/R/vectors.R))
 4. [Matrices](https://youtu.be/ojJ-x413pbo) (code available [here](https://vicpena.github.io/R/matrices.R))
 5. [Introduction to data.frames](https://youtu.be/e7vpHDuiEo8) (code available [here](https://vicpena.github.io/R/dataframes.R)) 
-6. [Factors] (code available [here](https://vicpena.github.io/R/factors.R)) 
+6. [Factors](https://youtu.be/99Pdi2eKjrI) (code available [here](https://vicpena.github.io/R/factors.R)) 
