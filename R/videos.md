@@ -9,3 +9,7 @@
 5. [Introduction to data.frames](https://youtu.be/e7vpHDuiEo8) (code available [here](https://vicpena.github.io/R/dataframes.R)) 
 6. [Factors](https://youtu.be/ua49uY2MQUM) (code available [here](https://vicpena.github.io/R/factors.R)) 
 7. [Introduction to data summaries and plots](https://youtu.be/FbZHX8kXzBk) (code available [here](https://vicpena.github.io/R/summaries.R)) 
+
+## Data wrangling
+
+1. [Introduction to input and output](https://youtu.be/Y5MksUnH2S0) (code available [here](https://vicpena.github.io/R/io.R))
