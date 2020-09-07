@@ -13,3 +13,4 @@
 ## Data wrangling
 
 1. [Introduction to input and output](https://youtu.be/Y5MksUnH2S0) (code available [here](https://vicpena.github.io/R/io.R))
+2. [Subsetting variables](https://youtu.be/ed-PtvZu2xw) (code available [here](https://vicpena.github.io/R/subsetvars.R))
