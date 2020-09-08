@@ -1,4 +1,4 @@
-# Videos
+# Course materials
 
 ## Introduction to R
 0. [Notes](https://vicpena.github.io/sta9750/introR.pdf)
