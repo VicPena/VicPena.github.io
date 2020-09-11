@@ -14,3 +14,5 @@
 0. [Notes](https://vicpena.github.io/sta9750/wrangle1.pdf)
 1. [Introduction to input and output](https://youtu.be/Y5MksUnH2S0) (code available [here](https://vicpena.github.io/R/io.R))
 2. [Subsetting variables](https://youtu.be/ed-PtvZu2xw) (code available [here](https://vicpena.github.io/R/subsetvars.R))
+3. [Subsetting rows](https://youtu.be/WWzZRRU7AA8) (code available [here](https://vicpena.github.io/R/subsetrows.R))
+4. [Examples on subsetting rows](https://youtu.be/AFkpOrTn6BQ) (code available [here](https://vicpena.github.io/R/examplesrows.R))
