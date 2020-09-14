@@ -16,3 +16,6 @@
 2. [Subsetting variables](https://youtu.be/ed-PtvZu2xw) (code available [here](https://vicpena.github.io/R/subsetvars.R))
 3. [Subsetting rows](https://youtu.be/WWzZRRU7AA8) (code available [here](https://vicpena.github.io/R/subsetrows.R))
 4. [Examples on subsetting rows](https://youtu.be/AFkpOrTn6BQ) (code available [here](https://vicpena.github.io/R/examplesrows.R))
+5. [Missing data](https://youtu.be/xkrGEp381iA) (code available [here](https://vicpena.github.io/R/missingdata.R))
+6. [Sorting data](https://youtu.be/1w7vxl_xAKA) (code available [here](https://vicpena.github.io/R/sortingdata.R))
+7. [Type conversions](https://youtu.be/_6Q_r9xeg3g) (code available [here](https://vicpena.github.io/R/typeconversions.R))
