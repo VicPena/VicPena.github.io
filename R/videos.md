@@ -20,3 +20,4 @@
 6. [Sorting data](https://youtu.be/1w7vxl_xAKA) (code available [here](https://vicpena.github.io/R/sortingdata.R))
 7. [Type conversions](https://youtu.be/_6Q_r9xeg3g) (code available [here](https://vicpena.github.io/R/typeconversions.R))
 8. [Working with aggregate data](https://youtu.be/RoE1XKFSPOE) (code available [here](https://vicpena.github.io/R/aggregatedata.R))
+9. [Reshaping data](https://youtu.be/Kf1rkBAwcTk) (code available [here](https://vicpena.github.io/R/reshaping.R))
