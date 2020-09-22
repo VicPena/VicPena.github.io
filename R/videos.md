@@ -23,3 +23,4 @@
 9. [Reshaping data](https://youtu.be/Kf1rkBAwcTk) (code available [here](https://vicpena.github.io/R/reshaping.R))
 10. [`group_by` and `summarize`](https://youtu.be/fHd1iYiQnyE) (code available [here](https://vicpena.github.io/R/groupby.R))
 11. [Identifying a maximum](https://youtu.be/0MtFC8TxZ_A) (code available [here](https://vicpena.github.io/R/idmax.R))
+12. [Joining datasets](https://youtu.be/g6EBlZvcdi8) (code available [here](https://vicpena.github.io/R/join.R))
