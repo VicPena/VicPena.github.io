@@ -27,4 +27,5 @@
 13. [Joining datasets 2: `nycflights13`](https://youtu.be/QvcjigJRL20) (code available [here](https://vicpena.github.io/R/nycflights13.R))
 
 ## Data visualization
+0. [Notes](https://vicpena.github.io/sta9750/plots.html)
 1. [Introduction to `ggplot2`](https://youtu.be/lx4FoEMSAvY) (code available [here](https://vicpena.github.io/R/ggplot2intro.R))
