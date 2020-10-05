@@ -25,3 +25,6 @@
 11. [Identifying a maximum](https://youtu.be/0MtFC8TxZ_A) (code available [here](https://vicpena.github.io/R/idmax.R))
 12. [Joining datasets](https://youtu.be/g6EBlZvcdi8) (code available [here](https://vicpena.github.io/R/join.R))
 13. [Joining datasets 2: `nycflights13`](https://youtu.be/QvcjigJRL20) (code available [here](https://vicpena.github.io/R/nycflights13.R))
+
+## Data visualization
+1. [Introduction to `ggplot2`](https://youtu.be/lx4FoEMSAvY) (code available [here](https://vicpena.github.io/R/ggplot2intro.R))
