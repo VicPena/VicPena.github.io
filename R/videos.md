@@ -29,3 +29,4 @@
 ## Data visualization
 0. [Notes](https://vicpena.github.io/sta9750/plots.html)
 1. [Introduction to `ggplot2`](https://youtu.be/lx4FoEMSAvY) (code available [here](https://vicpena.github.io/R/ggplot2intro.R))
+2. [More `ggplot2`](https://youtu.be/8LOjTZ-FW6Q) (code available [here](https://vicpena.github.io/R/moreggplot.R))
