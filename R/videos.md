@@ -36,3 +36,4 @@
 ## Basic confidence intervals and hypothesis tests
 0. [Notes](https://vicpena.github.io/sta9750/basicinference.pdf)
 1. [Normal means](https://youtu.be/rFR2uKzr88M) (code available [here](https://vicpena.github.io/R/normalmeans.R))
+2. [Proportions](https://youtu.be/EJQlg0lFyU0)(code available [here](https://vicpena.github.io/R/prop.R))
