@@ -37,3 +37,4 @@
 0. [Notes](https://vicpena.github.io/sta9750/basicinference.pdf)
 1. [Normal means](https://youtu.be/rFR2uKzr88M) (code available [here](https://vicpena.github.io/R/normalmeans.R))
 2. [Proportions](https://youtu.be/EJQlg0lFyU0) (code available [here](https://vicpena.github.io/R/prop.R))
+3. [Chi-squared tests](https://youtu.be/G3p3YLn3BlQ) (code available [here](https://vicpena.github.io/R/chi2.R))
