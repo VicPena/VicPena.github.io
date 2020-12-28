@@ -18,7 +18,7 @@
 
 ## Logistics
 
-In our morning sessions (10 to noon) I'll lecture. In the afternoon sessions (from 2pm to 4pm), we'll work throguh problems assigned on TopHat and other sources. I'll either let you work on your own and be there to answer your questions, or we can go through the problems together. We'll adapt depending on how we feel about class dynamics. I'll also assign Datacamp courses that you can complete at your convenience. 
+In our morning sessions (10 to noon) I'll lecture. In the afternoon sessions (from 2pm to 4pm), we'll work through problems assigned on TopHat and other sources. I'll either let you work on your own and be there to answer your questions, or we can go through the problems together. We'll adapt depending on how we feel about class dynamics. I'll also assign Datacamp courses that you can complete at your convenience. 
 
 ## Handouts 
 
