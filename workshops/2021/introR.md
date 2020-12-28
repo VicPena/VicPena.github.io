@@ -6,7 +6,7 @@
 
 **My email address:** `victor.pena@baruch.cuny.edu`. 
 
-**Office hours:** By appointment. Just send me an email and we'll make it work.
+**Office hours:** By appointment. Send me an email and we'll make it work.
 
 ## Pre-requisites
 
