@@ -12,7 +12,7 @@
 
 * **Installing `R` and `Rstudio`:** Here are some direct links to download [R](https://cran.r-project.org/) and [Rstudio](https://rstudio.com/). You should install R first and then Rstudio. [This video](https://www.youtube.com/watch?v=6GBZxrQyzM0) I recorded for our undergraduate students explains the process. 
 
-* **Getting access to TopHat:** [Click on this link](https://app.tophat.com/register/student/) to register on TopHat as a student. The join code for the workshop is 742437, the name of the course is "R workshop 2021", and the Course Code is Rworkshop. 
+* **Getting access to TopHat:** [Click on this link](https://app.tophat.com/register/student/) to register on TopHat as a student. The join code for the workshop is 742437, the name of the course is "R workshop 2021". 
 
 * **Getting access to Datacamp:** Unfortunately, I'm waiting on Datacamp to activate our course. I'll let you know when they approve it. You will have to register with your `@baruch.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know.
 
