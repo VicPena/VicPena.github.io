@@ -2,7 +2,7 @@
 
 ## Basics
 
-**Days:** January 23-25, 2020. 
+**Days:** January 11th, 13th, and 15th.  
 
 **Teaching times:** 10am to noon, then 2pm to 4pm. We'll meet on Zoom. You'll receive an email with my personal meeting room information.
 
