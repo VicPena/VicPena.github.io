@@ -22,17 +22,10 @@
 
 ## Logistics
 
-I suggest that you work through the [Introduction to Machine Learning](https://www.datacamp.com/courses/introduction-to-machine-learning-with-r) course on Datacamp. If you're familiar with the models and theoretical concepts, you can skip the videos (which explain them) and go straight to the exercises which focus on implementing the methods in `R`. 
+If you're completely new to machine learning, I suggest that you work through [Machine Learning for Everyone](https://www.datacamp.com/courses/introduction-to-machine-learning-with-r) on Datacamp. It's a qualitative introduction to the topic.
 
-If you don't have a strong coding background (e.g. if you're not comfortable with `for` loops), here's a list of exercises you might want to skip:
+After that, I suggest that you take [Machine Learning for Marketing Analytics](https://learn.datacamp.com/courses/machine-learning-for-marketing-analytics-in-r). The applications are in Marketing, but the general concepts apply to other fields.
 
-* **"Using CV":** this exercise uses  a `for` loop to implement cross-validation; in practice, we can use `library(caret)`, which does that automatically for us.  
-* **"Increasing the bias":** this exercise involves editing a custom-made function in a hard-coded classifier, something that rarely happens in practice.
-* **"K's choice":** you can tune this parameter using cross-validation, which is implemented in `library(caret)` .
-* **"Making a scree plot!":** you can tune this parameter using cross-validation, which is implemented in `library(caret)`.
-* **"Your own k-NN algorithm":** you can use `library(caret)` to fit this model without using a custom function.
-
-Once you finish the course, I suggest that you take a look at my short notes on [using `library(caret)` for doing cross-validation](http://vicpena.github.io/workshops/caretCV.html).
 
 ## Books (all open-access)
 
