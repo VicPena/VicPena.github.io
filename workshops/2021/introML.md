@@ -24,10 +24,11 @@
 
 If you're completely new to machine learning, I suggest that you work through [Machine Learning for Everyone](https://www.datacamp.com/courses/introduction-to-machine-learning-with-r) on Datacamp. It's a qualitative introduction to the topic.
 
-After that, I suggest that you take [Machine Learning for Marketing Analytics](https://learn.datacamp.com/courses/machine-learning-for-marketing-analytics-in-r). The applications are in Marketing, but the general concepts apply to other fields.
-
+As we go through the course, I'll assign readings and provide additional material.
 
 ## Books (all open-access)
+
+* [Hands-on Machine Learning with R](https://bradleyboehmke.github.io/HOML/), by Bradley Boehmke.
 
 * [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/), by James, Witten, Hastie, and Tibshirani.
 
