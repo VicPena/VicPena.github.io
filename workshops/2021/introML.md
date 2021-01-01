@@ -18,7 +18,7 @@
 
 * Some additional coding background can be helpful, but it's not essential. 
 
-* **Getting access to Datacamp:** Unfortunately, I'm waiting on Datacamp to activate our course. I'll let you know when they approve it. You will have to register with your `@baruch.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know.
+* **Getting access to Datacamp:** You can register for Datacamp [here](https://www.datacamp.com/groups/shared_links/440ca96d99604c790ff2e16d9bbe39e6176674fbe6e3f4a141c62a5b54cdb426). You will have to register with your `@baruch.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know.
 
 ## Logistics
 
