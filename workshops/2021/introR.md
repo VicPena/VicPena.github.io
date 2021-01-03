@@ -16,9 +16,11 @@
 
 * **Getting access to Datacamp:** You can register for Datacamp [here](https://www.datacamp.com/groups/shared_links/440ca96d99604c790ff2e16d9bbe39e6176674fbe6e3f4a141c62a5b54cdb426). You will have to register with your `@baruch.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know.
 
+* **Getting access to our Slack channel:** We'll communicate via Slack. I created a channel, which you can join by clicking [here](https://join.slack.com/t/baruch-7qq2478/shared_invite/zt-koyyyavl-UzA0UacaZTjfh9nSSPdg2w).  You will have to register with your `@baruch.cuny.edu`. If you want to use another email address, please let me know.
+
 ## Logistics
 
-In our morning sessions (10 to noon) I'll lecture. In the afternoon sessions (from 2pm to 4pm), we'll work through problems assigned on TopHat and other sources. I'll either let you work on your own and be there to answer your questions, or we can go through the problems together. We'll adapt depending on how we feel about class dynamics. I'll also assign Datacamp courses that you can complete at your convenience. 
+We will have lectures from 10 to noon, and then from 2pm to 4pm. Outside of class, we'll communicate via Slack. Each day, I'll assign exercises and Datacamp courses that you can complete at your convenience.
 
 ## Handouts 
 
