@@ -18,9 +18,14 @@
 
 * **Getting access to our Slack channel:** We'll communicate via Slack. I created a channel, which you can join by clicking [here](https://join.slack.com/t/baruch-7qq2478/shared_invite/zt-koyyyavl-UzA0UacaZTjfh9nSSPdg2w).  You will have to register with your `@baruch.cuny.edu`. If you want to use another email address, please let me know.
 
-## Logistics
+## Logistics and code
 
-We will have lectures from 10 to noon, and then from 2pm to 4pm. Outside of class, we'll communicate via Slack. Each day, I'll assign exercises and Datacamp courses that you can complete at your convenience.
+We will have lectures from 10 to noon, and then from 2pm to 4pm. Outside of class, we'll communicate via Slack. Each day, I'll assign exercises and Datacamp courses that you can complete at your convenience.\
+
+Below I'll post the code I write in our lectures:
+
+* [Day 1, session 1](https://vicpena.github.io/workshops/2021/day1morn.R)
+* [Day 1, session 2](https://vicpena.github.io/workshops/2021/day1aft.R)
 
 ## Handouts 
 
