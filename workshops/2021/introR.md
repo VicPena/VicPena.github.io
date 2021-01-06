@@ -20,7 +20,7 @@
 
 ## Logistics and code
 
-We will have lectures from 10 to noon, and then from 2pm to 4pm. Outside of class, we'll communicate via Slack. Each day, I'll assign exercises and Datacamp courses that you can complete at your convenience.\
+We will have lectures from 10 to noon, and then from 2pm to 4pm. Outside of class, we'll communicate via Slack. Each day, I'll assign exercises and Datacamp courses that you can complete at your convenience.
 
 Below I'll post the code I write in our lectures:
 
