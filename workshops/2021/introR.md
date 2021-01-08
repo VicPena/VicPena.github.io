@@ -28,6 +28,7 @@ Below I'll post the code I write in our lectures:
 * [Day 1, session 2](https://vicpena.github.io/workshops/2021/day1aft.R)
 * [Day 2, session 1](https://vicpena.github.io/workshops/2021/day2morn.R)
 * [Day 2, session 2](https://vicpena.github.io/workshops/2021/day2aft.R)
+* [Day 3, session 1](https://vicpena.github.io/workshops/2021/day3morn.R)
 
 ## Handouts 
 
