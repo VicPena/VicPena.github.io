@@ -10,7 +10,7 @@
 
 ## Pre-requisites
 
-* **Installing `R` and `Rstudio`:** Here are some direct links to download [R](https://cran.r-project.org/) and [Rstudio](https://rstudio.com/). You should install R first and then Rstudio. [This video](https://www.youtube.com/watch?v=6GBZxrQyzM0) I recorded for our undergraduate students explains the process. 
+* **Installing `R` and `Rstudio`:** Here are some direct links to download [R](https://cran.r-project.org/) and [Rstudio](https://rstudio.com/). You should install `R` first and then Rstudio. [This video](https://www.youtube.com/watch?v=6GBZxrQyzM0) I recorded for our undergraduate students explains the process. 
 
 * **Getting access to TopHat:** [Click on this link](https://app.tophat.com/register/student/) to register on TopHat as a student. The join code for the workshop is 742437, the name of the course is "R workshop 2021". 
 
@@ -34,7 +34,7 @@ Below I'll post the code I write in our lectures:
 
 We're not going to cover all the material in these handouts, but I thought you might find them useful for reference (or if you want to go further):
 
-1. [Introduction to R](https://vicpena.github.io/sta9750/introR.pdf)
+1. [Introduction to `R`](https://vicpena.github.io/sta9750/introR.pdf)
 2. [Data wrangling](https://vicpena.github.io/sta9750/wrangle1.pdf)
 3. [Data visualization](https://vicpena.github.io/sta9750/plots.html)
 4. [Basic confidence intervals and hypothesis tests](https://vicpena.github.io/sta9750/basicinference.pdf)
