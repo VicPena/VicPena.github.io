@@ -27,6 +27,7 @@ If you're completely new to machine learning, I suggest that you work through [M
 Below, I'll post the code we write in our sessions:
 
 * [Regularized regression](http://VicPena.github.io/workshops/2021/regregression.R)
+* [Logistic regression](http://VicPena.github.io/workshops/2021/logistic.R)
 
 Here are some slides:
 
