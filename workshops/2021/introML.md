@@ -24,7 +24,10 @@
 
 If you're completely new to machine learning, I suggest that you work through [Machine Learning for Everyone](https://www.datacamp.com/courses/introduction-to-machine-learning-with-r) on Datacamp. It's a qualitative introduction to the topic.
 
-As we go through the course, I'll assign readings and provide additional material.
+Below, I'll post the code we write in our sessions:
+
+* [Regularized regression](http://VicPena.github.io/workshops/2021/regregression.R)
+
 
 ## Books (all open-access)
 
