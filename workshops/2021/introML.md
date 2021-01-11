@@ -28,6 +28,9 @@ Below, I'll post the code we write in our sessions:
 
 * [Regularized regression](http://VicPena.github.io/workshops/2021/regregression.R)
 
+Here are some slides:
+
+* [Intro to ML](http://VicPena.github.io/workshops/2021/introML.pdf)
 
 ## Books (all open-access)
 
