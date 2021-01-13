@@ -29,8 +29,9 @@ Below, I'll post the code we write in our sessions:
 * [Regularized regression](http://VicPena.github.io/workshops/2021/regregression.R)
 * [Logistic regression](http://VicPena.github.io/workshops/2021/logistic.R)
 * [Confusion matrices](http://VicPena.github.io/workshops/2021/classif_titanic0.R)
+* [Multiclass classification](http://VicPena.github.io/workshops/2021/multi_titanic0.R)
 
-Here's a [link to some exercises](https://docs.google.com/document/d/1IbG2E2OBjh82I5gD_gJrdQyGqrWcTeWf_fLvEvnqikk/edit?usp=sharing)
+Here's a [link to some exercises](https://docs.google.com/document/d/1IbG2E2OBjh82I5gD_gJrdQyGqrWcTeWf_fLvEvnqikk/edit?usp=sharing).
 
 Here are some slides:
 
