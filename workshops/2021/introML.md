@@ -36,6 +36,7 @@ Here's a [link to some exercises](https://docs.google.com/document/d/1IbG2E2OBjh
 Here are some slides:
 
 * [Intro to ML](http://VicPena.github.io/workshops/2021/introML.pdf)
+* [Classification](http://VicPena.github.io/workshops/2021/classification.pdf)
 
 ## Books (all open-access)
 
