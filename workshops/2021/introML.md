@@ -38,6 +38,7 @@ Here are some slides:
 
 * [Intro to ML](http://VicPena.github.io/workshops/2021/introML.pdf)
 * [Classification](http://VicPena.github.io/workshops/2021/classification.pdf)
+* [Unsupervised learning](http://VicPena.github.io/workshops/2021/unsupervised.pdf)
 
 ## Books (all open-access)
 
