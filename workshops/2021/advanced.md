@@ -1,4 +1,4 @@
-# Advanced methods in `R` workshop
+# Introduction to text mining in `R` workshop
 
 ## Basics
 
@@ -22,7 +22,6 @@
 
 I recommend that you take [Introduction to text analysis in `R`](https://campus.datacamp.com/courses/introduction-to-text-analysis-in-r/) on Datacamp. It's a nice and gentle introduction to text analysis which uses packages in the `tidyverse`. After you take that, if you want to learn more text mining with `R`, I strongly recommend that you take a look at the book [Text Mining with `R`](https://www.tidytextmining.com/). 
 
-Initially, I thought we could cover deep learning as well. In hindsight, I think that isn't feasible, but we'll see if we have some time for that.
 
 ## Books (all open-access)
 
