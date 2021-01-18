@@ -30,6 +30,7 @@ Here are some links to datasets we will use
 And here are some links to the code we wrote in our sessions
 
 * [Roomba](https://vicpena.github.io/workshops/2021/roomba.R)
+* [Tweets](https://vicpena.github.io/workshops/2021/tweets.R)
 
 ## Books (all open-access)
 
