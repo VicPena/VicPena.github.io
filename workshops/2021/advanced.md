@@ -22,6 +22,11 @@
 
 I recommend that you take [Introduction to text analysis in `R`](https://campus.datacamp.com/courses/introduction-to-text-analysis-in-r/) on Datacamp. It's a nice and gentle introduction to text analysis which uses packages in the `tidyverse`. After you take that, if you want to learn more text mining with `R`, I strongly recommend that you take a look at the book [Text Mining with `R`](https://www.tidytextmining.com/). 
 
+Here are some links to dataset we will use
+
+* [Roomba reviews](https://vicpena.github.io/workshops/2021/Roomba.csv)
+* [Tweets](https://vicpena.github.io/workshops/2021/tweets.csv)
+
 
 ## Books (all open-access)
 
