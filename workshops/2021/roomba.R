@@ -227,22 +227,58 @@ barp3 = tok %>%
 
 # plot sentiments
 ggplot(barp3) +
-  aes(x = fct_reorder(sentiment, n), y = perc) +
+  aes(x = fct_reorder(sentiment, n), y = perc, label = paste(round(perc, 2),"%")) +
   geom_col(fill = "pink") + # bar plots (geom_col: stands for column)
+  geom_text() + 
   xlab("sentiment") +
   ggtitle("Sentiment analysis for Roomba reviews (Dict: nrc)") +
   coord_flip()
 
 
 
-# plot top 10 positive and negative words, using bing
+# plot top 10 most frequent positive and negative words, using bing
+
+# create a dataset that is merged with the bing dictionary
+tok_bing = tok %>% inner_join(get_sentiments("bing"))
+# table which contains the top 10 words by sentiments
+barp_sent = tok_bing %>% group_by(sentiment) %>% count(word) %>% slice_max(n, n = 10)
+barp_sent
+ggplot(barp_sent) +
+  aes(x = reorder_within(word, n, sentiment), y = n, fill = sentiment, label = n) +
+   geom_col(show.legend = FALSE) +
+    geom_text() +
+    scale_x_reordered() + 
+    facet_wrap(  sentiment  ~ . , scales = "free" ) +
+      coord_flip()
 
 # do the same, but break down further by product
+barp_sent2 = tok_bing %>% 
+  group_by(sentiment, Product) %>% 
+  count(word) %>% 
+  slice_max(n, n = 10) %>%
+  mutate(perc = 100*n/sum(n))
+
+ggplot(barp_sent2) +
+  aes(x = reorder_within(word, n, list(sentiment, Product)), y = perc, fill = sentiment, label = round(perc,2)) +
+  geom_col(show.legend = FALSE) +
+  geom_text() +
+  scale_x_reordered() + 
+  facet_wrap(  sentiment  ~ Product , scales = "free" ) +
+  coord_flip()
 
 # find words that appear in top 10 
 # in only one of the products
+barp_sent2 %>% filter(sentiment == "negative")
+# get out a database which contains
+# those words that appear for one roomba
+# but not the other
+unq = barp_sent2 %>% ungroup() %>% count(word) %>% 
+  filter(n == 1) %>% 
+    select(word)
 
-# add "Product" variable
+View(barp_sent2)
+barp_sent2 %>% inner_join(unq)
+
 
 ##################
 # Topic modeling #
@@ -252,33 +288,127 @@ ggplot(barp3) +
 
 # create dtm
 # install.packages("tm")
+# install.packages("NLP")
+library(tm)
+
+# find interesting groups of words
+# given a set of "documents"
+# set of documents are the reviews
+
+# filter out stop_words
+tok = Roomba %>% unnest_tokens(word, Review)
+tok = tok %>% anti_join(stop_words)
+tok = tok %>% filter( !(word %in% c("roomba", "vacuum", "cleaning", "clean", "irobot")) ) # words I don't want to keep
+
+# how many times each word appears in each review
+dtm_review = tok %>% count(word, id) %>% cast_dtm(id, word, n)
+dtm_review
+# id: review
+# word: words in the review
+# n: counting how many times each word appears
+
 
 # run topic model
 # install.packages("topicmodels")
 library(topicmodels)
+# LDA a type of topic model
+# Latent Dirichlet Allocation
+# There are extensions that have 
+# time-series
+# Your topics change over time 
+# dynamic LDA
+# Hierarchical LDA
+
+# Gibbs' sampler: specifying a method for estimating
+# LDA is a Bayesian model
+# it has associated with it a posterior distribution 
+# over all the unknowns
+# sample from posterior distribution using 
+# a Markov Chain
+lda_output = LDA(dtm_review, k = 2, methods = "Gibbs")
+
+lda_topics = lda_output %>% tidy(matrix = "beta") # betas are word probabilities by topic
+
+# top 5 words by topic
+barplot_lda = lda_topics %>% group_by(topic) %>% slice_max(beta, n = 10) 
+# Pr(word given a topic) = Pr(word | topic)
+lda_topics %>% group_by(topic) %>% summarize(sum(beta))
+
+# create a plot that has 
+# betas, terms (words), topics
+ggplot(barplot_lda) +
+  aes(x = reorder_within(term, beta, topic), y = beta, fill = topic) +
+    geom_col(show.legend =  FALSE) +
+      facet_wrap(topic ~ . , scales = "free", nrow = 5) +
+        scale_x_reordered() + 
+        coord_flip()
+
 # k is number of topics
-
-# convert lda output to tidy format
-
-# betas are conditional word probabilities
-# given the topic
-
-# plot with top 10 words by topic
-
 
 
 # how to select k?
 # one way: using "perplexity" (the lower the better)
+# perplexity is a function of loglikelihood
+# the higher the loglikelihood, the lower the perplexity
+
+# fit the model for different values of k 
+# (k is the number of topics / clusters)
+# and then we'll identify a value of k 
+# after which adding new clusters doesn't
+# seem to "help much"
+
+# for loop to run this model for different values of k
+maxK = 10
+perp = numeric(maxK)
+for (k in 2:maxK) {
+  lda_output = LDA(dtm_review, k = k, methods = "Gibbs")
+  perp[k] = perplexity(lda_output)
+}
+qplot(x = 2:maxK, y = perp[-1])
 
 ############
 # stemming #
 ############
 
 # install.packages("SnowballC")
+library(SnowballC)
+tok = tok %>% mutate(word_stem = wordStem(word))
+
 
 # 1st create freq table, top 10 stemmed words
+tok %>% count(word) %>% slice_max(n, n = 10)
+tok %>% count(word_stem) %>% slice_max(n, n = 10)
 
-# then, plot
+# after stemming we could potentially re run all of our analyses
+
+library(tm)
+
+# find interesting groups of words
+# given a set of "documents"
+# set of documents are the reviews
+
+# how many times each word appears in each review
+dtm_review = tok %>% count(word_stem, id) %>% cast_dtm(id, word_stem, n)
+dtm_review
+# id: review
+# word: words in the review
+# n: counting how many times each word appears
+lda_output = LDA(dtm_review, k = 2, methods = "Gibbs")
+lda_topics = lda_output %>% tidy(matrix = "beta") # betas are word probabilities by topic
+
+# top 5 words by topic
+barplot_lda = lda_topics %>% group_by(topic) %>% slice_max(beta, n = 10) 
+# Pr(word given a topic) = Pr(word | topic)
+lda_topics %>% group_by(topic) %>% summarize(sum(beta))
+
+# create a plot that has 
+# betas, terms (words), topics
+ggplot(barplot_lda) +
+  aes(x = reorder_within(term, beta, topic), y = beta, fill = topic) +
+  geom_col(show.legend =  FALSE) +
+  facet_wrap(topic ~ . , scales = "free", nrow = 5) +
+  scale_x_reordered() + 
+  coord_flip()
 
 
 
@@ -287,22 +417,5 @@ library(topicmodels)
 #######################
 
 # top 10 2-grams
-
-# getting rid of stop_words
-# how?
-# well, we have different options...
-# we want to get rid of 2-grams where
-# both words are stop_words for sure
-
-
-# strategy: separate the 2-grams into 2 words
-# filter out rows where both words are stop_words
-# then, paste 2-grams back together
-
-
-# create table of 2-grams after filtering out stop_words
-
-
-
-
-
+tok_2gram = Roomba %>% unnest_tokens(word, Review, token = "ngrams", n = 2)
+tok_2gram
