@@ -275,21 +275,11 @@ library(topicmodels)
 ############
 
 # install.packages("SnowballC")
-library(SnowballC)
-tok %>% mutate(word = stem)
-
-library(SnowballC)
-tok = tok %>% mutate(word_stem  = wordStem(word))
 
 # 1st create freq table, top 10 stemmed words
-barp_stem = tok %>% count(word_stem) %>% slice_max(n, n = 10)
+
 # then, plot
-ggplot(barp_stem) +
-  aes(x = fct_reorder(word_stem, n), y = n) +
-  geom_col(fill = "pink") + # bar plots (geom_col: stands for column)
-  xlab("top 10 most frequent terms") +
-  ggtitle("Word frequency of top 10 most freq. terms in Roomba reviews") +
-  coord_flip()
+
 
 
 #######################
