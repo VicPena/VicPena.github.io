@@ -107,7 +107,7 @@ barp = tok %>% count(word) %>% slice_max(n, n = 10)
 # now I can use ggplot
 ggplot(barp) +
   aes(x = word, y = n) +
-    geom_col() # bar plots (geom_col: stands for column)
+  geom_col() # bar plots (geom_col: stands for column)
 
 # order bars by frequency
 ggplot(barp) +
@@ -120,7 +120,7 @@ ggplot(barp) +
 
 
 # Barplot of word frequency by product, top 10 words only
-barp2 = tok %>% group_by(Product) %>% count(word) %>% slice_max(n, n = 10)
+barp2 = tok %>% group_by(Product) %>% count(word_stem) %>% slice_max(n, n = 10)
 barp2
 
 
@@ -129,12 +129,13 @@ barp2
 # geom_point(), geom_bar(), geom_line(), geom_smooth()... 
 # faceting w/ facet.grid
 ggplot(barp2) +
-  aes(x = reorder_within(word, n, Product), y = n, fill = Product) +
-    geom_col(show.legend = FALSE) +
-    scale_x_reordered() +
-    facet_wrap( Product ~ . , scales = "free") +
-    coord_flip() +
-    xlab("Top 10 words") 
+  aes(x = reorder_within(word_stem, n, Product), y = n, fill = Product, label = n) +
+  geom_col(show.legend = FALSE) +
+  geom_text() +
+  scale_x_reordered() +
+  facet_wrap( Product ~ . , scales = "free") +
+  coord_flip() +
+  xlab("Top 10 words") 
 
 
 ##############
@@ -245,11 +246,11 @@ barp_sent = tok_bing %>% group_by(sentiment) %>% count(word) %>% slice_max(n, n 
 barp_sent
 ggplot(barp_sent) +
   aes(x = reorder_within(word, n, sentiment), y = n, fill = sentiment, label = n) +
-   geom_col(show.legend = FALSE) +
-    geom_text() +
-    scale_x_reordered() + 
-    facet_wrap(  sentiment  ~ . , scales = "free" ) +
-      coord_flip()
+  geom_col(show.legend = FALSE) +
+  geom_text() +
+  scale_x_reordered() + 
+  facet_wrap(  sentiment  ~ . , scales = "free" ) +
+  coord_flip()
 
 # do the same, but break down further by product
 barp_sent2 = tok_bing %>% 
@@ -274,7 +275,7 @@ barp_sent2 %>% filter(sentiment == "negative")
 # but not the other
 unq = barp_sent2 %>% ungroup() %>% count(word) %>% 
   filter(n == 1) %>% 
-    select(word)
+  select(word)
 
 View(barp_sent2)
 barp_sent2 %>% inner_join(unq)
@@ -338,10 +339,10 @@ lda_topics %>% group_by(topic) %>% summarize(sum(beta))
 # betas, terms (words), topics
 ggplot(barplot_lda) +
   aes(x = reorder_within(term, beta, topic), y = beta, fill = topic) +
-    geom_col(show.legend =  FALSE) +
-      facet_wrap(topic ~ . , scales = "free", nrow = 5) +
-        scale_x_reordered() + 
-        coord_flip()
+  geom_col(show.legend =  FALSE) +
+  facet_wrap(topic ~ . , scales = "free", nrow = 5) +
+  scale_x_reordered() + 
+  coord_flip()
 
 # k is number of topics
 
@@ -415,7 +416,102 @@ ggplot(barplot_lda) +
 #######################
 # tokenize by n-grams #
 #######################
+# read in the data
+library(readr)
+library(tidyverse)
+library(tidytext)
+Roomba <- read_csv("http://vicpena.github.io/workshops/2021/Roomba.csv")
 
+# find bigrams
 # top 10 2-grams
-tok_2gram = Roomba %>% unnest_tokens(word, Review, token = "ngrams", n = 2)
-tok_2gram
+
+
+# getting rid of stop_words
+# how?
+# well, we have different options...
+# we want to get rid of 2-grams where
+# both words are stop_words for sure
+
+
+# strategy: separate the 2-grams into 2 words
+# filter out rows where both words are stop_words
+# then, paste 2-grams back together
+
+
+# create table of 2-grams after filtering out stop_words
+
+# another option is getting rid of 2-grams where there is 1 or 2
+# stop_words
+
+# top 10 most common bigrams
+
+# let's go with the option where there may be one stop_word
+# before that, though, let's stem the words 
+
+
+# repeat top 10 after stemming
+
+# plot top 10 2-grams by product
+
+# 1st, create table with w/ top 10 most freq. bigrams by product
+# add in relative freq. (i.e. proportions)
+
+# now, plot 
+
+# sentiment analysis?
+
+# get bigrams that start by "not"
+
+
+# then, run sentiment analysis on second word
+
+# get top 5 words by sentiment
+
+
+
+# convert sentiment to factor
+# change levels of sentiment to  "not + negative" and "not + positive"
+
+# top 5 words by topic
+
+
+# break down further by product
+# 1st, create table by product & sentiment, run sentiment analysis
+
+# get top 3 by product and sentiment
+
+
+# convert to factor + edit levels
+# change levels of sentiment to  "not + negative" and "not + positive"
+
+
+# could do the same with "no", "without" "never", etc. 
+
+#################
+# network plots #
+#################
+
+# here, let's work with the bigram data 
+# where both words are NOT stop_words
+# don't unite the columns and don't forget to stem
+
+
+# install.packages("tidygraph")
+# install.packages("ggraph")
+library(tidygraph)
+library(ggraph)
+
+# bigram counts, keep top 20
+
+# alternatively, can use library(snahelper)
+# install.packages("snahelper")
+# install.package("igraph)
+library(snahelper)
+library(igraph)
+# highlight graph object, select snahelper addin
+
+
+# top 10 bigram graph plot by product
+
+# alternatively, can do 2 separate plots
+# can use snahelper
