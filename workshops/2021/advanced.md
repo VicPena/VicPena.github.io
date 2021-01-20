@@ -34,6 +34,8 @@ And here are some links to the code we wrote in our sessions
 * [Tweets](https://vicpena.github.io/workshops/2021/tweets.R) (["solution"](https://vicpena.github.io/workshops/2021/tweets_solved.R))
 * [Animal farm](https://vicpena.github.io/workshops/2021/animal_farm.R)
 
+Here are some [slides](https://vicpena.github.io/workshops/2021/textmining.pdf)
+
 ## Books (all open-access)
 
 * [Text Mining with `R`](https://www.tidytextmining.com/), by Julia Silge and David Robinson.
