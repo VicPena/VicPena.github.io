@@ -158,6 +158,8 @@ sent %>% group_by(sentiment, complaint_label) %>% count(word) %>% slice_max(n, n
 # Topic modeling #
 ##################
 
+library(topicmodels)
+
 # create dtm
 dtm_tweets = tok %>% count(word, tweet_id) %>% cast_dtm(tweet_id, word, n)
 
@@ -190,3 +192,46 @@ lda_topics %>%
 
 # get rid of more stopwords?
 
+#############################
+# modeling complaint_labels #
+#############################
+
+# goal: building a model
+# to predict if a tweet is a complaint or not
+
+
+library(readr)
+tweets <- read_csv("http://vicpena.github.io/workshops/2021/tweets.csv")
+library(tidytext)
+library(SnowballC)
+
+# split data into training and test set
+library(rsample)
+set.seed(123) # this ensures that we get the same random split
+split = initial_split(tweets, prop = 0.7) # 70% training, 30% testing
+train = training(split)
+test = testing(split)
+
+
+# build model on train set
+train_tok = train %>% unnest_tokens(word, tweet_text) 
+train_tok = train_tok %>%  anti_join(stop_words) 
+
+# find sentiments of tweets, using bing dict
+train_tok = train_tok %>% inner_join(get_sentiments("bing"))
+# find % positivity by tweet_id
+# convert sentiment into factor
+train_tok = train_tok %>% mutate(sentiment = as.factor(sentiment))
+sent = train_tok %>% group_by(X1) %>% count(sentiment, .drop = FALSE) %>% mutate(pos_perc = 100*n/sum(n))
+# filter positivity
+sent = sent %>% ungroup %>% filter(sentiment == "positive")
+
+# merge with complaint_label
+comp = train_tok %>% select(X1, complaint_label)
+sent = sent %>% left_join(comp, by = 'X1')
+
+#  find % of original tweets that we kept
+nrow(sent)/nrow(train)
+
+# find average positivty of tweets by complaint_label
+sent %>% group_by(complaint_label) %>% summarize(avgPos = mean(pos_perc))
