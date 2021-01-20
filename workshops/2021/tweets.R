@@ -78,4 +78,67 @@ library(wordcloud)
 
 # plot with top 10 words by topic
 
+#############################
+# modeling complaint_labels #
+#############################
+
+# goal: building a model
+# to predict if a tweet is a complaint or not
+
+library(tidytext)
+library(readr)
+tweets <- read_csv("http://vicpena.github.io/workshops/2021/tweets.csv")
+
+
+# split data into training and test set
+library(rsample)
+set.seed(123) # this ensures that we get the same random split
+split = initial_split(tweets, prop = 0.7) # 70% training, 30% testing
+train = training(split)
+test = testing(split)
+
+
+# build model on train set
+
+# find sentiments of tweets, using bing dict
+
+# find % positivity by tweet_id
+# convert sentiment into factor
+
+# filter positivity
+
+# merge with complaint_label
+
+#  find % of original tweets that we kept
+
+# find average positivty of tweets by complaint_label
+
+# plot % positivty of tweets by complaint_label
+
+#  run logistic regression to predict complaint status given pos_perc
+# first, we'll have to convert complaint_label into factor
+
+# predict labels for test set
+
+
+
+# find sentiments of tweets, using bing dict
+
+# find % positivity by tweet_id
+# convert sentiment into factor
+
+# filter positivity
+
+# merge with complaint_label
+
+
+#  find % of original tweets that we kept
+
+
+# add in predictions in "complaint / non-complaint" terms, transform to factor as needed
+
+# summarize results in confusion matrices
+# install.packages("caret")
+
+
 
