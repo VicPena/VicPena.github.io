@@ -33,6 +33,7 @@ And here are some links to the code we wrote in our sessions
 * [Roomba](https://vicpena.github.io/workshops/2021/roomba.R)
 * [Tweets](https://vicpena.github.io/workshops/2021/tweets.R) (["solution"](https://vicpena.github.io/workshops/2021/tweets_solved.R))
 * [Animal farm](https://vicpena.github.io/workshops/2021/animal_farm.R)
+* [Congress data](https://vicpena.github.io/workshops/2021/congress.R)
 
 Here are some [slides](https://vicpena.github.io/workshops/2021/textmining.pdf)
 
