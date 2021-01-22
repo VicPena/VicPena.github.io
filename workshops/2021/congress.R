@@ -4,6 +4,7 @@ library(tidytext)
 library(SnowballC)
 # A dataset containing information about bills from the US congress
 # Link: https://raw.githubusercontent.com/VicPena/VicPena.github.io/master/workshops/2021/congress.csv
+# source: https://cfss.uchicago.edu/notes/supervised-text-classification/
 
 # ID: identifier for bill
 # cong: session of congress in which bill first appeared
