@@ -78,6 +78,7 @@ library(wordcloud)
 
 # plot with top 10 words by topic
 
+
 #############################
 # modeling complaint_labels #
 #############################
@@ -85,10 +86,11 @@ library(wordcloud)
 # goal: building a model
 # to predict if a tweet is a complaint or not
 
-library(tidytext)
+
 library(readr)
 tweets <- read_csv("http://vicpena.github.io/workshops/2021/tweets.csv")
-
+library(tidytext)
+library(SnowballC) # used for stemming 
 
 # split data into training and test set
 library(rsample)
@@ -100,45 +102,57 @@ test = testing(split)
 
 # build model on train set
 
-# find sentiments of tweets, using bing dict
+train_tok = train %>% unnest_tokens(word, tweet_text) 
+train_tok = train_tok %>%  anti_join(stop_words) 
 
+# find sentiments of tweets, using bing dict
+train_tok = train_tok %>% inner_join(get_sentiments("bing"))
 # find % positivity by tweet_id
 # convert sentiment into factor
-
+train_tok = train_tok %>% mutate(sentiment = as.factor(sentiment))
+sent = train_tok %>% group_by(X1) %>% count(sentiment, .drop = FALSE) %>% mutate(pos_perc = 100*n/sum(n))
 # filter positivity
+sent = sent %>% ungroup %>% filter(sentiment == "positive")
 
 # merge with complaint_label
-
-#  find % of original tweets that we kept
+comp = train_tok %>% select(X1, complaint_label)
+sent = sent %>% left_join(comp, by = 'X1')
 
 # find average positivty of tweets by complaint_label
+sent %>% group_by(complaint_label) %>% summarize(avgPos = mean(pos_perc))
+# convert complaint_label to factor, so that we can run models on it
+sent = sent %>% mutate(complaint_label = as.factor(complaint_label))
 
 # plot % positivty of tweets by complaint_label
+ggplot(sent) +
+  aes(x = pos_perc) +
+  geom_histogram() +
+  facet_wrap(~ complaint_label)
 
 #  run logistic regression to predict complaint status given pos_perc
 # first, we'll have to convert complaint_label into factor
 
 # predict labels for test set
 
-
+test_tok = test %>% unnest_tokens(word, tweet_text) 
+test_tok = test_tok %>%  anti_join(stop_words) 
 
 # find sentiments of tweets, using bing dict
-
+test_tok = test_tok %>% inner_join(get_sentiments("bing"))
 # find % positivity by tweet_id
 # convert sentiment into factor
-
+test_tok = test_tok %>% mutate(sentiment = as.factor(sentiment))
+test_sent = test_tok %>% group_by(X1) %>% count(sentiment, .drop = FALSE) %>% mutate(pos_perc = 100*n/sum(n))
 # filter positivity
+test_sent = test_sent %>% ungroup %>% filter(sentiment == "positive")
 
 # merge with complaint_label
-
-
-#  find % of original tweets that we kept
-
+comp = test_tok %>% select(X1, complaint_label)
+test_sent = test_sent %>% left_join(comp, by = 'X1')
 
 # add in predictions in "complaint / non-complaint" terms, transform to factor as needed
 
 # summarize results in confusion matrices
 # install.packages("caret")
-
 
 
