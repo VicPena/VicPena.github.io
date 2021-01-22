@@ -6,13 +6,12 @@ My email address is ``victor.pena@baruch.cuny.edu``.
 # Publications & preprints
 
 * Peña, V. & Irie, K. [On the relationship between beta-Bartlett and Uhlig extended processes.](https://arxiv.org/abs/2006.13868)
-* Peña, V. & Berger, J. O. [Restricted type II maximum likelihood priors on regression coefficients.](https://arxiv.org/abs/1711.08072) *To appear in Bayesian Analysis*.
-* Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2020) [On the Ubiquity of Information Inconsistency with Conjugate Priors.](https://link.springer.com/article/10.1007/s11749-020-00704-4?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst&utm_source=ArticleAuthorOnlineFirst&utm_medium=email&utm_content=AA_en_06082018&ArticleAuthorOnlineFirst_20200221) *TEST*.
-* Barrientos, A. F. & Peña, V. [Bayesian Bootstraps for massive datasets.](https://arxiv.org/abs/1705.09998) *To appear in Bayesian Analysis*.
-* Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  *NIPS Workshop on Bayesian Optimization.*
-* Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) *Bioinformatics, 31(22), 3631-3637.*
-
-* Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) *Statistica Sinica, 27(4), 1554-1559.*
+* Peña, V. & Berger, J. O. [Restricted type II maximum likelihood priors on regression coefficients.](https://projecteuclid.org/euclid.ba/1574478408) Bayesian Analysis, 15(2020), 1281-1297.
+* Mulder, J., Berger, J. O., Peña, V., & Bayarri, M. J. (2020) [On the Prevalence of Information Inconsistency with Conjugate Priors.](https://link.springer.com/article/10.1007/s11749-020-00704-4?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst&utm_source=ArticleAuthorOnlineFirst&utm_medium=email&utm_content=AA_en_06082018&ArticleAuthorOnlineFirst_20200221) TEST.
+* Barrientos, A. F. & Peña, V. [Bayesian Bootstraps for massive datasets.](https://projecteuclid.org/download/pdfview_1/euclid.ba/1557475224) Bayesian Analysis, 15(2):363-388. 
+* Jauch, M. & Peña, V. (2016). [Bayesian optimization with shape constraints.](https://arxiv.org/abs/1612.08915)  NIPS Workshop on Bayesian Optimization.
+* Attolini, C. S. O., Peña, V., & Rossell, D. (2015). [Designing alternative splicing RNA-seq studies. Beyond generic guidelines.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4757954/) Bioinformatics, 31(22), 3631-3637.
+* Banks, D. & Peña, V. (2017). [Discussion of "Dissecting Multiple Imputation from a Multi-phase Inference Perspective: What Happens when God’s, Imputer’s, and Analyst’s Models are Uncongenial?."](http://www3.stat.sinica.edu.tw/preprint/SS-2016-0302_Preprint.pdf) Statistica Sinica, 27(4), 1554-1559.
 * Peña, V. & Berger, J. O. [A note on recent criticisms to Birnbaum's theorem.](https://arxiv.org/abs/1711.08093)
 *  Berger, J.O., Garcia-Donato, G., Martinez-Beneito, M.A, & Peña, V. [Bayesian variable selection in high dimensional problems without assumptions on prior model probabilities.](https://arxiv.org/abs/1607.02993)
 
