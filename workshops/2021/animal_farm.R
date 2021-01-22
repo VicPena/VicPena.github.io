@@ -140,3 +140,124 @@ library(NbClust)
 
 # plotting within sum of squares
 fviz_nbclust(wide2, kmeans, method = "wss")
+
+###################
+# Back at bigrams #
+###################
+
+# read in the data
+library(tidyverse)
+library(tidytext)
+library(readr)
+animal_farm = read_csv("http://vicpena.github.io/workshops/2021/animal_farm.csv")
+
+# convert chapter into factor
+animal_farm = animal_farm %>% mutate(chapter = as.factor(chapter))
+animal_farm
+# reorder levels
+chaps = levels(animal_farm$chapter)
+chaps[2:9] = chaps[3:10]
+chaps[10] = "Chapter 10"
+animal_farm = animal_farm %>% mutate(chapter = factor(chapter, levels = chaps))
+
+
+# since I had a hard time with them on Wed, let's
+# cover bigrams again...
+
+# bigrams: combinations of 2 words
+
+# 2 approaches to getting rid of stop words with bigrams:
+# - work only with bigrams where BOTH words are NOT stop words
+# - work only with bigrams where AT LEAST ONE word is NOT a stop word
+
+
+# - work only with bigrams where BOTH words are NOT stop words
+# process:
+# 1. get bigrams with unnest_tokens
+# 2. split up the bigrams into 2 words with separate
+# 3. filter out stop words
+# 4. paste bigrams back together with unite
+
+
+# - work only with bigrams where AT LEAST ONE word is NOT a stop word
+# same process, different logical condition
+
+# can do usual plots of word frequencies, etc.
+# we can also compute tf_idf
+
+# 1st, count bigram frequency
+# then, use bind_tf_idf
+
+# plot top 3 bigrams according to tf_idf by chapter
+
+# find top 3
+
+
+
+# then, plot
+
+# could do the same using tf instead of tf_idf
+
+#################
+# network plots #
+#################
+library(ggraph)
+library(igraph)
+
+# 1st step, separate bigrams in 2 cols,
+# count word counts
+# find top 20 (so graph is manageable)
+# finally, save result as "graph" object
+tab_graph = one_tok  %>%  
+  separate(word, into = c("from", "to"), sep = " ")  %>% 
+  count(from, to)  %>%
+  slice_max(n, n = 20) %>%
+  as_tbl_graph()
+
+# plot network using ggraph
+
+# do it separately by chapter??
+# in principle, we could use the facet_node command
+# however, I can't get it to work so that 
+# it gets rid of zero freq links by chapter
+
+# pick top 5 to make the graph smaller
+tab_graph_chap = one_tok  %>%  
+  separate(word, into = c("from", "to"), sep = " ")  %>% 
+  group_by(chapter) %>%
+  count(from, to)  %>%
+  slice_max(n, n = 5) %>%
+  as_tbl_graph()
+
+# this is not great
+ggraph(tab_graph_chap, layout = "fr") +
+  geom_edge_link(aes(width = n, alpha = n)) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+  facet_edges(~ chapter, scales = "free")
+
+# so... we can write a loop that does the plots individually
+# far from optimal, but it'll be better than 
+# the previous plot
+chap_plot = one_tok  %>%  
+  separate(word, into = c("from", "to"), sep = " ")  %>% 
+  group_by(chapter) %>%
+  count(from, to)  %>%
+  slice_max(n, n = 5)
+chap_plot
+plots = list()
+for (i in 1:10) {
+  # filter counts for chapter i 
+  data_plot = chap_plot %>% filter(chapter == paste("Chapter", i))
+  # create the plot for chapter i, then save it into plots list
+  plots[[i]] = ggraph(data_plot, layout = "fr") +
+    geom_edge_link(aes(width = n, alpha = n)) +
+    geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
+    ggtitle(paste("Chapter", i))
+}
+
+# grid.arrange allows us to plot a bunch of ggplots together
+library(gridExtra)
+grid.arrange(grobs = plots, ncol = 2)
+
+# far from perfect, but it's a good start
+
