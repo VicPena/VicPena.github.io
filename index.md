@@ -2,7 +2,7 @@
 
 I'm an assistant professor in statistics at [Baruch College](http://www.baruch.cuny.edu/) ([Zicklin](https://zicklin.baruch.cuny.edu/), [CUNY](http://www2.cuny.edu/)). Most of the research I've done is related to Bayesian hypothesis testing and model selection, but I'm also interested in other topics, such as time-series analysis or foundations of statistical science.
 
-My email address is ``victor.pena@baruch.cuny.edu``.
+You can reach me at ``victor.pena@baruch.cuny.edu``.
 
 # Teaching
 
