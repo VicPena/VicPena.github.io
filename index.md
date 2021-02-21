@@ -8,8 +8,8 @@ You can reach me at ``victor.pena@baruch.cuny.edu``.
 
 * [STA2000: Business statistics I](https://www.baruch.cuny.edu/bctc/blackboard/) (F18).
 * [STA3000: Statistical computing](https://www.baruch.cuny.edu/bctc/blackboard/) (F19, F20, S21, F21).
-* STA9750: Basic software tools for data analysis ([F18](http://vicpena.github.io/sta9750/F18/), [S19](http://vicpena.github.io/sta9750/S19/), [F19](https://www.baruch.cuny.edu/bctc/blackboard/), F20).
-* R workshops for PhD students in business (W20, W21: [Part 1](http://vicpena.github.io/workshops/2021/introR.md), [Part 2](http://vicpena.github.io/workshops/2021/introML.md), [Part 3](http://vicpena.github.io/workshops/2021/advanced.md))
+* STA9750: Basic software tools for data analysis ([F18](http://vicpena.github.io/sta9750/F18/), [S19](http://vicpena.github.io/sta9750/Spring19/), [F19](https://www.baruch.cuny.edu/bctc/blackboard/), F20).
+* R workshops for PhD students in business (W20, W21: [Part 1](http://vicpena.github.io/workshops/2021/introR), [Part 2](http://vicpena.github.io/workshops/2021/introML), [Part 3](http://vicpena.github.io/workshops/2021/advanced))
 
 # Research
 
