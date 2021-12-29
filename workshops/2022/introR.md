@@ -14,7 +14,7 @@
 * **Installing `R` and `Rstudio`:** Here are some direct links to download [R](https://cran.r-project.org/) and [Rstudio](https://rstudio.com/). You should install `R` first and then Rstudio. [This video](https://www.youtube.com/watch?v=6GBZxrQyzM0) I recorded for our undergraduate students explains the process. 
 
 * **Getting access to TopHat:** 
-*
+
 * **Getting access to Datacamp:**
 
 ## Logistics and code
