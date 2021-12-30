@@ -15,7 +15,7 @@
 
 * **Getting access to TopHat:** [Click on this link](https://app.tophat.com/register/student/) to register as a student. The join code for the workshop is 680016.
 
-* **Getting access to Datacamp:** You can register for Datacamp [here](https://www.datacamp.com/groups/shared_links/93e614c421fbfdb79b1794c6e571f58a63c48a0b9f7a8e8847e80557f4380fff). You will have to register with your `@baruch.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know. 
+* **Getting access to Datacamp:** You can register for Datacamp [here](https://www.datacamp.com/groups/shared_links/93e614c421fbfdb79b1794c6e571f58a63c48a0b9f7a8e8847e80557f4380fff). You will have to register with your `@baruch.cuny.edu` or `@baruchmail.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know. 
 
 ## Logistics and code
 
