@@ -1,16 +1,7 @@
 # About me
 
-I'm an assistant professor in statistics at the [Zicklin School of Business](https://zicklin.baruch.cuny.edu/) at [Baruch College](http://www.baruch.cuny.edu/), which is part of the [City University of New York](http://www2.cuny.edu/). Most of the research I've done is on Bayesian hypothesis testing and model selection, but I'm also interested in other topics, such as time-series analysis or foundations of statistical science.
+For the time being, I'm an assistant professor in statistics at the [Zicklin School of Business](https://zicklin.baruch.cuny.edu/) at [Baruch College](http://www.baruch.cuny.edu/), which is part of the [City University of New York](http://www2.cuny.edu/). In the near future, I'll be a María Zambrano fellow at Universitat Politècnica de Catalunya. Most of the research I've done is on Bayesian hypothesis testing and model selection, but I'm also interested in other topics, such as time-series analysis or foundations of statistical science.
 
 You can reach me at ``victor.pena@baruch.cuny.edu``.
-
-# Teaching
-
-* [STA2000: Business statistics I](https://www.baruch.cuny.edu/bctc/blackboard/) (F18).
-* [STA3000: Statistical computing](https://www.baruch.cuny.edu/bctc/blackboard/) (F19, F20, S21, F21).
-* STA9750: Basic software tools for data analysis ([F18](http://vicpena.github.io/sta9750/F18/), [S19](http://vicpena.github.io/sta9750/Spring19/), [F19](https://www.baruch.cuny.edu/bctc/blackboard/), F20).
-* R workshops for PhD students in business (W20, W21: [Part 1](http://vicpena.github.io/workshops/2021/introR), [Part 2](http://vicpena.github.io/workshops/2021/introML), [Part 3](http://vicpena.github.io/workshops/2021/advanced))
-
-# Research
 
 Here's my [Google scholar](https://scholar.google.com/citations?user=VmWTUIoAAAAJ&hl=en).
