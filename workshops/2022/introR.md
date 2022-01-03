@@ -23,8 +23,8 @@ We will have lectures from 10 to noon, and then from 2pm to 4pm. Each day, I'll 
 
 Below I'll post the code I write in our lectures:
 
-* [Day 1, session 1](http://vicpena.github.io/workshops/2022/day1morn_sk.R)
-* [Day 1, session 2](http://vicpena.github.io/workshops/2022/day1aft_sk.R)
+* [Day 1, session 1](http://vicpena.github.io/workshops/2022/day1morn.R)
+* [Day 1, session 2](http://vicpena.github.io/workshops/2022/day1aft.R)
 * [Day 2, session 1](http://vicpena.github.io/workshops/2022/day2morn_sk.R)
 * [Day 2, session 2](http://vicpena.github.io/workshops/2022/day2aft_sk.R)
 * [Day 3, session 1](http://vicpena.github.io/workshops/2022/day3morn_sk.R)
