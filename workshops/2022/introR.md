@@ -17,7 +17,7 @@
 
 * **Getting access to Datacamp:** You can register for Datacamp [here](https://www.datacamp.com/groups/shared_links/93e614c421fbfdb79b1794c6e571f58a63c48a0b9f7a8e8847e80557f4380fff). You will have to register with your `@baruch.cuny.edu` or `@baruchmail.cuny.edu` email address to join Datacamp. If you want to use another email address, please let me know. 
 
-## Logistics and code
+## Logistics, code, and recordings
 
 We will have lectures from 10 to noon, and then from 2pm to 4pm. Each day, I'll assign exercises and Datacamp courses that you can complete at your convenience.
 
@@ -29,6 +29,8 @@ Below I'll post the code I write in our lectures:
 * [Day 2, session 2](http://vicpena.github.io/workshops/2022/day2aft_sk.R)
 * [Day 3, session 1](http://vicpena.github.io/workshops/2022/day3morn_sk.R)
 * [Day 3, session 2](http://vicpena.github.io/workshops/2022/day3aft_sk.R)
+
+Here are the [lecture recordings](https://www.youtube.com/playlist?list=PLtm7DecWdnxNP5GCExn2F9tHk11a4KdGW).
 
 ## Handouts 
 
