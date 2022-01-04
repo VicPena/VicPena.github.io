@@ -1,4 +1,7 @@
-# Overview
+############
+# Overview #
+############
+# Plots!
 # - Univariate plots
 # - Bivariate plots
 # - More than two variables
@@ -6,12 +9,13 @@
 # - Improving plots 
 # - Interactive plots with plotly
 
+# Reference for plots:
+# http://www.cookbook-r.com/Graphs/
+
 
 ####################
 # Univariate plots #
 ####################
-# Reference for plots:
-# http://www.cookbook-r.com/Graphs/
 
 
 library(tidyverse)
