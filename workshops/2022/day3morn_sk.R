@@ -4,6 +4,57 @@
 # - Confidence intervals and hypothesis testing
 # - Exploratory data analysis
 
+###################### 
+# Plots: odds & ends #
+######################
+
+library(tidyverse)
+library(openintro)
+
+data(hsb2)
+tab2 = hsb2 %>% count(ses, race)
+
+# changing scale from proportions to percentages
+# in geom_col(position = "fill")
+ggplot(tab2) +
+  aes(x = ses, y = n, fill = race) +
+  geom_col(position = "fill") +
+  scale_y_continuous() 
+
+
+ggplot(tab2) +
+  aes(x = ses, y = n, fill = race) +
+  geom_col(position = "fill") +
+  scale_y_continuous(labels = scales::percent) 
+
+
+# adding counts / percentages to bars
+library(openintro)
+data(immigration)
+
+immi_counts = immigration %>% group_by(political) %>% count(response)
+
+ggplot(immi_counts) +
+  aes(x = political, y = n, label = n, fill = response) +
+  geom_col() +
+  geom_text(position = position_stack(0.5))
+
+ggplot(immi_counts) +
+  aes(x = political, y = n, label = n, fill = response) +
+  geom_col(position = "dodge") +
+  geom_text(position = position_dodge(0.9))
+
+
+ggplot(immi_counts) +
+  aes(x = political, y = n, label = round(100*n/sum(n),2), fill = response) +
+  geom_col(position = "fill") +
+  geom_text(position = position_fill(0.5))
+
+
+# adding error bars to bar plots
+# http://www.sthda.com/english/wiki/ggplot2-error-bars-quick-start-guide-r-software-and-data-visualization
+
+
 ###########################################
 # Confidence intervals & Hypothesis tests #
 ###########################################
