@@ -38,9 +38,9 @@ Here's a [link to some exercises](https://docs.google.com/document/d/1IbG2E2OBjh
 
 Here are some slides:
 
-* [Intro to ML](http://VicPena.github.io/workshops/2022/introML.pdf)
-* [Classification](http://VicPena.github.io/workshops/2022/classification.pdf)
-* [Unsupervised learning](http://VicPena.github.io/workshops/2022/unsupervised.pdf)
+* [Intro to ML](http://VicPena.github.io/workshops/2021/introML.pdf)
+* [Classification](http://VicPena.github.io/workshops/2021/classification.pdf)
+* [Unsupervised learning](http://VicPena.github.io/workshops/2021/unsupervised.pdf)
 
 ## Books (all open-access)
 
