@@ -45,6 +45,8 @@ regularized_reg = train(
   )
 )
 
+regularized_reg
+
 # find coefficients
 coef(regularized_reg$finalModel, regularized_reg$finalModel$lambdaOpt)
 
