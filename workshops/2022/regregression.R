@@ -15,8 +15,6 @@ library(rsample) # splitting data
 library(openintro) # hsb2 data
 library(ISLR2) # College data
 
-# screencap to this: 
-# https://stats.stackexchange.com/questions/67736/equivalence-between-elastic-net-formulations
 
 ##########################
 # predicting math scores #
