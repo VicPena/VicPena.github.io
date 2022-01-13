@@ -34,6 +34,8 @@ Below, I'll post the code we write in our sessions:
 * [Multiclass classification](http://VicPena.github.io/workshops/2022/multi_titanic0.R)
 * [Unsupervised learning](http://VicPena.github.io/workshops/2022/unsupervised.R)
 
+Here's a link to the [video recordings](https://www.youtube.com/playlist?list=PLtm7DecWdnxMm8V8Z12sG2CeYAulXxxw-)
+
 Here's a [link to some exercises](https://docs.google.com/document/d/1IbG2E2OBjh82I5gD_gJrdQyGqrWcTeWf_fLvEvnqikk/edit?usp=sharing).
 
 Here are some slides:
