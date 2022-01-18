@@ -26,7 +26,6 @@ Here are some links to datasets we will use
 
 * [Roomba reviews](https://vicpena.github.io/workshops/2021/Roomba.csv)
 * [Tweets](https://vicpena.github.io/workshops/2021/tweets.csv)
-* [Animal farm](https://vicpena.github.io/workshops/2021/animal_farm.csv)
 
 And here are some links to the code we wrote in our sessions
 
