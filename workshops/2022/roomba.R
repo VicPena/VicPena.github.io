@@ -284,20 +284,100 @@ ggplot(top5_words_star) +
 # - word clouds
 # - sentiment analysis
 
+# the apartment is clean after this 
+# the apartment is not clean after this
+
 ###########
 # bigrams #
 ###########
-
+# extract bigrams from text
 bigrams = Roomba %>% unnest_tokens(word, Review, token = "ngrams", n = 2)
 
+trigrams = Roomba %>% unnest_tokens(word, Review, token = "ngrams", n = 3)
+trigrams %>% count(word) %>% slice_max(n, n = 10)
+
+
 # top 10 most frequent bigrams
+bigrams %>% count(word) %>% slice_max(n, n = 10)
+# issue: it contains stop_words
+# these are not very informative
+
+# option 1: to remove the bigrams where
+# both words are stop_words
+
+# option 2: to remove the bigrams
+# where there is a word that is a stop_word
+
+# option 1 contains more bigrams than option 2
+# but option might contain bigrams that are less informative
+
+# the kitchen: this would be included in option 1
+# but not in option 2
+
+# here we are going to go with option 2
+# so things like "the kitchen" would not be included
+
 
 
 # get rid of stop_words
+# this works as long as you have a dataset called bigrams
+# and the column with the bigrams is called word
+bigrams
 both_tok = bigrams %>%
   separate(word, into = c("word1", "word2"), sep = " ") %>%
-  filter( !(word1 %in% stop_words$word) & !(word2 %in% stop_words$word) ) %>%
+  filter( !(word1 %in% c(stop_words$word, "roomba", "650", "880")) & 
+          !( word2 %in% c(stop_words$word, "roomba", "650", "880")) ) %>%
   unite(word, c(word1, word2), sep = " ")
+
+
+tri_tok = trigrams  %>%
+  separate(word, into = c("word1", "word2", "word3"), sep = " ") %>%
+  filter( !(word1 %in% c(stop_words$word, "roomba", "650", "880")) &
+            !( word2 %in% c(stop_words$word, "roomba", "650", "880")) &
+            !( word3 %in% c(stop_words$word, "roomba", "650", "880"))) %>%
+  unite(word, c(word1, word2, word3), sep = " ")
+tri_tok %>% count(word) %>% slice_max(n, n = 10)
+
+# email: victor.pena@baruch.cuny.edu
+
+# filter: only keeps those bigrams where the first word is not on the 
+# list of stop_words and the second word is not on the list of stop_words
+  
+both_tok %>% count(word) %>% slice_max(n, n = 10)
+
+
+top5_words_star = both_tok %>% 
+                    group_by(Stars) %>%
+                        count(word) %>% 
+                            slice_max(n, n = 5)
+
+ggplot(top5_words_star) +
+  aes(y = reorder_within(word, n, Stars), x = n, fill = Stars) +
+  geom_col() +
+  scale_y_reordered() +
+  facet_wrap(~ Stars, scales = "free", nrow = 1) +
+  ylab("top 10 most frequent stems (by stars)") +
+  theme(legend.position="none") 
+
+
+# find the top 5 most frequent 
+# bigrams by Product 
+# and then find the plot with the 5 
+# most frequent bigrams
+top5_words_prod = both_tok %>%
+  group_by(Product) %>%
+  count(word) %>%
+  slice_max(n=5,n)
+
+top5_words_prod
+
+ggplot(top5_words_prod) +
+  aes(y = reorder_within(word, n, Product), x = n, fill = Product) +
+  geom_col() +
+  scale_y_reordered() +
+  facet_wrap(~ Product, scales = "free", nrow = 1) +
+  ylab("top 10 most frequent stems (by product)") +
+  theme(legend.position="none")
 
 
 
@@ -311,21 +391,54 @@ library(wordcloud)
 
 # input for wordcloud
 # a frequency table
+word_count = tok %>% count(word)
 
 # first I will need a table with word frequencies
 
 # important to remember that 
 # the input of wordcloud is a freq table with word counts
+wordcloud(word = word_count$word, 
+          freq = word_count$n,
+          max.words = 50,
+          color = "darkolivegreen3")
 
 # change colors
 # colors in R: http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 
-# we can do separate word clouds by product
+# split the data using filters
+# and then running the wordclouds
 
+# I want two create two word clouds
+# one for Roomba 650 another
+# for Roomba 880
+tok650 = tok %>% filter(Product == "iRobot Roomba 650 for Pets")
+tok880 = tok %>% filter(Product == "iRobot Roomba 880 for Pets and Allergies")
 
-# separate the data into 2 disjoint sets
-# and then repeat the process
+# exercise: adapt the code below 
+# to get word clouds with top 50 words 
+# for 650 and 880 separately 
+# with colors that are not the one that I chose
+wordcloud(word = word_count$word, 
+          freq = word_count$n,
+          max.words = 50,
+          color = "darkolivegreen3")
+# http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 
+# table for tok650
+word_count_650 = tok650 %>% count(word)
+# word cloud
+wordcloud(word = word_count_650$word, 
+          freq = word_count_650$n,
+          max.words = 50,
+          color = "red")
+
+# table for tok880
+word_count_880 = tok880 %>% count(word)
+# word cloud 
+wordcloud(word = word_count_880$word, 
+          freq = word_count_880$n,
+          max.words = 50,
+          color = "darkviolet")
 
 
 ######################
@@ -351,10 +464,28 @@ library(textdata)
 get_sentiments("afinn") %>% View
 get_sentiments("afinn") %>% count(value)
 get_sentiments("afinn") %>% filter(value == 5)
+get_sentiments("afinn") %>% filter(value == 4)
+
 # loughran: has more sentiments than just + and - but... it's not ordinal
-get_sentiments("loughran") %>% count(sentiment)
+get_sentiments("loughran") %>% view
 # nrc
 get_sentiments("nrc") %>% count(sentiment)
+
+get_sentiments("nrc") %>% view
+
+
+# there is no accepted best dictionary
+# and what you can do is to run analyses with 
+# different dictionaries and see how robust 
+# your conclusions are to the choice of dictionary
+
+# most often the conclusions don't change much
+# if you change the dictionary
+
+# if it seems that a text is positive with one 
+# dictionary it's going to seem positive with
+# another one
+
 
 
 # merge tokenized data with bing dictionary
@@ -362,23 +493,92 @@ get_sentiments("nrc") %>% count(sentiment)
 # (can use either inner_ or right_join)
 # then, tabulate sentiment
 
-# plot sentiments
-# fct_reorder(sentiment, n)
-# label = paste(round(perc, 2),"%")
-# geom_text
+# merging with the bing dictionary
+bing_sent = tok %>% inner_join(get_sentiments("bing"))
+nrc_sent = tok %>% inner_join(get_sentiments("nrc"))
+# inner_join = merges data
+
+get_sentiments("bing") %>% view
+get_sentiments("nrc") %>% view
+# this gets the tok data
+# and only keeps those words that have an entry
+# in the bing dictionary
+
+# bing dictionary has a list of words with a 
+# "positive" or "negative" sentiment attached to them
+bing_sent
+
+# we can count the number of occurrences 
+# of positive and negative words by tabulating the 
+# frequencies of the sentiment variable
+bing_sent %>% count(sentiment) %>% mutate(perc = 100*n/sum(n))
+nrc_sent %>% count(sentiment) %>% mutate(perc = 100*n/sum(n))
+# 54% positive / 46% negative
+# this table gets me the number of positive and negative 
+# words in my roomba dataset
+
+# get % of positive words by product
+# use group_by
+bing_sent %>% 
+  group_by(Product) %>% 
+  count(sentiment) %>% 
+  mutate(perc = 100*n/sum(n))
+# 55.3% positive for roomba 650
+# 53.4% positive for roomba 880
+
+# exercise: do the same as above
+# but use Stars as the grouping variable
+# and use bing_nrc dataset instead of 
+# bing_sent
+nrc_sent %>% 
+  group_by(Stars) %>% 
+  count(sentiment) %>% 
+  mutate(perc = 100*n/sum(n)) 
+
+bing_plot = bing_sent %>% 
+  group_by(Stars) %>% 
+  count(sentiment) %>% 
+  mutate(perc = 100*n/sum(n)) 
+
+ggplot(bing_plot) +
+  aes(y = sentiment, x = perc, fill = sentiment) +
+      geom_col() +
+        facet_wrap(~ Stars, nrow = 5) +
+         theme(legend.position="none") +
+            xlim(0, 100)
 
 
-# plot top 10 most frequent positive and negative words, using bing
+# your sentiment analysis is as good
+# as your dictionary is
 
-# create a dataset that is merged with the bing dictionary
+# if you have a good list of words (dictionary) for your problem at 
+# hand, then your analysis will be good
+# however, if your list of words (dictionary) for your problem
+# is not good, then your analysis will not be good
 
-# table which contains the top 10 words by sentiments
-# x = reorder_within(word, n, sentiment)
-# scale_x_reordered()
-# facet_wrap(  sentiment  ~ . , scales = "free" )
+
+# plot top 10 most frequent positive and negative words,
+# using bing
+
+# the answer: use group_by sentiment
+# and then do a count of words and 
+# then do a slice_max
+bing_sent %>% group_by(sentiment) %>%
+                count(word) %>%
+                    slice_max(n, n = 5)
+# top 5 most frequent negative and positive words
+
 
 
 # do the same, but break down further by product
+bing_sent %>% group_by(Product, sentiment) %>%
+  count(word) %>%
+  slice_max(n, n = 5)
+
+
+# I have prepared some exercises
+# that cover the topics that we have 
+# worked on for a new dataset
 
 
 
@@ -390,4 +590,129 @@ get_sentiments("nrc") %>% count(sentiment)
 top_wide = top %>% pivot_wider(names_from = Product, values_from = n) 
 top_wide %>% filter(!complete.cases(top_wide))
 
+# Today
+# - stopwords in other languages
+# - network plots
+# - tf_idf
+# - topic models
+# - exercises 
 
+
+################################
+# stopwords in other languages #
+################################
+
+# install.packages("tm")
+library(tm)
+?stopwords
+stopwords("spanish")
+
+
+#################
+# network plots #
+#################
+
+library(igraph)
+# find top 20 bigrams and 
+# separate(word, into = c("word1", "word2"))
+
+
+# create graph_from_data_frame()
+
+
+# create graph with bigrams 
+library(ggraph)
+ggraph(bigram_graph, layout = "fr") +
+  geom_edge_link(aes(edge_alpha = n)) +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)
+
+
+##########
+# tf_idf #
+##########
+
+# tf: term frequency
+# idf: inverse document frequency
+# tf idf = tf*idf
+
+# find tf_idf by Product
+
+# plot top 10 tf_idfs
+
+
+# what's going on with lighthouses and otto?
+
+# plot top 10 tfs
+
+
+##################
+# Topic modeling #
+##################
+
+
+# install.packages("tm")
+# install.packages("NLP")
+# install.packages("topicmodels")
+library(tm)
+library(topicmodels)
+
+# dataset structured in 
+# documents which have words
+
+# topic models "discover" topics
+# different topics have different 
+# word probabilities
+# for example, the probability
+# that the word "cat" appears in 
+# topic 1 might be 0.2 and in 
+# topic 2 might be 0.1 
+
+# topic models give us word probabilities
+# given the topic (betas) as well as 
+# probabilities of topics given the document (gammas)
+
+
+
+# filter out stop_words
+
+
+# count words by Product
+# cast_dtm(Product, word, n)
+
+# run topic model
+# LDA(dtm, k = number of topics, methods = "Gibbs")
+
+# Get betas with tidy(matrix = "beta") 
+# Get gammas with tidy(matrix = "gamma")
+
+# top 5 words by topic
+
+
+# create a plot for betas
+
+# create a plot for gammas
+
+
+
+
+# how to select k?
+# one way: using "perplexity" (the lower the better)
+# perplexity is a function of loglikelihood
+# the higher the loglikelihood, the lower the perplexity
+
+# fit the model for different values of k 
+# (k is the number of topics / clusters)
+# and then we'll identify a value of k 
+# after which adding new clusters doesn't
+# seem to "help much"
+
+# for loop to run this model for different values of k
+maxK = 10
+perp = numeric(maxK)
+for (k in 2:maxK) {
+  lda_output = LDA(dtm_review, k = k, methods = "Gibbs")
+  perp[k] = perplexity(lda_output)
+}
+qplot(x = 2:maxK, y = perp[-1])
+# http://qpleple.com/perplexity-to-evaluate-topic-models/
