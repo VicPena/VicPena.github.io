@@ -30,6 +30,7 @@ Here are some links to datasets we will use
 And here are some links to the code we wrote in our sessions
 
 * [Roomba](https://vicpena.github.io/workshops/2022/roomba.R)
+* [Roomba](https://vicpena.github.io/workshops/2022/case_studies.R)
 
 Here are some [slides](https://vicpena.github.io/workshops/2021/textmining.pdf)
 
