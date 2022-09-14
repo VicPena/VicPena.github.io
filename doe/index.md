@@ -12,7 +12,7 @@
 ### Notes
 
 * [Introduction to experimental design](http://vicpena.github.io/doe/basic_concepts.pdf)
-* [Review: inference for a population mean]
+* Review: inference for a population mean
 
 ### Labs
 
