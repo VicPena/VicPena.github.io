@@ -11,8 +11,8 @@
 
 ### Notes
 
-* Introduction to experimental design
-* Introduction to hypothesis testing 
+* [Introduction to experimental design](http://vicpena.github.io/doe/basic_concepts.pdf)
+* [Hypothesis testing: review](http://vicpena.github.io/doe/intro_testing.pdf)
 
 ### Labs
 
