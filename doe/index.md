@@ -10,10 +10,11 @@
 
 ## Course materials
 
-### Notes
+### Notes and slides
 
 * [Introduction to experimental design](http://vicpena.github.io/doe/basic_concepts.pdf)
 * [Review: inference for a population mean](http://vicpena.github.io/doe/normal.pdf)
+* [Completely randomized designs](http://vicpena.github.io/doe/crd.pdf)
 
 ### Labs
 
