@@ -51,40 +51,5 @@ summary(mod)
 # Tukey HSD
 TukeyHSD(mod, conf.level = 0.95)
 
-# Example: Doughnuts
-# During cooking, doughnuts absorb fat in various
-# amounts. Lowe wished to learn if the amount
-# absorbed depends on the type of fat used
-# For each of four fats, six batches
-# of doughnuts were prepared. The data 
-# in the table below are the grams of fat
-# absorbed per batch, coded by deducting 100g
-# to give simpler figures
-
-mat = matrix(c(64, 78, 75, 55,
-               72, 91, 93, 66,
-               68, 97, 78, 49,
-               77, 82, 71, 64,
-               56, 85, 63, 70,
-               95, 77, 76, 68), byrow = T, ncol = 4)
-colnames(mat) = c("T1", "T2", "T3", "T4")
-mat = as.data.frame(mat)
-
-dough = mat %>% pivot_longer(cols = c(T1, T2, T3, T4),
-                             names_to = "type",
-                             values_to = "fat")
-
-# plot data
-
-# run aov 
-
-# check assumptions
-
-# run global test
-
-# run pairwise comparisons
-
-
-
 
 
