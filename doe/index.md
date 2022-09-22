@@ -18,4 +18,4 @@
 
 ### Labs
 
-* [Lab 1](http://vicpena.github.io/doe/Lab1.pdf) ([code](http://vicpena.github.io/doe/Lab1_code.R))
+* [Lab 1](http://vicpena.github.io/doe/Lab1.pdf) ([solution](http://vicpena.github.io/doe/Lab1_sol.pdf), [code](http://vicpena.github.io/doe/Lab1_sol.Rmd))
