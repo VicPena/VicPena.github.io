@@ -18,3 +18,4 @@
 
 ### Labs
 
+* [Lab 1](http://vicpena.github.io/doe/Lab1.pdf)
