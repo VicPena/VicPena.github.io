@@ -1,0 +1,346 @@
+---
+title: 'Design of experiments: Lab 2'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Exercise 1.**  [From Montgomery (2009).] During cooking, doughnuts absorb fat in various amounts. A scientist wished to learn if the amount absorbed depends on the type of fat used. For each of four fats, six batches of doughnuts were prepared. The data in the table below are the grams of fat absorbed per batch, coded by deducting 100g to give simpler figures.
+```{r, echo = FALSE}
+library(knitr)
+mat = matrix(c(64, 78, 75, 55,
+               72, 91, 93, 66,
+               68, 97, 78, 49,
+               77, 82, 71, 64,
+               56, 85, 63, 70,
+               95, 77, 76, 68), byrow = T, ncol = 4)
+colnames(mat) = c("T1", "T2", "T3", "T4")
+mat = as.data.frame(mat)
+kable(mat)
+```
+
+a) Read the data into `R` and plot it. By looking at your plot, do you think that there will be significant differences between the types of fat?
+
+**Solution:**
+```{r, message = FALSE}
+library(tidyverse)
+mat = matrix(c(64, 78, 75, 55,
+               72, 91, 93, 66,
+               68, 97, 78, 49,
+               77, 82, 71, 64,
+               56, 85, 63, 70,
+               95, 77, 76, 68), byrow = T, ncol = 4)
+colnames(mat) = c("T1", "T2", "T3", "T4")
+mat = as.data.frame(mat)
+df = mat %>% pivot_longer(cols = c(T1, T2, T3, T4),
+                              names_to = "type",
+                              values_to = "fat")
+df$type = factor(df$type)
+```
+
+b) Check that the assumptions of the one-way ANOVA model are satisfied. 
+ 
+**Solution:** The variance of the groups doesn't look too different:
+
+```{r, fig.width = 5, fig.height = 3}
+boxplot(fat ~ type, data = df)
+```
+
+Most points in the $qq$-plot are near the dashed line, so it seems that the residuals are approximately normal:
+
+```{r, fig.width = 5, fig.height = 3}
+mod = aov(fat ~ type, data = df)
+plot(mod, which = 2)
+```
+
+We don't have an easy way to check the assumption of independence. We can proceed with the analysis.
+
+c) Fit a one-way ANOVA model with the sum-to-zero constraint. Find point estimates and confidence intervals for the grand mean and the treatment effects. Comment on the results.
+
+**Solution:** It seems like there will be differences between treatments. Type 2 has a big positive effect, whereas Type 4 has a strong negative effect. 
+
+```{r}
+options(contrasts = c("contr.sum", "contr.poly")) 
+mod = aov(fat ~ type, data = df)
+dummy.coef(mod)
+confint(mod)
+```
+
+d) Is there evidence to claim that there are differences between types of fat at the $\alpha = 0.01$ significance level?
+
+**Solution:** Yes, there is; the $p$-value of the global test is $< \alpha$.
+
+```{r}
+summary(mod)
+```
+
+e) Run `TukeyHSD` to perform pairwise comparisons and comment on the results.
+
+**Solution:** The only $p$-value that is small is that comparing type 2 to type 4.  
+
+```{r}
+TukeyHSD(mod)
+```
+
+
+**Exercise 2.** In this exercise, we will work with three datasets where the assumptions of the one-way ANOVA model are not satisfied. Here is the code that reads the datasets:
+
+```{r}
+dat1 = read.csv("http://vicpena.github.io/doe/dat1.csv")
+dat2 = read.csv("http://vicpena.github.io/doe/dat2.csv")
+dat3 = read.csv("http://vicpena.github.io/doe/dat3.csv")
+```
+
+In `dat3`, the experiments were performed sequentially in an order given by the variable `order`. Identify the assumptions that are not satisfied in each case. 
+
+**Solution:** In the case of `dat1`, the assumption of equality of variances is violated. We can see that in a boxplot of `treatment` vs `outcome` or a plot of fitted values against observed values.
+
+```{r, fig.width = 5, fig.height = 3}
+ggplot(dat1) +
+  aes(x = treatment, y = outcome) +
+    geom_boxplot()
+
+mod1 = aov(outcome ~ treatment, data = dat1)
+plot(mod1, which = 1)
+```
+
+In the case of `dat2`, the assumption of normality is violated. We can especially see that in the $qq$-plot of the residuals. 
+
+```{r, fig.width = 5, fig.height = 3}
+mod2 = aov(outcome ~ treatment, data = dat2)
+plot(mod1, which = 2)
+```
+
+In the case of `dat3`, the assumption of independence is violated. There is a clear order-dependence in the observations:
+
+```{r, fig.width = 5, fig.height = 3}
+ggplot(dat3) +
+  aes(x = order, y = outcome, color = treat) +
+      geom_line()
+```
+
+**Exercise 3.** In the process of turning wood into paper sheets, phenol waste is produced. A group of technicians working at a paper company want to compare the average phenol waste produced by 3 different species of trees. The code below reads in the data, which contains the percentage of phenol waste produced in 15 experiments.
+
+```{r}
+phenol = read.csv("http://vicpena.github.io/doe/phenol.csv")
+```
+
+a) Are there differences between tree species?
+
+**Solution:** There are significant differences between trees at the $\alpha = 0.05$ significance level.
+
+```{r, fig.width = 5, fig.height = 3}
+ggplot(phenol) +
+  aes(x = tree, y = phenol) +
+    geom_boxplot()
+mod = aov(phenol ~ tree, data = phenol)
+summary(mod)
+```
+We can run a `TukeyHSD` to see where the differences are:
+```{r}
+TukeyHSD(mod)
+```
+There are significant differences between A and B and A and C at $\alpha = 0.05$.
+
+b) What assumptions did you make to draw your conclusions in part a)? Are they reasonable in this context?
+
+**Solution:** As usual, we make assumptions of normality, independence, and equality of variances. The latter seems to be satisfied by looking at the boxplot in part a). The qq-plot looks good, so the assumption of normality doesn't seem to be violated. We don't have enough information to check independence. 
+```{r, fig.width = 5, fig.height = 3}
+plot(mod, which = 2)
+```
+
+
+c) The technicians ran all the experiments for type A first, then those for type B, and then those for type C. Do you think that's reasonable, or would you design the experiment differently?
+
+**Solution:** It's not ideal. It would be best to run the experiments in random order to avoid temporal dependence. 
+
+d) Actually, the design was originally balanced, but the technicians excluded three observations from the analysis (with phenol waste percentages 3.6, 4.1, and 3.5). Do you think this is reasonable?
+
+**Solution:** It depends. Phenol waste percentages of 3.6, 4.1, and 3.5 are certainly abnormal values compared to the other data. If they were excluded because they made a mistake in the experiment, it seems reasonable to exclude them. If not, the technicians should find out what's wrong with those observations.
+
+
+**Exercise 4.** [Ott (1973)] In the process of manufacturing an electronic circuit, an engineer noticed that there was more variability than expected between circuits. Having studied the problem, the engineer concluded that one of the sources of variability could be a flat piece of insulating ceramic that is placed in the circuits.
+
+This flat piece is obtained from ceramic sheets that are purchased from an outside supplier. Each sheet is cut into small pieces, each of which is placed in a circuit. The engineer suspects that there is variation between sheets and that this difference affects the outcome.
+
+You can read in the data with the following command:
+
+```{r}
+ott = read.csv2("http://vicpena.github.io/doe/Ott_Case_13_1.csv")
+```
+
+To analyze whether the suspicion was founded, 6 sheets were taken and cut into 7 pieces each. Then, a circuit was assembled in each of the 42 pieces. 
+
+a) Plot the data and draw some preliminary conclusions about the influence of the sheet on the outcome.
+
+**Solution** It seems that there are some differences between sheets. 
+
+```{r, fig.width = 5, fig.height = 3}
+ott$Fulla = as.factor(ott$Fulla)
+ggplot(ott) +
+  aes(x = Fulla, y = Y) +
+    geom_boxplot()
+```
+
+b) Does the ceramic sheet influence the outcome?
+
+```{r, fig.width = 5, fig.height = 3}
+mod = aov(Y ~ Fulla, data = ott)
+summary(mod)
+```
+The $p$-value is significant at $\alpha = 0.05$. 
+
+We can run a `TukeyHSD` to see where the differences are:
+
+```{r}
+TukeyHSD(mod)
+```
+Most $p$-values aren't significant at $\alpha = 0.05$. There are significant differences between sheets 4 and 6 and sheets 3 and 6.
+
+c) Verify that the assumptions of the model are satisfied.
+
+**Solution** Looking at the boxplot in part a), the assumption of equality of variances may be a little suspect. The qq-plot looks fine, so the hypothesis of normality seems reasonable. We don't have data to verify the hypothesis of independence.
+
+```{r, fig.width=5, fig.height=3}
+plot(mod, which = 2)
+```
+
+**Exercise 5.** [Montgomery (2009)] An experiment is conducted to investigate the effectiveness of 5 insulating materials. Four test pieces of each material are taken and subjected to a high potential difference to accelerate their time to failure. The times to failures (in minutes) are shown in the following table:
+
+\begin{center}
+\begin{table}[h!]
+\begin{tabular}{l|llll}
+Material & \multicolumn{4}{l}{Time to failure} \\
+\hline
+1        & 110    & 157     & 194    & 178     \\
+2        & 1      & 2       & 4      & 18      \\
+3        & 880    & 1256    & 5276   & 4355    \\
+4        & 495    & 7040    & 5307   & 10050   \\
+5        & 7      & 5       & 29     & 2      
+\end{tabular}
+\end{table}
+\end{center}
+
+a) Plot the data and comment on what you see. 
+
+**Solution:** There seem to be differences between materials. It also seems clear that the variance depends on the material.
+
+```{r, fig.width = 5, fig.height = 3}
+ins = matrix( c(1 , 110    , 157     , 194    , 178     ,
+                2 , 1      , 2       , 4      , 18      ,
+                3 , 880    , 1256    , 5276   , 4355    ,
+                4 , 495    , 7040    , 5307   , 10050   ,
+                5 , 7      , 5       , 29     , 2), nrow = 5, byrow = T)  
+colnames(ins) = c("material", "r1", "r2", "r3", "r4")
+ins = as.data.frame(ins)
+ins$material = as.factor(ins$material)
+ins = ins %>% pivot_longer(c(r1, r2, r3, r4), 
+                     names_to = "replicate",
+                     values_to = "time") %>%
+              select(-replicate)
+ggplot(ins) +
+  aes(x = material, y = time) + 
+    geom_point()
+```
+
+b) Do the materials have the same effect on the average time to failure?
+
+**Solution:** If we run `aov`, we'll find a significant $p$-value at $\alpha = 0.05$. However, the assumptions of the model aren't satisfied; see part c). 
+
+```{r}
+mod = aov(time ~ material, data = ins)
+summary(mod)
+```
+
+
+c) Check the model assumptions. Do you think they are satisfied?
+
+**Solution:** The assumptions of normality and equality of variance are clearly not satisfied.
+
+```{r, fig.width = 8, fig.height = 4}
+par(mfrow = c(1, 2))
+plot(mod, which = 2)
+plot(mod, which = 3)
+```
+
+d) Try out taking a logarithmic transformation of the time to failure and running the analysis again. Comment on the results.
+
+**Solution:** The residuals look good after taking the logarithmic transformation. The $F$ test tells us that there are differences between materials.
+
+```{r, fig.width = 8, fig.height = 4}
+mod_log = aov(log(time) ~ material, data = ins)
+summary(mod_log)
+par(mfrow = c(1, 2))
+plot(mod_log, which = 2)
+plot(mod_log, which = 3)
+```
+We can find where the differences are with `TukeyHSD`:
+
+```{r}
+TukeyHSD(mod_log)
+```
+
+**Exercise 6.** A textile factory has 5 looms. Each loom is assumed to provide the same amount of fabric per minute. To investigate this hypothesis, the company recorded the Kg of fabric processed in one minute at the looms at different times. The data obtained are the following:
+
+\begin{center}
+\begin{table}[h!]
+\begin{tabular}{l|lllll}
+Loom & \multicolumn{5}{l}{Output {[}Kg/min{]}} \\
+\hline
+1    & 14.0   & 14.1   & 14.2  & 14.0  & 14.1  \\
+2    & 13.9   & 13.8   & 13.9  & 14.0  & 14.0    \\
+3    & 14.1   & 14.2   & 14.1  & 14.0  & 13.9  \\
+4    & 13.6   & 13.8   & 14.0  & 13.9  & 13.7  \\
+5    & 13.8   & 13.6   & 13.9  & 13.8  & 14.0   
+\end{tabular}
+\end{table}
+\end{center}
+
+a) Plot the data and fit a one-way ANOVA model. Check the assumptions of the model.
+
+**Solution:** I'm not plotting the results here for concreteness, but the residuals look fine. 
+
+```{r, fig.width = 5, fig.height = 3}
+mat = matrix( c(1    , 14.0   , 14.1   , 14.2  , 14.0  , 14.1  ,
+                2    , 13.9   , 13.8   , 13.9  , 14.0  , 14.0    ,
+                3    , 14.1   , 14.2   , 14.1  , 14.0  , 13.9  ,
+                4    , 13.6   , 13.8   , 14.0  , 13.9  , 13.7  ,
+                5    , 13.8   , 13.6   , 13.9  , 13.8  , 14.0),
+                nrow = 5, byrow = T)
+colnames(mat) = c("loom", "r1", "r2", "r3", "r4", "r5")
+df = as.data.frame(mat)
+df= df %>% pivot_longer(c(r1, r2, r3, r4, r5), 
+                    names_to = "rep", 
+                    values_to = "fabric") %>%
+              select(-rep)
+df$loom = factor(df$loom)
+ggplot(df) + 
+  aes(x = loom, y = fabric) +
+    geom_point()
+```
+
+
+b) Is there evidence to reject the hypothesis that the looms produce the same amount of fabric?
+
+**Solution:** There are significant differences at the $\alpha = 0.05$ significance level.
+
+```{r}
+mod_loom = aov(fabric ~ loom, data = df)
+summary(mod_loom)
+```
+
+However, one could argue that the differences may not be practically relevant. Let's take a look at `TukeyHSD`, which gives us intervals quantifying the estimated differences between looms (as well as $p$-values):
+
+```{r}
+TukeyHSD(mod_loom)
+```
+The estimated differences are, at most, of 0.5 kg. We should talk to the workers at the factory and ask them if these differences are practically relevant or not.
+
+c) Find an estimate of the variability between looms and compare it to the variability within looms.
+
+**Solution:** The variability between looms can be estimated with the mean square of `loom` in the ANOVA table: it is 0.0854. Analogously, the variability within looms can be estimated with the mean square `Residuals` from the ANOVA table, which is 0.0148. 
+
+
+
