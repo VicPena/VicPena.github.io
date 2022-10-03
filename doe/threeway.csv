@@ -1,0 +1,73 @@
+drug,feed,diet,bp
+X,Psych,No diet,170
+X,Psych,No diet,175
+X,Psych,No diet,165
+X,Psych,No diet,180
+X,Psych,No diet,160
+X,Psych,No diet,158
+X,Psych,Diet,161
+X,Psych,Diet,173
+X,Psych,Diet,157
+X,Psych,Diet,152
+X,Psych,Diet,181
+X,Psych,Diet,190
+Y,Psych,No diet,186
+Y,Psych,No diet,194
+Y,Psych,No diet,201
+Y,Psych,No diet,215
+Y,Psych,No diet,219
+Y,Psych,No diet,209
+Y,Psych,Diet,164
+Y,Psych,Diet,166
+Y,Psych,Diet,159
+Y,Psych,Diet,182
+Y,Psych,Diet,187
+Y,Psych,Diet,174
+Z,Psych,No diet,180
+Z,Psych,No diet,187
+Z,Psych,No diet,199
+Z,Psych,No diet,170
+Z,Psych,No diet,204
+Z,Psych,No diet,194
+Z,Psych,Diet,162
+Z,Psych,Diet,184
+Z,Psych,Diet,183
+Z,Psych,Diet,156
+Z,Psych,Diet,180
+Z,Psych,Diet,173
+X,No psych,No diet,173
+X,No psych,No diet,194
+X,No psych,No diet,197
+X,No psych,No diet,190
+X,No psych,No diet,176
+X,No psych,No diet,198
+X,No psych,Diet,164
+X,No psych,Diet,190
+X,No psych,Diet,169
+X,No psych,Diet,164
+X,No psych,Diet,176
+X,No psych,Diet,175
+Y,No psych,No diet,189
+Y,No psych,No diet,194
+Y,No psych,No diet,217
+Y,No psych,No diet,206
+Y,No psych,No diet,199
+Y,No psych,No diet,195
+Y,No psych,Diet,171
+Y,No psych,Diet,173
+Y,No psych,Diet,196
+Y,No psych,Diet,199
+Y,No psych,Diet,180
+Y,No psych,Diet,203
+Z,No psych,No diet,202
+Z,No psych,No diet,228
+Z,No psych,No diet,190
+Z,No psych,No diet,206
+Z,No psych,No diet,224
+Z,No psych,No diet,204
+Z,No psych,Diet,205
+Z,No psych,Diet,199
+Z,No psych,Diet,170
+Z,No psych,Diet,160
+Z,No psych,Diet,179
+Z,No psych,Diet,179
