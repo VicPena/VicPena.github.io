@@ -15,7 +15,7 @@
 * [Introduction to experimental design](http://vicpena.github.io/doe/basic_concepts.pdf)
 * [Review: inference for a population mean](http://vicpena.github.io/doe/normal.pdf)
 * [Completely randomized designs](http://vicpena.github.io/doe/crd.pdf) ([code](http://vicpena.github.io/doe/oneway.R))
-* [Two factors](http://vicpena.github.io/doe/twofactor.pdf) 
+* [Two factors... and more](http://vicpena.github.io/doe/twofactor.pdf) 
 
 
 ### Labs
