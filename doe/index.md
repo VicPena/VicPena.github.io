@@ -4,7 +4,7 @@
 
 * Instructors: Víctor Peña (`victor.pena.pizarro@upc.edu`) and Isaac Subirana (`isubirana@ub.edu`).
 * Office hours: By appointment.
-* Lectures: Tuesdays 5pm to 7pm @ S02. 
+* Lectures: Tuesdays 5pm to 7pm at S02. 
 * Labs: There are two groups: [click here to know your group](http://vicpena.github.io/doe/groups.pdf). Both groups meet Thursday. One group meets from 3 to 5pm at PC2 and the other group meets from 5pm to 7pm at PC1. 
 
 
