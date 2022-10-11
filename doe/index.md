@@ -16,7 +16,7 @@
 * [Review: inference for a population mean](http://vicpena.github.io/doe/normal.pdf)
 * [Completely randomized designs](http://vicpena.github.io/doe/crd.pdf) ([code](http://vicpena.github.io/doe/oneway.R))
 * [Two factors... and more](http://vicpena.github.io/doe/twofactor.pdf) 
-
+* [Introduction to two-level factorial designs](http://vicpena.github.io/doe/twolevel_factorial.pdf)
 
 ### Labs
 
