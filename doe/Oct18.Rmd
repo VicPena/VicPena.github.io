@@ -1,0 +1,139 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Agenda
+
+Recordeu, teniu els materials de classe a: <http://vicpena.github.io/doe>
+
+-   Dijous 20: Lab de dissenys fraccionals
+
+-   Dimarts 25: Resolem examen de prova junts
+
+-   Dijous 27: Examen parcial
+
+A partir de la setmana vinent, tindreu l'Isaac
+
+Avui farem:
+
+-   Dissenys complets $2^k$ : Exemple cardigan
+
+-   Dissenys fraccionals $2^{k-p}$ : Exemple galetes i exemple tub d'escapament
+
+## Exemple: Cardigan
+
+La part davantera d'un jersei cordat està formada per 2 meitats, i cadascuna d'elles està formada al seu torn pel que anomenem cos i tira. La tira és la zona on van allotjats els botons o els traus (segons el costat) i està teixida de manera que és més forta i consistent que el cos.
+
+Tradicionalment, el cos i la tira es teixien per separat i després es cosien, però en l'actualitat hi ha màquines que teixeixen simultàniament, en una mateixa peça, el cos i la tira, amb l'avantatge que s'eliminen operacions en la confecció de la peça.
+
+L'inconvenient és que en tenir la tira diferent tipus de punt, i estar teixida sota altres paràmetres, de vegades resulta ser més llarga o més curta que el cos, de manera que la peça resulta defectuosa.
+
+Per determinar les condicions de teixit de la tira que aconsegueixen que la longitud del cos (LC) i de la tira (LT) siguin iguals, es realitza un disseny $2^3$ amb els següents factors:
+
+-   A: Tipus de tira: Interlock (--) i tubular (+)
+
+-   B: Número d\'agulles: 4 i 10
+
+-   C: Graduació del punto (longitud de la malla a la part interior): 9,0 i 10,8
+
+S\'obtenen els següents resultats, en l\'ordre estàndard de la matriu de disseny:
+
+```{r}
+lc = c(67.8, 71.7, 67.6, 77.0, 62.2, 71.6, 71.7, 75.6)
+lt = c(62.6, 66.8, 62.6, 71.7, 61.1, 66.8, 70.6, 70.6)
+```
+
+Temps que es triga en fer la peça (t, mm:ss): 9:18 9:18 9:17 9:18 12:40 12:39 12:39 12:39
+
+a) Expliqueu com influeixen cadascun dels factors en el temps que triga a teixir-se la peça
+
+**Solució:** Convertim els temps a segons
+
+```{r}
+temps = c(9*60+18, 9*60+18, 9*60+17, 9*60+18,
+          12*60+40, 12*60+39, 12*60+39, 12*60+39)
+```
+
+És un disseny $2^3$. Creem la matriu de disseny amb `FrF2` , afegim la resposta, i fem el Daniel plot. 
+
+```{r}
+library(FrF2)
+disseny = FrF2(nruns = 8, nfactors = 3, 
+               factor.names = c("tipus", "agulla", "grad"),
+               randomize = FALSE)
+dis_temps = add.response(disseny, temps)
+DanielPlot(dis_temps)
+```
+
+b) Tenint en compte que l'objectiu és que LC = LT (no importa el valor concret que prenguin), indiqueu quina penseu que ha de ser la resposta a analitzar
+
+**Solució:**
+
+c) Identifiqueu els efectes importants i expliqueu com influeixen els factors en la resposta.
+
+**Solució:** 
+
+d) En cas que poguéssiu continuar l'experimentació, indiqueu com ho faríeu.
+
+**Solució:** 
+
+e) Es pot aconseguir l'objectiu que LC = LT? És possible aconseguir-ho amb un temps de teixit inferior a 10 minuts? Raoneu la resposta.
+
+**Solució:** 
+
+## Exemple: Galetes
+
+**Variable resposta:** com de bones són les galetes, en una escala de 0 a 10
+
+**Factors:**
+
+-   Mantega: 10g o 15g
+
+-   Sucre: mitja tassa o una tassa sencera
+
+-   Llevat: mitja cullerada o una sencera
+
+-   Temps de cocció: 12min o 16min
+
+4 factors, però només s'han fet 8 experiments: disseny $2^{4-3}$
+
+Primer, creem la matriu de disseny amb `FrF2`:
+
+```{r}
+design = FrF2(nruns = 8, nfactors = 4, 
+              factor.names = c("mantega", "sucre", "llevat", "temps"),
+              randomize = FALSE)
+
+aliasprint(design)
+```
+
+Afegim la resposta
+
+```{r}
+nota =  c(2, 4, 5, 7, 2, 4, 5, 7)
+design = add.response(design, nota)
+DanielPlot(design)
+```
+
+
+
+## Exemple: Tub d'escapament
+
+7 factors poden influir el diàmetre d'un tub d'escapament.
+
+L'empresa només pot fer 8 experiments per raons de pressupost.
+
+Van fer un disseny $2^{7-3}$.
+
+Creem la matriu de disseny i afegim la resposta
+
+```{r}
+design = FrF2(nruns = 8, nfactors = 7, randomize = FALSE)
+y = c(34.6, 46.3, 48.6, 44.9, 49.7, 34.0, 46.5, 49.0)
+design = add.response(design, y)
+```
+
