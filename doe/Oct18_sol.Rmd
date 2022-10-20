@@ -3,7 +3,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 ## Agenda
@@ -96,6 +96,7 @@ summary(mod_dif)
 Mirem el gràfic d'efectes i la taula d'efectes estimats
 
 ```{r}
+library(emmeans)
 emmip(mod_dif, tipus ~ grad)
 ```
 
@@ -127,7 +128,7 @@ e) Es pot aconseguir l'objectiu que LC = LT? És possible aconseguir-ho amb un t
 
 -   Temps de cocció: 12min o 16min
 
-4 factors, però només s'han fet 8 experiments: disseny $2^{4-3}$
+4 factors, però només s'han fet 8 experiments: disseny $2^{4-1}$
 
 Primer, creem la matriu de disseny amb `FrF2`:
 
@@ -178,7 +179,7 @@ Sembla que com més mantega i sucre, millor. Podríem continuar investigant afeg
 
 L'empresa només pot fer 8 experiments per raons de pressupost.
 
-Van fer un disseny $2^{7-3}$.
+Van fer un disseny $2^{7-4}$.
 
 Creem la matriu de disseny i afegim la resposta
 
@@ -214,6 +215,6 @@ Què fem?
 
 -   Podria ser que els efectes importants siguin B, E i G.
 
--   També podria ser raonable els models B + E + BE, B + G + BG, E + G + BE
+-   També podria ser raonable els models B + E + BE, B + G + BG, E + G + EG
 
 Conclusió: sembla que els factors B, E i G són els més importants. Seria bo fer un disseny complet $2^3$ amb aquests factors i veure què passa.
