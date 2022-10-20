@@ -1,0 +1,96 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Exemple: Injecció 
+
+En una planta de fabricación de piezas de plástico por inyección se realizó un experimento para reducir el número de rugosidades ("mark flows") que aparecían en las piezas. Cada prueba consistió en fabricar 100 piezas y obtener el número medio de rugosidades (contadas de una forma normalizada) que aparecían.
+
+Se decidió estudiar los 8 factores siguientes, todos ellos a 2 niveles, uno bajo (--) y otro alto (+):
+
+-   A: Recorrido de inyección
+
+-   B: Temperatura del molde
+
+-   C: Temperatura del fundido	 	
+
+-   D: Apertura de la boquilla
+
+-   E: 1ª Velocidad de inyección
+
+-   F: 2ª Velocidad de inyección
+
+-   G: Punto de cambio (inyec./mante.)	
+
+-   H: Fuerza de cierre del molde
+
+El diseño experimental utilizado fue un 2^8-4^ con los experimentos seleccionados con `FrF2`. Los
+resultados obtenidos, en el orden estándar de la matriz de diseño, fueron
+
+```{r}
+resposta = c(6.2, 5.2, 4.3, 3.0, 5.3, 4.0, 0.0,
+             1.9, 6.3, 5.8, 6.0, 3.0, 3.3, 5.8,
+             0.0, 0.0)
+```
+
+**Solució:** Creem la matriu de disseny i hi afegim la resposta
+
+```{r}
+library(FrF2)
+dis = FrF2(nruns = 16, nfactors = 8, 
+           randomize = FALSE)
+
+resposta = c(6.2, 5.2, 4.3, 3.0, 5.3, 4.0, 0.0,
+             1.9, 6.3, 5.8, 6.0, 3.0, 3.3, 5.8,
+             0.0, 0.0)
+dis = add.response(dis, resposta)
+```
+
+És un disseny de resolució IV: hi ha interaccions de dos factors confoses entre elles
+
+```{r}
+aliasprint(dis)
+```
+
+Fem el Daniel plot i identifiquem la temperatura del motlle i la fundició com a importants
+
+```{r}
+DanielPlot(dis)
+```
+
+Ajustem el model amb les temperatures com a predictores, i veiem que són significatives
+
+```{r}
+mod = aov(resposta ~ B + C, dis)
+summary(mod)
+```
+
+Fem el gràfic d'efectes
+
+```{r}
+library(emmeans)
+emmip(mod, B ~ C)
+```
+
+Si volem minimitzar la resposta, recomanem que B = C = 1. És a dir, volem que les temperatures siguin altes. Si volem continuar experimentant, podríem provar temperatures més altes.
+
+## Afegir noms dels nivells del factor
+
+Amb `FrF2`, podem afegir els noms dels nivells, si en tenim. Per exemple:
+
+```{r}
+disseny2 = FrF2(nruns = 16, nfactors = 5,
+                randomize = FALSE,
+                factor.names = 
+                  list(temp = c("150", "200"),
+                       visco = c("1", "2"),
+                       conc = c("20", "30"),
+                       pres = c("2", "4"),
+                       tipus = c("A", "B")))
+disseny2
+
+```
