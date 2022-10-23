@@ -24,4 +24,4 @@
 * [Lab 2](http://vicpena.github.io/doe/Lab2.pdf) ([solution](http://vicpena.github.io/doe/Lab2_sol.pdf), [code](http://vicpena.github.io/doe/Lab2_sol.Rmd))
 * [Lab 3](http://vicpena.github.io/doe/Lab3.pdf) ([solution](http://vicpena.github.io/doe/Lab3_sol.pdf), [code](https://github.com/VicPena/VicPena.github.io/tree/master/doe/Lab3.R))
 * [Lab 4](http://vicpena.github.io/doe/Lab4.pdf) ([solution](http://vicpena.github.io/doe/Lab4_sol.html))
-* [Lab 5](http://vicpena.github.io/doe/Lab5.pdf) ([example](http://vicpena.github.io/doe/Lab5.Rmd))
+* [Lab 5](http://vicpena.github.io/doe/Lab5.pdf) ([solution](http://vicpena.github.io/doe/Lab5.Rmd))
