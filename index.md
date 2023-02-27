@@ -1,6 +1,6 @@
 # About me
 
-Currently, I'm a María Zambrano fellow at Universitat Politècnica de Catalunya (UPC). Prior to that, I was an Assistant Professor at Baruch College, which is part of the City University of New York (CUNY). 
+I'm a María Zambrano fellow at Universitat Politècnica de Catalunya (UPC).
 
 You can reach me at `victor.pena.pizarro@upc.edu`.
 
