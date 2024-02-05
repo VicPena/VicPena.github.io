@@ -1,6 +1,6 @@
 # About me
 
-I'm a María Zambrano fellow at Universitat Politècnica de Catalunya (UPC).
+I'm an Assistant Professor (professor lector) at Universitat Politècnica de Catalunya (UPC).
 
 You can reach me at `victor.pena.pizarro@upc.edu`.
 
