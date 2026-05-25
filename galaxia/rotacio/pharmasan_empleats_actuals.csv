@@ -1,0 +1,945 @@
+﻿ID empleat;Nom complet;Sexe;Data naixement;Departament;Location
+PSN-BCN-2020-0001;Toni Costa Ruiz;Home;30/4/1995;RH;Barcelona (22@)
+PSN-BCN-2009-0001;Jordi Álvarez López;Home;21/4/1976;R+D;Granollers
+PSN-BCN-2015-0001;Jaume Muñoz Rodríguez;Home;6/8/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0001;Andrea Ramírez Riera;Dona;25/8/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0001;Tània Fernández Romero;Dona;29/3/1961;R+D;Barcelona (22@)
+PSN-BCN-2012-0001;Àlex Pérez Marín;Home;3/3/1980;Finances;Barcelona (22@)
+PSN-BOS-2020-0001;David Kelly;Home;22/1/1994;R+D;Boston (MA)
+PSN-BCN-2020-0002;Manel Rovira González;Home;12/2/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0001;Thomas Taylor;Home;22/12/1973;Finances;Boston (MA)
+PSN-BCN-2008-0002;Arnau Iglesias Bosch;Home;11/4/1964;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0001;Berta Suárez Ruiz;Dona;27/3/1999;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0002;Natalie Davis;Dona;5/8/1975;R+D;Boston (MA)
+PSN-BCN-2008-0003;Pau Romero Fernández;Home;29/3/1977;R+D;Granollers
+PSN-BOS-2008-0003;Ryan Wilson;Home;21/12/1971;Sistemes;Boston (MA)
+PSN-BCN-2019-0002;Olga Moreno López;Dona;10/4/1994;Sistemes;Barcelona (22@)
+PSN-BCN-2019-0003;Júlia López Martínez;Dona;16/2/1988;RH;Barcelona (22@)
+PSN-BCN-2011-0001;Lídia Camps Rodríguez;Dona;22/11/1981;Finances;Barcelona (22@)
+PSN-BCN-2008-0004;Quim Arnau Navarro;Home;23/11/1973;R+D;Granollers
+PSN-BCN-2015-0002;Marc Sánchez López;Home;29/12/1986;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0001;Joan Romero Bosch;Home;1/12/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0005;Anna Navarro Gil;Dona;23/2/1961;Comercial;Barcelona (22@)
+PSN-BCN-2017-0001;Lídia Vila Grau;Dona;17/11/1983;R+D;Granollers
+PSN-BOS-2008-0004;Claire Williams;Dona;23/5/1970;Finances;Boston (MA)
+PSN-BCN-2018-0001;Sílvia Puig Gómez;Dona;22/1/1988;R+D;Barcelona (22@)
+PSN-BCN-2017-0002;Arnau Rovira Soler;Home;10/11/1976;R+D;Granollers
+PSN-BCN-2008-0006;Anna Martín Navarro;Dona;27/2/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0007;José Planas González;Home;6/5/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0005;Joshua Murphy;Home;5/2/1972;Finances;Boston (MA)
+PSN-BCN-2014-0001;Raimon Martínez Ramos;Home;8/12/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0001;Genís Bosch Domínguez;Home;16/1/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0002;Inés Pérez Costa;Dona;6/4/1978;R+D;Granollers
+PSN-BCN-2008-0008;Rafa Font Prat;Home;7/3/1974;R+D;Granollers
+PSN-BCN-2008-0009;Mateu Hernández Camps;Home;27/3/1970;Finances;Barcelona (22@)
+PSN-BCN-2019-0004;Miquel Díaz Fernández;Home;6/3/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0002;Joan Ribas Martínez;Home;3/4/1984;Finances;Barcelona (22@)
+PSN-BCN-2008-0010;Hèctor Sánchez Suárez;Home;22/4/1970;R+D;Granollers
+PSN-BCN-2016-0002;Roc González Vázquez;Home;9/2/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0002;Eva Riera Vila;Dona;22/4/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0003;Jana Soler González;Dona;24/3/1976;Comercial;Barcelona (22@)
+PSN-BCN-2008-0011;Àngels Serrano Ramírez;Dona;21/3/1963;Comercial;Barcelona (22@)
+PSN-BCN-2012-0003;Eva Riera Vázquez;Dona;10/4/1974;R+D;Granollers
+PSN-BOS-2008-0006;Madison Davis;Dona;9/7/1975;Finances;Boston (MA)
+PSN-BCN-2019-0005;Cristina Soler Ramírez;Dona;10/5/1996;Finances;Barcelona (22@)
+PSN-BCN-2012-0004;Guillem Ruiz Bosch;Home;1/9/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2016-0001;Nora Sullivan;Dona;22/2/1985;Finances;Boston (MA)
+PSN-BCN-2008-0012;Nil Ferrer Fernández;Home;30/12/1961;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0003;Roger Ruiz Sánchez;Home;20/3/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0004;Mateu Torres Martín;Home;21/11/1976;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0013;Patricia Camps Navarro;Dona;8/4/1962;Comercial;Barcelona (22@)
+PSN-BCN-2015-0003;Blanca Riera Vázquez;Dona;16/8/1979;RH;Barcelona (22@)
+PSN-BCN-2008-0014;Mateu Gil Gómez;Home;20/11/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0003;Anna Sánchez Prat;Dona;14/2/1986;Comercial;Barcelona (22@)
+PSN-BCN-2008-0015;Francesc Prat Ferrer;Home;27/6/1969;Sistemes;Barcelona (22@)
+PSN-BOS-2008-0007;William Wilson;Home;4/4/1965;Sistemes;Boston (MA)
+PSN-BOS-2019-0001;Amelia Martin;Dona;9/4/1992;R+D;Boston (MA)
+PSN-BCN-2019-0006;Pere Sánchez Puig;Home;31/7/1988;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0001;Daniel Costa Álvarez;Home;7/1/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0003;Marina Díaz Blanco;Dona;8/8/1995;R+D;Granollers
+PSN-BCN-2012-0005;Guillem Puig Fernández;Home;22/11/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0003;Teresa Gómez López;Dona;28/9/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0002;Sergi Costa Vázquez;Home;2/10/1979;Sistemes;Barcelona (22@)
+PSN-BCN-2017-0005;Albert Ribas Ramírez;Home;4/12/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0003;Lucía Moreno Bosch;Dona;27/2/1978;R+D;Granollers
+PSN-BCN-2012-0006;Daniel Molina Delgado;Home;11/12/1970;RH;Barcelona (22@)
+PSN-BCN-2019-0007;Núria Pérez González;Dona;28/6/1995;Comercial;Barcelona (22@)
+PSN-BOS-2011-0001;Sophia Taylor;Dona;11/3/1973;Comercial;Boston (MA)
+PSN-BOS-2008-0008;Elizabeth Clark;Dona;25/3/1964;Comercial;Boston (MA)
+PSN-BCN-2018-0004;Hugo Ramírez Martín;Home;15/1/1986;R+D;Granollers
+PSN-BCN-2019-0008;Pilar Ortega Gómez;Dona;30/3/1989;RH;Barcelona (22@)
+PSN-BCN-2018-0005;Lucía Hernández Navarro;Dona;7/1/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0007;Ismael López Gómez;Home;21/12/1977;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0016;Laia Ruiz Hernández;Dona;11/1/1974;Finances;Barcelona (22@)
+PSN-BCN-2010-0002;Pilar Fernández Jiménez;Dona;30/1/1962;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0017;Javier Batlle Vallès;Home;21/11/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0008;Pau Martínez Rodríguez;Home;31/12/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0018;Daniel Vázquez Ortega;Home;26/11/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0002;Jesús Jiménez Sánchez;Home;6/4/1984;Comercial;Barcelona (22@)
+PSN-BCN-2022-0002;Berta Torres Álvarez;Dona;6/2/1997;R+D;Granollers
+PSN-BCN-2011-0002;Teresa Puig Sánchez;Dona;5/9/1978;R+D;Granollers
+PSN-BCN-2019-0009;Andreu Fernández Ortega;Home;10/8/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0019;Mireia Duran Esteve;Dona;15/6/1967;Sistemes;Barcelona (22@)
+PSN-BCN-2021-0001;Carlos Pérez García;Home;22/1/1993;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0006;Laia Ferrer Navarro;Dona;15/3/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0007;Inés Marín Fernández;Dona;27/4/1989;RH;Barcelona (22@)
+PSN-BCN-2021-0002;Nora Soler Grau;Dona;10/1/1999;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0003;Hèctor Martínez Martín;Home;9/5/1970;R+D;Granollers
+PSN-BCN-2017-0008;Lídia Pérez Martínez;Dona;11/8/1988;Finances;Barcelona (22@)
+PSN-BCN-2021-0003;Ismael Hernández Ferrer;Home;28/11/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0010;Sergi Riera Bosch;Home;21/10/1988;Comercial;Barcelona (22@)
+PSN-BOS-2018-0001;Alexander Sullivan;Home;8/8/1988;R+D;Boston (MA)
+PSN-BCN-2011-0003;Eva Romero Gómez;Dona;5/5/1979;R+D;Granollers
+PSN-BCN-2015-0004;Pol Sánchez Vallès;Home;26/9/1979;RH;Barcelona (22@)
+PSN-BCN-2018-0006;Ramon Iglesias Hernández;Home;31/10/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0020;Oriol Ortiz García;Home;23/12/1961;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0004;Beatriz García Martínez;Dona;9/6/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0021;Pol Fernández Muñoz;Home;7/8/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0022;Beatriz Domènech Costa;Dona;2/8/1964;Comercial;Barcelona (22@)
+PSN-BCN-2016-0005;Gerard Marín Rovira;Home;23/4/1985;Comercial;Barcelona (22@)
+PSN-BCN-2010-0004;Arnau Moreno Martínez;Home;3/12/1972;Finances;Barcelona (22@)
+PSN-BCN-2018-0007;Roger Batlle Rubio;Home;15/7/1986;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0004;Sílvia Ruiz Hernández;Dona;19/8/1974;Comercial;Barcelona (22@)
+PSN-BCN-2017-0009;Rubén Ortiz López;Home;3/6/1980;R+D;Granollers
+PSN-BCN-2011-0005;Guillem Gómez Molina;Home;1/4/1979;RH;Barcelona (22@)
+PSN-BCN-2008-0023;Rafa Hernández Ribas;Home;7/10/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2021-0001;Victoria Sullivan;Dona;7/10/1993;RH;Boston (MA)
+PSN-BCN-2012-0009;David Pérez Álvarez;Home;23/9/1977;Sistemes;Barcelona (22@)
+PSN-BCN-2019-0011;Gemma Fernández Puig;Dona;26/5/1996;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0024;Arnau González Domínguez;Home;21/9/1977;R+D;Granollers
+PSN-BOS-2022-0001;Patrick Sullivan;Home;18/1/1998;R+D;Boston (MA)
+PSN-BCN-2008-0025;Raquel Pérez Sánchez;Dona;29/7/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2010-0001;Thomas Davis;Home;4/10/1981;R+D;Boston (MA)
+PSN-BCN-2015-0005;Nil Martínez Ruiz;Home;5/12/1988;Finances;Barcelona (22@)
+PSN-BCN-2008-0026;Berta García Castro;Dona;5/10/1969;Comercial;Barcelona (22@)
+PSN-BCN-2018-0008;Ainhoa Muñoz Fernández;Dona;28/8/1985;R+D;Granollers
+PSN-BOS-2008-0009;Hannah Sullivan;Dona;24/10/1965;R+D;Boston (MA)
+PSN-BOS-2008-0010;David Johnson;Home;21/3/1979;R+D;Boston (MA)
+PSN-BCN-2016-0006;Rosa Pérez González;Dona;9/2/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0004;Javier López González;Home;4/6/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0027;Mar Soler Hernández;Dona;1/2/1974;RH;Barcelona (22@)
+PSN-BCN-2011-0006;Miquel Martín Delgado;Home;20/7/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0005;Anna Sánchez Domínguez;Dona;25/1/1980;RH;Barcelona (22@)
+PSN-BCN-2008-0028;Roger Ferrer Colomer;Home;6/4/1963;R+D;Granollers
+PSN-BCN-2008-0029;Nil Sánchez Rubio;Home;26/9/1973;R+D;Granollers
+PSN-BCN-2019-0012;Carlos Moreno García;Home;30/9/1995;Finances;Barcelona (22@)
+PSN-BCN-2008-0030;Hugo Martínez Pérez;Home;23/1/1972;Comercial;Barcelona (22@)
+PSN-BCN-2021-0004;Inés López Domènech;Dona;18/9/1998;Finances;Barcelona (22@)
+PSN-BOS-2016-0002;Charlotte Williams;Dona;18/1/1992;RH;Boston (MA)
+PSN-BCN-2008-0031;Carlos Ruiz Iglesias;Home;24/10/1965;R+D;Granollers
+PSN-BCN-2018-0009;Enric Ferrer Costa;Home;26/5/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0007;Cristina Álvarez Prat;Dona;29/9/1989;Comercial;Barcelona (22@)
+PSN-BCN-2012-0010;Francesc Muñoz Martín;Home;21/2/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0005;Irene Romero Ramírez;Dona;9/3/1998;R+D;Granollers
+PSN-BOS-2023-0001;William Garcia;Home;26/11/2000;Sistemes;Boston (MA)
+PSN-BCN-2008-0032;Raquel González Molina;Dona;29/7/1961;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0033;Mar Planas Vázquez;Dona;19/2/1961;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0010;Eduard Soler Del Río;Home;7/1/1992;Comercial;Barcelona (22@)
+PSN-BCN-2012-0011;Patricia Jiménez Serra;Dona;8/1/1984;Comercial;Barcelona (22@)
+PSN-BCN-2017-0011;Roc Martín Ruiz;Home;9/5/1992;Finances;Barcelona (22@)
+PSN-BCN-2012-0012;Montserrat Navarro Prat;Dona;3/1/1971;Comercial;Barcelona (22@)
+PSN-BCN-2021-0006;Ismael Torres Pérez;Home;4/12/1992;Comercial;Barcelona (22@)
+PSN-BCN-2020-0004;Hugo Molina Serrano;Home;23/1/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0004;Rosa Blanco Ferrer;Dona;19/11/1965;R+D;Granollers
+PSN-BCN-2009-0005;Pau Álvarez Moreno;Home;6/4/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0034;Álvaro Morales García;Home;23/2/1967;Comercial;Barcelona (22@)
+PSN-BCN-2008-0035;Nil López Rodríguez;Home;25/3/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0013;Enric Costa Rodríguez;Home;6/6/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0036;Ariadna Ramírez Sánchez;Dona;8/3/1969;Comercial;Barcelona (22@)
+PSN-BCN-2008-0037;Sonia Molina Ferrer;Dona;4/7/1972;Comercial;Barcelona (22@)
+PSN-BCN-2020-0005;Rafa Ramírez Ferrer;Home;22/1/1996;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2015-0001;Sophie Williams;Dona;7/7/1984;Comercial;Boston (MA)
+PSN-BOS-2017-0001;Audrey Rivera;Dona;1/5/1982;R+D;Boston (MA)
+PSN-BCN-2021-0007;Nil López Romero;Home;16/4/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0013;Jordi Morales Díaz;Home;17/6/1975;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0038;Raimon Gil López;Home;2/12/1970;Sistemes;Barcelona (22@)
+PSN-BOS-2008-0011;Sophie Lee;Dona;23/2/1963;RH;Boston (MA)
+PSN-BCN-2009-0006;Guillem Molina Arnau;Home;2/9/1977;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0003;Marc Delgado Vila;Home;6/1/1965;Comercial;Barcelona (22@)
+PSN-BCN-2020-0006;Enric Vila Ortega;Home;5/9/1992;R+D;Granollers
+PSN-BCN-2008-0039;Nora Martín Gil;Dona;19/9/1975;Comercial;Barcelona (22@)
+PSN-BCN-2008-0040;Guillem López Arnau;Home;8/5/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0014;Gerard García Sánchez;Home;27/7/1998;R+D;Granollers
+PSN-BOS-2012-0001;Abigail White;Dona;16/8/1980;R+D;Boston (MA)
+PSN-BCN-2008-0041;Ferran López Pérez;Home;3/4/1970;R+D;Granollers
+PSN-BCN-2018-0010;Carles Moreno Ferrer;Home;22/5/1991;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0008;Raimon Ramos Riera;Home;20/6/1994;R+D;Granollers
+PSN-BCN-2021-0009;Patricia Domènech Sánchez;Dona;6/5/1996;Comercial;Barcelona (22@)
+PSN-BCN-2008-0042;Víctor Bosch Soler;Home;24/8/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0010;Francesc García Jiménez;Home;10/10/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2023-0001;Sílvia García Bosch;Dona;10/4/2003;Sistemes;Barcelona (22@)
+PSN-BCN-2019-0015;Gemma Ribas Vila;Dona;2/4/1991;R+D;Granollers
+PSN-BCN-2018-0011;Antonio Romero Rodríguez;Home;20/12/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0012;Toni García Ferrer;Home;8/8/1987;Comercial;Barcelona (22@)
+PSN-BCN-2018-0012;Raimon García Rodríguez;Home;28/11/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0043;Cristina Jiménez López;Dona;18/7/1975;Sistemes;Barcelona (22@)
+PSN-BCN-2015-0006;Anna Álvarez Ortega;Dona;26/5/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2024-0001;Jesús López Serrano;Home;1/1/2003;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0008;Pol López Duran;Home;6/7/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0012;Madison Lee;Dona;17/12/1963;R+D;Boston (MA)
+PSN-BCN-2021-0011;Roger López Fernández;Home;17/8/1993;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0013;Tània López Serra;Dona;27/7/1994;Comercial;Barcelona (22@)
+PSN-BCN-2008-0044;Lídia Fernández Bosch;Dona;22/8/1971;RH;Barcelona (22@)
+PSN-BCN-2008-0045;Ferran Riera Bosch;Home;26/6/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0013;Roc Riera Torres;Home;3/5/1992;RH;Barcelona (22@)
+PSN-BCN-2013-0004;Daniel González Vázquez;Home;3/2/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2017-0002;Jonathan Martin;Home;17/1/1992;Comercial;Boston (MA)
+PSN-BCN-2008-0046;Andrea Díaz Rodríguez;Dona;3/1/1963;R+D;Granollers
+PSN-BCN-2017-0014;Pilar Navarro Ortega;Dona;27/11/1986;RH;Barcelona (22@)
+PSN-BCN-2008-0047;Rafa Ruiz Hernández;Home;21/1/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0007;Patricia López Arnau;Dona;29/3/1966;R+D;Granollers
+PSN-BOS-2008-0013;Jacob Sullivan;Home;17/12/1968;Comercial;Boston (MA)
+PSN-BOS-2012-0002;Natalie Kelly;Dona;24/5/1977;R+D;Boston (MA)
+PSN-BCN-2019-0016;Xavier Gómez Bosch;Home;5/1/1988;Comercial;Barcelona (22@)
+PSN-BCN-2016-0009;Jesús Costa Serrano;Home;1/8/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0048;Roger Puig Prat;Home;23/5/1970;R+D;Barcelona (22@)
+PSN-BCN-2018-0014;José Ramos García;Home;17/3/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0005;Rafa Gil Fernández;Home;8/7/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0012;Genís Martín Rodríguez;Home;16/5/1999;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0049;Arnau Martínez García;Home;2/8/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0014;Ricard Molina Torres;Home;10/12/1981;Comercial;Barcelona (22@)
+PSN-BCN-2018-0015;Marina Iglesias García;Dona;27/7/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0050;Àlex Martínez Martín;Home;26/7/1964;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0010;Ferran Suárez Ruiz;Home;15/9/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0003;Àlex Gómez Ferrer;Home;7/3/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2009-0001;Scarlett Kelly;Dona;4/3/1976;Finances;Boston (MA)
+PSN-BCN-2015-0007;Javier Camps Rodríguez;Home;29/7/1979;R+D;Granollers
+PSN-BCN-2019-0017;Jordi Castells Navarro;Home;18/8/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0051;Jordi Costa Marín;Home;5/1/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2021-0002;Dylan White;Home;10/2/1995;RH;Boston (MA)
+PSN-BCN-2011-0007;Àngels Soler Ruiz;Dona;27/3/1971;Finances;Barcelona (22@)
+PSN-BCN-2015-0008;Rafa Torres Martínez;Home;22/5/1987;R+D;Granollers
+PSN-BOS-2019-0002;Tyler Anderson;Home;21/11/1994;Comercial;Boston (MA)
+PSN-BCN-2017-0015;Montserrat Serra Vázquez;Dona;23/5/1993;Sistemes;Barcelona (22@)
+PSN-BCN-2012-0015;Adrià López Pérez;Home;26/5/1981;R+D;Granollers
+PSN-BOS-2008-0014;Ryan Davis;Home;7/3/1971;R+D;Boston (MA)
+PSN-BCN-2020-0007;Manel Sánchez Puig;Home;9/9/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0052;Teresa Pérez Ortiz;Dona;28/7/1971;Comercial;Barcelona (22@)
+PSN-BCN-2023-0002;Carme González Ferrer;Dona;5/7/1997;Comercial;Barcelona (22@)
+PSN-BCN-2023-0003;Raquel Rodríguez Suárez;Dona;27/6/2002;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0006;Aina Moreno Serrano;Dona;10/2/1989;Comercial;Barcelona (22@)
+PSN-BCN-2020-0008;Rafa Ferrer Ribas;Home;5/5/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0053;David González Morales;Home;17/7/1978;Finances;Barcelona (22@)
+PSN-BOS-2019-0003;Ethan Thompson;Home;18/3/1991;Sistemes;Boston (MA)
+PSN-BCN-2008-0054;Inés Moreno Delgado;Dona;20/1/1967;RH;Barcelona (22@)
+PSN-BCN-2011-0008;Antonio Puig Fernández;Home;21/10/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0009;Gerard Rodríguez Colomer;Home;16/4/1995;Finances;Barcelona (22@)
+PSN-BCN-2008-0055;Sílvia Ferrer López;Dona;29/5/1968;RH;Barcelona (22@)
+PSN-BCN-2008-0056;Roger Sánchez Batlle;Home;24/4/1964;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2023-0004;Pau González Gil;Home;2/11/1999;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0016;Ismael Navarro Ribas;Home;14/11/1964;Comercial;Barcelona (22@)
+PSN-BCN-2016-0011;Teresa Navarro Ramírez;Dona;8/12/1988;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0057;Guillem Costa Suárez;Home;1/1/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0012;Rafa Esteve Sánchez;Home;17/6/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0058;Ricard Vila Fernández;Home;22/9/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0004;Ferran Raventós Díaz;Home;7/5/2001;Finances;Barcelona (22@)
+PSN-BCN-2016-0013;Carlos García Navarro;Home;10/5/1988;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0006;Marc Soler Ribas;Home;31/12/1975;Sistemes;Barcelona (22@)
+PSN-BCN-2016-0014;Guillem Álvarez Pérez;Home;24/5/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2015-0009;Teresa Sánchez Suárez;Dona;17/8/1981;R+D;Granollers
+PSN-BOS-2017-0003;David Lee;Home;1/3/1990;R+D;Boston (MA)
+PSN-BCN-2017-0016;Oriol Puig Riera;Home;31/8/1983;Sistemes;Barcelona (22@)
+PSN-BCN-2016-0015;Ferran Martínez Gómez;Home;10/9/1976;R+D;Granollers
+PSN-BCN-2019-0018;Ismael Pérez Castells;Home;28/12/1987;Finances;Barcelona (22@)
+PSN-BCN-2013-0005;David Martínez Fernández;Home;1/2/1983;R+D;Granollers
+PSN-BCN-2018-0016;Roc Gil Prat;Home;8/3/1995;R+D;Granollers
+PSN-BCN-2008-0059;Eduard Navarro Pérez;Home;9/5/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0060;Quim Ramos Blanco;Home;15/5/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0017;Rosa García Martínez;Dona;30/5/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0061;Anna Ramírez Ribas;Dona;28/10/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2019-0004;Alexander White;Home;1/7/1993;Finances;Boston (MA)
+PSN-BCN-2008-0062;Quim Puig Romero;Home;28/2/1969;R+D;Granollers
+PSN-BCN-2010-0007;Helena Suárez Pérez;Dona;15/9/1974;RH;Barcelona (22@)
+PSN-BCN-2014-0007;Jesús Soler Serra;Home;30/9/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0006;David Castro Ortega;Home;27/10/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0016;Ricard Batlle Rodríguez;Home;10/2/1989;R+D;Granollers
+PSN-BCN-2011-0009;Aina Puig Grau;Dona;16/4/1979;R+D;Granollers
+PSN-BCN-2008-0063;Álvaro Serrano Gómez;Home;29/9/1962;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0017;Pere Gómez Hernández;Home;13/2/1980;R+D;Granollers
+PSN-BCN-2008-0064;Cristina Castro Ortega;Dona;5/5/1973;R+D;Granollers
+PSN-BCN-2008-0065;Elisenda Roca Fernández;Dona;22/10/1960;Sistemes;Barcelona (22@)
+PSN-BCN-2022-0005;Toni Duran Marín;Home;7/9/2000;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0008;Pol Romero García;Home;18/11/1983;R+D;Granollers
+PSN-BCN-2008-0066;Marc Vázquez Serrano;Home;15/12/1970;Comercial;Barcelona (22@)
+PSN-BCN-2008-0067;Adrià Ramos Torres;Home;17/1/1964;R+D;Barcelona (22@)
+PSN-BCN-2018-0017;Genís Arnau Rubio;Home;2/8/1996;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0019;Javier Ribas Prat;Home;9/7/1985;RH;Barcelona (22@)
+PSN-BCN-2008-0068;Rosa Moreno Ramos;Dona;20/11/1976;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0069;Pau Fernández Serrano;Home;20/2/1965;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0017;Irene Ruiz Costa;Dona;6/6/1988;RH;Barcelona (22@)
+PSN-BOS-2008-0015;Grace Walsh;Dona;11/5/1970;Sistemes;Boston (MA)
+PSN-BCN-2013-0007;Pol García Vázquez;Home;1/12/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0008;Montserrat Ribas García;Dona;24/6/1981;Comercial;Barcelona (22@)
+PSN-BCN-2018-0018;Aina Fernández Álvarez;Dona;3/9/1994;R+D;Granollers
+PSN-BCN-2016-0018;Sofia Gómez Jiménez;Dona;2/4/1978;Finances;Barcelona (22@)
+PSN-BCN-2018-0019;Ainhoa Soler González;Dona;6/11/1986;Finances;Barcelona (22@)
+PSN-BCN-2018-0020;Andreu Bosch Soler;Home;23/3/1981;R+D;Barcelona (22@)
+PSN-BCN-2011-0010;Carme Prat Vázquez;Dona;21/6/1984;Sistemes;Barcelona (22@)
+PSN-BOS-2012-0003;Madison Sullivan;Dona;28/12/1980;Sistemes;Boston (MA)
+PSN-BCN-2014-0009;Aina García López;Dona;17/4/1971;Comercial;Barcelona (22@)
+PSN-BCN-2011-0011;Jordi Vallès Ortega;Home;9/9/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0070;Marc Vallès Suárez;Home;2/10/1972;Finances;Barcelona (22@)
+PSN-BCN-2017-0018;Jana Batlle Blanco;Dona;15/6/1992;RH;Barcelona (22@)
+PSN-BCN-2008-0071;Núria Navarro Rodríguez;Dona;26/4/1963;RH;Barcelona (22@)
+PSN-BCN-2008-0072;Pau González Muñoz;Home;3/10/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0073;Anna Prat Díaz;Dona;8/6/1972;R+D;Barcelona (22@)
+PSN-BCN-2008-0074;Ainhoa López Ruiz;Dona;16/1/1963;R+D;Granollers
+PSN-BCN-2015-0010;Xavier Ribas Colomer;Home;21/7/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0075;Patricia Gil Batlle;Dona;5/6/1976;Sistemes;Barcelona (22@)
+PSN-BCN-2009-0008;Pol Puig Bosch;Home;24/5/1980;R+D;Granollers
+PSN-BCN-2009-0009;Àngels Puig Moreno;Dona;25/7/1972;RH;Barcelona (22@)
+PSN-BCN-2019-0020;Bernat García Ferrer;Home;22/3/1993;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0018;Carme Reig Gil;Dona;30/8/1976;R+D;Granollers
+PSN-BCN-2008-0076;Carles González Gil;Home;16/9/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0077;Xavier Jiménez Díaz;Home;11/7/1963;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0019;Gemma Martín Serrano;Dona;17/9/1979;RH;Barcelona (22@)
+PSN-BCN-2008-0078;Sílvia Hernández Rodríguez;Dona;18/6/1960;Comercial;Barcelona (22@)
+PSN-BCN-2017-0019;Ramon Fernández Soler;Home;21/1/1990;R+D;Barcelona (22@)
+PSN-BCN-2008-0079;Nil Vázquez Ferrer;Home;9/1/1965;RH;Barcelona (22@)
+PSN-BCN-2019-0021;Ferran Ruiz Serra;Home;1/6/1993;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0020;Adrià García Rodríguez;Home;3/2/1987;Comercial;Barcelona (22@)
+PSN-BCN-2015-0011;Andrea Ortega Romero;Dona;7/2/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0008;Lucía López Serra;Dona;9/9/1976;RH;Barcelona (22@)
+PSN-BCN-2008-0080;Sergi Puig Díaz;Home;3/1/1966;Finances;Barcelona (22@)
+PSN-BCN-2008-0081;Marc Delgado Fernández;Home;17/3/1962;Finances;Barcelona (22@)
+PSN-BOS-2015-0002;Chloe Brown;Dona;28/4/1979;R+D;Boston (MA)
+PSN-BCN-2008-0082;Adrià Serra Prat;Home;4/6/1966;Sistemes;Barcelona (22@)
+PSN-BCN-2010-0009;Nora Serrano González;Dona;15/11/1975;RH;Barcelona (22@)
+PSN-BOS-2008-0016;Sean McCarthy;Home;24/8/1967;R+D;Boston (MA)
+PSN-BOS-2008-0017;Samantha Lee;Dona;16/6/1973;Finances;Boston (MA)
+PSN-BCN-2008-0083;Gemma Sánchez Moreno;Dona;14/9/1969;Finances;Barcelona (22@)
+PSN-BCN-2012-0019;Gerard García Romero;Home;28/8/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0084;Arnau Ramos Martínez;Home;23/7/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0020;Hugo Díaz García;Home;18/5/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0085;Javier Ferrer Suárez;Home;5/3/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0020;Javier Sánchez Costa;Home;24/5/1976;R+D;Granollers
+PSN-BCN-2008-0086;Carla Blanco Vilanova;Dona;20/2/1972;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0087;Hugo Castro Colomer;Home;2/6/1971;Finances;Barcelona (22@)
+PSN-BCN-2017-0021;Andreu González Domínguez;Home;19/8/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0022;Hugo Hernández Domènech;Home;4/11/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0021;Nil Soler Delgado;Home;1/12/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0018;James Taylor;Home;19/12/1971;R+D;Boston (MA)
+PSN-BOS-2008-0019;Claire Rodriguez;Dona;7/11/1974;Comercial;Boston (MA)
+PSN-BCN-2012-0021;Quim Gómez Costa;Home;29/7/1978;Sistemes;Barcelona (22@)
+PSN-BCN-2016-0021;Miquel Rodríguez Prat;Home;4/8/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0013;Adrià Gómez Blanco;Home;20/1/2000;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2019-0005;Elizabeth Sullivan;Dona;24/3/1990;Comercial;Boston (MA)
+PSN-BCN-2009-0010;Pau Bosch Jiménez;Home;28/11/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0022;Hugo Pérez Ortiz;Home;22/7/1989;Sistemes;Barcelona (22@)
+PSN-BCN-2015-0012;Sergi Rovira Pérez;Home;9/10/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0088;Montserrat López Ferrer;Dona;2/6/1978;Sistemes;Barcelona (22@)
+PSN-BOS-2008-0020;Alexander Martin;Home;17/10/1960;Sistemes;Boston (MA)
+PSN-BCN-2017-0023;Lídia Reig Torres;Dona;25/11/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2017-0004;Sean Thompson;Home;3/2/1978;R+D;Boston (MA)
+PSN-BCN-2014-0010;Álvaro Martínez Soler;Home;5/4/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0089;Ismael Vendrell Duran;Home;31/8/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0022;Teresa González Castro;Dona;8/2/1990;R+D;Granollers
+PSN-BCN-2017-0024;Elena López Delgado;Dona;18/1/1976;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0090;Sofia Álvarez Blanco;Dona;4/12/1965;Comercial;Barcelona (22@)
+PSN-BOS-2019-0006;Elizabeth Kelly;Dona;24/10/1995;Finances;Boston (MA)
+PSN-BCN-2013-0009;Anna Rodríguez Domínguez;Dona;4/8/1981;Comercial;Barcelona (22@)
+PSN-BCN-2008-0091;Berta Fernández Serra;Dona;3/8/1978;Comercial;Barcelona (22@)
+PSN-BCN-2017-0025;Raquel Roca Navarro;Dona;8/2/1989;R+D;Barcelona (22@)
+PSN-BCN-2015-0013;Hèctor Domènech Fernández;Home;24/4/1982;Comercial;Barcelona (22@)
+PSN-BCN-2016-0022;Miquel López Blanco;Home;19/10/1989;RH;Barcelona (22@)
+PSN-BCN-2008-0092;Sílvia Fernández Esteve;Dona;28/7/1965;Finances;Barcelona (22@)
+PSN-BCN-2008-0093;Jordi Costa Álvarez;Home;24/9/1963;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2013-0001;Christopher Sullivan;Home;25/12/1980;Comercial;Boston (MA)
+PSN-BCN-2017-0026;Patricia Martínez Hernández;Dona;28/2/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2014-0001;Connor Wilson;Home;24/7/1980;R+D;Boston (MA)
+PSN-BCN-2020-0010;Guillem Jiménez Planas;Home;6/10/1997;R+D;Granollers
+PSN-BCN-2008-0094;Pilar Ramírez Serrano;Dona;15/11/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0095;Jesús Martínez Molina;Home;6/11/1969;Comercial;Barcelona (22@)
+PSN-BCN-2014-0011;Pere Muñoz Serra;Home;30/5/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0023;Paula García Castells;Dona;1/2/1994;Sistemes;Barcelona (22@)
+PSN-BCN-2016-0023;Guillem Reig López;Home;27/11/1975;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0027;Bernat Moreno Ramírez;Home;26/11/1988;R+D;Granollers
+PSN-BCN-2008-0096;Raimon Vilanova Martínez;Home;9/5/1967;R+D;Granollers
+PSN-BCN-2008-0097;Bernat Moreno Martínez;Home;21/5/1964;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0010;Pere Marín González;Home;22/5/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0023;Manel López Martínez;Home;16/6/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0098;Olga Ortiz Pérez;Dona;15/11/1966;Comercial;Barcelona (22@)
+PSN-BOS-2017-0005;James Anderson;Home;21/12/1990;Finances;Boston (MA)
+PSN-BCN-2015-0014;Olga Reig Esteve;Dona;6/12/1983;R+D;Granollers
+PSN-BCN-2023-0005;Marina Ruiz Rubio;Dona;15/5/2000;R+D;Granollers
+PSN-BCN-2015-0015;Javier Torres Molina;Home;20/11/1988;Sistemes;Barcelona (22@)
+PSN-BCN-2021-0014;Joan Romero Serra;Home;16/11/1999;Sistemes;Barcelona (22@)
+PSN-BCN-2019-0024;Ramon Fernández Gómez;Home;27/2/1994;R+D;Granollers
+PSN-BCN-2016-0024;Eduard Hernández Puig;Home;7/10/1993;R+D;Granollers
+PSN-BCN-2018-0024;Andreu Bosch Delgado;Home;11/4/1984;R+D;Granollers
+PSN-BCN-2019-0025;Raimon Martín Molina;Home;19/8/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0012;Daniel Torres López;Home;19/4/1977;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0099;Lídia Muñoz Hernández;Dona;9/6/1963;Comercial;Barcelona (22@)
+PSN-BOS-2020-0002;William Anderson;Home;27/5/1997;Finances;Boston (MA)
+PSN-BCN-2008-0100;Roger Domínguez Martínez;Home;6/6/1966;R+D;Barcelona (22@)
+PSN-BCN-2017-0028;Marc Jiménez García;Home;30/6/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0029;Aina Muñoz Gómez;Dona;19/6/1987;Finances;Barcelona (22@)
+PSN-BOS-2008-0021;Chloe Taylor;Dona;21/4/1973;R+D;Boston (MA)
+PSN-BOS-2012-0004;Ethan Lee;Home;14/2/1972;Sistemes;Boston (MA)
+PSN-BCN-2008-0101;Lucía García Martín;Dona;23/1/1973;R+D;Granollers
+PSN-BOS-2008-0022;Leah Sullivan;Dona;20/3/1963;R+D;Boston (MA)
+PSN-BOS-2008-0023;Samantha Taylor;Dona;6/8/1972;R+D;Boston (MA)
+PSN-BCN-2015-0016;Bernat Hernández Morales;Home;15/1/1976;RH;Barcelona (22@)
+PSN-BCN-2021-0015;Andrea Navarro Romero;Dona;11/4/1994;Finances;Barcelona (22@)
+PSN-BCN-2008-0102;Ismael Rovira Batlle;Home;11/4/1975;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0025;Pere García Ruiz;Home;26/11/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0011;Xavier Moreno Costa;Home;19/11/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2012-0005;Sean Davis;Home;20/9/1979;Comercial;Boston (MA)
+PSN-BCN-2021-0016;Xavier Vallès Navarro;Home;3/3/1997;Sistemes;Barcelona (22@)
+PSN-BCN-2020-0012;Genís López Soler;Home;3/4/1996;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2024-0002;Hèctor Ferrer Rodríguez;Home;2/7/2003;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0010;Andrea Rodríguez Ramos;Dona;19/5/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0103;Rubén Serra Gómez;Home;6/11/1973;Sistemes;Barcelona (22@)
+PSN-BCN-2012-0022;Pere Jiménez Ortega;Home;8/9/1977;Sistemes;Barcelona (22@)
+PSN-BCN-2016-0026;Pau Muñoz Ortega;Home;1/12/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0013;Jordi Ramos Suárez;Home;23/10/1987;R+D;Granollers
+PSN-BCN-2008-0104;Antonio Ferrer Colomer;Home;29/7/1963;Finances;Barcelona (22@)
+PSN-BCN-2009-0011;Raimon Rodríguez Vallès;Home;25/10/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0025;Paula Martínez Iglesias;Dona;9/1/1988;Comercial;Barcelona (22@)
+PSN-BCN-2008-0105;Oriol Puig Camps;Home;21/2/1963;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0023;Àngels González Batlle;Dona;17/9/1980;R+D;Granollers
+PSN-BCN-2022-0006;Pilar López Ramos;Dona;6/8/2001;Comercial;Barcelona (22@)
+PSN-BCN-2008-0106;Joan Gómez Ferrer;Home;29/7/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0026;Àlex Ruiz Fernández;Home;9/7/1990;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0107;Alba Rubio Muñoz;Dona;19/3/1975;R+D;Granollers
+PSN-BCN-2008-0108;Hugo Martínez García;Home;21/1/1966;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0012;Carlota Rodríguez Hernández;Dona;3/12/1978;R+D;Granollers
+PSN-BCN-2020-0014;Lucía Marín Blanco;Dona;30/4/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0027;Aina Pérez Bosch;Dona;31/10/1980;Comercial;Barcelona (22@)
+PSN-BCN-2008-0109;Marta García Sánchez;Dona;4/2/1973;Comercial;Barcelona (22@)
+PSN-BCN-2010-0011;Marc Soler Bosch;Home;2/11/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0015;Xavier Arnau Serrano;Home;9/8/1988;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0016;Toni Álvarez Martínez;Home;26/9/1992;RH;Barcelona (22@)
+PSN-BCN-2019-0027;Àngels Serra García;Dona;18/9/1989;Sistemes;Barcelona (22@)
+PSN-BCN-2015-0017;Oriol Iglesias Moreno;Home;20/12/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0028;Quim Jiménez Puig;Home;26/10/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0013;Rafa Torres Hernández;Home;6/6/1978;Finances;Barcelona (22@)
+PSN-BCN-2008-0110;Àlex Molina Iglesias;Home;29/6/1961;R+D;Granollers
+PSN-BOS-2009-0002;Christopher Hall;Home;10/2/1972;R+D;Boston (MA)
+PSN-BCN-2008-0111;Carme Serrano López;Dona;23/10/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0030;Arnau López Vendrell;Home;14/9/1993;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0031;Quim Ferrer Delgado;Home;7/9/1985;Finances;Barcelona (22@)
+PSN-BOS-2016-0003;Christopher Johnson;Home;9/2/1987;R+D;Boston (MA)
+PSN-BCN-2019-0028;Genís Díaz Vila;Home;18/2/1988;R+D;Granollers
+PSN-BCN-2008-0112;Montserrat González Álvarez;Dona;24/6/1961;R+D;Granollers
+PSN-BOS-2014-0002;Tyler Murphy;Home;30/10/1986;RH;Boston (MA)
+PSN-BCN-2017-0032;Víctor Soler Vila;Home;19/11/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0011;Àngels Puig Ferrer;Dona;1/3/1987;R+D;Granollers
+PSN-BCN-2008-0113;Ismael Rodríguez Serra;Home;9/4/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0114;Carles Roca Ribas;Home;27/5/1970;Comercial;Barcelona (22@)
+PSN-BCN-2018-0026;Oriol Martínez Rubio;Home;18/5/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0027;Joan Suárez Delgado;Home;11/5/1991;Sistemes;Barcelona (22@)
+PSN-BOS-2020-0003;Abigail McCarthy;Dona;27/4/1991;Sistemes;Boston (MA)
+PSN-BCN-2016-0029;Oriol Rodríguez López;Home;23/10/1989;R+D;Granollers
+PSN-BCN-2009-0012;Albert Martín Serrano;Home;10/1/1973;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0115;Ainhoa Torres Jiménez;Dona;26/12/1961;Finances;Barcelona (22@)
+PSN-BCN-2017-0033;Rosa Jiménez Serra;Dona;26/5/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0017;Cristina Ramos Marín;Dona;21/7/1985;Finances;Barcelona (22@)
+PSN-BCN-2008-0116;Pau Martínez Gómez;Home;19/2/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0029;Quim Costa Serra;Home;4/6/1996;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2013-0002;Leah Jones;Dona;15/5/1975;RH;Boston (MA)
+PSN-BCN-2022-0007;Roc Jiménez Marín;Home;30/6/2002;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0014;Xavier Domínguez Blanco;Home;27/10/1971;Comercial;Barcelona (22@)
+PSN-BCN-2008-0117;Lídia Romero Blanco;Dona;15/10/1973;Comercial;Barcelona (22@)
+PSN-BOS-2016-0004;Anthony Martinez;Home;2/2/1994;Comercial;Boston (MA)
+PSN-BCN-2009-0013;Raquel Vila Costa;Dona;6/4/1980;RH;Barcelona (22@)
+PSN-BCN-2022-0008;Pilar Serrano García;Dona;5/7/1996;Finances;Barcelona (22@)
+PSN-BCN-2009-0014;Francesc Castells Serra;Home;23/12/1974;Comercial;Barcelona (22@)
+PSN-BCN-2008-0118;Àlex García Álvarez;Home;11/8/1964;R+D;Granollers
+PSN-BCN-2022-0009;Arnau Iglesias Ortiz;Home;19/10/1997;R+D;Granollers
+PSN-BCN-2014-0013;Enric González Arnau;Home;2/10/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0119;Pol Ferrer Muñoz;Home;9/2/1969;Sistemes;Barcelona (22@)
+PSN-BCN-2011-0015;Raquel Navarro Soler;Dona;17/2/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2016-0005;Daniel Wilson;Home;25/3/1979;R+D;Boston (MA)
+PSN-BCN-2009-0015;Ismael García Vázquez;Home;24/2/1970;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0120;Xavier Esteve García;Home;30/1/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0121;Maria Jiménez Delgado;Dona;8/1/1963;RH;Barcelona (22@)
+PSN-BCN-2012-0024;Manel Rodríguez Álvarez;Home;30/3/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0034;Albert Pérez Sánchez;Home;30/5/1987;R+D;Granollers
+PSN-BCN-2008-0122;Blanca Ribas Rovira;Dona;8/9/1972;Sistemes;Barcelona (22@)
+PSN-BCN-2020-0018;David Roca Sánchez;Home;5/1/1998;R+D;Granollers
+PSN-BCN-2008-0123;Anna Martín Ruiz;Dona;14/6/1978;R+D;Granollers
+PSN-BCN-2011-0016;Helena González Serrano;Dona;31/12/1977;R+D;Granollers
+PSN-BCN-2009-0016;Noa Gómez Soler;Dona;15/11/1975;R+D;Granollers
+PSN-BCN-2008-0124;Albert Navarro Puig;Home;4/1/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0017;Paula Rodríguez Serra;Dona;10/1/1977;R+D;Granollers
+PSN-BOS-2018-0002;Andrew Clark;Home;8/4/1989;Finances;Boston (MA)
+PSN-BCN-2008-0125;Daniel Muñoz Hernández;Home;3/11/1974;Comercial;Barcelona (22@)
+PSN-BOS-2014-0003;Ethan McCarthy;Home;2/7/1981;R+D;Boston (MA)
+PSN-BCN-2008-0126;Mateu Delgado Martín;Home;26/1/1961;Finances;Barcelona (22@)
+PSN-BOS-2016-0006;Nicholas Walsh;Home;14/11/1986;R+D;Boston (MA)
+PSN-BOS-2008-0024;Daniel Johnson;Home;8/12/1973;Finances;Boston (MA)
+PSN-BCN-2016-0030;David Arnau Soler;Home;4/4/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0035;Mateu Ferrer García;Home;30/6/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0127;Carles Costa Hernández;Home;17/10/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0012;Manel López Blanco;Home;29/1/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0030;Albert Ribas Suárez;Home;11/10/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0128;Clara López Pérez;Dona;11/2/1966;RH;Barcelona (22@)
+PSN-BCN-2017-0036;Laia García Álvarez;Dona;16/2/1990;R+D;Granollers
+PSN-BCN-2010-0013;Albert Gil Soler;Home;21/1/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0037;Gerard Navarro Torres;Home;4/9/1978;R+D;Granollers
+PSN-BOS-2015-0003;Amelia White;Dona;16/8/1990;RH;Boston (MA)
+PSN-BOS-2016-0007;Christopher Rivera;Home;25/5/1989;Sistemes;Boston (MA)
+PSN-BOS-2015-0004;Samuel Sullivan;Home;22/7/1988;R+D;Boston (MA)
+PSN-BCN-2011-0017;Irene Martínez Ribas;Dona;26/12/1961;Finances;Barcelona (22@)
+PSN-BCN-2008-0129;Ainhoa Muñoz Vázquez;Dona;17/7/1964;RH;Barcelona (22@)
+PSN-BCN-2016-0031;Eduard Ferrer Roca;Home;30/1/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0130;Ainhoa Martín Raventós;Dona;11/1/1967;Comercial;Barcelona (22@)
+PSN-BOS-2020-0004;Logan Murphy;Home;21/5/1995;Comercial;Boston (MA)
+PSN-BCN-2017-0038;Judith Fernández Riera;Dona;21/12/1986;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0131;Laura Suárez Serrano;Dona;6/9/1963;R+D;Granollers
+PSN-BCN-2010-0014;Andreu Vilanova López;Home;7/10/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0010;Mar Moreno López;Dona;20/6/1996;Finances;Barcelona (22@)
+PSN-BCN-2019-0031;Adrià García Fernández;Home;26/5/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0132;Arnau Ortiz Álvarez;Home;5/10/1966;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2024-0003;Javier Rovira Gómez;Home;7/4/2003;Comercial;Barcelona (22@)
+PSN-BCN-2008-0133;Genís Molina Sánchez;Home;11/1/1965;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0039;Enric Esteve Duran;Home;10/11/1987;Finances;Barcelona (22@)
+PSN-BCN-2013-0012;Jana Ribas Gil;Dona;8/2/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0134;Raimon Martínez Castells;Home;14/11/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0135;Raimon López Ros;Home;20/1/1965;Comercial;Barcelona (22@)
+PSN-BCN-2023-0006;Ricard Ferrer Vázquez;Home;8/6/2003;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0136;Marta Moreno Blanco;Dona;1/5/1975;Sistemes;Barcelona (22@)
+PSN-BCN-2014-0014;Antonio Díaz Grau;Home;11/1/1978;Sistemes;Barcelona (22@)
+PSN-BCN-2021-0017;Bernat Jiménez Ferrer;Home;24/8/1997;R+D;Granollers
+PSN-BCN-2008-0137;Roc Molina Suárez;Home;2/12/1970;R+D;Granollers
+PSN-BCN-2008-0138;Álvaro Rovira Rodríguez;Home;15/5/1965;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0139;Jordi Planas González;Home;10/7/1975;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0140;Ainhoa Planas Castells;Dona;26/6/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0018;Blanca Soler Romero;Dona;19/10/1964;R+D;Granollers
+PSN-BCN-2012-0025;Daniel Sánchez Rovira;Home;1/1/1970;Comercial;Barcelona (22@)
+PSN-BCN-2019-0032;Inés Torres Ortiz;Dona;3/1/1990;RH;Barcelona (22@)
+PSN-BCN-2024-0004;Ricard Ros Costa;Home;26/11/2002;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0141;Pere Ribas Roca;Home;21/9/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0019;Mireia Muñoz González;Dona;4/2/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2015-0005;Henry Kelly;Home;11/11/1985;R+D;Boston (MA)
+PSN-BCN-2016-0032;Rubén Díaz Serrano;Home;9/9/1985;Sistemes;Barcelona (22@)
+PSN-BCN-2014-0015;Blanca Ruiz Romero;Dona;4/11/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0040;Rubén Fernández Ribas;Home;30/1/1980;Finances;Barcelona (22@)
+PSN-BCN-2014-0016;Ainhoa Serra Sánchez;Dona;26/8/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0142;Jesús Ortiz Ferrer;Home;2/2/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2015-0006;Andrew Hall;Home;28/1/1987;Comercial;Boston (MA)
+PSN-BOS-2019-0007;Matthew Taylor;Home;20/1/1991;Sistemes;Boston (MA)
+PSN-BCN-2014-0017;Miquel García González;Home;5/4/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0011;Pere Rubio Navarro;Home;20/4/2001;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0018;Arnau Martínez Torres;Home;19/8/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0033;Sergi López Moreno;Home;10/8/1989;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0019;Cristina Ortiz Rodríguez;Dona;9/3/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0034;Xavier Ruiz López;Home;26/4/1985;R+D;Granollers
+PSN-BCN-2018-0028;Hèctor Hernández Martínez;Home;4/9/1991;Comercial;Barcelona (22@)
+PSN-BOS-2008-0025;Hannah Davis;Dona;7/8/1969;Finances;Boston (MA)
+PSN-BCN-2014-0018;Nil Jiménez Ruiz;Home;26/11/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2018-0003;Jack Wilson;Home;30/4/1995;Comercial;Boston (MA)
+PSN-BOS-2015-0007;Abigail Brown;Dona;20/8/1976;R+D;Boston (MA)
+PSN-BCN-2010-0015;Andrea García Martínez;Dona;1/12/1979;R+D;Granollers
+PSN-BCN-2016-0035;Víctor Hernández Prat;Home;20/8/1981;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0041;Marta Ferrer Blanco;Dona;21/10/1987;R+D;Granollers
+PSN-BCN-2008-0143;Miquel Rubio Ramos;Home;22/3/1965;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0018;Nora Navarro Domínguez;Dona;27/7/1975;RH;Barcelona (22@)
+PSN-BCN-2008-0144;Berta Gómez Pérez;Dona;10/9/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0019;Gerard Rovira Moreno;Home;25/2/1995;Comercial;Barcelona (22@)
+PSN-BCN-2021-0020;Antonio Prat Soler;Home;1/6/1998;Comercial;Barcelona (22@)
+PSN-BCN-2012-0026;Judith Ferrer Martínez;Dona;11/5/1977;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0020;Jordi García Navarro;Home;5/10/1975;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0019;Guillem Riera Colomer;Home;3/8/1983;Sistemes;Barcelona (22@)
+PSN-BOS-2008-0026;Jack Murphy;Home;31/1/1968;R+D;Boston (MA)
+PSN-BCN-2008-0145;Hugo González De la Fuente;Home;9/3/1966;R+D;Barcelona (22@)
+PSN-BCN-2013-0013;Toni González Torres;Home;20/3/1982;Finances;Barcelona (22@)
+PSN-BCN-2008-0146;Lídia Vázquez Ortiz;Dona;2/3/1974;RH;Barcelona (22@)
+PSN-BCN-2023-0007;Irene García Ruiz;Dona;22/2/2002;R+D;Barcelona (22@)
+PSN-BCN-2008-0147;Àngels Álvarez González;Dona;29/8/1965;R+D;Granollers
+PSN-BCN-2008-0148;Hèctor Suárez Morales;Home;4/10/1974;R+D;Granollers
+PSN-BCN-2008-0149;Sonia Ramírez Rodríguez;Dona;19/10/1964;Sistemes;Barcelona (22@)
+PSN-BCN-2010-0016;Manel Romero Molina;Home;25/3/1981;R+D;Granollers
+PSN-BCN-2014-0020;Nora Puig Sánchez;Dona;15/11/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0012;Gerard Fernández García;Home;26/12/1998;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0150;Adrià López Jiménez;Home;3/9/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0014;Nil Pérez Ramírez;Home;29/9/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0151;Pere López Pérez;Home;30/5/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0029;Mireia Pérez Muñoz;Dona;15/6/1982;Comercial;Barcelona (22@)
+PSN-BOS-2019-0008;Leah Kelly;Dona;20/10/1988;Comercial;Boston (MA)
+PSN-BCN-2019-0033;Carles Gómez Vázquez;Home;22/6/1995;R+D;Granollers
+PSN-BCN-2008-0152;Ferran Rodríguez Planas;Home;28/11/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2019-0009;Sean Anderson;Home;24/6/1987;Sistemes;Boston (MA)
+PSN-BOS-2016-0008;Claire White;Dona;6/7/1986;Comercial;Boston (MA)
+PSN-BOS-2008-0027;Alexander McCarthy;Home;21/12/1966;R+D;Boston (MA)
+PSN-BCN-2008-0153;Gemma Riera Fernández;Dona;26/4/1967;RH;Barcelona (22@)
+PSN-BCN-2008-0154;Jesús Ferrer Iglesias;Home;10/9/1963;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0021;Guillem Esteve Puig;Home;8/6/1981;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0020;Nora Martín Vila;Dona;7/7/1996;R+D;Granollers
+PSN-BCN-2009-0019;Genís García Ortega;Home;24/11/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0030;Carles Martín Sánchez;Home;10/9/1988;Finances;Barcelona (22@)
+PSN-BCN-2012-0027;Adrià Iglesias Colomer;Home;17/11/1975;Comercial;Barcelona (22@)
+PSN-BCN-2014-0022;Miquel Iglesias García;Home;2/6/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0023;Hèctor Planas Hernández;Home;15/5/1979;Comercial;Barcelona (22@)
+PSN-BCN-2010-0017;Rafa Serrano Ortega;Home;8/2/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0034;Eva Soler Marín;Dona;10/11/1992;Sistemes;Barcelona (22@)
+PSN-BCN-2017-0042;Ferran Blanco Serrano;Home;18/6/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0155;Manel Castro Costa;Home;24/8/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0021;Pau Romero Ramírez;Home;27/7/1991;Sistemes;Barcelona (22@)
+PSN-BCN-2021-0021;Aina Rubio Vila;Dona;4/9/1997;R+D;Granollers
+PSN-BCN-2015-0018;Pau Romero Rodríguez;Home;3/5/1982;R+D;Granollers
+PSN-BOS-2021-0003;Elizabeth Jones;Dona;6/4/1995;Sistemes;Boston (MA)
+PSN-BOS-2015-0008;Sophie Anderson;Dona;16/6/1979;R+D;Boston (MA)
+PSN-BCN-2017-0043;Maria Rovira García;Dona;25/3/1984;R+D;Granollers
+PSN-BCN-2009-0020;Guillem Prat González;Home;18/4/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0156;Ariadna Domínguez García;Dona;8/10/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0028;Nicholas Martinez;Home;19/4/1967;R+D;Boston (MA)
+PSN-BCN-2015-0019;Daniel Delgado Puig;Home;23/8/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0036;Víctor Puig Ortega;Home;8/2/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0031;Elisenda Martínez Bosch;Dona;18/4/1988;RH;Barcelona (22@)
+PSN-BCN-2008-0157;Rubén Serra Navarro;Home;4/10/1965;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0028;Guillem González Pérez;Home;25/9/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2012-0006;Hannah Murphy;Dona;24/10/1980;Comercial;Boston (MA)
+PSN-BCN-2017-0044;Nora Ruiz Fernández;Dona;6/12/1988;RH;Barcelona (22@)
+PSN-BCN-2014-0024;Carla Grau Serra;Dona;7/4/1981;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0158;Roc Colomer Álvarez;Home;23/2/1965;R+D;Granollers
+PSN-BCN-2015-0020;Patricia Ribas Pérez;Dona;4/6/1977;R+D;Granollers
+PSN-BCN-2008-0159;Patricia Bosch López;Dona;18/11/1964;R+D;Barcelona (22@)
+PSN-BOS-2014-0004;Matthew Murphy;Home;26/12/1986;R+D;Boston (MA)
+PSN-BCN-2017-0045;Enric Serra López;Home;15/9/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0029;Logan Hall;Home;4/11/1966;Finances;Boston (MA)
+PSN-BCN-2018-0032;Raimon Navarro Pérez;Home;30/9/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0160;Júlia Rodríguez Fernández;Dona;22/3/1969;R+D;Granollers
+PSN-BCN-2019-0035;Oriol Martínez Ortiz;Home;7/3/1990;Sistemes;Barcelona (22@)
+PSN-BCN-2015-0021;Daniel Serrano González;Home;27/4/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0022;Mar Díaz Ruiz;Dona;10/8/1990;R+D;Granollers
+PSN-BCN-2008-0161;Víctor Prat Álvarez;Home;1/7/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0013;Rubén Castro González;Home;7/12/1998;R+D;Granollers
+PSN-BCN-2008-0162;Rubén López Gómez;Home;25/8/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0014;Carme Vázquez Gómez;Dona;1/9/1996;Finances;Barcelona (22@)
+PSN-BCN-2017-0046;Clara Muñoz Serra;Dona;7/8/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0023;Antonio Ferrer Marín;Home;16/4/1986;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0025;Sonia Raventós Soler;Dona;1/11/1985;R+D;Granollers
+PSN-BCN-2008-0163;Xavier López Duran;Home;6/5/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0033;Jana Vila Marín;Dona;10/5/1985;R+D;Granollers
+PSN-BOS-2015-0009;Olivia Lee;Dona;14/9/1980;Comercial;Boston (MA)
+PSN-BCN-2010-0018;Sergi González Marín;Home;14/2/1966;R+D;Granollers
+PSN-BOS-2008-0030;Victoria Davis;Dona;22/11/1972;Sistemes;Boston (MA)
+PSN-BCN-2019-0036;Noa Díaz Rovira;Dona;3/6/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0031;Chloe Hall;Dona;30/9/1961;R+D;Boston (MA)
+PSN-BCN-2015-0022;Albert Torres Ortega;Home;8/10/1987;R+D;Granollers
+PSN-BCN-2008-0164;Francesc Rodríguez Sánchez;Home;27/4/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0165;Lucía Bosch López;Dona;27/1/1966;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0166;Antonio Ramírez Marín;Home;30/11/1966;Sistemes;Barcelona (22@)
+PSN-BOS-2011-0002;James Sullivan;Home;20/11/1978;R+D;Boston (MA)
+PSN-BCN-2008-0167;Nil Jiménez Martínez;Home;6/1/1966;R+D;Granollers
+PSN-BCN-2020-0024;Carlos Vilanova López;Home;12/2/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0168;Carla Ortega Camps;Dona;10/1/1974;Comercial;Barcelona (22@)
+PSN-BCN-2016-0037;Rosa González Ferrer;Dona;9/1/1980;Comercial;Barcelona (22@)
+PSN-BCN-2008-0169;David Ortega Delgado;Home;10/11/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0019;Laura Jiménez Soler;Dona;22/7/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0015;Ismael Rodríguez Sánchez;Home;16/2/2001;R+D;Granollers
+PSN-BCN-2012-0029;Andreu Torres Bosch;Home;1/8/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0170;Gerard Fernández Martínez;Home;19/6/1962;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0022;Ricard Roca Hernández;Home;4/1/1993;R+D;Barcelona (22@)
+PSN-BCN-2013-0015;Miquel Blanco Ortiz;Home;5/11/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0032;Elizabeth Anderson;Dona;27/4/1974;Comercial;Boston (MA)
+PSN-BCN-2013-0016;Àlex García Soler;Home;28/12/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0033;Samuel Johnson;Home;17/3/1967;RH;Boston (MA)
+PSN-BCN-2012-0030;Raimon Ortiz Delgado;Home;28/5/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0034;Sophie Kelly;Dona;20/1/1972;Comercial;Boston (MA)
+PSN-BOS-2008-0035;William Murphy;Home;28/12/1964;Finances;Boston (MA)
+PSN-BCN-2014-0026;Aina López Pérez;Dona;19/8/1986;Finances;Barcelona (22@)
+PSN-BCN-2014-0027;Àngels Ramos Rodríguez;Dona;4/12/1981;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0171;Roc Prat Ribas;Home;29/5/1964;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0172;Nora Martínez Moreno;Dona;18/4/1975;Comercial;Barcelona (22@)
+PSN-BOS-2019-0010;Avery Miller;Dona;18/7/1996;Finances;Boston (MA)
+PSN-BCN-2008-0173;Joan Ortiz Martínez;Home;17/9/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2015-0023;Marc Puig Ribas;Home;28/10/1977;RH;Barcelona (22@)
+PSN-BOS-2008-0036;Joshua Lee;Home;25/2/1975;R+D;Boston (MA)
+PSN-BCN-2017-0047;Antonio Pérez Riera;Home;17/10/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0025;Sonia Ruiz López;Dona;29/11/1998;Finances;Barcelona (22@)
+PSN-BCN-2018-0034;Andreu Martín Díaz;Home;23/7/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0035;Bernat Molina Serra;Home;6/5/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0026;Paula Soler Fernández;Dona;20/5/1991;R+D;Granollers
+PSN-BCN-2017-0048;Irene Martín Riera;Dona;3/4/1982;Comercial;Barcelona (22@)
+PSN-BCN-2020-0027;Francesc Romero Molina;Home;19/3/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0174;Oriol Ruiz Puig;Home;24/2/1962;Sistemes;Barcelona (22@)
+PSN-BOS-2014-0005;Ethan Davis;Home;31/7/1980;Sistemes;Boston (MA)
+PSN-BCN-2019-0037;Adrià Hernández Martínez;Home;30/3/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0037;Daniel Sullivan;Home;9/2/1967;Sistemes;Boston (MA)
+PSN-BCN-2015-0024;Eduard Ortega Ramírez;Home;19/12/1977;R+D;Granollers
+PSN-BOS-2018-0004;Victoria Clark;Dona;6/2/1993;R+D;Boston (MA)
+PSN-BCN-2018-0036;Guillem Serrano López;Home;15/4/1988;Comercial;Barcelona (22@)
+PSN-BCN-2011-0021;Mateu Castells Puig;Home;20/12/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0175;Toni Marín Roca;Home;22/12/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0023;Gerard Costa Torres;Home;19/8/1999;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0024;Gerard Ferrer Bosch;Home;5/3/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0037;Antonio Molina Planas;Home;11/4/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0028;Arnau Rodríguez Torres;Home;9/10/1998;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0038;Jacob Kelly;Home;16/12/1970;Sistemes;Boston (MA)
+PSN-BCN-2008-0176;Marc Suárez Serra;Home;18/4/1971;R+D;Granollers
+PSN-BCN-2023-0008;Lídia Vázquez Martín;Dona;31/3/2003;R+D;Granollers
+PSN-BCN-2018-0038;Hugo Álvarez Molina;Home;9/7/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0039;Sonia Soler Rodríguez;Dona;4/9/1993;Finances;Barcelona (22@)
+PSN-BCN-2008-0177;Beatriz Rodríguez Pérez;Dona;15/11/1964;Comercial;Barcelona (22@)
+PSN-BCN-2010-0020;Olga Vázquez Gómez;Dona;25/2/1975;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0038;Ferran Marín Ribas;Home;27/1/1997;Finances;Barcelona (22@)
+PSN-BCN-2013-0017;Pau Vila Ramírez;Home;16/9/1981;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0178;Quim Díaz Puig;Home;22/7/1973;Comercial;Barcelona (22@)
+PSN-BCN-2008-0179;Pol Molina López;Home;2/1/1975;Comercial;Barcelona (22@)
+PSN-BOS-2020-0005;Hannah Miller;Dona;5/9/1994;RH;Boston (MA)
+PSN-BCN-2008-0180;Carles Suárez Serrano;Home;4/12/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0025;David Fernández Vila;Home;6/7/2000;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2015-0025;Ismael Riera González;Home;30/9/1989;Comercial;Barcelona (22@)
+PSN-BCN-2008-0181;Elena Fernández González;Dona;22/7/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2016-0009;Scarlett Murphy;Dona;1/4/1976;Finances;Boston (MA)
+PSN-BOS-2013-0003;Audrey Williams;Dona;26/8/1981;RH;Boston (MA)
+PSN-BCN-2008-0182;Carlos Moreno Martín;Home;31/3/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0038;Marina Vila Álvarez;Dona;15/12/1990;Sistemes;Barcelona (22@)
+PSN-BOS-2008-0039;Patrick Thompson;Home;6/2/1972;Comercial;Boston (MA)
+PSN-BCN-2011-0022;Arnau García Castro;Home;17/9/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0031;Toni Fernández García;Home;31/10/1979;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0049;Irene Sánchez González;Dona;22/7/1979;Finances;Barcelona (22@)
+PSN-BOS-2010-0002;Christopher Rodriguez;Home;19/11/1976;R+D;Boston (MA)
+PSN-BCN-2008-0183;Berta Álvarez Riera;Dona;7/11/1974;R+D;Granollers
+PSN-BCN-2015-0026;Antonio Pérez Batlle;Home;17/11/1980;R+D;Granollers
+PSN-BCN-2008-0184;Javier Esteve Muñoz;Home;8/4/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0026;Eduard Rodríguez Díaz;Home;25/7/1990;R+D;Granollers
+PSN-BCN-2009-0021;Quim Vila Duran;Home;9/4/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0185;Jordi Serra López;Home;17/11/1977;R+D;Granollers
+PSN-BCN-2009-0022;Ferran Martínez Sánchez;Home;15/3/1971;Finances;Barcelona (22@)
+PSN-BCN-2018-0040;Gemma Hernández Ferrer;Dona;29/11/1990;Comercial;Barcelona (22@)
+PSN-BCN-2016-0039;Helena Font González;Dona;20/8/1980;R+D;Granollers
+PSN-BCN-2008-0186;Laia Raventós Vila;Dona;5/7/1965;R+D;Granollers
+PSN-BCN-2008-0187;Àngels Gómez Serrano;Dona;16/1/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0018;Mateu Domènech Romero;Home;8/11/1972;R+D;Barcelona (22@)
+PSN-BCN-2016-0040;Cristina Rovira Vila;Dona;24/4/1986;Comercial;Barcelona (22@)
+PSN-BOS-2018-0005;Jonathan Miller;Home;17/2/1986;R+D;Boston (MA)
+PSN-BCN-2009-0023;Marina Romero Martínez;Dona;28/5/1970;R+D;Granollers
+PSN-BCN-2020-0029;Laia Domínguez Domènech;Dona;2/2/1996;RH;Barcelona (22@)
+PSN-BCN-2008-0188;Eduard Rodríguez Serra;Home;19/3/1963;Sistemes;Barcelona (22@)
+PSN-BCN-2023-0009;Àngels Raventós Ribas;Dona;6/1/2001;R+D;Granollers
+PSN-BOS-2008-0040;Amelia Johnson;Dona;10/2/1975;RH;Boston (MA)
+PSN-BCN-2008-0189;Ricard Álvarez González;Home;1/11/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2023-0010;Alba Ros García;Dona;24/12/2002;Comercial;Barcelona (22@)
+PSN-BCN-2008-0190;Xavier López García;Home;19/6/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0039;Francesc Ortega Gómez;Home;22/11/1988;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0030;Genís Sánchez Gómez;Home;24/10/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2020-0031;José Arnau Batlle;Home;14/6/1996;R+D;Barcelona (22@)
+PSN-BCN-2023-0011;Guillem Hernández Rovira;Home;15/11/2002;R+D;Granollers
+PSN-BCN-2020-0032;Pau Iglesias Colomer;Home;15/7/1991;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0191;Sergi Font Navarro;Home;6/4/1973;R+D;Granollers
+PSN-BCN-2010-0021;Alba Martín Vázquez;Dona;17/7/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2024-0005;Mireia Vilanova Domínguez;Dona;6/3/2003;R+D;Granollers
+PSN-BCN-2018-0041;Hugo Castro Costa;Home;28/10/1995;R+D;Granollers
+PSN-BCN-2013-0019;Anna López Díaz;Dona;29/8/1981;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0192;Ferran Puig Rovira;Home;1/1/1967;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0193;Nora Arnau Duran;Dona;19/8/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0016;Bernat Muñoz Gómez;Home;5/8/1999;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0194;Teresa Vila Romero;Dona;3/8/1971;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0020;Xavier Arnau Vilanova;Home;5/5/1981;R+D;Granollers
+PSN-BCN-2019-0040;Olga García Rubio;Dona;24/1/1988;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0022;Beatriz Ros Rovira;Dona;25/12/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0023;Maria Serra Castells;Dona;15/11/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0024;Nora Domínguez Ruiz;Dona;9/7/1975;RH;Barcelona (22@)
+PSN-BOS-2008-0041;Samantha Rodriguez;Dona;10/5/1971;RH;Boston (MA)
+PSN-BOS-2008-0042;Joshua Jones;Home;19/7/1970;Finances;Boston (MA)
+PSN-BCN-2014-0028;Judith Font Puig;Dona;6/12/1978;RH;Barcelona (22@)
+PSN-BCN-2018-0042;Guillem Molina Ruiz;Home;7/2/1980;R+D;Granollers
+PSN-BCN-2008-0195;Oriol Martínez García;Home;25/10/1960;R+D;Granollers
+PSN-BCN-2017-0050;Daniel Vila Ramírez;Home;16/4/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2015-0027;Mateu Castells Soler;Home;29/1/1977;Comercial;Barcelona (22@)
+PSN-BCN-2008-0196;Miquel García Muñoz;Home;29/7/1971;Comercial;Barcelona (22@)
+PSN-BCN-2013-0021;Pilar Castro Font;Dona;25/8/1975;Comercial;Barcelona (22@)
+PSN-BCN-2008-0197;Albert Puig Ruiz;Home;10/9/1960;Finances;Barcelona (22@)
+PSN-BOS-2013-0004;Daniel Martin;Home;2/9/1976;R+D;Boston (MA)
+PSN-BOS-2008-0043;William McCarthy;Home;3/6/1969;Finances;Boston (MA)
+PSN-BCN-2008-0198;Patricia González Riera;Dona;1/10/1971;Comercial;Barcelona (22@)
+PSN-BCN-2021-0027;Carme Torres Grau;Dona;21/4/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0041;Gerard Vila Riera;Home;10/8/1985;Comercial;Barcelona (22@)
+PSN-BCN-2014-0029;Pau Delgado Moreno;Home;8/3/1976;Comercial;Barcelona (22@)
+PSN-BCN-2008-0199;Carles Molina Vázquez;Home;25/12/1968;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0024;Ariadna Ortiz Castells;Dona;24/4/1979;RH;Barcelona (22@)
+PSN-BCN-2014-0030;Oriol Ortega Rovira;Home;30/10/1987;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0200;José Domínguez Arnau;Home;17/3/1972;Comercial;Barcelona (22@)
+PSN-BCN-2011-0023;Quim Díaz Suárez;Home;10/7/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0024;Nora Esteve Rodríguez;Dona;4/7/1970;R+D;Granollers
+PSN-BOS-2021-0004;Jacob Murphy;Home;29/12/1999;R+D;Boston (MA)
+PSN-BCN-2008-0201;Rosa Serra Ortega;Dona;3/11/1959;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0041;Genís Romero García;Home;14/4/1996;Sistemes;Barcelona (22@)
+PSN-BCN-2018-0043;Paula Ramírez Grau;Dona;20/10/1982;R+D;Granollers
+PSN-BCN-2008-0202;Andrea Álvarez Hernández;Dona;5/10/1969;R+D;Granollers
+PSN-BCN-2014-0031;Àlex Navarro Hernández;Home;3/1/1978;RH;Barcelona (22@)
+PSN-BCN-2019-0042;Andreu Sánchez Torres;Home;8/8/1987;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0044;Carme Fernández Serra;Dona;31/8/1996;R+D;Granollers
+PSN-BCN-2018-0045;Carles López Ruiz;Home;15/12/1988;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0025;Elisenda Bosch Gómez;Dona;2/8/1976;Comercial;Barcelona (22@)
+PSN-BCN-2009-0026;Elena Vendrell Riera;Dona;28/4/1973;Comercial;Barcelona (22@)
+PSN-BCN-2008-0203;Manel Fernández Domènech;Home;18/8/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0051;Hugo Moreno Gómez;Home;3/4/1993;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0204;Olga Rodríguez Costa;Dona;29/10/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0042;Joan Sánchez Font;Home;21/7/1990;R+D;Granollers
+PSN-BCN-2014-0032;Nil Muñoz Sánchez;Home;27/12/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0033;Tània Font Sánchez;Dona;21/9/1979;RH;Barcelona (22@)
+PSN-BCN-2020-0033;Núria Álvarez Roca;Dona;15/6/1997;R+D;Barcelona (22@)
+PSN-BCN-2008-0205;Mateu Domènech González;Home;19/9/1971;R+D;Granollers
+PSN-BCN-2017-0052;Daniel Ramos Riera;Home;9/6/1990;Comercial;Barcelona (22@)
+PSN-BCN-2013-0022;Oriol Díaz Delgado;Home;1/4/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2016-0010;Joshua Kelly;Home;3/8/1982;Finances;Boston (MA)
+PSN-BCN-2009-0027;Jana Torres Delgado;Dona;18/3/1975;RH;Barcelona (22@)
+PSN-BCN-2011-0025;Tània Delgado Vila;Dona;28/8/1969;RH;Barcelona (22@)
+PSN-BOS-2010-0003;Abigail Miller;Dona;9/9/1974;Sistemes;Boston (MA)
+PSN-BCN-2015-0028;Inés Serra Hernández;Dona;22/10/1991;R+D;Granollers
+PSN-BCN-2021-0028;Bernat Rovira Puig;Home;16/6/1997;Comercial;Barcelona (22@)
+PSN-BCN-2022-0017;José Serra García;Home;10/4/2001;Comercial;Barcelona (22@)
+PSN-BCN-2023-0012;Daniel Costa Ortiz;Home;1/11/2002;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0053;Roc Gómez Puig;Home;25/2/1991;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2015-0029;Francesc Moreno Martín;Home;28/8/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0029;Guillem Romero Martín;Home;10/6/1996;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0046;Blanca Ramos Gómez;Dona;5/2/1990;R+D;Granollers
+PSN-BCN-2008-0206;Oriol Pérez Fernández;Home;19/11/1961;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2022-0002;Michael Martin;Home;20/1/2000;Finances;Boston (MA)
+PSN-BCN-2012-0032;Genís Iglesias García;Home;15/9/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0043;Eduard Fernández Sánchez;Home;22/8/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0207;Carme García Rubio;Dona;3/7/1974;R+D;Granollers
+PSN-BCN-2011-0026;Rosa Rodríguez Costa;Dona;23/8/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0027;Marta Riera Pérez;Dona;6/7/1984;Finances;Barcelona (22@)
+PSN-BCN-2015-0030;Laura Jiménez Morales;Dona;30/5/1985;R+D;Barcelona (22@)
+PSN-BOS-2008-0044;Leah Williams;Dona;25/2/1974;Comercial;Boston (MA)
+PSN-BCN-2008-0208;Hugo Batlle Rodríguez;Home;17/11/1975;R+D;Barcelona (22@)
+PSN-BOS-2014-0006;Henry Martinez;Home;6/4/1979;Comercial;Boston (MA)
+PSN-BOS-2019-0011;Jonathan Clark;Home;28/6/1995;Comercial;Boston (MA)
+PSN-BCN-2018-0047;Toni Costa Domènech;Home;1/11/1992;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0209;Mireia Díaz Álvarez;Dona;6/12/1974;RH;Barcelona (22@)
+PSN-BCN-2021-0030;Xavier Fernández Domínguez;Home;22/9/1996;Comercial;Barcelona (22@)
+PSN-BOS-2022-0003;Joseph Brown;Home;6/6/1996;Comercial;Boston (MA)
+PSN-BCN-2013-0023;Carlos Soler Rodríguez;Home;26/9/1979;Sistemes;Barcelona (22@)
+PSN-BCN-2011-0028;Mireia Martínez Martín;Dona;18/5/1976;Comercial;Barcelona (22@)
+PSN-BCN-2021-0031;Carlos Riera Martínez;Home;22/6/1995;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0054;Clara Torres Ruiz;Dona;16/8/1980;R+D;Granollers
+PSN-BOS-2020-0006;Thomas Martin;Home;24/11/1996;R+D;Boston (MA)
+PSN-BCN-2021-0032;Mireia Pérez Domínguez;Dona;27/11/1997;R+D;Granollers
+PSN-BCN-2020-0034;Carles Domènech González;Home;22/6/1989;R+D;Granollers
+PSN-BCN-2012-0033;Daniel Gil Sánchez;Home;16/2/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0028;Jaume Suárez Díaz;Home;14/11/1974;R+D;Granollers
+PSN-BOS-2017-0006;Connor Kelly;Home;9/3/1991;Sistemes;Boston (MA)
+PSN-BCN-2016-0044;Laura Marín Gil;Dona;27/6/1988;R+D;Granollers
+PSN-BCN-2011-0029;Judith Colomer Domènech;Dona;16/4/1983;Sistemes;Barcelona (22@)
+PSN-BCN-2012-0034;Patricia Sánchez Romero;Dona;3/7/1980;R+D;Granollers
+PSN-BCN-2011-0030;Marta Delgado Romero;Dona;29/1/1972;RH;Barcelona (22@)
+PSN-BCN-2008-0210;Joan Martínez Vázquez;Home;11/10/1974;R+D;Barcelona (22@)
+PSN-BCN-2014-0034;Carla Rodríguez Hernández;Dona;15/1/1983;Comercial;Barcelona (22@)
+PSN-BCN-2020-0035;Ricard Rovira Riera;Home;18/10/1990;Comercial;Barcelona (22@)
+PSN-BOS-2020-0007;Sophie Davis;Dona;28/11/1998;RH;Boston (MA)
+PSN-BCN-2008-0211;Joan Sánchez Pérez;Home;22/6/1972;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2022-0018;Marc Domínguez Gil;Home;9/4/2000;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0031;Pol Martínez Fernández;Home;16/10/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2023-0013;Carlota García Ferrer;Dona;19/2/2003;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0212;Anna Ortiz Hernández;Dona;10/10/1963;R+D;Barcelona (22@)
+PSN-BCN-2009-0029;Joan Muñoz Vázquez;Home;30/4/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2012-0035;Carlota Ortiz Jordà;Dona;7/4/1976;Comercial;Barcelona (22@)
+PSN-BOS-2008-0045;Dylan Johnson;Home;1/2/1962;R+D;Boston (MA)
+PSN-BCN-2014-0035;Ramon Marín Martínez;Home;11/7/1977;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0213;Quim Marín Martínez;Home;28/2/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2015-0010;Zoey Murphy;Dona;25/9/1976;Comercial;Boston (MA)
+PSN-BCN-2008-0214;Jordi Ros Sánchez;Home;17/7/1965;Comercial;Barcelona (22@)
+PSN-BCN-2011-0032;Noa García Moreno;Dona;27/11/1970;R+D;Granollers
+PSN-BCN-2008-0215;Arnau Ramírez Rodríguez;Home;15/10/1969;Sistemes;Barcelona (22@)
+PSN-BCN-2016-0045;Jesús Jiménez Gómez;Home;22/1/1986;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0030;Jordi Romero Sánchez;Home;7/5/1965;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0048;Carlos Gil Fernández;Home;7/2/1979;R+D;Granollers
+PSN-BCN-2008-0216;Francesc García Ortega;Home;8/2/1963;Comercial;Barcelona (22@)
+PSN-BCN-2008-0217;Judith García Costa;Dona;26/2/1969;R+D;Granollers
+PSN-BCN-2018-0049;Antonio Rodríguez Hernández;Home;16/12/1990;Sistemes;Barcelona (22@)
+PSN-BCN-2019-0043;Xavier Bosch Domínguez;Home;4/10/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0046;Chloe Jones;Dona;28/11/1971;R+D;Boston (MA)
+PSN-BOS-2008-0047;Sean Lee;Home;22/12/1972;Sistemes;Boston (MA)
+PSN-BOS-2015-0011;Dylan Thompson;Home;14/11/1984;R+D;Boston (MA)
+PSN-BCN-2015-0031;Adrià Sánchez Jiménez;Home;11/1/1979;R+D;Barcelona (22@)
+PSN-BCN-2020-0036;José Ortega Suárez;Home;24/10/1991;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2016-0046;Ferran Fernández Martín;Home;28/10/1989;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0218;Júlia Gómez Riera;Dona;8/1/1965;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0036;Antonio Martín Gómez;Home;7/12/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0219;Daniel López Martínez;Home;3/5/1969;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0044;Albert Vila Moreno;Home;31/10/1993;R+D;Barcelona (22@)
+PSN-BCN-2024-0006;Berta Gómez Vendrell;Dona;28/10/2002;Comercial;Barcelona (22@)
+PSN-BCN-2008-0220;Clara García Castro;Dona;15/2/1970;R+D;Granollers
+PSN-BCN-2011-0033;Manel García Morales;Home;23/1/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0048;Jonathan Kelly;Home;1/3/1963;R+D;Boston (MA)
+PSN-BCN-2008-0221;Hèctor Sánchez Ramírez;Home;8/8/1968;R+D;Granollers
+PSN-BCN-2022-0019;Carles Fernández Marín;Home;22/1/1996;Finances;Barcelona (22@)
+PSN-BCN-2015-0032;Pol Ribas Martín;Home;9/3/1985;Sistemes;Barcelona (22@)
+PSN-BOS-2012-0007;William Brown;Home;8/11/1980;Comercial;Boston (MA)
+PSN-BCN-2015-0033;Enric Ferrer Molina;Home;22/2/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2014-0037;José Díaz Ortiz;Home;24/2/1970;R+D;Granollers
+PSN-BCN-2018-0050;Lucía Rodríguez Martínez;Dona;18/5/1991;Finances;Barcelona (22@)
+PSN-BCN-2014-0038;Pau Font García;Home;4/11/1987;R+D;Granollers
+PSN-BOS-2012-0008;Sophia Anderson;Dona;10/8/1976;R+D;Boston (MA)
+PSN-BCN-2013-0024;Javier Vázquez Batlle;Home;9/4/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2019-0012;Madison Murphy;Dona;8/12/1993;RH;Boston (MA)
+PSN-BCN-2008-0222;Adrià Díaz Riera;Home;27/3/1975;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0223;Joan Blanco Gil;Home;21/11/1975;R+D;Granollers
+PSN-BCN-2008-0224;Carlos Bosch Fernández;Home;18/11/1966;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2012-0009;Olivia Taylor;Dona;16/4/1978;RH;Boston (MA)
+PSN-BCN-2015-0034;Patricia Morales Rovira;Dona;21/1/1975;Comercial;Barcelona (22@)
+PSN-BCN-2009-0031;Sofia Domínguez López;Dona;22/12/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2008-0049;Grace Martinez;Dona;30/3/1972;R+D;Boston (MA)
+PSN-BCN-2008-0225;Ismael Álvarez García;Home;28/3/1969;R+D;Granollers
+PSN-BCN-2019-0045;Pau Planas Pérez;Home;5/2/1993;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0025;Javier Romero Ramírez;Home;21/12/1983;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0226;Pere Moreno Serra;Home;2/7/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2019-0046;Gemma Sánchez Fernández;Dona;15/11/1992;R+D;Granollers
+PSN-BOS-2019-0013;Amelia Sullivan;Dona;21/3/1992;R+D;Boston (MA)
+PSN-BCN-2016-0047;Paula Romero Delgado;Dona;2/10/1983;R+D;Granollers
+PSN-BOS-2008-0050;Anthony White;Home;22/12/1976;Comercial;Boston (MA)
+PSN-BCN-2008-0227;Toni Morales Álvarez;Home;19/11/1965;R+D;Granollers
+PSN-BCN-2008-0228;David Díaz Suárez;Home;22/3/1965;R+D;Granollers
+PSN-BCN-2017-0055;Mateu Colomer Fernández;Home;19/6/1976;R+D;Granollers
+PSN-BCN-2013-0025;Oriol Martín Rodríguez;Home;25/7/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0229;Miquel Marín Roca;Home;30/4/1969;R+D;Barcelona (22@)
+PSN-BCN-2016-0048;Hugo Ramírez Ramos;Home;1/11/1985;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0230;Àlex Morales Hernández;Home;28/11/1963;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2023-0014;Eva López García;Dona;20/9/2003;Finances;Barcelona (22@)
+PSN-BCN-2017-0056;Marc Serra Suárez;Home;5/2/1980;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0231;Carles Moreno Prat;Home;2/4/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2015-0035;Jaume Ortiz Ramos;Home;5/11/1976;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2009-0003;Madison Jones;Dona;29/1/1965;Sistemes;Boston (MA)
+PSN-BCN-2010-0026;Joan Martín Molina;Home;6/12/1977;R+D;Granollers
+PSN-BCN-2010-0027;Marc López García;Home;8/3/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0028;Àlex Serrano Suárez;Home;4/8/1982;Sistemes;Barcelona (22@)
+PSN-BCN-2008-0232;Noa Marín Rovira;Dona;29/5/1977;R+D;Granollers
+PSN-BCN-2018-0051;Montserrat Navarro Martínez;Dona;16/4/1985;Sistemes;Barcelona (22@)
+PSN-BOS-2008-0051;Tyler Walsh;Home;17/10/1959;Finances;Boston (MA)
+PSN-BCN-2019-0047;Raquel Ros Font;Dona;24/7/1997;RH;Barcelona (22@)
+PSN-BOS-2019-0014;Sophia Thompson;Dona;11/6/1989;Finances;Boston (MA)
+PSN-BCN-2014-0039;Pau Grau Jiménez;Home;27/3/1981;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0233;Núria Rodríguez García;Dona;24/4/1970;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2009-0032;Marina Ribas De la Vega;Dona;30/9/1969;Comercial;Barcelona (22@)
+PSN-BCN-2013-0026;Bernat Molina Rodríguez;Home;19/9/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2017-0057;Ariadna Molina Vila;Dona;8/12/1982;Comercial;Barcelona (22@)
+PSN-BCN-2020-0037;Quim Ortiz Jiménez;Home;27/4/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2018-0052;Júlia Fernández Martínez;Dona;6/10/1993;R+D;Granollers
+PSN-BCN-2020-0038;Hugo Jiménez Ferrer;Home;8/5/1997;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2013-0027;Genís Gil Blanco;Home;30/6/1984;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2021-0033;Xavier Álvarez López;Home;22/1/2000;Finances;Barcelona (22@)
+PSN-BCN-2008-0234;Antonio López Álvarez;Home;10/1/1973;R+D;Granollers
+PSN-BOS-2014-0007;Claire Sullivan;Dona;1/9/1974;Finances;Boston (MA)
+PSN-BCN-2019-0048;Ferran Ros Delgado;Home;3/7/1994;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0235;Mateu Rodríguez Vila;Home;26/2/1960;R+D;Barcelona (22@)
+PSN-BCN-2008-0236;Xavier Fernández Duran;Home;26/11/1973;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0029;Àngels Fernández Ferrer;Dona;23/12/1976;Comercial;Barcelona (22@)
+PSN-BOS-2015-0012;Scarlett Taylor;Dona;8/4/1980;Finances;Boston (MA)
+PSN-BCN-2011-0034;Jesús Torres Romero;Home;21/10/1974;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2010-0030;Pau Sánchez Álvarez;Home;1/12/1973;R+D;Granollers
+PSN-BCN-2008-0237;Tània Muñoz Delgado;Dona;7/2/1972;R+D;Barcelona (22@)
+PSN-BCN-2009-0033;Lídia Gómez Serra;Dona;27/9/1965;R+D;Granollers
+PSN-BCN-2018-0053;Mar Rodríguez Ramírez;Dona;27/6/1984;Sistemes;Barcelona (22@)
+PSN-BOS-2018-0006;Nora Taylor;Dona;10/5/1993;Finances;Boston (MA)
+PSN-BCN-2015-0036;Ramon López Iglesias;Home;21/1/1985;Sistemes;Barcelona (22@)
+PSN-BCN-2017-0058;Quim Font Vázquez;Home;6/6/1990;Operacions-Qualitat-Logística;Granollers
+PSN-BOS-2022-0004;Sophie Johnson;Dona;10/1/2001;Comercial;Boston (MA)
+PSN-BCN-2021-0034;Núria Jordà Costa;Dona;19/9/1995;R+D;Barcelona (22@)
+PSN-BCN-2019-0049;Sonia Fernández Gómez;Dona;7/9/1992;RH;Barcelona (22@)
+PSN-BCN-2011-0035;Laura Moreno Vilanova;Dona;31/8/1978;Comercial;Barcelona (22@)
+PSN-BOS-2020-0008;Ella Clark;Dona;1/2/1991;R+D;Boston (MA)
+PSN-BCN-2012-0036;Ricard Vilanova Castells;Home;8/5/1978;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2011-0036;Jordi Navarro Del Río;Home;26/12/1973;R+D;Barcelona (22@)
+PSN-BCN-2015-0037;Ricard Ferrer Ortega;Home;1/5/1982;Operacions-Qualitat-Logística;Granollers
+PSN-BCN-2008-0238;Raquel González Martín;Dona;2/6/1966;R+D;Granollers
+PSN-BCN-2008-0239;Àlex Ramos García;Home;8/10/1965;R+D;Granollers
+PSN-BOS-2017-0007;Connor Miller;Home;10/6/1987;Sistemes;Boston (MA)
+PSN-BOS-2011-0003;Michael White;Home;8/2/1979;R+D;Boston (MA)
+PSN-BOS-2013-0007;Amelia Garcia;Dona;15/9/1976;Comercial;Boston (MA)
+PSN-BCN-2008-0259;Ariadna Gómez López;Dona;21/4/1966;Operacions-Qualitat-Logística;Granollers
